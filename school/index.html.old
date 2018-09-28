@@ -1,0 +1,453 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+ <head>
+     <link type="text/css" rel="stylesheet" href="./2014/css/nusim2014_style.css" />
+     <title>
+        NuSTEC Neutrino Monte Carlo Generator School
+     </title>
+     <meta name="description" content=
+           NuSTEC Neutrino Monte Carlo Generator School">
+     <meta http-equiv="Keywords" content=
+         "GENIE, NuWro, Neutrino MC Generator, Monte Carlo, 
+          Phenomenology, Neutrino Interactions, Cross Sections, Hadronization, Hadron Transport">
+
+     <script language="JavaScript" src="./2014/scripts/gen_validatorv31.js" type="text/javascript"></script>
+
+ </head>
+
+ <body>
+
+    <!-- Header -->
+    <div id="Header">
+      NuSTEC Neutrino Generator School
+    </div>
+
+    <!-- Left column -->
+
+    <div id="LeftSide">
+     <div id="LeftSidePd">
+
+       Sponsored/supported by: 
+       <br />
+       <br />
+       <IMG src="./2014/images/logos/liverpool.png" align="center" width="180px">
+       <br /> 
+       <br /> 
+       <IMG src="./2014/images/logos/nustec.jpg" align="center" width="180px">
+       <br /> 
+       <br /> 
+
+       <br />
+       <div id="ContactInfoHeader">
+           <B> &nbsp; Organizing Committee &nbsp;</B>
+       </div>
+       <div id="ContactInfo">
+           L. Alvarez Ruso (Valencia) <br />
+           C. Andreopoulos [*] (Liverpool/RAL)<br />
+           S. Boyd (Warwick) <br />
+           S. Dytman (Pittsburgh) <br />
+           H. Gallagher (Tufts) <br />
+           J. Morfin (FNAL) <br />
+           J. Nowak (Lancaster) <br />
+           G. Perdue (FNAL) <br />
+           J. Sobczyk [*] (Wroclaw) <br />
+           M. Wascko (Imperial) <br />
+           <br />
+           Local support: <br /> 
+           Linda Fielding (Liverpool) <br />
+           Angie Reid (Liverpool)
+           <br />
+           <br />
+           [*] co-chairs
+       </div>
+
+       <br />
+<!--
+       <div id="ContactInfoHeader">
+           <B> &nbsp; About NuSTEC &nbsp;</B>
+       </div>
+       <div id="ContactInfo">
+           NuSTEC (Neutrino Scattering Theory Experiment Collaboration) is an
+           initiative to create a CTEQ-like collaboration to study neutrino-nucleus scattering.
+           Details may be found <A href="http://www.int.washington.edu/talks/WorkShops/int_13_54W/People/Morfin_J/Morfin.pdf">here</A>.
+       </div>
+
+       <br />
+-->
+
+       <div id="ContactInfoHeader">
+           <B> &nbsp; Key dates &nbsp;</B>
+       </div>
+       <div id="ContactInfo">
+            &mdash; Early registration deadline for potential school participants: 
+            <b> 14th of March, 2014</b>
+            <br />
+            &mdash; Registration deadline (if the maximum number of participants has not been reached earlier):
+            <b> 1st of May, 2014</b>.
+            <br />
+            &mdash; The first invitations will be sent out on the 
+            <b>15th of March, 2014.</b>
+            <br />
+            &mdash; The school will be held from 
+            the <b>14th (Wedns.) to the 16th (Fri.) of May, 2014.</b>
+       </div>
+
+       <br />
+
+       <div id="ContactInfoHeader">
+           <B> &nbsp; Registration &nbsp;</B>
+       </div>
+       <div id="ContactInfo">
+            <form method="POST" name="registrationform" action="./2014/scripts/registration-form-handler.php">
+                  Name: <br />
+                  <input type="text" name="name" value="your name"> <br />
+                  E-Mail:<br />
+                  <input type="text" name="email" value="your e-mail"> <br />
+                  Affiliation: <br />
+                  <input type="text" name="affiliation" value="your affiliation"> <br />
+                  Position: <br />
+                  <input type="text" name="position" value="your position"> <br />
+                  Project: <br />
+                  <input type="text" name="project" value="your current experiment(s)"> <br />
+                  Supervisor: <br />
+                  <input type="text" name="supervisor" value="your supervisor(s)"> <br />
+                  <br />
+                  <input type="submit" value="Send">
+                  <input type="reset" value="Reset">
+                  <br />
+            </form>
+
+            <script language="JavaScript">
+              // Code for validating the form
+              var frmvalidator  = new Validator("registrationform");
+              frmvalidator.addValidation("name","req","Please provide your name");
+              frmvalidator.addValidation("email","req","Please provide your email");
+              frmvalidator.addValidation("email","email","Please enter a valid email address");
+            </script>
+       </div>
+
+<!--
+       <br />
+       <div id="ContactInfoHeader">
+           <B> &nbsp; Confirmed participants &nbsp;</B>
+       </div>
+       <div id="ContactInfo">
+           C. Adams (Yale) <br />
+           L. Alvarez Ruso (Valencia) <br />
+           C. Andreopoulos (Liverpool/RAL)<br />
+           F. Bay (ETH Zurich) <br />
+           S. Boyd (Warwick) <br />
+           G. Christodoulou (Liverpool) <br />
+           T. Van Cuyck (Ghent) <br />
+           T. Dealtry (Oxford) <br />
+           S. Dennis (Warwick) <br />
+           T. Feusels (UBC) <br />
+           A. Furmanski (Warwick) <br />
+           T. Golan (Wroclaw) <br />
+           N. Grant (Lancaster) <br />
+           D. Hadley (Warwick) <br />
+           J. Hewes (Manchester) <br />
+           M. Kabirnezhad (Warsaw) <br />
+           M. Labare (Ghent) <br />
+           M. Lazos (Liverpool) <br />
+           Jia-shu Lu (IHEP Beijing) <br />
+           J. Nowak (Lancaster) <br />
+           C. Patrick (Northwestern) <br />
+           P. Paudyal (Liverpool) <br />
+           G. Perdue (FNAL) <br />
+           E. Scantamburlo (Geneve) <br />
+           J. Sobczyk (Wroclaw) <br />
+           T. Stainer (Liverpool) <br />
+           M. Tamsett (Sussex) <br />
+           M. Wascko (Imperial) <br />
+           C. Wilkinson (Sheffield) <br />
+           <br />
+       </div>
+-->
+
+     </div>
+    </div>
+
+    <br />
+
+
+    <!-- Right column -->
+    <div id="RightSide">
+     <div id="RightSidePd">
+        <!-- twitter stream -->
+        <a class="twitter-timeline"  href="https://twitter.com/NuMCSchool"  data-widget-id="429088954734764032">Tweets by @NuMCSchool</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <br />
+      </div>
+    </div>
+
+
+    <div id="MainInFrontPage">
+
+        Welcome to the <b>NuSTEC Neutrino Generator School</b> page.        
+        <br />
+        <br />
+        This is a generator training school, to be held at the <b>University of Liverpool</b> in <b>14-16 May 2014</b>.
+        To facilitate participation of overseas students, 
+        the school is organised as a satellite event of the popular <A href="http://nuint14.iopconfs.org/home"> NuINT14</A> workshop
+        to be held in London in 19-24 May 2014.
+        <br />
+        <br />
+        The school will provide a series of lectures covering a broad range of neutrino interaction phenomenology topics
+        focussing on the connections between theory, experiment and MC simulations.
+        The school will also offer extensive hands-on tutorials of the GENIE and NuWro MC generators.       
+        <br />
+        <br />
+        Participation is by invitation and, due to the hands-on nature of the school, will be limited to about 30 students.
+        Priority will be given to students and young post-doctoral research associates.
+
+        <br />
+        <br />
+
+        <div id="BorderlessBox">
+          <b class="clsBigFont"> Venue & Location </b>
+          <br />
+          The school will be held in the <A href="http://www.foresightcentre.co.uk/">Foresight Centre</A>,
+          the award-winning business conference centre of the <A href="http://www.liv.ac.uk/">University of Liverpool</A> in UK.
+          The Foresight Centre is located within the central campus and it is housed within one of the city's most
+          impressive Grade II listed buildings.
+          <br />
+          <br />
+          <IMG src="./2014/images/venue/foresight1.jpg" height="110px" align="left" hspace="3px"> 
+          <IMG src="./2014/images/venue/foresight2.png" height="110px" align="left" hspace="3px"> 
+          <IMG src="./2014/images/venue/foresight3.png" height="110px" align="left" hspace="3px"> 
+          <br />
+        </div>
+        <br />
+        <div id="BorderlessBox">
+          Liverpool in a UNESCO World Heritage City and a bustling metropolis
+          with a unique mix of contemporary and classic architecture.
+          With the largest collection of museum and galleries anywhere outside London,
+          and a fantastic selection of performance spaces, 
+          it is an ideal culturally-rich setting for the first NuSTEC generator school.
+          <br />
+          More information about visiting Liverpool may be found <A href="http://www.visitliverpool.com">here</A>.
+          <br />
+          <IMG src="./2014/images/venue/liverpool.jpg" align="left" width="450px" style="padding:5px">
+
+        </div>
+
+        <br />
+
+        <div id="BorderlessBox">
+          <b class="clsBigFont"> Programme</b>
+          <br />
+          Click on the lecture titles to see the slides (PDF format).
+          <br />
+            <table id="TabProgramme">
+              <tr>
+                <td> </td>
+                <td style="background-color:#E8E8E8"> Wed 14 </td>
+                <td style="background-color:#E8E8E8"> Thu 15 </td>
+                <td style="background-color:#E8E8E8"> Fri 16 </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>08:00 - 08:20</b> </td>
+                <td> Registration </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>08:20 - 08:30</b> </td>
+                <td> Welcome (Andreopoulos) </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>08:30 - 09:20</b> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T1</b> (Andreopoulos) 
+                       <br /> <A href="./2014/lectures/Lecture_T1.pdf"> <i>Neutrino generators &amp; MC methods</i></A> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T5</b> (Alvarez-Ruso) 
+                       <br /> <A href="./2014/lectures/Lecture_T5.pdf"> <i>Quasielastic neutrino scattering </i></A> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T9</b> (Alvarez-Ruso) 
+                       <br /> <A href="./2014/lectures/Lecture_T9.pdf"> <i>Weak coherent meson production</i></A> </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>09:20 - 09:30</b> </td>
+                <td colspan="3" style="text-align:center"> Break </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>09:30 - 10:20</b> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T2 </b> (Sobczyk)      
+                       <br /> <A href="./2014/lectures/Lecture_T2.pdf"> <i>Survey of current neutrino MC generators</i></A> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T6 </b> (Sobczyk) 
+                       <br /> <A href="./2014/lectures/Lecture_T6.pdf"> <i>Np-Nh contributions to quasielastic-like neutrino scattering</i></A> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T10</b> (Sobczyk)      
+                       <br /> <A href="./2014/lectures/Lecture_T10.pdf"> <i>Final state interactions &amp; survey of intranuclear cascade codes</i></A> </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>10:20 - 10:45</b> </td>
+                <td colspan="3" style="color:#B4045F;text-align:center"> <b>Mid-morning refreshements</b> (at Foresight Centre)</td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>10:30 - 11:20</b> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T3</b> (Alvarez-Ruso) 
+                       <br /> <A href="./2014/lectures/Lecture_T3.pdf"> <i>Basics of electro-weak interactions</i></A> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T7</b> (Alvarez-Ruso)      
+                       <br /> <A href="./2014/lectures/Lecture_T7.pdf"> <i>Neutrino production of resonances</i></A>  </td>
+                <td rowspan="3" style="background-color:#A9F5F2;vertical-align:text-top;"> <b>Tutorial 5</b> (Andreopoulos) 
+                       <br />  <A href="./2014/tutorials/Tutorial_5.pdf"> <i>Systematics & event re-weighting</i></A> </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>11:20 - 11:30</b> </td>
+                <td colspan="2" style="text-align:center"> Break </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>11:30 - 12:20</b> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T4</b> (Alvarez-Ruso) 
+                       <br /> <A href="./2014/lectures/Lecture_T4.pdf"> <i>The nuclear initial state / Basics of many-body theory</i></A> </td>
+                <td style="background-color:#FFFF99;vertical-align:text-top;"> <b>Lecture T8</b> (Sobczyk)      
+                       <br /> <A href="./2014/lectures/Lecture_T8.pdf"> <i>Deep inelastic neutrino scattering and neutrino-induced hadronization</i></A> </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>12:20 - 13:30</b> </td>
+                <td colspan="3" style="color:#B4045F;text-align:center"> <b>Lunch</b> (at Foresight Centre) </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>13:30 - 15:00</b> </td>
+                <td style="background-color:#A9F5F2;vertical-align:text-top;"> <b>Tutorial 1</b> (Perdue) 
+                       <br /> <A href="./2014/tutorials/Tutorial_1.pdf"> <i>GENIE intro - How to configure and run basic applications and analyze the outputs</i></A> </td>
+                <td style="background-color:#A9F5F2;vertical-align:text-top;"> <b>Tutorial 3</b> (Perdue) 
+                       <br /> <A href="./2014/tutorials/Tutorial_3.pdf"> <i>How to extract cross-section information</i></A> </td>
+                <td style="background-color:#A9F5F2;vertical-align:text-top;"> <b>Tutorial 6</b> (Perdue) 
+                       <br /> <A href="./2014/tutorials/Tutorial_6.pdf">  <i>Adding new models: A detailed walk-through</i></A> </td>
+                <td>  </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>15:00 - 15:30</b> </td>
+                <td colspan="3" style="color:#B4045F;text-align:center"> <b>Mid-afternoon refreshements</b> (at Foresight Centre)</td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>15:30 - 17:00</b> </td>
+                <td style="background-color:#A9F5F2;vertical-align:text-top;"> <b>Tutorial 2</b> (Golan)      
+                       <br /> <A href="./2014/tutorials/Tutorial_2.pdf">  <i>NuWro intro - How to configure and run basic applications and analyze the outputs</i></A> </td>
+                <td style="background-color:#A9F5F2;vertical-align:text-top;"> <b>Tutorial 4</b> (Perdue/Golan)       
+                       <br /> <A href="./2014/tutorials/Tutorial_4.pdf"><i>Comparing generator predictions with data</i></A> </td>
+                <td style="background-color:#A9F5F2;vertical-align:text-top;"> <b>Tutorial 7</b> (Perdue) 
+                       <br /> <A href="./2014/tutorials/Tutorial_7.pdf"> <i>Using fluxes and detector geometries. How to customize GENIE for a complex experimental setup.</i> </A></td>
+                <td>  </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>17:00 - 17:15</b> </td>
+                <td colspan="3" style="text-align:center"> Break </td>
+                <td>  </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>17:15 - 18:15</b> </td>
+                <td style="background-color:#F8E0EC;vertical-align:text-top;"> <b>Lecture E1</b> (Boyd)   
+                        <br /> <A href="./2014/lectures/Lecture_E1.pdf"> <i>Survey of neutrino scattering data</i></A> </td>
+                <td style="background-color:#F8E0EC;vertical-align:text-top;"> <b>Lecture E2</b> (Nowak)  
+                        <br /> <A href="./2014/lectures/Lecture_E2.pdf"> <i>Electron scattering data and its use in constraining neutrino models</i></A> </td>
+                <td style="background-color:#F8E0EC;vertical-align:text-top;"> <b>Lecture E3</b> (Wascko) 
+                        <br /> <A href="./2014/lectures/Lecture_E3.pdf"> <i>Unfolding techniques and model-independent measurements</i></A> </td>
+                <td>  </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>18:15 - 19:30 </b> </td>
+                <td> Discussion/Drinks </td>
+                <td> Discussion/Drinks </td>
+                <td> Discussion/Drinks </td>
+              </tr>
+              <tr>            
+                <td style="background-color:#E8E8E8"> <b>19:30 - </b> </td>
+                <td> </td>
+                <td style="border-style:solid;border-size:1pt;color:#B4045F"> <b>School dinner</b> </td>
+                <td> </td>
+              </tr>
+            </table>
+            <br />
+            <table id="TabProgramme">
+               <tr>
+                   <td style="background-color:#FFFF99"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                   <td> Theory & MC methods</td>
+                   <td style="background-color:#A9F5F2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                   <td> Hands-on tutorials</td>
+                   <td style="background-color:#FF99FF"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                   <td> Experiment</td>
+               </tr>
+            </table>
+
+        </div>
+
+        <br />
+
+        <div id="BorderlessBox">
+
+          <b class="clsBigFont"> School photos </b>
+          <br />
+          School photos are posted on the school twitter stream (see on the right hand side).
+          Please feel free to upload any interesting photo you take during the school and your stay at Liverpool!
+          <br />
+          <IMG src="./2014/photos/photo_wide.jpeg" align="left" width="620px" style="padding:5px">
+        </div>
+
+        <br />
+
+        <div id="BorderlessBox">
+          <b class="clsBigFont"> Logistics </b>
+          <br />
+          <br />
+          <b class="clsBigFont2"> Fees </b>
+          <br />
+          The registration fee is &pound;50 payable in cash at the registration desk.
+          The fee <b>includes</b> the cost of the school dinner.
+          Mid-morning and mid-afternoon refreshments and lunches will also be provided.
+          <br />
+          <br />
+          <b class="clsBigFont2"> School dinner </b>
+          <br />
+          A school dinner is organized for Thursday 15th May at the <A href="http://www.thequarteruk.com/kitchen/restaurant/">Quarter Liverpool</A>.
+          <br />
+          <br />
+          <b class="clsBigFont2"> Travel </b>
+          <br />
+          The campus is centrally located. The Foresight Centre is just a 10-minute walk away 
+          from the nearest mainline train station (Lime Street).
+          Directions can be found <A href="./2014/maps/foresight_centre.pdf"> here</A>.
+          A pdf map showing all University buildings can be found
+          <A href="http://www.liv.ac.uk/files/docs/maps/liverpool-university-campus-map.pdf">here</A>.
+          <br />
+          <br />
+          <b class="clsBigFont2"> Accomodation </b>
+          <br />
+          School participants should make their own arrangements.
+          There is a large number of and B&Bs and hotels in walking distance from the University.
+          Search via <A href="http://www.laterooms.com">laterooms.com</A> or <A href="http://www.booking.com/">booking.com</A>
+          (the University post code is L69 3BX). Some nearby hotels are listed below:
+          <ul class="clsHotelListFont"> 
+            <li> <A href="http://www.hopestreethotel.co.uk">Hope Street Hotel</A> (4* VE) 
+                 <br /> 40 Hope Str., Liverpool, L1 9DA. TEL: +44-1517-093000 </li>
+            <li> <A href=""> Novotel Liverpool Centre</A> (4* AA)
+                 <br /> 40 Hanover Street , Liverpool, L1 4LN, TEL: </li>
+            <li> <A href=""> Radisson Blu Hotel Liverpool </A> (4* AA)
+                 <br /> 107 Old Hall Street , Liverpool, L3 9BD, TEL: </li>
+            <li> <A href=""> Britannia Adelphi Hotel - City Centre</A> (3*)
+                 <br /> Ranelagh Place , Liverpool, L3 5UL, TEL: </li>
+            <li> <A href=""> 62 Castle Street Boutique Hotel</A> (3* VE)
+                 <br /> 62 Castle Street Boutique Hotel , Liverpool, L2 7LQ, TEL: </li>
+            <li> <A href="">The Liner at Liverpool</A> (3* VE)
+                 <br /> Lord Nelson Street, Liverpool, L3 5QB, TEL: </li>
+            <li> <A href="">Best Western Feathers Liverpool Hotel</A> (3* AA)
+                 <br /> 117-125 Mount Pleasant, Liverpool, L3 5TF, TEL: </li>
+            <li> <A href="">Holiday Inn Liverpool City Center</A> (3*)
+                 <br /> Lime Street, Liverpool, L1 1NQ, TEL: </li>
+            <li> <A href="">Holiday Inn Express Liverpool - Albert Dock</A> (3*)
+                 <br /> Britannia Pavillion, Albert Dock, Liverpool, L3 4AD, TEL: </li>
+            <li> <A href="">Campanile Liverpool</A> (2*)
+                 <br /> Chaloner Str., Queens Dock, Liverpool, L3 4AJ, TEL: </li>
+            <li> <A href="">Ibis Liverpool Centre Albert Dock</A> (2*)
+                 <br /> 27 Wapping, Liverpool, L1 8LY, TEL: </li>
+          </ul>
+        </div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<!--#include FILE="./header.inc"-->
+
+<body>
+
+   <!--#include FILE="./navigation.inc"-->
+
+   <div id="MainIn2ColumnPage">
+
+
+
+    <div CLASS="clsInsidePageHeader"> GENIE release, physics configuration and tune naming convention</div>
+
+    <br />
+
+     <div id="InsidePageSectionHeader">
+         GENIE/Generator versioning scheme
+     </div>
+     <div id="InsidePageSectionBody">
+         GENIE/Generator releases are numbered with 3 dot separated integers as <B>i.j.k</B>, where the
+         integers i,j,k correspond to the major, minor and revision number respectively.
+         The corresponding SVN tag for version i.j.k is <B>R-i_j_k</B>
+         (for example, GENIE version 2.0.2 is tagged as R-2_0_2).
+     </div>
+
+     <br />
+
+     <div id="InsidePageSectionHeader">
+         GENIE/Generator version number semantics
+     </div>
+     <div id="InsidePageSectionBody">
+         <ul>
+           <li>
+             Versions with even minor number (eg 2.4.*)
+             correspond to stable, fully validated physics/production releases. </li>
+           <li>
+             Versions with odd minor number (eg 2.3.*, 2.5.*) correspond to public `beta'/ candidate releases. </li>
+           <li>
+             Tagged versions always have an even revision number (eg 2.2.2 is a revision of the 2.2.0 physics / production
+             release whereas 2.3.2, 2.3.4, 2.3.6,... are `candidate' releases for the 2.4.0 physics / production release). </li>
+         </ul>
+     </div>
+
+     <br />
+
+     <div id="InsidePageSectionHeader">
+         GENIE/Generator codenames
+     </div>
+     <div id="InsidePageSectionBody">
+         The major production-quality releases of the GENIE/Generator product are code-named after
+         <A href="http://en.wikipedia.org/wiki/List_of_extinct_animals#Modern_extinctions">
+             modern extinct</A> or
+         <A href="http://en.wikipedia.org/wiki/Endangered_species"> endangered</A> species
+          (series of production releases:
+          <A href="http://en.wikipedia.org/wiki/Great_Auk"> <b>A</b>uk</A>,
+          <A href="https://www.wwf.org.uk/wildlife/polar-bears"> <b>B</b>ear (polar)</A>,
+          <A href="http://www.nature.ca/NOTEBOOKS/ENGLISH/echeetah.htm"><b>C</b>heetah</A>,
+          <A href="http://en.wikipedia.org/wiki/Dodo"> <b>D</b>odo</A>,
+          <A href="http://en.wikipedia.org/wiki/Irish_elk"> <b>E</b>lk</A>,
+          <A href="http://en.wikipedia.org/wiki/Falkland_Island_Fox"> <b>F</b>ox</A>,
+          <A href="http://en.wikipedia.org/wiki/Red_Gazelle"> <b>G</b>azelle</A>,
+          <A href="http://en.wikipedia.org/wiki/Hippopotamus"> <b>H</b>ippo</A>,
+          <A href="http://en.wikipedia.org/wiki/Pyrenean_Ibex"> <b>I</b>bex</A>,...
+         ).
+     </div>
+
+     <br />
+
+     <div id="InsidePageSectionHeader">
+         GENIE/Generator release qualifiers
+     </div>
+     <div id="InsidePageSectionBody">
+         The GENIE releases are marked as:
+         <ul>
+           <li> <B><I CLASS="clsFGreen">pro</I></B> :
+                 <br />
+                 Validated production-quality versions recommended for physics studies. </li>
+           <li> <B><I CLASS="clsFBlue"> old</I></B> :
+                 <br />
+                 Older production versions that have been greatly superseeded by newer versions.
+                 Versions marked as `depreciated' become unsupported.
+                 <!--
+                  We appreciate that experiments get highly attached on specific versions due to the
+                  enormous amount of work invested in generating high-statistics samples and in calculating
+                  MC-dependent corrections and systematics.
+                  We strive to support as many physics versions as reasonably possible.
+                 -->
+                 The typical lifetime of `physics' versions is of the order of 18-24 months. </li>
+           <li> <B><I CLASS="clsFRed"> rc </I></B> :
+                <br />
+                Release candidates. Please use for testing new models and features,
+                but avoid using for physics studies. </li>
+           <li> <B><I CLASS="clsFOrange"> special</I></B> :
+                <br />
+                Special releases prepared for a particular study, or an event such as a GENIE tutorial or a summer school.
+                Avoid using outside the intended context. </li>
+         </ul>
+     </div>
+
+     <br />
+
+     <div id="InsidePageSectionHeader"> 
+         GENIE/Generator comprehensive model configurations 
+     </div>
+     <div id="InsidePageSectionBody">    
+     
+        Starting from v3.0.0, with the deployment of multiple comprehensive configurations and tunes, 
+        and the addition of a `--tune' argument in several apps, GENIE adopted the following uniform 
+        naming convention for its model configurations and tunes:
+        <br />
+        <br />
+        A comprehensive model configuration is identified by a 7-character string in the form 
+        <h3 style="text-align:center;"> <b> Gdd_MMv </b> </h3>
+        where 
+        <ol type="1">
+           <li> 
+             <b>G</b> is a capital letter that identifies the author of the tune.
+             The default value is G (for the GENIE collaboration). 
+           </li>
+           <li> 
+             <b>dd</b> is a number describing the year during which the model configuration was developed.
+           </li> 
+           <li> 
+             <b>MM</b> is a number (00, 01, 02, ...) identifying a model configuration branch.
+           </li> 
+           <li> 
+             <b>v</b> is a character (a, b, c, ...) enumerating variations / offshoots of a model configuration branch.
+           </li>        
+       </ol>
+
+     </div>
+
+     <br />
+
+     <div id="InsidePageSectionHeader"> 
+         GENIE/Generator tunes  
+     </div>
+     <div id="InsidePageSectionBody">    
+
+       Once a comprehensive model configuration is defined, a number of different tunes may be produced.
+       Each distinct choice of a) fit datasets and dataset weighting scheme, b) parameters of interest and nuisance parameters, 
+       and c) prior constraints, leads to a different tune. A tune is identified by the model configuration name, and additional
+       information enumerating the parameters and datasets. This is a 14-character string in the form
+       <h3 style="text-align:center;"> <b> Gdd_MMv_PP_xxx </b> </h3> 
+       where 
+       <ol type="1"> 
+         <li> <b>Gdd_MMv</b> describes the model configuration (see above).
+         </li>
+         <li> <b>PP</b> is a number identifying the set of tuned parameters. 
+              This parameter set is defined uniquely only in the context of a particular model configuration. 
+              The number 00 indicates that a model configuration has not been tuned by GENIE. 
+         </li>
+         <li> <b>xxx</b> is a number that identifies the dataset used for the model configuration tuning. 
+              This may include a unique set weights associated with each component dataset. 
+              The number 00 indicates that a model configuration has not been tuned by GENIE. 
+         </li>
+       </ol> 
+     </div>   
+
+
+
+     
+  </div>  <!-- main -->
+        
+  <!--#include FILE="./footer.inc"-->
+        
+</body>  
+</html> 
+        
+        
+     

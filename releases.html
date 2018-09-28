@@ -1,0 +1,1560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<!--#include FILE="./header.inc"-->
+
+<body>
+
+   <!--#include FILE="./navigation.inc"-->
+
+   <div id="MainIn2ColumnPage">
+
+
+
+    <div CLASS="clsInsidePageHeader"> GENIE Releases</div>
+
+    <br />
+
+    <div id="InsidePageMainText">
+         To familiarize yourself with the GENIE release naming conventions, please see
+         <A href="./naming_conventions.html">here</A>.
+         <br />
+         <br />
+         <IMG src="./images/genie/guard.gif" align="left" width="100px" hspace="10px">
+         <b>GENIE recommends:</b>
+         <br />
+         For large MC productions and physics studies, use 
+         one of the comprehensive model configurations supported in the latest 
+         GENIE production release (<B>v2.12.10</B>).
+         <br />
+         <br />
+         To experiment with the latest publicly released physics models and technical 
+         features, you can (at your own risk) 
+         use the development version (SVN trunk) and/or enable non-default options 
+         in a production release. Please understand that these models and features may
+         be experimental and not well validated.
+    </div>
+
+    <br />
+
+
+    <!--
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     RELEASE TABLE
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -->
+
+
+     <div id="InsidePageSectionHeader">
+          Release table
+     </div>
+     <div id="InsidePageSectionBody">
+
+         <br />
+
+         <!--
+             *** *** *** *** *** *** CHEETAH *** *** *** *** *** ***
+          -->
+
+         <div id="ReleaseTableHeader">
+            <IMG src="./images/release/cheetah_small.jpg" align="left" width="120px" hspace="10px">
+               <B> Cheetah production release series</B> <br />
+               <I class="clsReleaseTableHeaderSubtext"> 
+                  Deployment of results from the leading <b>GENIE Global Analysis of Neutrino Scattering Data</b>,
+                  and seamless integration into a new series of GENIE Generator production releases.
+                  The new GENIE global analysis allows the tuning of large sets of physics parameters (both reweightable 
+                  and non-reweightable) and the robust estimation of parameter uncertainties and their correlations,
+                  and it leads to improved comprehensive model configurations with respect to the ones available in the Bear series.
+                  Multiple parameter tunes, from fits to different combinations of datasets, are deployed for each
+                  supported comprehensive model configuration.
+               </I>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version: 4.0.0 (planned; Q4 2018) </b>
+           <br />
+           <small>
+            SVN tag: - ,
+            Released: - ,
+            Status: -
+           </small>
+           <br />
+           <br />
+           <div id="ReleaseTableBody">
+           </div>
+         </div>
+
+         <br />
+         <br />
+         <br />
+
+         <!--
+             *** *** *** *** *** *** BEAR *** *** *** *** *** ***
+          -->
+
+         <div id="ReleaseTableHeader">
+            <IMG src="./images/release/bear_small.jpg" align="left" width="120px" hspace="10px">
+               <B> Bear production release series</B> <br />
+               <I class="clsReleaseTableHeaderSubtext"> 
+                  <b>Several new empirical and theory-driven global model configurations</b>
+                  including a new/improved GENIE default model, amalgamating the long series of Auk physics model
+                  developments into new comprehensive and self-consistent descriptions of neutrino-nucleon/nucleus scattering 
+                  from few hundred MeV to multi-TeV energy scales. All global physics model configurations supported concurrently (and
+                  can be easily switch via the --tune argument) and are fully <b>characterized through the most comprehensive set of data/MC 
+                  comparisons performed and published to date</b>.
+               </I>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version: 3.0.0 (planned; Q2 2018) </b>
+           <br />
+           <small>
+            SVN tag: - ,
+            Released: - ,
+            Status: -
+           </small>
+           <br />
+           <br />
+           <div id="ReleaseTableBody">
+           </div>
+         </div>
+
+         <br />
+         <br />
+         <br />
+
+
+         <!--
+            *** *** *** *** *** *** AUK *** *** *** *** *** ***
+         -->
+
+         <div id="ReleaseTableHeader">
+            <IMG src="./images/release/auk_small.jpg" align="left" width="120px" hspace="10px">
+               <B> Auk production release series</B> <br />
+               <I class="clsReleaseTableHeaderSubtext"> 
+                  A long series of <b>adiabatic improvements of the original GENIE physics model</b>, 
+                  with the gradual addition of sophisticated <b>tools for the experimental neutrino community</b>
+                  allowing the simulation of complex experimental setups in full detail and the support generator-related analysis tasks. 
+                  Several new physics models were installed and made available in the Auk series as optional alternatives of the established 
+                  default model, and they will be fully deployed into future GENIE global/comprehensive model confifurations and tunes.
+               </P>
+         </div>
+
+         <br />
+
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.12.10</b>
+           <br>
+           <small>
+             SVN tag: R-2_12_10 ,
+             Released: 19 February 2018 ,
+             Status: <i class="clsFGreen">pro</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Improvements over 2.12.8</b>
+             <br>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>`EmpiricalMEC-FracPN_NC`, `EmpiricalMEC-FracPN_CC` now directly specify the NP pair fraction, instead of being multiplied by another factor.</li>
+                <li>`EffectiveSF` no longer crashes when running on nucleons.</li>
+             </ul>
+
+             <br>FSI development model updates (not part of the default physics model):</br>
+
+             <ul>
+                <li>Save FSI model used (Intranuke2015) so that it can be cut on later.</li>
+                <li>Add suppression for low energy proton-proton collisions due to Coulomb interaction (hA2015, hN2015).</li>
+                <li>Disable binding energy corrections for low energy hadrons (caused a lot of errors) (hA2015, hN2015).</li>
+                <li>Add empirical cutoff for protons, neutrons at ~30 MeV (hN2015, A dependent) to suppressi events where all nucleons are emitted (temporary fix to hN2015).</li>
+                <li>Disable proton/neutron elastic scattering (hA2015).</li>
+             </ul>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Improve the automatic detection of dependencies in the configure script.</li>
+                <li>Reorder library list for Apps (put low level libs first) for Mac OS X `bind_at_load`.</li>
+                <li>Applications using `genie::utils::app_init::XSecTable(inpfile)` now search `$GXMLPATH` for spline files ins the same way config XML files are found.</li>
+                <li>Resolve speed issues with `QELEventGenerator` from 2.12.8.</li>
+                <li>Adjust `NievesQE` code so that `max_xsec` is correct for more than 1 nucleus in a simulation.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_12_10 -->
+
+         <br />
+
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.12.8</b>
+           <br>
+           <small>
+             SVN tag: R-2_12_8 ,
+             Released: 9 October 2017 ,
+             Status: <i class="clsFGreen">pro</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Improvements over 2.12.6</b>
+             <br>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>Added nucleon-nucleon correlation data to `data/evgen/nncorr`.</li>
+             </ul>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Fixed a bug in variable initialization in `GBGLRSAtmoFlux.cxx` pointed out by the community (T. Yang).</li>
+                <li>Bug fix to properly write `Q2s` and `Ws` to the ntuple in the NSV MEC model.</li>
+                <li>Fixed a bug in `QELEventGenerator` in calculating the Max Xsec with energy/nucleus/flavour dependence. (Model is very slow though, so be careful.)</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_12_8 -->
+
+         <br />
+
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.12.6</b>
+           <br>
+           <small>
+             SVN tag: R-2_12_6 ,
+             Released: 23 May 2017 ,
+             Status: <i class="clsFGreen">pro</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Improvements over 2.12.4</b>
+             <br>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>Added Helium in the Valencia (NSV) MEC model, to be generated using the Carbon hadron tensor and the regular scaling function. Also we now let the code go down to Be9, a default GENIE isotope.</li>
+                <li>Activated lines in pdg table for two pseudonuclei made of pp and nn, so that generation on Helium can proceed but didn't activate (kept commented out) the decay modes (must be handled in code directly).</li>
+             </ul>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Added new event generator lists: CCinclMEC+NueEl, duplicated Default+MEC as Default+CCMEC to avoid ambiguity, and added Default+CCMEC+NCMEC.</li>
+                <li>Fixed a bug in variable initialization in `GFLUKAAtmoFlux.cxx` pointed out by the community (Tao Lin).M/li>
+                <li>Fixed a bug in the Valencia (NSV) MEC model in the scaling function that affected calculation for the neutrino case. The bug only affects nuclei scaled away from a hadtensor. There was no effect on C, O, Ca40, Pb.</li>
+                <li>Fixed a bug in the Valencia (NSV) MEC model that set a too-low XSecMax for O and maybe N14.  The XSecMax has been increased to be more safe.</li>
+                <li>Bugfix: The use of NucBindE was disabled in the Valencia (NSV) MEC model for 2p2h in 2.12. Therefore, we now add the resulting removal energy directly to the remnant nucleus.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_12_6 -->
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.12.4</b>
+           <br>
+           <small>
+             SVN tag: R-2_12_4 ,
+             Released: 9 March 2017 ,
+             Status: <i class="clsFGreen">pro</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Improvements over 2.12.2</b>
+             <br>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>Add Oset implementation in hA2015, readjust for piA data validation.  Remove elastic scattering in hA2015.</li>
+                <li>Add NN medium effects from Pandharipande/Pieper model to hN2015 FSI model.  Use lookup tables to improve speed.</li>
+                <li>Add nn total cross section data to Intranuke.</li>
+             </ul>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Fix a bug that caused unnecessary warning spew when computing cross section for pions with kinetic energy over 1 GeV in the BergerSehgalFMCohPi model - now use Rein-Sehgal formulation more explicitly in that case. This is very close to what we were doing before, but somewhat awkwardly. Additionally, the old effective switch-over was for a pion kinetic energy less than 1 GeV (by the pion mass) rather than at 1 GeV.</li>
+                <li>The gevgen app now accepts a command line argument to specify the output file name.</li>
+                <li>Fix a bug that caused 'make install' to not work properly.</li>
+                <li>gMakeSplines: Add optional --no-copy argument to disable adding the input cross-sections in the output file. Default behavior is unchanged.</li>
+                <li>Updated Minerva's beampos value to match their code.</li>
+                <li>Fixed a bug that causes that floats to be sometimes printed in hexadecimal format in C++11.</li>
+                <li>Recovered a lost patch to the Makefiles (present in 2-10-10, but lost in 2-12-0 and 2-12-2) that was needed to make ROOT6 work with the Fermilab art framework.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_12_2 -->
+
+         <br />
+
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.12.2</b>
+           <br>
+           <small>
+             SVN tag: R-2_12_2 ,
+             Released: 6 December 2016 ,
+             Status: <i class="clsFGreen">pro</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Improvements over 2.12.0</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Move z-expansion entries in EGSyst enum at the back of the list so as not to reshuffle the subsequent values and invalidate stored reweights that are ordered by the old enum values.</li>
+                <li>Add SingleKaon library to the set loaded by the genie-config script.</li>
+                <li>Name for TGraph of strange cross sections in root files include <i>_strange</i></li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_12_2 -->
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.12.0</b>
+           <br>
+           <small>
+             SVN tag: R-2_12_0 ,
+             Released: 31 October 2016 ,
+             Status: <i class="clsFGreen">pro</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Improvements over 2.10:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Improved performance with ROOT 6.</li>
+             </ul>
+
+             <br>Physics changes - new/improved physics models:</br>
+             <ul>
+                 <li> Valencia MEC (Nieves, Simo, Vicente Vacas, PRC 83 (2011) 045501 Schwer, Cherdack, Gran, arXiv 1601.02038)</li>
+                 <li> Local Fermi Gas nuclear model </li>
+                 <li> Nieves CCQE (Nieves et al, PRC 79 (2004) 055503)</li>
+                 <li> Oset cascade in hN (Oset et al, Nucl. Phys. A468 (1987), Oset et al, Nucl. Phys. A484 (1998))</li>
+                 <li> K+ FSI in hN (see upcoming e-print)</li>
+                 <li> neutron-antineutron oscillations </li>
+                 <li> z-expansion of the axial form factor (Bhattacharya, Hill, Paz PRD 84 (2011) 073006 and Meyer, Betancourt, Gran, Hill arXiv 1603.03048) </li>
+                 <li> Several small tweaks to the resonance model (delta decays are no longer isotropic and the cross section for delta to N gamm was improved; see upcoming e-print)</li>
+                 <li> QEL hyperon production (A. Pais, Annals Phys. 63 (1971) 361)</li>
+                 <li> Berger-Sehgal coherent pion model (Berger, Sehgal PRD 79 (2009) 053003) </li>
+                 <li> Rein diffractive pion production model</li>
+                 <li> Bug fixes to the Bodek-Yang model (not applied by default)</li>
+                 <li> Energy dependent MA model (K. Kuzmin and V. Naumov, in press (2016))</li>
+                 <li> Added more functionality to the effective MEC model (7 new parameters to select do-nucleon initial state (CC nu/nubar, NC), perform integration for NC events, and provide reweighing knob for initial state dinucleon selection, see upcoming e-print).</li>
+                 <li> Numerous updates to the nucleon decay modes.</li>
+             </ul>
+
+             <br>Event generation apps</br>
+
+             <ul>
+                 <li> Patch to `gevgen` for handling input flux histograms with variable-width binning.</li>
+             </ul>
+
+             <br>Flux and geometry drivers</br>
+
+             <ul>
+                 <li> Installed the Honda, Athar, Kajita, Kasahara, and Midorikawa (HAKKM) atmospheric flux driver (GHAKKMAtmoFlux). Previously installed atmospheric fluxes were renamed (GBartolAtmoFlux -> GBGLRSAtmoFlux, GFlukaAtmo3DFlux -> GFLUKAAtmoFlux). The \phi dependence of atmospheric fluxes was installed generically at the GAtmoFlux base class (only available through HAKKM). All three fluxes available in the gevgen_atmo event generation app. </li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_12_0 -->
+
+         <br />
+
+<!--
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.11.2</b>
+           <br>
+           <small>
+             SVN tag: R-2_11_2 ,
+             Released: 30 September 2016 ,
+             Status: <i class="clsFRed">rc</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             The 2.11.X series are release candidates for 2.12.0.
+             <b>Improvements over 2.11.0:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li> Small changes to the gNtpConv class to improve performance for nucleon decay events.
+                </li>
+             </ul>
+
+             <br>Physics changes:</br>
+             <ul>
+                 <li> Include a significant expansion of the number of allowed nucleon decay channels - include all 2-body and 3-body decay channels listed in PDG and adopt the PDG decay mode numbering scheme. All decays are phase space decays at the moment. (See DUNE working group meeting notes from M. Sorel.)
+                 </li>
+                 <li> Fixed a number of bugs in the PDG table for isotope masses that entered when we did a large expansion of the table.
+                 </li>
+                 <li> Fixed a bug in the MECXSec algorithm (for Nieves, Simo, Vacas MEC) that affected spline generation.
+                 </li>
+             </ul>
+
+           </div>
+         </div> 
+
+         <br />
+-->
+<!--
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.11.0</b>
+           <br>
+           <small>
+             SVN tag: R-2_11_0 ,
+             Released: 2 September 2016 ,
+             Status: <i class="clsFRed">rc</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             The 2.11.X series are release candidates for 2.12.0.
+             <b>Improvements over 2.10:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Improved performance with ROOT 6.</li>
+             </ul>
+
+             <br>Physics changes - new/improved physics models:</br>
+             <ul>
+                 <li> Valencia MEC (Nieves, Simo, Vicente Vacas, PRC 83 (2011) 045501 Schwer, Cherdack, Gran, arXiv 1601.02038)</li>
+                 <li> Local Fermi Gas nuclear model </li>
+                 <li> Nieves CCQE (Nieves et al, PRC 79 (2004) 055503)</li>
+                 <li> Oset cascade in hN (Oset et al, Nucl. Phys. A468 (1987), Oset et al, Nucl. Phys. A484 (1998))</li>
+                 <li> K+ FSI in hN (see upcoming e-print)</li>
+                 <li> neutron-antineutron oscillations (see upcoming e-print)</li>
+                 <li> z-expansion of the axial form factor (Bhattacharya, Hill, Paz PRD 84 (2011) 073006 and Meyer, Betancourt, Gran, Hill arXiv 1603.03048) </li>
+                 <li> Several small tweaks to the resonance model (delta decays are no longer isotropic and the cross section for delta to N gamm was improved; see upcoming e-print)</li>
+                 <li> Independent implementation of GRV98 (see upcoming e-print)</li>
+                 <li> QEL hyperon production (A. Pais, Annals Phys. 63 (1971) 361)</li>
+                 <li> Berger-Sehgal coherent pion model (Berger, Sehgal PRD 79 (2009) 053003) </li>
+                 <li> Rein diffractive pion production model</li>
+                 <li> Bug fixes to the Bodek-Yang model (not applied by default, see upcoming e-print)</li>
+                 <li> Energy dependent MA model (K. Kuzmin and V. Naumov, in press (2016))</li>
+                 <li> Added more functionality to the effective MEC model (7 new parameters to select do-nucleon initial state (CC nu/nubar, NC), perform integration for NC events, and provide reweighing knob for initial state dinucleon selection, see upcoming e-print).</li>
+             </ul>
+
+             <br>Event generation apps</br>
+
+             <ul>
+                 <li> Patch to `gevgen` for handling input flux histograms with variable-width binning.</li>
+             </ul>
+
+             <br>Flux and geometry drivers</br>
+
+             <ul>
+                 <li> Installed the Honda, Athar, Kajita, Kasahara, and Midorikawa (HAKKM) atmospheric flux driver (GHAKKMAtmoFlux). Previously installed atmospheric fluxes were renamed (GBartolAtmoFlux -> GBGLRSAtmoFlux, GFlukaAtmo3DFlux -> GFLUKAAtmoFlux). The \phi dependence of atmospheric fluxes was installed generically at the GAtmoFlux base class (only available through HAKKM). All three fluxes available in the gevgen_atmo event generation app. </li>
+             </ul>
+
+          </div>
+
+         </div> 
+
+         <br />
+-->
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.10.10</b>
+           <br>
+           <small>
+             SVN tag: R-2_10_10 ,
+             Released: 3 August 2016 ,
+             Status: <i class="clsFBlue">old</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Improvements over 2.10.8:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Final State Interaction (FSI) model bugifx - The model used to make unguarded checks in some circumstances on the probe type during FSI computations, but the probe isn't defined for nucleon decay models. So, in these cases, we would access a null pointer and create undefined behavior. That is now fixed.</li>
+                <li>The Interaction package was patched to add an explicit streamer for `std::map<genie::KineVar_t,double>` which is required for reading back kinematics with newer versions of ROOT.</li>
+                <li>Change in KineVar map streamer means `Kinematics` ClassDef need to be bumped to version 2.</li>
+                <li>When using ROOT 6,  writing TTree branch `NtpMCEventRecord` refuses to be split, so don't event try (for now - will be revisited)</li>
+                <li>When generating ROOT 6 dictionary generate .rootmap file and regularize .pcm file name to match library name.</li>
+                <li>Minor fixes to header guards and to eliminate pedantic warnings.</li>
+             </ul>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>None.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_10_10 -->
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.10.8</b>
+           <br>
+           <small>
+             SVN tag: R-2_10_8 ,
+             Released: 23 May 2016 ,
+             Status: <i class="clsFBlue">old</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: 
+<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.8/xsec_comp-R-2_10_6_2016-04-04_vs_R-2_10_8_2016-05-12.pdf">world cross section data</a>
+               </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: 
+<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.8/genie-hadronization_data_comp-2016.5.17_15.57.38.pdf">hadronization data</a>.
+               </li>
+               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
+               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.10.6:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>GENIE 2.10.8 contains patches to support ROOT5 and ROOT6 concurrently. There are no other changes.</li>
+                
+                <li>One important point users need to be aware about with this release is the name of the GENIE Cint macro. One of the requirements of the new ROOT 6 compiled macros is that a function can't have the same name as a namespace any more. That means the macro can no longer be called just "genie.C" - we've renamed it "genie_setup.C". This breaks backwards compatibility with any scripts that load GENIE libraries by running this macro. The executable that runs an interpreter session is still named "genie".</li>
+             </ul>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>None.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_10_8 -->
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.10.6</b>
+           <br>
+           <small>
+             SVN tag: R-2_10_6 ,
+             Released: 6 April 2016 ,
+             Status: <i class="clsFBlue">old</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: 
+               </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: 
+               </li>
+               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
+               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.10.4:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>None.</li>
+             </ul>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>The MECPXSec cross section (for the Dytman model) is no longer forced to zero at 5 GeV. That functionality was taken out, although sufficient comments remain in the code to re-enable it by hand.</li>
+                <li>Also for Dytman MEC, the n+n and n+p fractions were swapped for the initial state target in neutrino mode (now n+p targets are more likely). Antineutrino mode was not changed.</li>
+                <li>New parameters were added to UserPhysicsOptions.xml to control the n+p fraction in addition to other parameters of the Dytman MECPXSec model.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_10_6 -->
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.10.4</b>
+           <br>
+           <small>
+             SVN tag: R-2_10_4 ,
+             Released: 5 February 2016 ,
+             Status: <i class="clsFBlue">old</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: 
+               </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: 
+               </li>
+               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
+               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.10.2:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Add Tomasz Golan (Rochester) and Julia Yarba (Fermilab) to the logo - welcome to GENIE!</li>
+                <li>Update copyright messages to 2016.</li>
+                <li>Fix <code>fZ0</code> data member shadowing bug in <code>src/FluxDrivers/GSimpleNtpFlux</code>, and make associated modifications to <code>GNuMIFlux</code> and <code>GFluxFileConfigI</code>.</li>
+                <li>Add debug output tweaks to <code>src/support/fnal/EvGen/gFNALExptEvGen.cxx</code>; no functional change.</li>
+                <li>Update NOvA locations transformation in <code>src/FluxDrivers/GNuMINtuple/GNuMIFlux.xml</code>.</li>
+             </ul>
+
+             <br>Physics changes:</br>
+
+            <ul>
+                <li>none.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_10_4 -->
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.10.2</b>
+           <br>
+           <small>
+             SVN tag: R-2_10_2 ,
+             Released: 4 January 2016 ,
+             Status: <i class="clsFBlue">old</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: 
+               </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: 
+               </li>
+               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
+               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.10.0:</b>
+             <br>
+
+             <br>Non-physics changes:</br>
+
+             <ul>
+                <li>Add Libo Jiang and Jeremy Wolcott to the logo - welcome to GENIE!</li>
+                <li>Bug fix in <code>FluxDrivers/GFlavorMap.cxx</code>: Fix test <code>string.find() == 0</code> and do some string trimming as well.</li>
+                <li>Expand file path (e.g. ~ or environment variable) of xsec file before further processing in <code>Utils/AppInit.cxx</code>.</li>
+                <li>Add a feature to the <code>Utils/GSimFiles</code> class - save the path to the XML file and introduce corresponding access method.</li>
+                <li>Allow override of default PDG file with environment variable: <code>${GENIE_PDG_TABLE}</code></li>
+             </ul>
+
+             <br>Physics changes:</br>
+
+             <ul>
+                <li>Added nuclei to the default PDG table for Nova.</li>
+                <li>Bugifx in <code>src/MEC/MECGenerator.cxx</code>: catch bad phase space decay events.</li>
+                <li>Stop photon rescattering in <code>HadronTransport/Intranuke2014.cxx</code> and <code>HadronTransport/Intranuke.cxx</code>.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_10_2 -->
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.10.0</b>
+           <br>
+           <small>
+             SVN tag: R-2_10_0 ,
+             Released: 2 November 2015 ,
+             Status: <i class="clsFBlue">old</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: 
+<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/genie-world_nu_xsec_data_comp-all-2015.10.05_11.31.14.ps">world cross section data</a>,
+<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/genie-structfunc_data_comp-2015.10.05_11.31.13.ps">structure functions</a>, and
+<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/xsec_comp_v2100_v286_oct14.ps">2.10.0 versus 2.8.6 comparisons</a>.
+               </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: 
+<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/genie-hadronization_data_comp-2015.10.5_11.31.14.ps">hadronization data</a>.
+               </li>
+               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
+               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here</a>.</li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.8.6:</b>
+             <br>
+             <p>
+               GENIE 2.10.0 is a production release. 
+             </p>
+
+             <br>
+             Non-physics changes:
+             <ul>
+               <li>
+                 The <code>XclsTag</code> object was updated with a new field for strange production for one of the new models in 2.10.0. This could impact the ability of some users to read older GENIE files.
+                 </li>
+               <li>
+                 GSL (GNU Scientific Library) is now used by default by the cross section integration routines and is a required library.
+                 We have re-tuned the parameters for producing DIS cross section splines to reflect the usage of GSL.
+                 This stabilizes a number of the "wiggles" seen in release candidate 2.9.0.
+                 </li>
+             </ul>
+
+             <br>
+             Physics changes:
+             <ul>
+               <li>Effective Spectral Function model from Bodek, Christy, and Coopersmith (EPJC (2014) 74:3091) is now available as an optional model.</li>
+               <li>Very high energy mode extension to 5 TeV.</li>
+               <li>Inclusive Eta production is included.</li>
+               <li>The Berger-Sehgal resonant pion model (PRD 76, 113004) with MiniBooNE tuning (by J. Nowak) is now available as an optional model.</li>
+               <li>Improved hA FSI model.</li>
+               <li>Single kaon production from Alam, Simo, Athar, and Vacas (PRD 82, 033001 (2010)) is now available as an optional model.</li>
+               <li>Implemented a <code>GFluxDriverFactory</code>, where flux drivers can self-register and be returned by name.</li>
+               <li>Introduced two common flux interfaces <code>GFluxExposureI</code> and <code>GFluxFileConfigI</code>, allowing <code>GNuMIFlux</code>, <code>GSimpleNtpFlux</code> and the external <code>GDk2NuFlux</code> to be used interchangeably.  Other flux drivers can start to incorporate these.</li>
+               <li>Renamed <code>gevgen_numi</code> executable to <code>gevgen_fnal</code> to emphasize its use in FNAL experiments at other beam lines (e.g. Dune); executable will dynamically pick up <code>GDk2NuFlux</code> flux driver if available (i.e. no longer a build dependence). Flux entries from the input driver will be copied to a branch along side the <code>GHepRecord</code>; flux metadata from all ntuple files will be copied to the output file.</li>
+               <li>Reinstated method in <code>GHepRecord</code> to return the stored <code>KinePhaseSpace_t</code>, allowing records to be fully recreated from elements stored in non-genie formats.</li>
+               <li>Numerous small updates to the validation packages.</li>
+             </ul>
+
+             <br>
+             Notable bug fixes. Please note, we attempt to give credit for all the changes we can, but we sometimes miss things when we review the commit history - if you see an omission, please let us know!
+             <ul>
+               <li>NC Elastic sign error discovered by L. Alvarez-Ruso (SVN 5543).</li>
+               <li>Remove explicit ".so" from loadlibs.C so ROOT's library loading mechanisms also work on Mac OS-X (SVN 5533).</li>
+               <li>Small bugfixes to the Kuzmin-Lyubushkin-Naumov model in the Berger-Sehgal resonance model by I. Kakorin (SVN 5522, 5521, 5517, 5508, 5504, 5503).</li>
+               <li>Close the directory opened by LHAPDF when getting PDF sets, from M. Nirkko (SVN 5499).</li>
+               <li>Message thresholds may be specified in an ordered list of files so they may be cascaded (SVN 5465).</li>
+               <li>Fix parameter indexing issue when defining a "box" fiducial volume. Also include option for using Geo/GeomVolSelectorRockBox as a volume limiter (this is an extension and changes no previous behaviour). (SVN 5463)</li>
+               <li>Fix small bug in the Registry::Get() method (SVN 5461).</li>
+               <li>Set fZmin and max to be largest and smallest possible in Numerical/BLI2D, from R. Gran (SVN 5388)</li>
+               <li>Call Max instead of Min when trying to get a maximum in Numerical/BLI2D, from J. Schwehr (SVN 5386)</li>
+               <li>Re-weighting bug discovered by NOvA in the Coherent model.</li>
+               <li>Re-weighting bug discovered by Minerva in the Delta model (to non-isotropic, weights were not applied to anything but delta++).</li>
+               <li>Re-weighting fix for formation zones.</li>
+             </ul>
+
+           </div>
+         </div>  <!-- end: div id="ReleaseTableHeader2" for 2_10_0 -->
+
+         <br />
+
+         <!--  hide 2.9.0
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.9.0</b>
+           <br>
+           <small>
+             SVN tag: R-2_9_0 ,
+             Released: 16 April 2015 ,
+             Status: <i class="clsFRed">rc</i>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: </li>
+               <li> Hadron rescattering data/MC comparisons: </li>
+               <li> Pre-computed cross section splines is available <a href="https://www.hepforge.org/archive/genie/data/2.9.0/">here</a>.</li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.8.6:</b>
+             <br>
+             <p>
+               GENIE 2.9.0 is a "beta release" candidate for the 2.10.0 production release. As such it is considered a "release candidate" and not a "production release."
+             </p>
+
+             <br>
+             Non-physics changes:
+             <ul>
+               <li>
+                 The <code>XclsTag</code> object was updated with a new field for strange production for one of the new models in 2.9.0. This could impact the ability of some users to read older GENIE files.
+                 </li>
+               <li>
+                 GSL (GNU Scientific Library) is now used by default by the cross section integration routines and is a required library. This introduces numerous, very small numerical perturbations in the cross section results.
+                 </li>
+             </ul>
+
+             <br>
+             Physics changes:
+             <ul>
+               <li>Effective Spectral Function model from Bodek, Christy, and Coopersmith (EPJC (2014) 74:3091) is now available as an optional model.</li>
+               <li>Very high energy mode extension to 5 TeV.</li>
+               <li>Inclusive Eta production is included.</li>
+               <li>The Berger-Sehgal resonant pion model (PRD 76, 113004) with MiniBooNE tuning (by J. Nowak) is now available as an optional model.</li>
+               <li>Improved hA FSI model.</li>
+               <li>Single kaon production from Alam, Simo, Athar, and Vacas (PRD 82, 033001 (2010)) is now available as an optional model.</li>
+               <li>Implemented a <code>GFluxDriverFactory</code>, where flux drivers can self-register and be returned by name.</li>
+               <li>Introduced two common flux interfaces <code>GFluxExposureI</code> and <code>GFluxFileConfigI</code>, allowing <code>GNuMIFlux</code>, <code>GSimpleNtpFlux</code> and the external <code>GDk2NuFlux</code> to be used interchangeably.  Other flux drivers can start to incorporate these.</li>
+               <li>Renamed <code>gevgen_numi</code> executable to <code>gevgen_fnal</code> to emphasize its use in FNAL experiments at other beam lines (e.g. Dune); executable will dynamically pick up <code>GDk2NuFlux</code> flux driver if available (i.e. no longer a build dependence). Flux entries from the input driver will be copied to a branch along side the <code>GHepRecord</code>; flux metadata from all ntuple files will be copied to the output file.</li>
+               <li>Reinstated method in <code>GHepRecord</code> to return the stored <code>KinePhaseSpace_t</code>, allowing records to be fully recreated from elements stored in non-genie formats.</li>
+               <li>Numerous small updates to the validation packages.</li>
+             </ul>
+
+             <br>
+             Notable bug fixes:
+             <ul>
+               <li>Re-weighting bug discovered by NOvA in the Coherent model.</li>
+               <li>Re-weighting bug discovered by Minerva in the Delta model (to non-isotropic, weights were not applied to anything but delta++).</li>
+               <li>Re-weighting fix for formation zones.</li>
+             </ul>
+
+           </div>
+         </div>  end: div id="ReleaseTableHeader2" for 2_9_0 
+         -->
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.8.6</b>
+           <br>
+           <small>
+             SVN tag: R-2_8_6 ,
+             Released: 14 November 2014 ,
+             Status: <I CLASS="clsFBlue"> old</I>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: </li>
+               <li> Hadron rescattering data/MC comparisons: </li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.8.4:</b>
+             <br>
+             <br>
+             Non-physics changes:
+             <ul>
+               <li>
+		<p>
+		This release is almost identical to 2.8.4 with the only change being in how the <code>$LHAPATH</code> environment variable is handled and how the patched GRV98lo file is distributed.
+		</p>
+		<p>
+		We removed the restriction on <code>$LHAPATH</code>. We now supply, in <code>$GENIE/data/evgen/pdfs</code>, the patched PDF.
+		Please copy this to your <code>$LHAPATH area</code>. Note the PDF has a different name - it is <code>GRV98lo_patched.LHgrid</code>.
+		This changed name is reflected in <code>$GENIE/config/PDFLIB.xml</code>.
+		By default, GENIE will not run if you do not copy the patched PDF file to that area.
+		If you would like to use the older, un-patched PDF, simply rename the PDF in the configuration XML to drop the <code>_patched</code> part of the filename.
+		</p>
+               </li>
+             </ul>
+
+           </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version 2.8.4</b>
+           <br>
+           <small>
+             SVN tag: R-2_8_4 ,
+             Released: 23 September 2014 ,
+             Status: <I CLASS="clsFBlue"> old</I>
+           </small>
+           <br>
+           <br>
+           <div id="ReleaseTableBody">
+             <b>Validation plots for this release:</b>
+             <br>
+             <ul>
+               <li> Neutrino cross-section data/MC comparisons: </li>
+               <li> Neutrino-induced hadronization data/MC comparisons: </li>
+               <li> Hadron rescattering data/MC comparisons: </li>
+             </ul>
+
+             <br>
+
+             <b>Improvements over 2.8.2:</b>
+             <br>
+             <br>
+             Non-physics changes:
+             <ul>
+               <li>
+               Fixed a bug in make install (introduced in 2.8.2). It did not previously run install on the Conventions package. (P. Rodrigues, MINERvA; rev r4219)
+               </li>
+
+               <li>
+               Update GNuMIFlux.xml for Minerva flux window size and add preliminary LBNE transformations (R. Hatcher; rev r4221)
+               </li>
+
+               <li>
+               Support for Dk2Nu in gevgen_numi (src/support/numi/EvGen/gNuMIExptEvGen.cxx); build instructions can be found <a href="https://cdcvs.fnal.gov/redmine/projects/dk2nu/wiki/Wiki">here</a>.
+               </li>
+
+               <li>
+               Fixed a bug (introduced in 2.8.2) in PDF/PDFLIB.cxx that could create situation where one eventually run out of file handles checking the LHAPATH. (P. Rodrigues, MINERvA; rev r4224)
+               </li>
+
+               <li>
+               Added support to GNuMIFlux for Minerva variant of g4numi format ntuples; additions should be compatible with older file layouts as well; bump ClassDef version of associated GNuMIFluxPassThroughInfo. (R. Hatcher; rev r4225)
+               </li>
+
+               <li>
+               Update GNuMIFlux.xml with new NOvA NearDet coordinate transformation (R. Hatcher; rev r4227)
+               </li>
+
+               <li>
+               Add NOvA rock configurations to GNuMIFlux.xml, remove old unnecessary configs and clean up some misleading comments (R. Hatcher; rev r4229)
+               </li>
+             </ul>
+
+           </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+          <b>Version 2.8.2 </b>
+          <br />
+          <small>
+           SVN tag: R-2_8_2,
+           Released: 6 September 2014,
+           Status: <I CLASS="clsFBlue"> old</I>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+              <b>Validation plots for this release:</b>
+              <br />
+              <ul>
+                <li> Neutrino cross-section data/MC comparisons: </li>
+                <li> Neutrino-induced hadronization data/MC comparisons: </li>
+                <li> Hadron rescattering data/MC comparisons: </li>
+              </ul>
+              <br>
+
+              <b>Improvements over 2.8.0:</b>
+              <br>
+              <br>
+              Non-physics changes:
+             <ul>
+              <li>
+               Bug fix in the event generator driver. (MCJDriver). (J. Koskinen, Ice Cube; revision 4136)
+              </li>
+              <li>
+               Bug fix in the beam line flux driver. (T. Dealtry, T2K; revision 4137)
+              </li>
+              <li>
+               Performance improvement for the re-weighting initialization code. (C. Backhouse, NOvA; revision 4133)
+              </li>
+              <li>
+               Intranuke: additional validation data sets, new validation programs. (S. Dytman, N. Geary and T. Golan)
+              </li>
+              <li>
+               Makefiles: stop the build on an error. (P. Rodrigues, MINERvA; revision 4141)
+              </li>
+              <li>
+              Add support for Dk2Nu flux format files. (R. Hatcher; revision 4216)
+              </li>
+            </ul>
+
+            Physics model changes:
+            <ul>
+              <li>
+                Bug fix in the coherent pion model
+                (fencepost error in the indexing code for looking up the pion-nucleus cross section).
+                (H. Gallagher, D. Cherdack, and D. Scully)
+             </li>
+             <li>
+               Intranuke changes: (S. Dytman)
+               <ul>
+                 <li>
+                  Fix problem with high energy protons failing and causing program to delay,
+                 </li>
+                 <li>
+                  Fix confusing names for absorption final state.
+                 </li>
+                 <li>
+                  Fix strangeness conservation problem in kaon absorption.
+                 </li>
+               </ul>
+            </li>
+            <li>
+              PDF overhaul (H. Gallagher and G. Perdue)
+              <p>
+              We recommend using LHAPDF5 and not Cernlib for PDFs. There is a bug in the version of GRV98lo that comes with
+              LHAPDF5. We contacted the LHAPDF authors and they immediately provided a fixed file, but it must be distributed
+              with GENIE as LHAPDF5 is frozen. The PDF set included here was producted by Graeme Watt (Durham, UK).
+              The patched version recreates exactly:
+               <a href=http://hepdata.cedar.ac.uk//hepdata/pdflib/grv/grv98/grv98.f>grv98.f</a>
+             </p>
+             <p>
+             NOTE: In this version of GENIE, you MUST use the PDFs in $GENIE/data/evgen/pdfs with LHAPDF5. You MUST set your LHAPATH environemnt variable to $GENIE/data/evgen/pdfs!
+             </p>
+             <p>
+              Our thanks to Graeme and LHAPDF for the patched file. Please note that this file will work only with LHAPDF 5.x and is not properly formatted for LHAPDF 6.
+             </p>
+            </li>
+            <li>
+              Nuclear modification to structure functions is now f(x), not f(rescaled x).  (B. Tice, MINERvA/SeaQuest; revision 4139)
+            </li>
+            <li>
+             Bug fix in the formation zones calculation for nucleons (H. Gallagher; revision 4138)
+             <p>
+              Prior versions of the GENIE implementation of the formation zone underestimated it for nucleons.
+              The problem is summarized in Section IV, and in particular Figure 8 of
+              <a href=http://arXiv.org/pdf/1202.4197.pdf>this paper.</a>
+             </p>
+            </li>
+          </ul>
+          </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+          <b>Version 2.8.0 </b>
+          <br />
+          <small>
+           SVN tag: R-2_8_0,
+           Released: 27 March 2013,
+           Status: <I CLASS="clsFBlue"> old</I>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+              <b>Validation plots for this release:</b>
+              <br />
+              <ul>
+                <li> Neutrino cross-section data/MC comparisons: </li>
+                <li> Neutrino-induced hadronization data/MC comparisons: </li>
+                <li> Hadron rescattering data/MC comparisons: </li>
+              </ul>
+
+              <br />
+
+              <b>Improvements over 2.6.0:</b>
+              <br />
+              <br />
+              New interaction processes:
+              <ul>
+                   <li> First implementation of a meson exchange current (MEC) event generator.
+                        The CC MEC generator simulates CCQE-like scattering off nucleon clusters and is tuned to the CCQE-like rate
+                        difference between the MiniBooNE data and the nominal CCQE expectation based on bubble chamber measurements on deuterium.
+                        </li>
+                   <li> Implemented inverse muon decay (IMD) annihilation channel
+                        v&#772;<sub>e</sub> e<sup>-</sup> &rarr; &mu;<sup>-</sup> v&#772;<sub>&mu;</sub>.
+                        Before, only v<sub>&mu;</sub> e<sup>-</sup> &rarr; &mu;<sup>-</sup> v<sub>e</sub> was implemented.
+                        New code was contributed by Rosen Matev, Roumen Tsenov et al.
+                        </li>
+              </ul>
+
+              Improvements in hadronic simulations:
+              <ul>
+                   <li> Major INTRANUKE code restructuring and deployment of an experimental version of the new hN INC model. </li>
+                   <li> INTRANUKE particle stepping changes / additions:
+                        &pi;<sup>-</sup>,&pi;<sup>+</sup> and n,p cross-section differences are taken into account.
+                        The isospin of nuclear medium is treated properly.
+                        </li>
+                   <li> INTRANUKE hA addition:
+                        More complete modeling of pion absorption and nucleon knockout processes based on
+                        a parameterization of the hN model. The number of produced nucleons is chosen from a distribution,
+                        then a phase space decay is used to set the nucleon kinematics.
+                        </li>
+                   <li> INTRANUKE hA addition:
+                        Inelastic reactions now treated as quasielastic. Angle chosen from 2-body kinematics, includes binding
+                        energy and Fermi motion.  Pauli blocking is included.
+                        </li>
+                   <li> INTRANUKE hA addition:
+                        Pion production modeling now closer to data. Use compilation of data and fits for &pi;N&rarr;&pi;&pi;N
+                        and for NN&rarr;&pi;NN. Kinematics generated vis phase space decays.
+                        User has choice of including the effect of further intranuclear rescattering on intranuclear rescattering products
+                        at the expense of reweighting unitarity (for currently available reweighting algorithm).
+                        </li>
+                   <li> INTRANUKE hA addition: Kaon rescattering </li>
+               </ul>
+
+
+              Event generation apps, neutrino fluxes and geometry drivers:
+              <ul>
+                   <li> Added nucleon-decay event generation application. Nuclear effects are simulated using the same models used for neutrino scattering.
+                        The following decay modes are simulated:
+                            p &rarr; e<sup>+</sup> &pi;<sup>0</sup>,
+                            p &rarr; &mu;<sup>+</sup> &pi;<sup>0</sup>,
+                            p &rarr; e<sup>+</sup> &eta;<sup>0</sup>,
+                            p &rarr; &mu;<sup>+</sup> &eta;<sup>0</sup>,
+                            p &rarr; e<sup>+</sup> &rho;<sup>0</sup>,
+                            p &rarr; &mu;<sup>+</sup> &rho;<sup>0</sup>,
+                            p &rarr; e<sup>+</sup> &omega;<sup>0</sup>,
+                            p &rarr; &mu;<sup>+</sup> &omega;<sup>0</sup>,
+                            n &rarr; e<sup>+</sup> &pi;<sup>-</sup>,
+                            n &rarr; &mu;<sup>+</sup> &pi;<sup>-</sup> and
+                            p &rarr; v&#772; K<sup>+</sup>.
+                        </li>
+                   <li> Overhaul of the GENIE FLUKA and BGLRS atmospheric neutrino flux drivers (contributed by Andy Blake).
+                        The status of these drivers is now upgraded from experimental to production. </li>
+                   <li> Updates to the NuMI flux driver: Allow for non-random initial entry.
+                        Correct POT accumulation in case of flavor rejection and/or in case the flux is used for geometry exploration.
+                        Allow vector of file patterns to be passed to the driver.
+                        </li>
+                   <li> Allow geometry exploration with rays of maximum neutrino energy. </li>
+                   <li> Additional support for PathLengthList manipulation and error handling in event generation drivers. </li>
+                   <li> Additional support for GFlavorMixerI derived classes. </li>
+               </ul>
+
+              Data archives, validation, tuning & reweighting apps:
+              <ul>
+                   <li> Updated and re-organised the extensive neutrino-,
+                        electron- and hadron-nucleus scattering data archive used for physics validation and tuning.
+                        The new data archives are stored in $GENIE/data/validation </li>
+                   <li> Updated and re-organised the suite of validation and tuning programs. </li>
+                   <li> Event reweighting updates bring the reweighting in sync with the latest INTRANUKE hA developments. </li>
+              </ul>
+
+              Configuration and build system and other technical aspects:
+              <ul>
+                  <li> GENIE environmental variables ($GSEED, $GSPLOAD, $GEVGL, $GMSGCONF, $GCACHEFILE, $GUNPHYSMASK, $GMCJMONREFRESH, $GHEPPRINTLEVEL,
+                       $GPRODMODE, $GDISABLECACHING) may no longer used. Corresponding command-line arguments were added in all GENIE applications.
+                       </li>
+              </ul>
+
+              Bug-fixes:
+              <ul>
+                 <li> </li>
+              </ul>
+
+              <br />
+              In addition, v2.8.0 includes all bug-fixes and new features also
+              installed in 2.6.2, 2.6.4, 2.6.6 and 2.6.8 revisions (see below).
+
+             </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+          <b>Version 2.6.8</b>
+          <br />
+          <small>
+           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_8">R-2_6_8</A>,
+           Released: 10 January 2013,
+           Status: <I CLASS="clsFBlue"> old</I>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+            This is a patch release including small fixes kindly provided by Brett Viren, Dimitris Lennis
+            and Tarak Thakore so that GENIE builds against ROOT 5.34/03 with GCC 4.3.2
+            and on Ubuntu 12.*.
+          </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+          <b>Version 2.6.6</b>
+          <br />
+          <small>
+           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_6">R-2_6_6</A>,
+           Released: 10 February 2012,
+           Status: <I CLASS="clsFBlue"> old</I>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+            This is a patch release issued in preparation for T2K MC production 5, which allows the
+            T2K flux driver and event generation application to handle the 4-fold size increase of
+            the combined input JPARC flux simulation n-tuples.
+          </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+          <b>Version 2.6.4</b>
+          <br />
+          <small>
+           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_4">R-2_6_4</A>,
+           Released: 07 July 2011,
+           Status: <I CLASS="clsFBlue"> old</I>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+              This is a patch release issued in preparation for the new T2K sand muon geometry and flux (nd13).
+              The JPARC neutrino flux driver was trivially extended to handle a larger number of near detector locations
+              (up to 50; was up to 10).
+          </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+          <b>Version 2.6.2</b>
+          <br />
+          <small>
+           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_2">R-2_6_2</A>,
+           Released: 01 April 2011,
+           Status: <I CLASS="clsFBlue"> old</I>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+                  <b>Improvements over 2.6.0:</b>
+                  <ul>
+                   <li> Bug-fix: Transition from KNO to Pythia6 (W range from 2.3 to 3.0 GeV) in AGKY was reversed (reported by Torben Ferber). </li>
+                   <li> Bug-fix: Change the way the top volume name is matched in ROOT geometry navigation code. Previously the string length was not
+                        required to be same and sometimes led to degeneracies and selection of incorrect top volume (reported by Kevin Connolly). </li>
+                   <li> Bug-fix: The atmospheric flux driver was not generating flux vertices uniformly (per unit area) in the plane which is perpendicular to the flux neutrino direction
+                        (reported by Torben Ferber). </li>
+                   <li> Bug-fix: T2K flux driver was ignoring decay modes added in JNUBEAM version 10a (numu from K+ and K0, numubar from K- and K0, nue from pi+, nuebar from pi-).</li>
+                   <li> Speed optimizations when generating events over complex detector geometries with neutrinos drawn from beam-line simulation ntuples.
+                        Dramatic speed increases of 1-2 orders of magnitude can be achieved for event generation over complex geometries
+                        (approaching speed of event generation for single nuclear targets).
+                        Changes to the flux interface and GMCJDriver.
+                        Currently only the T2K-specific event generation app employs the optimized scheme.
+                   <li> Improvement to reweighting tools (brings them in line with those used for evaluating GENIE systematics in the 2010a T2K analysis).</li>
+                   <li> T2K event generation application: Add option to pre-calculate event generation probabilities for all neutrinos in the input flux ntuple.
+                        Print out of exact event rate predictions, for use when deciding how many events to put in a spill/bunch later in T2K MC chain.</li>
+                   <li> T2K flux driver updates: Pass-through information includes all new variables in most recent 11a JNUBEAM T2K flux files.
+                        Ability to handle much larger flux files. Implement flux interface extension required for speed optimization. </li>
+                   <li> Geometry package: New classes GeomVolSelectorFiducial and GeomVolSelectorRockBox (see class documentation). </li>
+                   <li> Flux package: New classes GFlavorMixerI, GFluxBlender (see class documentation).
+                        Added SetUserCoordSystem(TRotation &) in atmospheric flux driver to set rotation
+                        between the topocentric horizontal and a user-defined detector coordinate system.</li>
+                   <li> Installed new atmospheric neutrino event generation application (gevgen_atmo). See $GENIE/src/support/atmo/EvGen/. </li>
+                   <li> Installed new event reweighting application (grwght1scan). See $GENIE/src/support/rwght/. </li>
+                  </ul>
+             </div>
+           </div>
+
+           <br />
+
+           <div id="ReleaseTableHeader2">
+             <b>Version 2.6.0</b>
+             <br />
+             <small>
+               SVN tag:  <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_0">R-2_6_0</A>,
+               Released: 17 March 2010,
+               Status:   <I CLASS="clsFBlue"> old</I>
+             </small>
+             <br />
+             <br />
+             <div id="ReleaseTableBody">
+                  <b> Improvements over 2.4.0:</b>
+                  <ul>
+                    <li> Included all bug-fixes and new features also installed in 2.4.2 and 2.4.4 revisions (see below).</li>
+                    <li> Added electron-nucleon/nucleus scattering simulation capabilities.
+                         Now can validate GENIE against electron scattering data
+                         using the exact same phyhsics framework that simulates neutrino interactions. </li>
+                    <li> Significant extension of the GENIE event reweighting capabilities.</li>
+                    <li> Collected & released many of the GENIE physics validation and model fitting tools.</li>
+                    <li> AGKY hadronization: Improvements in strange particle production.</li>
+                    <li> Added interface to LHAPDF -
+                         Note change in GENIE dependencies (We recommend using the light-weight LHAPDF library
+                         and scrapping CERNLIB) </li>
+                    <li> Users now have very fine control over which particles to decay and which decay modes to inhibit.</li>
+                    <li> Geometry navigation: Significantly improved performance (ROOT geometries).</li>
+                    <li> Geometry navigation: Added capability to define arbitrary fiducial volume cuts. </li>
+                    <li> JPARC neutrino flux driver: Certified with version 10a fluxes and included additional flux pass-through
+                         info. Maintained compatibility with 07a fluxes. </li>
+                    <li> NuMI flux driver: Numerous improvements. FLUGG support.</li>
+                    <li> Improvements of atmospheric flux drivers.</li>
+                    <li> Installed new generic ntuple flux driver </li>
+                    <li> Updated the `t2k_rootracker', `numi_rootracker' bare-ROOT event formats
+                         and the `t2k_tracker' SuperK text event format following communication
+                         with relevant detector and analysis groups.</li>
+                    <li> Added first experimental version of a diffractive scattering generator. </li>
+                    <li> Interfaced GENIE with GNU Scientific Library to access advanced multi-dimensional integration algorithms
+                         (experimental).</li>
+                    <li> Updated for use with the latest gcc and in 64-bit platforms.</li>
+                  </ul>
+             </div>
+           </div>
+
+           <br />
+
+           <div id="ReleaseTableHeader2">
+             <b>Version 2.4.4 </b>
+             <br />
+             <small>
+               SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_4"> R-2_4_4</A>,
+               Released: 19 June 2009,
+               Status: <I CLASS="clsFBlue"> old</I>
+             </small>
+             <br />
+             <br />
+             <div id="ReleaseTableBody">
+                  This is a <b>A minor 2.4 revision</b>
+                  primarily to support early-summer physics MC production plans (T2K/MDC1)
+                  while 2.6.0 is in the works.
+                  <ul>
+                    <li> Bug-fix: Corrected Adler's PCAC CC suppression term in
+                         the coherent pion production model (mpi -> mpi^2)</li>
+                    <li> Bug-fix: Corrected pion kinematics in coherent pion production
+                         scattering (the transverse momentum randomization in the LAB^{prime}
+                         frame, z^{prime} is along \ver{q}, and the rotation from LAB^{prime} to LAB
+                         were taking place in reversed order). </li>
+                    <li> Bug-fix: Fixed problem with density-weighted path-lengths in the
+                         ROOT geometry navigation code.</li>
+                    <li> Bug-fix: Fixed problem with PYTHIA decay-products entering the GHEP
+                         record with different position 4-vector units than expected.</li>
+                    <li> Bug-fix: Fixed a minor problem with the search for the maximum coherent differential
+                         cross section, which was preventing coherent pion event kinematics from being
+                         generated for energies very close to the energy threshold.</li>
+                    <li> Requested feature: As per popular request, GENIE won't decay pi0's by
+                         default. If you need to restore the previous behaviour
+                         then toggle the `InhibitPi0Decay' flag. </li>
+                    <li> Requested feature: Tweaked the JPARC flux driver and the T2K event
+                         generation application to allow event generation for specific
+                         neutrino flavours only.</li>
+                    <li> Requested feature: Added option to generate events in specific
+                         geometry volumes only.</li>
+                    <li> Requested feature: Addded tool to generate NEUT-like cross section
+                         table for SK MC job normalization. </li>
+                    <li> Other: Updated Ar40 removal energy as per ArgoNEUT request.
+                         Updated the PDG table. Added snapshot of the NuMI flux driver (as of the
+                         v2.4.4 tagging date) for test runs by the NuMI expts.
+                         Backported a version of gntpc that includes the implementation of the
+                         `numi_rootracker' bare-ROOT format. Backported improvements to the gntpc
+                         code generating summary ntuples.</li>
+                  </ul>
+             </div>
+           </div>
+
+           <br />
+
+           <div id="ReleaseTableHeader2">
+             <b>Version 2.4.2</b>
+             <br />
+             <small>
+               SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_2">R-2_4_2</A>,
+               Released: 20 December 2008,
+               Status:  <I CLASS="clsFBlue"> old</I>
+             </small>
+             <br />
+             <br />
+             <div id="ReleaseTableBody">
+                 This is a <b>A minor 2.4 revision</b>
+                  primarily to support MDC0 T2K/SuperK production plans.
+                  <ul>
+                    <li> Bug-fix: Fixed wrong Delta- code, affecting the Delta- decays and the
+                         produced final states in nubar RES events </li>
+                    <li> New feature: Finalized/extended the 't2k_tracker' format and
+                         the mapping to NEUT reaction codes. </li>
+                  </ul>
+             </div>
+           </div>
+
+           <br />
+
+           <div id="ReleaseTableHeader2">
+               <b>Version 2.4.0</b>
+               <br />
+               <small>
+                  SVN tag:  <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_0">R-2_4_0</A>,
+                  Released: 08 June 2008,
+                  Status:   <I CLASS="clsFBlue"> old</I>
+               </small>
+               <br />
+               <br />
+               <div id="ReleaseTableBody">
+                  <b>Improvements over 2.2.*:</b>
+                  <ul>
+                    <li> Significant speed improvements (event generation ~ x3 faster than 2.2.2 for event generation
+                         for fixed initial state. ~ x1E+2 faster for event generation on ROOT geometries).</li>
+                    <li> Fixed a few remaining memory leaks. </li>
+                    <li> Installed new customized event generation application for T2K (gT2Kevgen, see $GENIE/src/support/t2k/EvGen)
+                         including a driver for the JPARC neutrino flux
+                         and hooks for the nd280, 2km, ingrid and SuperK detector geometries and/or nuclear target mix.
+                    <li> Added event converter from GENIE's native GHEP format to T2K/nd280's ROOT-only format (rootracker) </li>
+                    <li> Added simulation of nuclear de-excitation gamma rays for O16.</li>
+                    <li> Added a preliminary implementation of anomaly mediated neutrino - photon interactions
+                         [Harvey, Hill and Hill, PRL99,261601(2007)]</li>
+                    <li> Added the V.Tvaskis et al. (PRL 98, 142301, 2007) parameterization of the longitudinal
+                         to transverse cross section ratio R as an alternative to the existing Whitlow parameterization.</li>
+                    <li> More carefull treatment of thresholds in the cross section splines.</li>
+                    <li> Bug fixes in algorithm navigating ROOT-based detector geometry descriptions. </li>
+                    <li> Added a flux driver for the Bartol atmospheric neutrino flux. </li>
+                    <li> The code reading the input XML cross section files has been switched from the tree-based libxml2 API
+                         to the XmlTextReader libxml2 API. Hugely better speed/memory performance when using large XML cross
+                         section files (eg ~100MB as when using all nuclear targers on nd280 & MINOS geometries).
+                         Requires libxml2 version &ge; 2.5.0</li>
+                    <li> Configuration script changes.</li>
+                  </ul>
+             </div>
+           </div>
+
+           <br />
+
+           <div id="ReleaseTableHeader2">
+               <b>Version 2.2.2 </b>
+               <br />
+               <small>
+                 SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_2_2"> R-2_2_2</A>
+                 Released: 19 December 2007,
+                 Status:  <I CLASS="clsFBlue"> old</I>
+               </small>
+               <br />
+               <br />
+               <div id="ReleaseTableBody">
+                  <b>A minor 2.2 revision:</b>
+                  <ul>
+                    <li> Updates the code converting events from the native GHEP/ROOT format to
+                         the tracker format used by T2K to better match what is expected by the
+                         T2K/nd280 detector mc.
+                  </ul>
+                 </small>
+             </div>
+           </div>
+
+           <br />
+
+           <div id="ReleaseTableHeader2">
+               <b>Version 2.2.0</b>
+               <br />
+               <small>
+                  SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_2_0">R-2_2_0</A>,
+                  Released: 12 December 2007,
+                  Status: <I CLASS="clsFBlue"> old</I>
+               </small>
+               <br />
+               <br />
+               <div id="ReleaseTableBody">
+                  <b>Improvements over 2.0.*:</b>
+                  <ul>
+                    <li> Changes to the determination of the mean free path of hadrons in nuclear
+                         matter in INTRANUKE / hA model (gDocDB-760)</li>
+                    <li> Intranuclear vertex selection uses a realistic nuclear density profile.</li>
+                    <li> Added QE charm production (gDocDB-759)
+                         using the cross section model of S.G.Kovalenko, Sov.J.Nucl.Phys.52:934 (1990)</li>
+                    <li> Added elastic ve- scattering. </li>
+                    <li> Added GENIE tcp/ip event server for interfacing with legacy (fortran)
+                         MINOS detector MC (gminos)</li>
+                    <li> Added a cross section model re-weighting engine </li>
+                    <li> Added option to simulate multi-nucleon emission from N-N correlations
+                         (not fully developed yet and not enabled by default)</li>
+                    <li> Added a few modifications / flags so as to handle newer version of log4cpp and
+                         gcc versions > 4.1 and 64-bit systems.
+                  </ul>
+             </div>
+           </div>
+
+           <br />
+
+           <div id="ReleaseTableHeader2">
+               <b>Version 2.0.0 </b>
+               <br />
+               <small>
+                  SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_0_0">R-2_0_0</A>
+                  Released: 17 August 2007,
+                  Status: <I CLASS="clsFBlue">old</I>
+               </small>
+               <br />
+               <br />
+               <div id="ReleaseTableBody">
+                  <b>The first GENIE production release (Auk)</b>.
+                  <br />
+                  The default physics in 2.0.0 is identical with the neugen/'daikon+'
+                  version (daikon+ is a bug fix revision of the MC used at the <b>2007 MINOS CC Analysis</b>).
+                  A description of the physics model (cross section, hadronization and intranuclear rescattering
+                  can be found in gDocDB-756, 757 and 758).
+                  Various plots illustrating the GENIE-2.0.0 - neugen/daikon+ equivalence can be
+                  found in (gDocDB-755 [pub]).
+                  GENIE 2.0.0 supersedes neugen & future major model improvements will only be
+                  included in GENIE.
+             </div>
+           </div>
+
+           <br />
+
+
+         <!--
+             *** *** *** *** *** *** GENESIS *** *** *** *** *** ***
+          -->
+
+         <br />
+         <br />
+
+         <div id="ReleaseTableHeader">
+             <IMG src="./images/release/creation2.jpeg" align="left" width="140px" hspace="10px">
+               <B> "The genesis" (v1) </B> <br />
+               <I class="clsReleaseTableHeaderSubtext"> 
+                  Pre-release versions of the code produced in 2002-2003 and used for calculations in Costas' PhD thesis.
+                  A re-engineering of the GENIE Generator platform using best practices of object-oriented design 
+                  started at RAL in mid ~2004 as a side project, leading to a first public production release (v2.0.0) in August 2007.
+               </I>
+         </div>
+
+     </div>
+
+
+
+
+  </div> <!-- main -->
+          
+  <!--#include FILE="./footer.inc"-->
+        
+  </body>
+</html> 
+         

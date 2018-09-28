@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<!--#include FILE="./header.inc"-->
+
+<body>
+
+   <!--#include FILE="./navigation.inc"-->
+
+   <div id="MainIn2ColumnPage">
+
+     
+     <div CLASS="clsInsidePageHeader"> Get started with the GENIE/Generator  </div>
+
+      <br />
+
+      This page includes a basic descriptions of the steps required to obtain the GENIE/Generator source code (and the required 3rd party software packages),
+      configure it, build it, and run a few simple post-installation tests. For more details, please see the 
+      <A href="<A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2">GENIE Physics & User manual</A>.
+      Please report any problems to the authors.
+
+      <br />
+      <br />
+
+      <div id="InsidePageSectionHeader"> 
+         Obtaining the GENIE/Generator source code
+      </div>
+      <div id="InsidePageSectionBody">
+        You can obtain the GENIE/Generator source code from its official repository in the <A href="https://github.com/GENIE-MC">GENIE GitHub organization</A>.
+        Detailed instructions are provided in the GENIE GitHub page.
+        For example, to obtain the GENIE trunk (master) version, type:        
+        <br />
+        <br />
+        <div id="terminal">
+         <b>shell%</b> git clone https://github.com/GENIE-MC/Generator.git
+        </div>
+      </div>
+
+      <br />
+
+      <div id="InsidePageSectionHeader"> 
+         Required third-party software packages
+      </div>
+      <div id="InsidePageSectionBody">
+
+        This section contains information for building 3rd party (external) software used by GENIE.
+        If you encounter problems building the 3rd party software please contact the
+        package authors or your local system administrators.
+        <br />
+        <br />
+        For a typical GENIE installation you need:
+        <br />
+                       <UL>
+                          <LI> <A href="http://root.cern.ch" target="_top">
+                                  ROOT</A>
+                          <LI> <A href="http://www.gnu.org/software/gsl/" target="_top">
+                                  GNU Scientific Library (GSL)</A> 
+                          <LI> <A href="http://www.thep.lu.se/~torbjorn/Pythia.html" target="_top">
+                                  PYTHIA6</A> 
+                          <LI> <A href="http://projects.hepforge.org/lhapdf/" target="_top">
+                                  LHAPDF5 or LHAPDF6 </A> [Both of which are optional in GENIE v3.0.0 and above]
+                          <LI> <A href="http://sourceforge.net/projects/log4cpp" target="_top">
+                                  log4cpp</A>
+                          <LI> <A href="http://www.xmlsoft.org" target="_top"> 
+                                  libxml2</A>
+                       </UL>
+      </div>
+
+     <br />
+
+     <div id="InsidePageSectionHeader"> 
+          Installation of external packages in UNIX (incl. LINUX, MAC OS X) 
+     </div>
+     <div id="InsidePageSectionBody">
+      <br />
+
+      <div id="InsidePageSubSectionHeader">
+        <B> log4cpp </B> 
+      </div>     
+      <div id="InsidePageSubSectionBody">
+          <b>Description:</b> Message/Error logging library for C++
+          <br />
+          <b>Recommended version:</b> 
+          <br />
+          <b>Web-site:</b> 
+                 <A href="http://sourceforge.net/projects/log4cpp" target="_top">
+                                   http://sourceforge.net/projects/log4cpp</A>                
+          <br />
+          <br />
+          <b>Installing development version from source: </b>
+          <br />
+          Get the source code from the sourceforge.net CVS repository:
+          <DIV id="terminal">
+            <b>shell$</b> cd /your/software/area/
+            <br />
+            <b>shell$</b> cvs -d :pserver:anonymous@log4cpp.cvs.sourceforge.net:/cvsroot/log4cpp login
+            <br />
+            <I>(passwd: just press enter)</I>
+            <br />
+            <b>shell$</b> cvs -d :pserver:anonymous@log4cpp.cvs.sourceforge.net:/cvsroot/log4cpp -z3 co log4cpp
+            <br />
+            <b>shell$</b> cd log4cpp
+            <BR>
+            <b>shell$</b> ./autogen.sh
+            <BR>
+            <b>shell$</b> ./configure --prefix=[location]
+            <BR>
+            <b>shell$</b> gmake
+            <BR>
+            <b>shell$</b> gmake install
+          </DIV>
+          <br />
+          <div id="InstSubSectionNotes">
+          <b>Notes:</b>
+            <br />
+            - log4cpp may already exist in your system (look for a liblog4cpp library)
+            <br />
+            - Precompiled binaries are also readily available on LINUX (eg using yum: `yum install log4cpp')
+              and MAC OS X (eg. using DarwinPorts: `sudo port install log4cpp').
+          </div>
+      </div>     
+
+      <br />
+
+      <div id="InsidePageSubSectionHeader">
+        <B> libxml2 </B> 
+      </div>     
+      <div id="InsidePageSubSectionBody">
+          <b>Description:</b> XML parser. 
+          <br />
+          <b>Recommended version:</b> any reasonably new
+          <br />       
+          <b>Web-site:</B>
+             <A href="http://www.xmlsoft.org" target="_top"> http://www.xmlsoft.org</A>
+          <br />
+          <br />
+          <b>Installing development version from source:</b>
+          <br />
+          <DIV id="terminal">
+            <b>shell$</b> cd /your/software/area/
+            <br />
+            <b>shell$</b> svn co https://svn.gnome.org/svn/libxml2/trunk libxml2
+            <BR>
+            <b>shell$</b> cd libxml2
+            <BR>
+            <b>shell$</b> ./autogen.sh --prefix=[location]
+            <BR>
+            <b>shell$</b> gmake
+            <BR>
+            <b>shell$</b> gmake install
+          </DIV>
+          <br />
+          <b>Notes:</b>
+          <br />
+            - libxml2 is most likely  already installed at your system (look for a libxml2 library)
+          <br />
+            - Precompiled binaries are also readily available on LINUX (eg using yum: `yum install libxml2')
+              and MAC OS X (eg. using DarwinPorts: `sudo port install libxml2').
+      </div>
+
+      <br />
+
+      <div id="InsidePageSubSectionHeader">
+        <B> LHAPDF </B> 
+      </div>     
+      <div id="InsidePageSubSectionBody">
+          <b>Description:</b> The Les Houches Accord PDF Interface
+          <br />
+          <b>Recommended version:</b> 5.9.1
+          <br />       
+          <b>Web-site:</b> <A href="http://projects.hepforge.org/lhapdf/" target="_top">
+                 http://projects.hepforge.org/lhapdf/</A>
+          <br />       
+          <br />       
+          <b>Installing version x.y.z from source:</b>
+          <br />
+          <DIV id="terminal">
+            <b>shell$</b> cd /your/software/area/
+            <br />
+            <b>shell$</b> wget http://www.hepforge.org/archive/lhapdf/lhapdf-<i>x.y.z</i>.tar.gz
+            <br />
+            <b>shell$</b> tar xzvf lhapdf-<i>x.y.z</i>.tar.gz
+            <br />
+            <b>shell$</b> cd lhapdf
+            <br />
+            <b>shell$</b> ./configure --prefix=[location]
+            <br />
+            <b>shell$</b> gmake
+            <br />
+            <b>shell$</b> gmake install
+            <br />
+          </DIV>
+      </div>
+
+      <br />
+
+      <div id="InsidePageSubSectionHeader">
+        <B> PYTHIA6 and ROOT/PYTHIA thin wrapper library </B> 
+      </div>     
+      <div id="InsidePageSubSectionBody">
+          <b>Description:</b> LUND Monte Carlo (used by GENIE for hadronizing the high-W fraction of neutrino events)
+          <br />
+          <b>Recommended version:</b> 
+             Do not use the precompiled PYTHIA version that comes with CERNLIB.
+          <br />
+          <b>Web-site:</b> 
+              <A href="http://www.thep.lu.se/~torbjorn/Pythia.html" target="_top">
+                                       http://www.thep.lu.se/~torbjorn/Pythia.html </A>
+          <br />
+          <br />
+          <b>Installing from source:</b>
+          <br />        
+          There is a number of steps in order to build PYTHIA for GENIE.
+          Downloading, tweaking and building PYTHIA is automated using Robert Hatcher's 
+          <A href="http://projects.hepforge.org/genie/trac/browser/generator/trunk/src/scripts/build/ext/build_pythia6.sh">build_pythia6.sh</i></A> script.
+          Please read the script documentation.
+          It would download all the required source files, modify them as needed and build them. So you only need to do:
+          <br />
+          <DIV id="terminal">
+            <b>shell$</b> cd /your/software/area/
+            <br />
+            <b>shell$</b> source build_pythia6.sh
+            <br />
+          </DIV>
+          <br />       
+          <div id="InsidePageSubSectionNotes">
+           <B>Notes:</B>
+             <br />
+             - build_pythia6.shneeds to access the internet to download the source code. If you access the internet through a proxy
+               server and not directly then remember to set the <b>http_proxy</b> environmental variable. 
+             <br />
+             - build_pythia6.sh accepts a PYTHIA6 version as an argument.
+               For example, in order to build v6.4.12 then type: `source build_pythia6.sh 6412'.
+               Read the script documentation for details.
+             <br />
+             - If you are using a recent version of ROOT and have problems with undefined pytune_ symbols, then move to a recent version of PYTHIA6.
+          </div>
+      </div>
+
+      <br />
+
+      <div id="InsidePageSubSectionHeader">
+        <B> ROOT Class Libraries </B> 
+      </div>     
+      <div id="InsidePageSubSectionBody">
+          <b>Recommended version:</b> Any reasonably new (> 5.15.08) 
+          <br />       
+          <b>Web-site:</b>
+               <A href="http://root.cern.ch" target="_top"> http://root.cern.ch</A>
+          <br />
+          <br />
+          Detailed installation instructions are given in
+          <A href="http://root.cern.ch/root/Install.html" target="_top">http://root.cern.ch/root/Install.html</A>
+          <br />
+          <br />
+          For a standard GENIE installation the only extra ROOT configuration options you need are the ones
+          required for enabling GSL (via MathMore) and the ROOT/PYTHIA interface. 
+          When configuring ROOT, add:
+          `<b>--enable-pythia6</b>', `<b>--enable-mathmore</b>' and
+          `<b>--with-pythia6-libdir=</b>/path/to/pythia/lib' 
+          <br />
+      </div>
+
+     </div>
+
+
+     <br />
+
+     <div id="InsidePageSectionHeader"> 
+         Configuring and building GENIE
+     </div>
+     <div id="InsidePageSectionBody">
+        If all external dependencies are installed, then in order to configure and build GENIE you just need to:
+        <br />
+        <div id="terminal">
+          <b>shell%</b> configure [options] <br />
+          <b>shell%</b> gmake <br />
+          <b>shell%</b> gmake install  <i>(*optional*, see below)</i> <br />
+        </div>
+        <br />
+        <table border="0" cellpadding="1" cellspacing="2">
+
+	 <tr CLASS="clsConfigureTableBody"> <td> FLAG            </td><td>  DESCRIPTION                                  </td><td>  DEFAULT    </td></tr>  
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>--prefix</b> </td><td>  installation location (for 'gmake install')  </td><td>  /usr/local  </td></tr>  
+	 <tr CLASS="clsConfigureTableBody"> <td colspan="3">    
+         <br />
+         <tr>
+
+	 <tr CLASS="clsConfigureTableBody"> <td colspan="3">    
+   	    enable/disable options with either --enable- or --disable- (eg --enable-lhapdf --disable-flux-drivers) 
+         </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td colspan="3">    
+         <br />
+         <tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>profiler         </b>  </td><td>  GENIE code profiling using Google perftools                          </td><td>  default: disabled  </td></tr>  
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>doxygen-doc      </b>  </td><td>  Generate doxygen documentation at build time                         </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>dylibversion     </b>  </td><td>  Adds version number in dynamic lib names                             </td><td>  default: enabled (recommended) </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>lowlevel-mesg    </b>  </td><td>  Disable (rather than filter out at run time) some prolific
+                                                                                      debug/info level messages known to slow GENIE down                  </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>debug            </b>  </td><td>  Adds -g in the compiler options to request debug info               </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>lhapdf           </b>  </td><td>  Use the LHAPDF parton density function library, requires libLHAPDF  </td><td>  default: enabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>cernlib          </b>  </td><td>  Use the PDFLIB parton density function library, requires CERNLIB    </td><td>  default: disabled (LHAPDF is preferred) </td></tr>  
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>flux-drivers     </b>  </td><td>  Built-in flux drivers                                               </td><td>  default: enabled   </td></tr>  
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>geom-drivers     </b>  </td><td>  Built-in detector geometry drivers                                  </td><td>  default: enabled   </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>mueloss          </b>  </td><td>  Muon energy loss modeling (for atm. upgoing muon sim.)              </td><td>  default: enabled   </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>vle-extension    </b>  </td><td>  GENIE very low energy (1 MeV - 100 MeV) extension                   </td><td>  default: disabled (experimental)</td></tr>  
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>validation-tools </b>  </td><td>  GENIE physics model validation tools                                </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>test             </b>  </td><td>  Test programs                                                       </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>t2k              </b>  </td><td>  Enables T2K-specific generation app                                 </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>fnal             </b>  </td><td>  Enables FNAL experiment-specific event generation app               </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>atmo             </b>  </td><td>  Atmospheric neutrino event generation app                           </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>nucleon-decay    </b>  </td><td>  Nucleon decay event generation app                                  </td><td>  default: disabled  </td></tr>  
+         <tr CLASS="clsConfigureTableBody"> <td> <b>rwght            </b>  </td><td>  Event reweighting tools                                             </td><td>  default: disabled  </td></tr>  
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>masterclass      </b>  </td><td>  GENIE neutrino masterclass app                                      </td><td>  default: disabled (in devel) </td></tr>  
+ 
+	 <tr CLASS="clsConfigureTableBody"> <td colspan="3">    
+         <br />
+         <tr>
+
+	 <tr CLASS="clsConfigureTableBody"> <td colspan="3">    
+    	    with options for 3rd party software, prefix with --with- (eg --with-lhapdf-lib=/some/path/) 
+         </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>optimiz-level </b> </td><td> Compiler optimization level (O,O2,O3,OO,Os)  </td><td>   default: O2 </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>profiler-lib  </b> </td><td> Path to profiler library                     </td><td>   needed if you --enable-profiler     </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>doxygen-path  </b> </td><td> Doxygen binary path                          </td><td>   needed if you --enable-doxygen      </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>pythia6-lib   </b> </td><td> PYTHIA6 library path                         </td><td>   always needed / auto-detected afterchecking for $PYTHIA6 env.var. </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>cern-lib      </b> </td><td> CERN libraries path                          </td><td>   needed if you --enable-cern / auto-detected after checking for $CERNLIB env.var.</td></tr> 
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>lhapdf-inc    </b> </td><td> Path to LHAPDF includes                      </td><td>   needed if you --enable-lhapdf / auto-detected after checking for $LHAPDF_INC env.var.</td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>lhapdf-lib    </b> </td><td> Path to LHAPDF libraries                     </td><td>   needed if you --enable-lhapdf / auto-detected after checking for $LHAPDF_LIB env.var.</td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>libxml2-inc   </b> </td><td> Path to libxml2 includes                     </td><td>   always needed / auto-detected       </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>libxml2-lib   </b> </td><td> Path to libxml2 library                      </td><td>   always needed / auto-detected       </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>log4cpp-inc   </b> </td><td> Path to log4cpp includes                     </td><td>   always needed / auto-detected       </td></tr>
+	 <tr CLASS="clsConfigureTableBody"> <td> <b>log4cpp-lib   </b> </td><td> Path to log4cpp library                      </td><td>   always needed / auto-detected       </td></tr>
+        </table>
+
+        <br />
+        <br />
+        Below, is an example of how I typically build the GENIE/Generator:
+        <br />
+        <div id="terminal">
+         <b>shell%</b> cd $GENIE <br />
+         <b>shell%</b> ./configure <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --prefix=<i>/some/installation/path</i>  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-profiler          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-validation-tools   <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-cernlib      <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-lhapdf        <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-flux-drivers  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-geom-drivers  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-doxygen      <br /> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-test          <br /> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-mueloss       <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-dylibversion  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-t2k           <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-fnal          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-atmo          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-nucleon-decay <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-rwght         <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-masterclass  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-debug        <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-optimiz-level=O2                                      <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-pythia6-lib=<i>/full/path/to/my/libPythia6/</i>       <br />  
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-lhapdf-inc=<i>/full/path/to/my/lhapdf/includes/</i>    <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-lhapdf-lib=<i>/full/path/to/my/lhapdf/library/</i>    <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-libxml2-inc=<i>/full/path/to/my/libml2/includes/</i>  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-libxml2-lib=<i>/full/path/to/my/libxml2/library/</i>  <br /> 
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-log4cpp-inc=<i>/full/path/to/my/log4cpp/includes/</i> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-log4cpp-lib=<i>/full/path/to/my/log4cpp/library/</i>  <br />
+          <b>shell%</b> gmake <br />
+          <br />
+        </div>
+
+        <br />
+        <b>Further notes: </b>
+        <ul>
+         <li>
+           The configure script has defaults for all the enable/disable options and auto-detection capabilities for
+           figuring out the paths. It is likely that a simple './configure' (no arguments) would work in your system.
+           However, we recommend you staying in control of the build configuration and supply all the required inputs.
+         </li>
+         <li>
+           You can run 'gmake install' to           
+           to copy binaries, libraries and headers under $DIR/bin, $DIR/lib and $DIR/include respectivelly, 
+           where $DIR is the installation location specified with --prefix at the GENIE configuration step.
+           I usually skip that and just pick the GENIE binaries, libraries and headers from
+           $GENIE/bin, $GENIE/lib and $GENIE/src respectivelly.
+         </li>
+         <li>
+           Before following the installation instructions given above and and/or before running GENIE, make sure that:
+            <ul>
+              <li>
+               You have defined $GENIE to point at your top level GENIE directory
+              </li>
+              <li>
+               You have defined $ROOTSYS to point at your ROOT installation
+              </li>
+              <li>
+               All your library paths ($ROOTSYS/lib, $GENIE/lib, /path/to/pyhia6, /path/to/libxml2/lib, /path/to/log4cpp/lib, ...)
+               are listed in $LD_LIBRARY_PATH (of $DYLD_LIBRARY_PATH on Mac OS X)
+              </li>
+              <li>
+               All your binary paths ($ROOTSYS/bin, $GENIE/bin) are listed in $PATH
+              </li>
+            </ul>
+         </li>
+         <li>
+            When using  old versions of gcc (< 4) don't use optimizations above the O2 level as it generates a seekoff overload problem.
+            See <A href="http://gcc.gnu.org/ml/gcc-prs/2003-02/msg00485.html">this email</A> at the gnu-gcc mailing list.
+         </li>
+        </ul>
+
+      </div>
+
+      <br />
+
+      <div id="InsidePageSectionHeader"> 
+         What to do next - Testing your installation
+      </div>
+      <div id="InsidePageSectionBody">
+
+      <TABLE border="0" cellpadding="0" cellspacing="0">
+      <TR>
+       <TD width="20%">
+        <CENTER>
+        <IMG src="./images/genie/genie_unleashed.jpg" valign="top">
+        <BR>
+        </CENTER>	
+       </TD>
+       <TD>
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+       </TD>
+       <TD valign="top">
+
+         <div CLASS="clsTableEntryMain">
+           If the installation was successfull you should find a bunch of libraries in $GENIE/lib
+           and some applications in $GENIE/bin. Here is a set of instructions, for running a few simple apps,
+           and making sure there is no major issue with your GENIE installation.
+           <BR />
+           <BR />
+           First, download pre-computed cross-sections, from nu_mu+O^16 interactions, from
+           <A href="http://www.hepforge.org/archive/genie/data/"> here </A>.
+           Download datafiles corresponding to the version of GENIE you are using.           
+           If you want to generate these cross-sections by yourself, see the GENIE User and Physics manual.
+           <BR />
+           <BR />
+           Generate a 100k event sample of nu_mu+O^16 interactions between 0 and 10 GeV using a simple
+           analytical (x*exp(-x)) numu flux description <I>(Note: pdg_code(nu_mu)=14, pdg_code(O^16)=1000080160)</I>:
+           <div id="terminal">   
+              <B>shell&</B> <A href="https://genie.hepforge.org/trac/browser/trunk/src/stdapp/gEvGen.cxx">gevgen</A> -n 100000 -p 14 -t 1000080160 -e 0,10 -f 'x*exp(-x)' --run 1000 --seed 1721827 --cross-sections /path/to/downladed/cross_sections.xml
+           </div>
+           <BR />
+           Print-out the first 50 events from the GHEP (GENIE's native event format) 
+           event file generated during the previous step (there should be a file named `gntp.1000.ghep.root'):
+           <div id="terminal">   
+              <B>shell&</B> <A href="https://genie.hepforge.org/trac/browser/trunk/src/stdapp/gEvDump.cxx">gevdump</A> -n 50 -f gntp.1000.ghep.root
+           </div>
+           <BR />
+           Generate a 10k event sample of pi^{+}+16O interactions for pi^{+}'s of 200 MeV kinetic energy:
+           <div id="terminal">   
+              <B>shell&</B> <A href="https://genie.hepforge.org/trac/browser/trunk/src/stdapp/gEvGenHadronNucleus.cxx">gevgen_hadron</A> -n 10000 -p 211 -t 1000080160 -k 0.2 --seed 65431
+           </div>
+           <BR />
+           If everything seems to work then the GENIE is really out of the bottle. 
+           Read the Physics and User manual for further instructions 
+           and information on GENIE tools. Have fun...
+        </div>
+       </TD>
+      </TR>
+      </TABLE>
+
+      </div>
+
+
+
+  </div>  <!-- main -->
+     
+   <!--#include FILE="./footer.inc"-->
+     
+</body>
+</html>
+       
