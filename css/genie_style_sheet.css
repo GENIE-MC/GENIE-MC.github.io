@@ -391,6 +391,35 @@ div#LogoBox {
        text-align: right
 }
 
+
+.clsConfigTable {  
+    	border-collapse: collapse; 
+}
+.clsConfigTableHeader {  
+	background: #B0B0B0; 
+	color: black; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12x; 
+        font-weight: bold;
+	border-bottom:1px solid black;
+	border-top:1px solid black;
+}
+.clsConfigTableModelDescription {  
+	background: #DCDCDC; 
+	color: black; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px; 
+	border-top:1px solid black;
+}
+.clsConfigTableTuneDescription {  
+	background: white; 
+	color: black; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	border-top:1px dashed #707070;
+}
+
+
 div#TextBlkNoBB {
 	color: black; 
 	font-family: Arial, Helvetica, sans-serif; 
@@ -402,7 +431,7 @@ div#TextBlkNoBB {
 div#FrontPageMainText {
 	color: black; 
 	font-family: Arial, Helvetica, sans-serif; 
-	font-size:12px;
+	font-size:13px;
 	padding:8px; 
  	width:100%;
 }
