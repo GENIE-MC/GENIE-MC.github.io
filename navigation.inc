@@ -33,7 +33,10 @@
                    <b>Global fits & physics tunes</b> </A>
                <br />
                <A href="./naming_conventions.html"> 
-                   Release and tune naming </A>
+                   Naming conventions</A>
+               <br />
+               <A href="http://scisoft.fnal.gov/scisoft/packages/genie_xsec/"> 
+                   Associated data releases</A>
                <br />
                <br />
                <A href="./incubator.html"> 
@@ -97,8 +100,10 @@
                <A href="./get_started.html">  
                     Get started </A>          
                <br />
+<!--
                Generator doxygen
                <br />
+-->
                GENIE course
                <br />
                <br />
