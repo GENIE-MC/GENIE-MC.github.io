@@ -53,7 +53,7 @@
         <br />
                        <UL>
                           <LI> <A href="http://root.cern.ch" target="_top">
-                                  ROOT</A>
+                                  ROOT</A> 
                           <LI> <A href="http://www.gnu.org/software/gsl/" target="_top">
                                   GNU Scientific Library (GSL)</A> 
                           <LI> <A href="http://www.thep.lu.se/~torbjorn/Pythia.html" target="_top">
@@ -213,7 +213,7 @@
           <br />        
           There is a number of steps in order to build PYTHIA for GENIE.
           Downloading, tweaking and building PYTHIA is automated using Robert Hatcher's 
-          <A href="http://projects.hepforge.org/genie/trac/browser/generator/trunk/src/scripts/build/ext/build_pythia6.sh">build_pythia6.sh</i></A> script.
+          <A href="https://github.com/GENIE-MC/Generator/tree/master/src/scripts/build/ext/build_pythia6.sh">build_pythia6.sh</i></A> script.
           Please read the script documentation.
           It would download all the required source files, modify them as needed and build them. So you only need to do:
           <br />
@@ -244,7 +244,7 @@
         <B> ROOT Class Libraries </B> 
       </div>     
       <div id="InsidePageSubSectionBody">
-          <b>Recommended version:</b> Any reasonably new (> 5.15.08) 
+          <b>Recommended version:</b> Please get a recent ROOT6 version. ROOT5 should still work but is no longer supported by GENIE.
           <br />       
           <b>Web-site:</b>
                <A href="http://root.cern.ch" target="_top"> http://root.cern.ch</A>
@@ -311,7 +311,6 @@
          <tr CLASS="clsConfigureTableBody"> <td> <b>fnal             </b>  </td><td>  Enables FNAL experiment-specific event generation app               </td><td>  default: disabled  </td></tr>  
          <tr CLASS="clsConfigureTableBody"> <td> <b>atmo             </b>  </td><td>  Atmospheric neutrino event generation app                           </td><td>  default: disabled  </td></tr>  
          <tr CLASS="clsConfigureTableBody"> <td> <b>nucleon-decay    </b>  </td><td>  Nucleon decay event generation app                                  </td><td>  default: disabled  </td></tr>  
-         <tr CLASS="clsConfigureTableBody"> <td> <b>rwght            </b>  </td><td>  Event reweighting tools                                             </td><td>  default: disabled  </td></tr>  
 	 <tr CLASS="clsConfigureTableBody"> <td> <b>masterclass      </b>  </td><td>  GENIE neutrino masterclass app                                      </td><td>  default: disabled (in devel) </td></tr>  
  
 	 <tr CLASS="clsConfigureTableBody"> <td colspan="3">    
@@ -356,7 +355,6 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-fnal          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-atmo          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-nucleon-decay <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --enable-rwght         <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-masterclass  <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --disable-debug        <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --with-optimiz-level=O2                                      <br />
@@ -440,26 +438,31 @@
            <BR />
            <BR />
            First, download pre-computed cross-sections, from nu_mu+O^16 interactions, from
-           <A href="http://www.hepforge.org/archive/genie/data/"> here </A>.
-           Download datafiles corresponding to the version of GENIE you are using.           
+           <A href="http://scisoft.fnal.gov/scisoft/packages/genie_xsec"> here </A>.
+           Download datafiles corresponding to the version of GENIE and the physics tune you plan on using.           
            If you want to generate these cross-sections by yourself, see the GENIE User and Physics manual.
            <BR />
            <BR />
            Generate a 100k event sample of nu_mu+O^16 interactions between 0 and 10 GeV using a simple
            analytical (x*exp(-x)) numu flux description <I>(Note: pdg_code(nu_mu)=14, pdg_code(O^16)=1000080160)</I>:
            <div id="terminal">   
-              <B>shell&</B> <A href="https://genie.hepforge.org/trac/browser/trunk/src/stdapp/gEvGen.cxx">gevgen</A> -n 100000 -p 14 -t 1000080160 -e 0,10 -f 'x*exp(-x)' --run 1000 --seed 1721827 --cross-sections /path/to/downladed/cross_sections.xml
+              <B>shell&</B> <A href="https://github.com/GENIE-MC/Generator/tree/master/src/Apps/gEvGen.cxx">gevgen</A> 
+                 -n 100000 -p 14 -t 1000080160 -e 0,10 -f 'x*exp(-x)' --run 1000 --seed 1721827 
+                 --cross-sections /path/to/downladed/cross_sections.xml
+                 --tune <A href="tunes.html">tune_name</A>
            </div>
            <BR />
            Print-out the first 50 events from the GHEP (GENIE's native event format) 
            event file generated during the previous step (there should be a file named `gntp.1000.ghep.root'):
            <div id="terminal">   
-              <B>shell&</B> <A href="https://genie.hepforge.org/trac/browser/trunk/src/stdapp/gEvDump.cxx">gevdump</A> -n 50 -f gntp.1000.ghep.root
+              <B>shell&</B> <A href="https://github.com/GENIE-MC/Generator/tree/master/src/Apps/gEvDump.cxx">gevdump</A> 
+                -n 50 -f gntp.1000.ghep.root
            </div>
            <BR />
            Generate a 10k event sample of pi^{+}+16O interactions for pi^{+}'s of 200 MeV kinetic energy:
            <div id="terminal">   
-              <B>shell&</B> <A href="https://genie.hepforge.org/trac/browser/trunk/src/stdapp/gEvGenHadronNucleus.cxx">gevgen_hadron</A> -n 10000 -p 211 -t 1000080160 -k 0.2 --seed 65431
+              <B>shell&</B> <A href="https://github.com/GENIE-MC/Generator/tree/master/src/Apps/gEvGenHadronNucleus.cxx">gevgen_hadron</A> 
+                 -n 10000 -p 211 -t 1000080160 -k 0.2 --seed 65431
            </div>
            <BR />
            If everything seems to work then the GENIE is really out of the bottle. 
