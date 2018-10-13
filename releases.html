@@ -26,13 +26,12 @@
          <br />
          For large MC productions and physics studies, use 
          one of the comprehensive model configurations supported in the latest 
-         GENIE production release (<B>v2.12.10</B>).
+         GENIE production release (<B>v3.0.0</B>).
          <br />
          <br />
          To experiment with the latest publicly released physics models and technical 
-         features, you can (at your own risk) 
-         use the development version (SVN trunk) and/or enable non-default options 
-         in a production release. Please understand that these models and features may
+         features, you can (at your own risk) use the development version and/or enable 
+         non-default options. Please understand that these models and features may
          be experimental and not well validated.
     </div>
 
@@ -77,7 +76,7 @@
            <b>Version: 4.0.0 (planned; Q3 2019) </b>
            <br />
            <small>
-            SVN tag: - ,
+            Tag: - ,
             Released: - ,
             Status: -
            </small>
@@ -113,16 +112,50 @@
          <br />
 
          <div id="ReleaseTableHeader2">
-           <b>Version: 3.0.0 (planned; October 2018) </b>
+           <b>Version: 3.0.0 </b>
            <br />
            <small>
-            SVN tag: - ,
-            Released: - ,
-            Status: -
+            Tag: R-3_0_0,
+            Released: 10 October 2018,
+            Status: <i class="clsFGreen">pro</i>
            </small>
            <br />
            <br />
            <div id="ReleaseTableBody">
+              We are pleased to announce a major new release, the first in more than a decade and the start of the Bear series.
+              <br />
+              <br />
+              Release v3.0.0 <b>consolidates a series of physics modelling improvements</b> installed over the past 5 years.
+              It also represents a <b>major shift in philosophy</b>: Instead of a single "Default" model with optional 
+              modelling elements that can be enabled by users, at own risk, GENIE now constructs, deploys and supports 
+              <b>multiple comprehensive model configurations that run out the box</b>. 
+              Special care was taken to combine models in a way that consistency
+              is ensured, double-counting is removed, and updated model parameter estimations are made to take into account 
+              the impact of experimental constraints on the specific mixture of models in each given configuration.
+              Full characterization of comprehensive models and tunes is performed using detailed data/MC comparisons.
+              <br />
+              <br />
+              Between 2015-2018, GENIE implemented a <b>powerfull new global analysis of neutrino scattering data</b>.
+              The analysis relies on the <i>Comparisons</i> product, which includes <b>extensive curated archives of neutrino, 
+              charged-lepton and hadron scattering data</b>, as well as highly-developed software to produce a
+              <b>comprehensive set of data/MC comparisons</b>. <i>Comparisons</i> includes <b>interfaces to the 
+              <A href="https://professor.hepforge.org">Professor</A> tuning tool</b>
+              which "<i>reduces the exponentially expensive process of brute-force tuning to a scaling closer to a power
+              law in the number of parameters and allows for massive parallelisation</i>".
+              This enabled the generation of several new tunes, a selection of which was <b>fully integrated in the
+              <i>Generator</i> product</b> and was made available in GENIE v3.0.0 
+              (see <A href="./tunes.html">here</A> for the current list of publicly available tunes).
+              Nuclear cross-section and hadronization tunes are ongoing and additional tunes 
+              will be made available in future revisions.              
+              <br />
+              <br />
+              The new release constitutes a major technical upgrade, with important modifications in the core framework,
+              in particular the configuration system, and a re-organization of the entire source tree.
+              Please also note that from v3.0.0, Reweight is distributed as a separate product in the family of the GENIE
+              products that also includes the Generator, Comparisons, and Tuning products.
+              <br />
+              <br />
+              Details for GENIE v3.0.0 and its new tunes will be made available in a near-future publications.
            </div>
          </div>
 
@@ -154,8 +187,8 @@
            <b>Version 2.12.10</b>
            <br>
            <small>
-             SVN tag: R-2_12_10 ,
-             Released: 19 February 2018 ,
+             Tag: R-2_12_10,
+             Released: 19 February 2018,
              Status: <i class="clsFGreen">pro</i>
            </small>
            <br>
@@ -201,9 +234,9 @@
            <b>Version 2.12.8</b>
            <br>
            <small>
-             SVN tag: R-2_12_8 ,
+             Tag: R-2_12_8 ,
              Released: 9 October 2017 ,
-             Status: <i class="clsFGreen">pro</i>
+             Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
@@ -235,9 +268,9 @@
            <b>Version 2.12.6</b>
            <br>
            <small>
-             SVN tag: R-2_12_6 ,
+             Tag: R-2_12_6 ,
              Released: 23 May 2017 ,
-             Status: <i class="clsFGreen">pro</i>
+             Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
@@ -271,9 +304,9 @@
            <b>Version 2.12.4</b>
            <br>
            <small>
-             SVN tag: R-2_12_4 ,
+             Tag: R-2_12_4 ,
              Released: 9 March 2017 ,
-             Status: <i class="clsFGreen">pro</i>
+             Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
@@ -311,9 +344,9 @@
            <b>Version 2.12.2</b>
            <br>
            <small>
-             SVN tag: R-2_12_2 ,
+             Tag: R-2_12_2 ,
              Released: 6 December 2016 ,
-             Status: <i class="clsFGreen">pro</i>
+             Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
@@ -338,9 +371,9 @@
            <b>Version 2.12.0</b>
            <br>
            <small>
-             SVN tag: R-2_12_0 ,
+             Tag: R-2_12_0 ,
              Released: 31 October 2016 ,
-             Status: <i class="clsFGreen">pro</i>
+             Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
@@ -390,110 +423,11 @@
 
          <br />
 
-<!--
-         <div id="ReleaseTableHeader2">
-           <b>Version 2.11.2</b>
-           <br>
-           <small>
-             SVN tag: R-2_11_2 ,
-             Released: 30 September 2016 ,
-             Status: <i class="clsFRed">rc</i>
-           </small>
-           <br>
-           <br>
-           <div id="ReleaseTableBody">
-             The 2.11.X series are release candidates for 2.12.0.
-             <b>Improvements over 2.11.0:</b>
-             <br>
-
-             <br>Non-physics changes:</br>
-
-             <ul>
-                <li> Small changes to the gNtpConv class to improve performance for nucleon decay events.
-                </li>
-             </ul>
-
-             <br>Physics changes:</br>
-             <ul>
-                 <li> Include a significant expansion of the number of allowed nucleon decay channels - include all 2-body and 3-body decay channels listed in PDG and adopt the PDG decay mode numbering scheme. All decays are phase space decays at the moment. (See DUNE working group meeting notes from M. Sorel.)
-                 </li>
-                 <li> Fixed a number of bugs in the PDG table for isotope masses that entered when we did a large expansion of the table.
-                 </li>
-                 <li> Fixed a bug in the MECXSec algorithm (for Nieves, Simo, Vacas MEC) that affected spline generation.
-                 </li>
-             </ul>
-
-           </div>
-         </div> 
-
-         <br />
--->
-<!--
-
-         <div id="ReleaseTableHeader2">
-           <b>Version 2.11.0</b>
-           <br>
-           <small>
-             SVN tag: R-2_11_0 ,
-             Released: 2 September 2016 ,
-             Status: <i class="clsFRed">rc</i>
-           </small>
-           <br>
-           <br>
-           <div id="ReleaseTableBody">
-             The 2.11.X series are release candidates for 2.12.0.
-             <b>Improvements over 2.10:</b>
-             <br>
-
-             <br>Non-physics changes:</br>
-
-             <ul>
-                <li>Improved performance with ROOT 6.</li>
-             </ul>
-
-             <br>Physics changes - new/improved physics models:</br>
-             <ul>
-                 <li> Valencia MEC (Nieves, Simo, Vicente Vacas, PRC 83 (2011) 045501 Schwer, Cherdack, Gran, arXiv 1601.02038)</li>
-                 <li> Local Fermi Gas nuclear model </li>
-                 <li> Nieves CCQE (Nieves et al, PRC 79 (2004) 055503)</li>
-                 <li> Oset cascade in hN (Oset et al, Nucl. Phys. A468 (1987), Oset et al, Nucl. Phys. A484 (1998))</li>
-                 <li> K+ FSI in hN (see upcoming e-print)</li>
-                 <li> neutron-antineutron oscillations (see upcoming e-print)</li>
-                 <li> z-expansion of the axial form factor (Bhattacharya, Hill, Paz PRD 84 (2011) 073006 and Meyer, Betancourt, Gran, Hill arXiv 1603.03048) </li>
-                 <li> Several small tweaks to the resonance model (delta decays are no longer isotropic and the cross section for delta to N gamm was improved; see upcoming e-print)</li>
-                 <li> Independent implementation of GRV98 (see upcoming e-print)</li>
-                 <li> QEL hyperon production (A. Pais, Annals Phys. 63 (1971) 361)</li>
-                 <li> Berger-Sehgal coherent pion model (Berger, Sehgal PRD 79 (2009) 053003) </li>
-                 <li> Rein diffractive pion production model</li>
-                 <li> Bug fixes to the Bodek-Yang model (not applied by default, see upcoming e-print)</li>
-                 <li> Energy dependent MA model (K. Kuzmin and V. Naumov, in press (2016))</li>
-                 <li> Added more functionality to the effective MEC model (7 new parameters to select do-nucleon initial state (CC nu/nubar, NC), perform integration for NC events, and provide reweighing knob for initial state dinucleon selection, see upcoming e-print).</li>
-             </ul>
-
-             <br>Event generation apps</br>
-
-             <ul>
-                 <li> Patch to `gevgen` for handling input flux histograms with variable-width binning.</li>
-             </ul>
-
-             <br>Flux and geometry drivers</br>
-
-             <ul>
-                 <li> Installed the Honda, Athar, Kajita, Kasahara, and Midorikawa (HAKKM) atmospheric flux driver (GHAKKMAtmoFlux). Previously installed atmospheric fluxes were renamed (GBartolAtmoFlux -> GBGLRSAtmoFlux, GFlukaAtmo3DFlux -> GFLUKAAtmoFlux). The \phi dependence of atmospheric fluxes was installed generically at the GAtmoFlux base class (only available through HAKKM). All three fluxes available in the gevgen_atmo event generation app. </li>
-             </ul>
-
-          </div>
-
-         </div> 
-
-         <br />
--->
-
          <div id="ReleaseTableHeader2">
            <b>Version 2.10.10</b>
            <br>
            <small>
-             SVN tag: R-2_10_10 ,
+             Tag: R-2_10_10 ,
              Released: 3 August 2016 ,
              Status: <i class="clsFBlue">old</i>
            </small>
@@ -529,28 +463,13 @@
            <b>Version 2.10.8</b>
            <br>
            <small>
-             SVN tag: R-2_10_8 ,
+             Tag: R-2_10_8 ,
              Released: 23 May 2016 ,
              Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: 
-<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.8/xsec_comp-R-2_10_6_2016-04-04_vs_R-2_10_8_2016-05-12.pdf">world cross section data</a>
-               </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: 
-<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.8/genie-hadronization_data_comp-2016.5.17_15.57.38.pdf">hadronization data</a>.
-               </li>
-               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
-               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
-             </ul>
-
-             <br>
-
              <b>Improvements over 2.10.6:</b>
              <br>
 
@@ -577,25 +496,13 @@
            <b>Version 2.10.6</b>
            <br>
            <small>
-             SVN tag: R-2_10_6 ,
+             Tag: R-2_10_6 ,
              Released: 6 April 2016 ,
              Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: 
-               </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: 
-               </li>
-               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
-               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
-             </ul>
-
-             <br>
 
              <b>Improvements over 2.10.4:</b>
              <br>
@@ -623,25 +530,13 @@
            <b>Version 2.10.4</b>
            <br>
            <small>
-             SVN tag: R-2_10_4 ,
+             Tag: R-2_10_4 ,
              Released: 5 February 2016 ,
              Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: 
-               </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: 
-               </li>
-               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
-               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
-             </ul>
-
-             <br>
 
              <b>Improvements over 2.10.2:</b>
              <br>
@@ -671,26 +566,13 @@
            <b>Version 2.10.2</b>
            <br>
            <small>
-             SVN tag: R-2_10_2 ,
+             Tag: R-2_10_2 ,
              Released: 4 January 2016 ,
              Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: 
-               </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: 
-               </li>
-               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
-               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here (2.10.0 equivalant)</a>.</li>
-             </ul>
-
-             <br>
-
              <b>Improvements over 2.10.0:</b>
              <br>
 
@@ -721,30 +603,13 @@
            <b>Version 2.10.0</b>
            <br>
            <small>
-             SVN tag: R-2_10_0 ,
+             Tag: R-2_10_0 ,
              Released: 2 November 2015 ,
              Status: <i class="clsFBlue">old</i>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: 
-<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/genie-world_nu_xsec_data_comp-all-2015.10.05_11.31.14.ps">world cross section data</a>,
-<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/genie-structfunc_data_comp-2015.10.05_11.31.13.ps">structure functions</a>, and
-<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/xsec_comp_v2100_v286_oct14.ps">2.10.0 versus 2.8.6 comparisons</a>.
-               </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: 
-<a href="https://www.hepforge.org/archive/genie/official_plots/2.10.0/genie-hadronization_data_comp-2015.10.5_11.31.14.ps">hadronization data</a>.
-               </li>
-               <!-- <li> Hadron rescattering data/MC comparisons: </li> -->
-               <li> Pre-computed cross section splines are available <a href="https://www.hepforge.org/archive/genie/data/2.10.0/">here</a>.</li>
-             </ul>
-
-             <br>
-
              <b>Improvements over 2.8.6:</b>
              <br>
              <p>
@@ -783,15 +648,15 @@
              <br>
              Notable bug fixes. Please note, we attempt to give credit for all the changes we can, but we sometimes miss things when we review the commit history - if you see an omission, please let us know!
              <ul>
-               <li>NC Elastic sign error discovered by L. Alvarez-Ruso (SVN 5543).</li>
-               <li>Remove explicit ".so" from loadlibs.C so ROOT's library loading mechanisms also work on Mac OS-X (SVN 5533).</li>
-               <li>Small bugfixes to the Kuzmin-Lyubushkin-Naumov model in the Berger-Sehgal resonance model by I. Kakorin (SVN 5522, 5521, 5517, 5508, 5504, 5503).</li>
-               <li>Close the directory opened by LHAPDF when getting PDF sets, from M. Nirkko (SVN 5499).</li>
-               <li>Message thresholds may be specified in an ordered list of files so they may be cascaded (SVN 5465).</li>
-               <li>Fix parameter indexing issue when defining a "box" fiducial volume. Also include option for using Geo/GeomVolSelectorRockBox as a volume limiter (this is an extension and changes no previous behaviour). (SVN 5463)</li>
-               <li>Fix small bug in the Registry::Get() method (SVN 5461).</li>
-               <li>Set fZmin and max to be largest and smallest possible in Numerical/BLI2D, from R. Gran (SVN 5388)</li>
-               <li>Call Max instead of Min when trying to get a maximum in Numerical/BLI2D, from J. Schwehr (SVN 5386)</li>
+               <li>NC Elastic sign error discovered by L. Alvarez-Ruso.</li>
+               <li>Remove explicit ".so" from loadlibs.C so ROOT's library loading mechanisms also work on Mac OS-X.</li>
+               <li>Small bugfixes to the Kuzmin-Lyubushkin-Naumov model in the Berger-Sehgal resonance model by I. Kakorin.</li>
+               <li>Close the directory opened by LHAPDF when getting PDF sets, from M. Nirkko.</li>
+               <li>Message thresholds may be specified in an ordered list of files so they may be cascaded.</li>
+               <li>Fix parameter indexing issue when defining a "box" fiducial volume. Also include option for using Geo/GeomVolSelectorRockBox as a volume limiter (this is an extension and changes no previous behaviour). </li>
+               <li>Fix small bug in the Registry::Get() method.</li>
+               <li>Set fZmin and max to be largest and smallest possible in Numerical/BLI2D, from R. Gran. </li>
+               <li>Call Max instead of Min when trying to get a maximum in Numerical/BLI2D, from J. Schwehr</li>
                <li>Re-weighting bug discovered by NOvA in the Coherent model.</li>
                <li>Re-weighting bug discovered by Minerva in the Delta model (to non-isotropic, weights were not applied to anything but delta++).</li>
                <li>Re-weighting fix for formation zones.</li>
@@ -807,24 +672,13 @@
            <b>Version 2.9.0</b>
            <br>
            <small>
-             SVN tag: R-2_9_0 ,
+             Tag: R-2_9_0 ,
              Released: 16 April 2015 ,
              Status: <i class="clsFRed">rc</i>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: </li>
-               <li> Hadron rescattering data/MC comparisons: </li>
-               <li> Pre-computed cross section splines is available <a href="https://www.hepforge.org/archive/genie/data/2.9.0/">here</a>.</li>
-             </ul>
-
-             <br>
-
              <b>Improvements over 2.8.6:</b>
              <br>
              <p>
@@ -874,23 +728,13 @@
            <b>Version 2.8.6</b>
            <br>
            <small>
-             SVN tag: R-2_8_6 ,
+             Tag: R-2_8_6 ,
              Released: 14 November 2014 ,
              Status: <I CLASS="clsFBlue"> old</I>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: </li>
-               <li> Hadron rescattering data/MC comparisons: </li>
-             </ul>
-
-             <br>
-
              <b>Improvements over 2.8.4:</b>
              <br>
              <br>
@@ -919,23 +763,13 @@
            <b>Version 2.8.4</b>
            <br>
            <small>
-             SVN tag: R-2_8_4 ,
+             Tag: R-2_8_4 ,
              Released: 23 September 2014 ,
              Status: <I CLASS="clsFBlue"> old</I>
            </small>
            <br>
            <br>
            <div id="ReleaseTableBody">
-             <b>Validation plots for this release:</b>
-             <br>
-             <ul>
-               <li> Neutrino cross-section data/MC comparisons: </li>
-               <li> Neutrino-induced hadronization data/MC comparisons: </li>
-               <li> Hadron rescattering data/MC comparisons: </li>
-             </ul>
-
-             <br>
-
              <b>Improvements over 2.8.2:</b>
              <br>
              <br>
@@ -979,44 +813,35 @@
           <b>Version 2.8.2 </b>
           <br />
           <small>
-           SVN tag: R-2_8_2,
+           Tag: R-2_8_2,
            Released: 6 September 2014,
            Status: <I CLASS="clsFBlue"> old</I>
           </small>
           <br />
           <br />
           <div id="ReleaseTableBody">
-              <b>Validation plots for this release:</b>
-              <br />
-              <ul>
-                <li> Neutrino cross-section data/MC comparisons: </li>
-                <li> Neutrino-induced hadronization data/MC comparisons: </li>
-                <li> Hadron rescattering data/MC comparisons: </li>
-              </ul>
-              <br>
-
               <b>Improvements over 2.8.0:</b>
               <br>
               <br>
               Non-physics changes:
              <ul>
               <li>
-               Bug fix in the event generator driver. (MCJDriver). (J. Koskinen, Ice Cube; revision 4136)
+               Bug fix in the event generator driver. (MCJDriver). (J. Koskinen, Ice Cube)
               </li>
               <li>
-               Bug fix in the beam line flux driver. (T. Dealtry, T2K; revision 4137)
+               Bug fix in the beam line flux driver. (T. Dealtry, T2K)
               </li>
               <li>
-               Performance improvement for the re-weighting initialization code. (C. Backhouse, NOvA; revision 4133)
+               Performance improvement for the re-weighting initialization code. (C. Backhouse, NOvA)
               </li>
               <li>
                Intranuke: additional validation data sets, new validation programs. (S. Dytman, N. Geary and T. Golan)
               </li>
               <li>
-               Makefiles: stop the build on an error. (P. Rodrigues, MINERvA; revision 4141)
+               Makefiles: stop the build on an error. (P. Rodrigues, MINERvA)
               </li>
               <li>
-              Add support for Dk2Nu flux format files. (R. Hatcher; revision 4216)
+              Add support for Dk2Nu flux format files. (R. Hatcher)
               </li>
             </ul>
 
@@ -1058,10 +883,10 @@
              </p>
             </li>
             <li>
-              Nuclear modification to structure functions is now f(x), not f(rescaled x).  (B. Tice, MINERvA/SeaQuest; revision 4139)
+              Nuclear modification to structure functions is now f(x), not f(rescaled x).  (B. Tice, MINERvA/SeaQuest)
             </li>
             <li>
-             Bug fix in the formation zones calculation for nucleons (H. Gallagher; revision 4138)
+             Bug fix in the formation zones calculation for nucleons (H. Gallagher)
              <p>
               Prior versions of the GENIE implementation of the formation zone underestimated it for nucleons.
               The problem is summarized in Section IV, and in particular Figure 8 of
@@ -1078,23 +903,13 @@
           <b>Version 2.8.0 </b>
           <br />
           <small>
-           SVN tag: R-2_8_0,
+           Tag: R-2_8_0,
            Released: 27 March 2013,
            Status: <I CLASS="clsFBlue"> old</I>
           </small>
           <br />
           <br />
           <div id="ReleaseTableBody">
-              <b>Validation plots for this release:</b>
-              <br />
-              <ul>
-                <li> Neutrino cross-section data/MC comparisons: </li>
-                <li> Neutrino-induced hadronization data/MC comparisons: </li>
-                <li> Hadron rescattering data/MC comparisons: </li>
-              </ul>
-
-              <br />
-
               <b>Improvements over 2.6.0:</b>
               <br />
               <br />
@@ -1198,7 +1013,7 @@
           <b>Version 2.6.8</b>
           <br />
           <small>
-           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_8">R-2_6_8</A>,
+           Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_8">R-2_6_8</A>,
            Released: 10 January 2013,
            Status: <I CLASS="clsFBlue"> old</I>
           </small>
@@ -1217,7 +1032,7 @@
           <b>Version 2.6.6</b>
           <br />
           <small>
-           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_6">R-2_6_6</A>,
+           Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_6">R-2_6_6</A>,
            Released: 10 February 2012,
            Status: <I CLASS="clsFBlue"> old</I>
           </small>
@@ -1236,7 +1051,7 @@
           <b>Version 2.6.4</b>
           <br />
           <small>
-           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_4">R-2_6_4</A>,
+           Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_4">R-2_6_4</A>,
            Released: 07 July 2011,
            Status: <I CLASS="clsFBlue"> old</I>
           </small>
@@ -1255,7 +1070,7 @@
           <b>Version 2.6.2</b>
           <br />
           <small>
-           SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_2">R-2_6_2</A>,
+           Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_2">R-2_6_2</A>,
            Released: 01 April 2011,
            Status: <I CLASS="clsFBlue"> old</I>
           </small>
@@ -1296,7 +1111,7 @@
              <b>Version 2.6.0</b>
              <br />
              <small>
-               SVN tag:  <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_0">R-2_6_0</A>,
+               Tag:  <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_6_0">R-2_6_0</A>,
                Released: 17 March 2010,
                Status:   <I CLASS="clsFBlue"> old</I>
              </small>
@@ -1340,7 +1155,7 @@
              <b>Version 2.4.4 </b>
              <br />
              <small>
-               SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_4"> R-2_4_4</A>,
+               Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_4"> R-2_4_4</A>,
                Released: 19 June 2009,
                Status: <I CLASS="clsFBlue"> old</I>
              </small>
@@ -1390,7 +1205,7 @@
              <b>Version 2.4.2</b>
              <br />
              <small>
-               SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_2">R-2_4_2</A>,
+               Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_2">R-2_4_2</A>,
                Released: 20 December 2008,
                Status:  <I CLASS="clsFBlue"> old</I>
              </small>
@@ -1414,7 +1229,7 @@
                <b>Version 2.4.0</b>
                <br />
                <small>
-                  SVN tag:  <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_0">R-2_4_0</A>,
+                  Tag:  <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_4_0">R-2_4_0</A>,
                   Released: 08 June 2008,
                   Status:   <I CLASS="clsFBlue"> old</I>
                </small>
@@ -1453,7 +1268,7 @@
                <b>Version 2.2.2 </b>
                <br />
                <small>
-                 SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_2_2"> R-2_2_2</A>
+                 Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_2_2"> R-2_2_2</A>
                  Released: 19 December 2007,
                  Status:  <I CLASS="clsFBlue"> old</I>
                </small>
@@ -1476,7 +1291,7 @@
                <b>Version 2.2.0</b>
                <br />
                <small>
-                  SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_2_0">R-2_2_0</A>,
+                  Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_2_0">R-2_2_0</A>,
                   Released: 12 December 2007,
                   Status: <I CLASS="clsFBlue"> old</I>
                </small>
@@ -1508,7 +1323,7 @@
                <b>Version 2.0.0 </b>
                <br />
                <small>
-                  SVN tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_0_0">R-2_0_0</A>
+                  Tag: <A href="http://projects.hepforge.org/genie/trac/browser/branches/R-2_0_0">R-2_0_0</A>
                   Released: 17 August 2007,
                   Status: <I CLASS="clsFBlue">old</I>
                </small>
