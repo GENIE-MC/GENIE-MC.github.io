@@ -42,7 +42,7 @@ specification, can launch new incubator projects.
 <a name="current"></a>
 
 <div id="InsidePageSectionHeader">
-     Currently in incubation: 20 projects
+     Currently in incubation: 22 projects
 </div>
 
 <div id="InsidePageSectionBody">
@@ -54,7 +54,7 @@ specification, can launch new incubator projects.
            <br />
            <b>Description: </b>
              Revisit event generation of high-energy neutrinos (up to 1E8 GeV), improve the GENIE DIS model at this energy regime
-             and perform comparisons with LEPTO (standard high-energy generator in KM3NET) 
+             and perform comparisons with LEPTO (standard high-energy generator in KM3NET)
            <br />
            <b>Developers: </b>
              Alfonso Garcia Soto (NIKHEF)
@@ -271,7 +271,7 @@ specification, can launch new incubator projects.
               Move the existing GENIE hadronization data/MC comparisons into the new GENIE/Comparisons framework,
               to allow a fit to hadronization data exploiting the new Professor/GENIE interface.
            <br />
-           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Hugh Gallagher (Tufts), Marco Roda (Liverpool), 
+           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Hugh Gallagher (Tufts), Marco Roda (Liverpool),
                           Vlad Syrotenko (Tufts), Julia Tena-Vidal (Liverpool)
            <br />
            <b>Reporting: </b> STWG
@@ -293,7 +293,7 @@ specification, can launch new incubator projects.
               Exploit the new Professor/GENIE interface to develop GENIE fits to hadronization data.
               Provide improved hadronization model tunes, and model parameter uncertainties / correlations.
            <br />
-           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Hugh Gallagher (Tufts), Marco Roda (Liverpool), 
+           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Hugh Gallagher (Tufts), Marco Roda (Liverpool),
                           Vlad Syrotenko (Tufts), Julia Tena-Vidal (Liverpool)
            <br />
            <b>Reporting: </b> STWG
@@ -324,7 +324,7 @@ specification, can launch new incubator projects.
            <br />
            <b>Documentation: </b>
              GENIE-Doc-22
-             <img src="./images/icons/lock.png" align="top" height="15">, 
+             <img src="./images/icons/lock.png" align="top" height="15">,
              <A href="https://github.com/GENIE-MC/Generator/projects/1"> GitHub project</A>
            <br />
         </div>
@@ -456,7 +456,7 @@ specification, can launch new incubator projects.
            <br />
            <b>Description: </b>
              Improve the sampling procedure used for GENIE/Professor tunes,
-             to improve the validity of Professor parameterizations for parameters 
+             to improve the validity of Professor parameterizations for parameters
              near physical (or other) boundaries.
            <br />
             <b>Developers: </b>
@@ -474,8 +474,52 @@ specification, can launch new incubator projects.
 
        <br />
 
+       <div id="IncubatorProject">
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> Comparisons API refactorization </em>
+            <br />
+            <b>Description: </b>
+              The current API don't allow to build observables other than those which are data related and that come from a standard GENIE simulation.
+              The system needs to be updated to allow two new fondamental features: <br>
+               a) build confidence belts around predictions due to error propagation of parameters coming from a tune; <br>
+               b) build generic predictions of obsrvables not necessarily related to specific data release.
+            <br />
+            <b>Developers: </b>
+              Marco Roda (Liverpool), Julia Tena-Vidal (Liverpool)
+            <br />
+            <b>Reporting: </b>
+              STWG
+            <br />
+            <b>Target release: </b> GENIE/Comparisons v1.2.0
+            <br />
+            <b>Documentation: </b>
+              GENIE-Doc-49
+              <img src="./images/icons/lock.png" align="top" height="15">
+            <br />
+        </div>
 
-<!--
+        <br />
+
+        <div id="IncubatorProject">
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> Comparisons plotting update </em>
+            <br />
+            <b>Description: </b>
+              The plotting of comparisons even has some faults: the code is a bit unorganised and the there are some problem in the memory management that causes a double free corruption.
+              Ideally we want to add a method Draw() that can be specified for each dataset and move some of the plotting code at the Storages level
+            <br />
+            <b>Developers: </b>
+              Marco Roda (Liverpool)
+            <br />
+            <b>Reporting: </b>
+              STWG
+            <br />
+            <b>Target release: </b> GENIE/Comparisons v1.2.0
+            <br />
+            <b>Documentation: </b>
+              Genie-doc-50
+              <img src="./images/icons/lock.png" align="top" height="15">
+            <br />
+        </div>
+      <!--
        <div id="IncubatorProject">
            <b>Project: </b> <em class="clsIncubatorProjectTitle"> blah </em>
            <br />
@@ -562,14 +606,14 @@ GRADUATED
      <b>Project:</b> <em class="clsIncubatorProjectTitle"> free_nucleon_xsec_model_retune </em>
      <br />
      <b>Description: </b>
-       Revisit the GENIE free-nucleon x-section model procedure and adapt it to the 
+       Revisit the GENIE free-nucleon x-section model procedure and adapt it to the
        new GENIE Comparisons and Tuning / Professor frameworks.
-       Include anti-neutrino data in the procedure used for the v2 tune, 
-       include QE data to provide a flux constraint, and include nuisance parameters 
-       to account for flux uncertainties. 
+       Include anti-neutrino data in the procedure used for the v2 tune,
+       include QE data to provide a flux constraint, and include nuisance parameters
+       to account for flux uncertainties.
        Take this opportunity to clean-up the data archive, remove spurious data points,
        revisit the systematic error assignments and and validate the statistical procedure used.
-       Develop procedures, within the GENIE Comparisons and Tuning frameworks, 
+       Develop procedures, within the GENIE Comparisons and Tuning frameworks,
        for a complete error analysis.
        For the fits, consider all comprehensive model configurations supported in GENIE v3.
      <br />
@@ -1341,9 +1385,9 @@ RETIRED
 
 
 
-  </div> <!-- main -->  
-          
+  </div> <!-- main -->
+
   <!--#include FILE="./footer.inc"-->
-        
+
   </body>
-</html> 
+</html>
