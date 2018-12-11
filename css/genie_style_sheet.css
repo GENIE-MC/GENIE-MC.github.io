@@ -419,6 +419,66 @@ div#LogoBox {
 	border-top:1px dashed #707070;
 }
 
+/*  ---------------------------------------------------------------------------- */
+/*  Version dependencies between different GENIE products */
+/*  ---------------------------------------------------------------------------- */
+
+.clsVersionTableReweightGeneratorHeader {  
+	background: white; 
+	color: #900C3F; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	border-top:  2px solid #900C3F;
+	border-left: 2px solid #900C3F;
+	border-right:2px solid #900C3F;
+}
+.clsVersionTableReweight {  
+	background: white; 
+	color: #900C3F; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	border-top:   1px solid #707070;
+	border-bottom:1px solid #707070;
+	border-left:  2px solid #900C3F;
+	border-right: 1px solid #707070;
+}
+.clsVersionTableGenerator {  
+	background: #e0e0eb;
+	color: #900C3F; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	border-top:   1px solid #707070;
+	border-bottom:1px solid #707070;
+	border-right :2px solid #900C3F;
+}
+.clsVersionTableCharacterizationAndTuningHeader {  
+	background: #e0e0eb; 
+	color: black; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px;
+}
+.clsVersionTableCharacterizationAndTuning {  
+	background: #e0e0eb; 
+	color: black; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	border-top:   1px solid #707070;
+	border-bottom:1px solid #707070;
+	border-left:  1px solid #707070;
+	border-right: 1px solid #707070;
+}
+.clsVersionTableBottomLine {  
+	background: white; 
+	border-top:  2px solid #900C3F;
+}
+.clsVersionTableGeneric {  
+	background: white; 
+	color: black; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	border: 1px solid #707070;
+}
+
 
 div#TextBlkNoBB {
 	color: black; 
@@ -649,6 +709,8 @@ div#PageFooter {
   border-right:1px solid black; 
   padding:6px;
 }
+
+
 
 #MainIn2ColumnPage {
 	padding: 0px 5px 2px 2px;

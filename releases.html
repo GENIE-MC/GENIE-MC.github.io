@@ -12,7 +12,7 @@
 
 
 
-    <div CLASS="clsInsidePageHeader"> GENIE Releases</div>
+    <div CLASS="clsInsidePageHeader"> GENIE/Generator Releases</div>
 
     <br />
 
@@ -26,7 +26,7 @@
          <br />
          For large MC productions and physics studies, use 
          one of the comprehensive model configurations supported in the latest 
-         GENIE production release (<B>v3.0.0</B>).
+         GENIE production release (<B>v3.0.2</B>).
          <br />
          <br />
          To experiment with the latest publicly released physics models and technical 
@@ -50,30 +50,35 @@
      </div>
      <div id="InsidePageSectionBody">
 
-         <br />
+         <h3><u>Future production release series:</u></h3>
 
          <!--
-             *** *** *** *** *** *** CHEETAH *** *** *** *** *** ***
+             *** *** *** *** *** *** DUGONG *** *** *** *** *** ***
           -->
 
          <div id="ReleaseTableHeader">
-            <IMG src="./images/release/cheetah_small.jpg" align="left" width="120px" hspace="10px">
-               <B> Cheetah production release series</B> <br />
+            <IMG src="./images/release/dugong.png" align="left" width="120px" hspace="10px">
+               <B> Dugong production release series</B> [Generator vrs series 5 - Planned for 2022] <br />
                <I class="clsReleaseTableHeaderSubtext"> 
-                  Comprehensive deployment of results from the leading <b>GENIE Global Analysis of Neutrino Scattering Data</b>,
-                  and seamless integration into a new series of GENIE Generator production releases.
-                  The new GENIE global analysis allows the tuning of large sets of physics parameters (both reweightable 
-                  and non-reweightable) and the robust estimation of parameter uncertainties and their correlations,
-                  and it leads to improved comprehensive model configurations with respect to the ones available in the Bear series.
-                  Multiple parameter tunes, from fits to different combinations of datasets, are deployed for each
-                  supported comprehensive model configuration.
+                  GENIE/Generator Version 5.0.0 is envisioned as the first release 
+                  of explict <b>Argon tunes</b>
+                  produced from a <b>global analysis of folded data distributions from the SBND experiment</b>.
+                  This release will be enabled by work to
+                  integrate the GENIE global analysis software
+                  into the SBND analysis software.
+                  This effort to combine the most successful and well-motivated 
+                  empirical and theory-based comprehensive models in GENIE
+                  with the full power of SBND data,
+                  will yield the models that will <b>underpin physics exploitation in DUNE</b>.
+
                </I>
          </div>
 
          <br />
 
+<!--
          <div id="ReleaseTableHeader2">
-           <b>Version: 4.0.0 (planned; Q3 2019) </b>
+           <b>Version: 5.0.0 (planned; 2022) </b>
            <br />
            <small>
             Tag: - ,
@@ -89,6 +94,53 @@
          <br />
          <br />
          <br />
+-->
+
+         <!--
+             *** *** *** *** *** *** CHEETAH *** *** *** *** *** ***
+          -->
+
+         <div id="ReleaseTableHeader">
+            <IMG src="./images/release/cheetah_small.jpg" align="left" width="120px" hspace="10px">
+               <B> Cheetah production release series</B> [Generator vrs series 4 - Planned for Q1/2020] <br />
+               <I class="clsReleaseTableHeaderSubtext"> 
+                  Release of an expanded set of GENIE Comprehensive Model Configurations, 
+                  including <b>several new microscopic / theoretical calculations and improved empirical hadronic models</b>, and 
+                  <b>full deployment of new phyiscs tuning results</b>
+                  from the leading GENIE Global Analysis of Neutrino Scattering Data,
+                  <b>including hadronization tunes and nuclear cross-section data tunes</b>.
+                  All new tunes will seamlessly integrated into the GENIE Generator platform.
+                  GENIE/Generator version 4.0.0 will be accompanied by a new major release of the GENIE/Reweight product (version 2.0.0)
+                  that will provide full support for the new GENIE physics tunes (including support for intrinsically non-reweightable
+                  systematic parameters). GENIE/Reweight version 2.0.0 will be accompanied by the release of our
+                  detailed Professor/YODA response functions constructed from our brute-force systematic parameter scans, as part of 
+                  the GENIE global fits of neutrino scattering data, as well as the release of 
+                  all covariance matrices from the GENIE global fits. 
+               </I>
+         </div>
+
+         <br />
+<!--
+         <div id="ReleaseTableHeader2">
+           <b>Version: 4.0.0 (planned; Q1 2020) </b>
+           <br />
+           <small>
+            Tag: - ,
+            Released: - ,
+            Status: -
+           </small>
+           <br />
+           <br />
+           <div id="ReleaseTableBody">
+           </div>
+         </div>
+
+         <br />
+         <br />
+         <br />
+-->
+
+         <h3><u>Current production release series:</u></h3>
 
          <!--
              *** *** *** *** *** *** BEAR *** *** *** *** *** ***
@@ -101,12 +153,85 @@
                   <b>Several new empirical and theory-driven global model configurations</b>
                   including a new/improved GENIE default model, amalgamating the long series of Auk physics model
                   developments into new comprehensive and self-consistent descriptions of neutrino-nucleon/nucleus scattering 
-                  from few hundred MeV to multi-TeV energy scales. All global physics model configurations supported concurrently (and
-                  can be easily switch via the --tune argument) and are fully <b>characterized through the most comprehensive set of data/MC 
-                  comparisons performed and published to date</b>.
+                  from few hundred MeV to multi-TeV energy scales. 
                   Deployment of first results from the leading <b>GENIE Global Analysis of Neutrino Scattering Data</b>,
-                  including a retune of free-nucleon cross-section model and targeted retunes of nuclear cross-sections.
+                  and seamless integration into a new series of GENIE Generator production releases.
+                  The new GENIE global analysis allows the tuning of large sets of physics parameters (both reweightable
+                  and non-reweightable) and the robust estimation of parameter uncertainties and their correlations,
+                  and it leads to improved comprehensive model configurations with respect to the ones available in the Bear series.
+                  Multiple parameter tunes, from fits to different combinations of datasets, are deployed for each
+                  supported comprehensive model configuration.
                </I>
+         </div>
+
+         <br />
+
+         <table border="0" cellpadding="1" cellspacing="0">
+<!--
+             <tr>
+                <td colspan="4" class="clsVersionTableGeneric"> <b>GENIE product</b> </td>
+                <td></td>
+             </tr>
+-->
+             <tr>
+                <td class="clsVersionTableGeneric"> <b>Reweight</b>    </td>
+                <td class="clsVersionTableGeneric"> <b>Generator</b>   </td>
+                <td class="clsVersionTableGeneric"> <b>Comparisons</b> </td>
+                <td class="clsVersionTableGeneric"> <b>Tuning</b>      </td>
+                <td class="clsVersionTableGeneric"> <b>Comments</b>    </td>
+             </tr>
+             <tr>
+                <td> </td>
+                <td colspan="3" class="clsVersionTableCharacterizationAndTuningHeader"> 
+                   Products for GENIE model characterization and global analysis / tuning </td>
+                <td> </td>
+             </tr>
+             <tr>
+                <td colspan="2" class="clsVersionTableReweightGeneratorHeader"> 
+                   Products for GENIE MC production and generator-related analysis tasks </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+             </tr>
+             <tr>
+                <td class="clsVersionTableReweight">        1.0.0      </td>
+                <td class="clsVersionTableGenerator">    <b>3.0.2</b>  </td>
+                <td class="clsVersionTableCharacterizationAndTuning">  </td>
+                <td class="clsVersionTableCharacterizationAndTuning">  </td>
+                <td class="clsVersionTableGeneric"> 
+                    Reweight product updates to bring in sync with changes in Generator v3.
+                    </td>
+             </tr>
+             <tr>
+                <td class="clsVersionTableReweight">     n/a                </td>
+                <td class="clsVersionTableGenerator">    <b>3.0.0</b>       </td>
+                <td class="clsVersionTableCharacterizationAndTuning"> 1.0.0 </td>
+                <td class="clsVersionTableCharacterizationAndTuning"> 1.0.0 </td>
+                <td class="clsVersionTableGeneric"> 
+                    Product versions used for GENIE 3.0.0 comprehensive model 
+                    characterization and free-nucleon cross-section model retunes
+                    </td>
+             </tr>
+             <tr>
+                <td colspan="2" class="clsVersionTableBottomLine"> </td>
+                <td colspan="3"> </td>
+             </tr>
+         </table>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
+           <b>Version: 3.0.2 </b>
+           <br />
+           <small>
+            Tag: R-3_0_2,
+            Released: 09 December 2018,
+            Status: <i class="clsFGreen">pro</i>
+           </small>
+           <br />
+           <br />
+           <div id="ReleaseTableBody">
+           </div>
          </div>
 
          <br />
@@ -161,8 +286,8 @@
 
          <br />
          <br />
-         <br />
 
+         <h3><u>Past production release series:</u></h3>
 
          <!--
             *** *** *** *** *** *** AUK *** *** *** *** *** ***
