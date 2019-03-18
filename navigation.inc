@@ -39,7 +39,7 @@
                    Associated data releases</A>
                <br />
                <br />
-               <A href="./Forum/forum.html">
+               <A href="./forum.html">
                     User forum</A> 
                <br />
                <A href="./incubator.html">
