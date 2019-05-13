@@ -79,6 +79,8 @@
                <A href="https://github.com/GENIE-MC" target="_top">
                    GitHub organization page</A>
                <br />
+
+<!--
                &nbsp;
                <A href="https://github.com/GENIE-MC/Generator" target="_top">
                    [Generator repository]</A>
@@ -97,6 +99,7 @@
                <A href="https://github.com/GENIE-MC/Reweight" target="_top">
                    [Reweight repository]</A>
                <br />
+-->
                <br />
 
 

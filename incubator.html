@@ -139,7 +139,7 @@ specification, can launch new incubator projects.
            <b>Project:</b> <em class="clsIncubatorProjectTitle"> dcc_pions </em>
            <br />
            <b>Description: </b>
-             DCC Pion model
+             Implement the Direct Coupled Channel pion production model by Sato et al.
            <br />
            <b>Developers: </b>
                 Walter Giele (FNAL)
@@ -160,7 +160,7 @@ specification, can launch new incubator projects.
            <b>Project:</b> <em class="clsIncubatorProjectTitle"> lanl_zero_pion </em>
            <br />
            <b>Description: </b>
-             LANL Zero Pion model
+             Implement the LANL zero-pion model
            <br />
            <b>Developers: </b>
                 Saori Pastore (GWU), Minerba Betancourt (FNAL)
@@ -220,36 +220,12 @@ specification, can launch new incubator projects.
         <br />
 
         <div id="IncubatorProject">
-           <b>Project:</b> <em class="clsIncubatorProjectTitle"> electron_scattering_form_factors </em>
-           <br />
-           <b>Description: </b>
-             Update Form Factors (FFs) for electron scattering processes in GENIE, and enable future similar updates
-           <br />
-           <b>Developers: </b>
-                Adi Ashkenazi (MIT)
-           <br />
-           <b>Reporting: </b> NPWG
-           <br />
-           <b>Target release: </b> GENIE/Generator v?
-           <br />
-           <b>Documentation:</b>
-             GENIE-Doc-38
-             <img src="./images/icons/lock.png" align="top" height="15">
-           <br />
-        </div>
-
-        <br />
-
-        <div id="IncubatorProject">
            <b>Project:</b> <em class="clsIncubatorProjectTitle"> comparisons_minerva </em>
            <br />
            <b>Description: </b>
-              Implement GENIE / MINERvA data comparisons in the new GENIE Comparisons/Tuning frameworks.
-              The following data releases will be implemented:
-              PRL 111 (2013) 022502; PRL 111 (2013) 022501; PRL 112 (2014) 231801;
-              PRL 113 (2014) 261802; PRD 92 (2015) 092008; PRD 91 (2015) 071301; PLB 749 (2015) 130-136
+              Implement GENIE / MINERvA data comparisons for recent MINERvA data releases in the new GENIE Comparison framework.
            <br />
-           <b>Developers: </b> Julia Yarba (Fermilab), Gabe Perdue (Fermilab)
+           <b>Developers: </b> 
            <br />
            <b>Reporting: </b> STWG
            <br />
@@ -373,11 +349,90 @@ specification, can launch new incubator projects.
         <br />
 
         <div id="IncubatorProject">
+           <b>Project: </b> <em class="clsIncubatorProjectTitle"> 0pi_theory_API </em>
+           <br />
+           <b>Description: </b> A generator/theory interface for microscopic zero-pion calculations.
+           <br />
+           <b>Developers: </b> Stephen Gardiner (Fermilab)
+           <br />
+           <b>Reporting: </b> TCWG / PPWG.
+           <br />
+           <b>Target release: </b> GENIE/Generator v?
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-?
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
+
+        <div id="IncubatorProject">
+           <b>Project: </b> <em class="clsIncubatorProjectTitle"> nlo_extrapolation </em>
+           <br />
+           <b>Description: </b> Investigate using the NLO DIS model of the very_high_energy_extension project all the way down to the inelastic threshold.
+           <br />
+           <b>Developers: </b> 
+           <br />
+           <b>Reporting: </b> TCWG / PPWG.
+           <br />
+           <b>Target release: </b> GENIE/Generator v?
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-43
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
+
+
+        <div id="IncubatorProject">
+           <b>Project: </b> <em class="clsIncubatorProjectTitle"> mk1pi </em>
+           <br />
+           <b>Description: </b> Implement in GENIE the single-pion model by Minoo Kabirnezhad including interferences 
+           between resonances and  non-resonance backrounds.
+           <br />
+           <b>Developers: </b> Minoo Kabirnezhad (Oxford), Costas Andreopoulos (Liverpool/STFC-RAL), Marco Roda (Liverpool)
+           <br />
+           <b>Reporting: </b> TCWG / PPWG.
+           <br />
+           <b>Target release: </b> GENIE/Generator v?
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-43
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
+
+        <div id="IncubatorProject">
            <b>Project: </b> <em class="clsIncubatorProjectTitle"> nc_onegamma </em>
            <br />
            <b>Description: </b> Improve modeling of NC1&gamma; production in GENIE.
            <br />
            <b>Developers: </b> Teppei Katori (QMUL), Pierre Lasorak (QMUL)
+           <br />
+           <b>Reporting: </b> PPWG.
+           <br />
+           <b>Target release: </b> GENIE/Generator v?
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-47
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
+
+
+        <div id="IncubatorProject">
+           <b>Project: </b> <em class="clsIncubatorProjectTitle"> bdm2 </em>
+           <br />
+           <b>Description: </b> Upgraded Boosted Dark Matter model
+           <br />
+           <b>Developers: </b> Josh Berger (Pittsburgh)
            <br />
            <b>Reporting: </b> PPWG.
            <br />
@@ -411,15 +466,54 @@ specification, can launch new incubator projects.
         <br />
 
         <div id="IncubatorProject">
-           <b>Project:</b> <em class="clsIncubatorProjectTitle"> susav2_and_martini_mec </em>
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> susav2 </em>
            <br />
-           <b>Description:</b> A GENIE implementation of the SuSAv2 and M. Martini, M. Ericson, G. Chanfray, J. Marteau MEC models.
+           <b>Description:</b> A GENIE implementation of the SuSAv2 model.
            <br />
            <b>Developers:</b> Sara Bolognesi (CEA Saclay), Stephen Dolan (CEA Saclay), Stephen Gardiner (Fermilab)
            <br />
            <b>Reporting:</b> NPWG
            <br />
-           <b>Target release:</b> GENIE/Generator v3.2.0?
+           <b>Target release:</b> 
+           <br />
+           <b>Documentation:</b>
+             GENIE-Doc-13
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+       <br />
+
+        <div id="IncubatorProject">
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> susaM* </em>
+           <br />
+           <b>Description:</b> A GENIE implementation of the SuSAM* model
+           <br />
+           <b>Developers:</b> Igor Kakorin (JINR)
+           <br />
+           <b>Reporting:</b> NPWG
+           <br />
+           <b>Target release:</b> 
+           <br />
+           <b>Documentation:</b>
+             GENIE-Doc-13
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+
+       <br />
+
+        <div id="IncubatorProject">
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> martini_mec </em>
+           <br />
+           <b>Description:</b> Martini, M. Ericson, G. Chanfray, J. Marteau MEC models.
+           <br />
+           <b>Developers:</b> Sara Bolognesi (CEA Saclay), Stephen Dolan (CEA Saclay), Stephen Gardiner (Fermilab)
+           <br />
+           <b>Reporting:</b> NPWG
+           <br />
+           <b>Target release:</b> 
            <br />
            <b>Documentation:</b>
              GENIE-Doc-13
@@ -475,7 +569,7 @@ specification, can launch new incubator projects.
        <br />
 
        <div id="IncubatorProject">
-            <b>Project: </b> <em class="clsIncubatorProjectTitle"> Comparisons API refactorization </em>
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> comparisons_API_refactorization </em>
             <br />
             <b>Description: </b>
               The current API don't allow to build observables other than those which are data related and that come from a standard GENIE simulation.
@@ -500,7 +594,7 @@ specification, can launch new incubator projects.
         <br />
 
         <div id="IncubatorProject">
-            <b>Project: </b> <em class="clsIncubatorProjectTitle"> Comparisons plotting update </em>
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> comparisons_plotting_update </em>
             <br />
             <b>Description: </b>
               The plotting of comparisons even has some faults: the code is a bit unorganised and the there are some problem in the memory management that causes a double free corruption.
@@ -519,6 +613,69 @@ specification, can launch new incubator projects.
               <img src="./images/icons/lock.png" align="top" height="15">
             <br />
         </div>
+
+        <br />
+
+        <div id="IncubatorProject">
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> hadronization_data_systematics </em>
+            <br />
+            <b>Description: </b> Re-evaluate the systematics of the data on the characteristics of the neutrino-induced hadronic showers.
+            <br />
+            <b>Developers: </b>
+            <br />
+            <b>Reporting: </b>
+              STWG
+            <br />
+            <b>Target release: </b> GENIE/Comparisons v?
+            <br />
+            <b>Documentation: </b>
+              Genie-doc-?
+              <img src="./images/icons/lock.png" align="top" height="15">
+            <br />
+        </div>
+
+        <br />
+
+        <div id="IncubatorProject">
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> tune_io_and_configuring </em>
+            <br />
+            <b>Description: </b> Implement tune metadata I/O so that Reweight adjusts its initial state according 
+              to the actual tune used in the generation of the events.
+            <br />
+            <b>Developers: </b> Costas Andreopoulos (Liverpool/STFC-RAL), Marco Roda (Liverpool)
+            <br />
+            <b>Reporting: </b>
+              STWG
+            <br />
+            <b>Target release: </b> GENIE/Reweight v?
+            <br />
+            <b>Documentation: </b>
+              Genie-doc-?
+              <img src="./images/icons/lock.png" align="top" height="15">
+            <br />
+        </div>
+
+        <br />
+
+        <div id="IncubatorProject">
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> professor_response_func_reweight </em>
+            <br />
+            <b>Description: </b> Implement weight calculators using the detailed Professor/YODA response
+            functions computed from brute-force parameter scans.
+            <br />
+            <b>Developers: </b> Costas Andreopoulos (Liverpool/STFC-RAL), Marco Roda (Liverpool)
+            <br />
+            <b>Reporting: </b>
+              STWG
+            <br />
+            <b>Target release: </b> GENIE/Reweight v?
+            <br />
+            <b>Documentation: </b>
+              Genie-doc-?
+              <img src="./images/icons/lock.png" align="top" height="15">
+            <br />
+        </div>
+
       <!--
        <div id="IncubatorProject">
            <b>Project: </b> <em class="clsIncubatorProjectTitle"> blah </em>
