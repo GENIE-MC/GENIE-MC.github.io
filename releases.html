@@ -26,7 +26,7 @@
          <br />
          For large MC productions and physics studies, use
          one of the comprehensive model configurations supported in the latest
-         GENIE production release (<B>v3.0.2</B>).
+         GENIE production release (<B>v3.0.4</B>).
          <br />
          <br />
          To experiment with the latest publicly released physics models and technical
@@ -240,13 +240,43 @@
            <br />
            <br />
            <div id="ReleaseTableBody">
-             The GENIE collaboration announces new versions of the Generator (v3.0.4) and Reweight (v1.0.2) software packages.
-
-             The Generator release fixes bugs in previous releases.  In brief, <br>
-             - Various small changes were made to Nieves and Llewellyn-Smith quasielasticmodels.  Most important change was in the handling of binding energy. <br>
-             - Delta->nucleon+pion angular distribution is now in the correct frame. <br>
-
-             Detailed technical note to be find at the genie <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=113">GENIE doc-db 113</A>.
+             <b>Improvements over 3.0.2</b>
+             <br />
+             <ul>
+               <li> Previously, Pauli blocking for quasielastic event was implemented as a suppression factor which was
+                    computed analytically. The calculation was valid only for a Fermi Gas model. Pauli blocking is now
+                    implemented in a more generic way, as a cut on the outgoing nucleon momentum, allowing for correct
+                    calculation of the effect irrespectively of the assumed nucleon momentum distribution.
+               <li> Bug fix: Removal energy was ignored by the quasielastic event generator, which always put the struck
+                    nucleon on the mass shell.</li>
+               <li> Bug fix: In the GENIE implementation of the Valenia model, an incorrect reference frame was used to compute 
+                    the contraction of the leptonic and hadronic tensors. </li>
+               <li> Bug fix: In the GENIE implementation of the Valenia model, a Coulomb correction was implemented only 
+                    as an overall scaling factor in the differential correction, an ignored the effect on the 3-momentum transfer.</li>
+               <li> Bug fix: In the quasielastic event generation, there was a single instance of Q<sup>2</sup> miscalculation
+                    due to a mismatch of the reference frames of the neutrino and final-state primary lepton momentum 4-vectors.</li>
+               <li> Bug fix: In the GENIE implementation of the Valenia model, in the calculation of the Coulomb correction
+                    through an integral over the nuclear volume, integration limits did not account for the A<sup>1/3</sup>
+                    grow of the nuclear radius, resulting in a correction that was too small for heavy nuclei.</li>
+               <li> Bug fix: In the GENIE implementation of the Valenia model, explicit forms of the hadron tensors should be
+                    evaluated in the lab frame with coordinates rotated so that the Coulomb-corrected 3-momentum transfer points
+                    along the positive z direction. Previously, the Coulomb correction was not applied in the edge case where
+                    the uncorrected 3-momentum transfer was pointing along the negative z direction. </li>
+               <li> Bug fix: Previously, in the new quasielastic event generator first included in v3, 
+                    Fermi motion was erroneously applied to free nucleon targets.
+               <li> Bug fix: Previously, Pauli blocking was erroneously applied in the simulation of 
+                    quasielastic charm production. </li>
+               <li> Bug fix: In the simulation of the &Delta; &rightarrow; N + &pi; decay, the polar angle &theta;
+                    was defined wrt to the z axis, rather than wrt to the direction of the momentum-transfer vector 
+                    in the &Delta; CM frame. </li>
+               <li> Bug fix: The invariant mass threshold for deep-inelastic events was inadvertently set to the 
+                    nucleon mass, when the corresponding threshold for resonance events was modified to allow simulation of 
+                    &Delta; &rightarrow; N + &pi; decays below the pion production threshold.
+                    The threshold for deep-inelastic events is now set back to the sum of the nucleon and pion masses.</li>
+             </ul>
+             <br />
+             Detailed technical note to be find at the GENIE Document Database: 
+             <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=113">GENIE doc-db 113</A>.
            </div>
          </div>
 
@@ -258,11 +288,16 @@
            <small>
             Tag: R-3_00_02,
             Released: 09 December 2018,
-            Status: <i class="clsFGreen">pro</i>
+            Status: <i class="clsFBlue">old</i>
            </small>
            <br />
            <br />
            <div id="ReleaseTableBody">
+             <b>Improvements over 3.0.0</b>
+             <br />
+             <ul>
+               <li> </li>
+             </ul>
            </div>
          </div>
 
@@ -274,7 +309,7 @@
            <small>
             Tag: R-3_00_00,
             Released: 10 October 2018,
-            Status: <i class="clsFGreen">pro</i>
+            Status: <i class="clsFBlue">old</i>
            </small>
            <br />
            <br />
@@ -334,7 +369,7 @@
                   allowing the simulation of complex experimental setups in full detail and the support generator-related analysis tasks.
                   Several new physics models were installed and made available in the Auk series as optional alternatives of the established
                   default model, and they will be fully deployed into future GENIE global/comprehensive model confifurations and tunes.
-               </P>
+               </I>
          </div>
 
          <br />
