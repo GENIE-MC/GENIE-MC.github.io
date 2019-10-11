@@ -167,24 +167,44 @@
          <br />
 
          <table border="0" cellpadding="1" cellspacing="0">
-<!--
              <tr>
-                <td colspan="4" class="clsVersionTableGeneric"> <b>GENIE product</b> </td>
-                <td></td>
+                <td class="clsVersionTableGeneric" colspan="4"> <b>GENIE Products</b> </td>
+                <td> </td>
+                <td class="clsVersionTableGeneric" colspan="8"> <b>External dependencies</b> </td>
              </tr>
--->
+
              <tr>
                 <td class="clsVersionTableGeneric"> <b>Reweight</b>    </td>
                 <td class="clsVersionTableGeneric"> <b>Generator</b>   </td>
                 <td class="clsVersionTableGeneric"> <b>Comparisons</b> </td>
                 <td class="clsVersionTableGeneric"> <b>Tuning</b>      </td>
                 <td class="clsVersionTableGeneric"> <b>Comments</b>    </td>
+                <td class="clsVersionTableGeneric"> ROOT    </td>
+                <td class="clsVersionTableGeneric"> APFEL   </td>
+                <td class="clsVersionTableGeneric"> LHAPDF5 </td>
+                <td class="clsVersionTableGeneric"> LHAPDF6 </td>
+                <td class="clsVersionTableGeneric"> PYTHIA6 </td>
+                <td class="clsVersionTableGeneric"> PYTHIA8 </td>
+                <td class="clsVersionTableGeneric"> INCL    </td>
+                <td class="clsVersionTableGeneric"> GEANT4  </td>               
              </tr>
              <tr>
                 <td> </td>
                 <td colspan="3" class="clsVersionTableCharacterizationAndTuningHeader">
                    Products for GENIE model characterization and global analysis / tuning </td>
                 <td> </td>
+                <td colspan="8" class="clsVersionTableExternalProductsHeader"> 
+                 Versions of external products that:
+                 <ul>
+                   <li>
+                      may have implications on the definition of GENIE tunes, are shown in <b class="clsRed">red</b>. 
+                   </li>
+                   <li>
+                      are not mandatory for all comprehensive configurations and tunes
+                      but are required only for a specific <u>subset</u> of those, are shown within <b>( )</b>. 
+                   </li>
+                 </ul>
+                </td>
              </tr>
              <tr>
                 <td colspan="2" class="clsVersionTableReweightGeneratorHeader">
@@ -192,6 +212,24 @@
                 <td> </td>
                 <td> </td>
                 <td> </td>
+                <td colspan="8" class="clsVersionTableExternalProductsHeader"> </td>
+             </tr>
+             <tr>
+                <td class="clsVersionTableReweight">        ?          </td>
+                <td class="clsVersionTableGenerator">    <b>3.2.0</b>  </td>
+                <td class="clsVersionTableCharacterizationAndTuning">  </td>
+                <td class="clsVersionTableCharacterizationAndTuning">  </td>
+                <td class="clsVersionTableGeneric">
+                     New minor release in preparation.
+                    </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  (?) </td>
+                <td class="clsVersionTableExternalProducts">  (?) </td>
+                <td class="clsVersionTableExternalProducts">  (?) </td>
+                <td class="clsVersionTableExternalProducts">  (?) </td>
+                <td class="clsVersionTableExternalProducts">  (?) </td>
+                <td class="clsVersionTableExternalProducts">  (?) </td>
+                <td class="clsVersionTableExternalProducts">  (?) </td>
              </tr>
              <tr>
                 <td class="clsVersionTableReweight">        1.0.4      </td>
@@ -199,8 +237,16 @@
                 <td class="clsVersionTableCharacterizationAndTuning">  </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  </td>
                 <td class="clsVersionTableGeneric">
-                     Minor bug-fix revision (details below).
+                     Bug-fix revision (details below).
                     </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
              </tr>
              <tr>
                 <td class="clsVersionTableReweight">        1.0.4      </td>
@@ -208,8 +254,16 @@
                 <td class="clsVersionTableCharacterizationAndTuning">  </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  </td>
                 <td class="clsVersionTableGeneric">
-                     Minor bug-fix revision (details below).
+                     Bug-fix revision (details below).
                     </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
              </tr>
              <tr>
                 <td class="clsVersionTableReweight">        1.0.0      </td>
@@ -219,6 +273,14 @@
                 <td class="clsVersionTableGeneric">
                     Reweight product updates to bring in sync with changes in Generator v3.
                     </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
              </tr>
              <tr>
                 <td class="clsVersionTableReweight">     n/a                </td>
@@ -229,13 +291,25 @@
                     Product versions used for GENIE 3.0.0 comprehensive model
                     characterization and free-nucleon cross-section model retunes
                     </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
+                <td class="clsVersionTableExternalProducts">  N/A </td>
              </tr>
              <tr>
                 <td colspan="2" class="clsVersionTableBottomLine"> </td>
                 <td colspan="3"> </td>
+                <td colspan="7"> </td>
              </tr>
          </table>
 
+         <b> Note: </b> The table above shows the recommended amongst all compatible combinations of versions.
+
+         <br />
          <br />
 
          <div id="ReleaseTableHeader2">
