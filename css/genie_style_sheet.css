@@ -423,6 +423,15 @@ div#LogoBox {
 /*  Version dependencies between different GENIE products */
 /*  ---------------------------------------------------------------------------- */
 
+.clsVersionTableGroupOfProductsHeader {  
+	background: #7b241c; 
+	color: white; 
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:14px;
+	border-top:  2px solid #7b241c;
+	border-left: 2px solid #7b241c;
+	border-right:2px solid #7b241c;
+}
 .clsVersionTableReweightGeneratorHeader {  
 	background: white; 
 	color: #900C3F; 
@@ -446,10 +455,11 @@ div#LogoBox {
 	background: #e0e0eb;
 	color: #900C3F; 
         font-family: Arial, Helvetica, sans-serif; 
-	font-size:12px;
+	font-size:14px;
+        font-weight: bold;
 	border-top:   1px solid #707070;
 	border-bottom:1px solid #707070;
-	border-right :2px solid #900C3F;
+	border-right: 2px solid #900C3F;
 }
 .clsVersionTableCharacterizationAndTuningHeader {  
 	background: #e0e0eb; 
