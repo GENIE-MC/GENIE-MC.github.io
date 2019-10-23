@@ -194,7 +194,7 @@
              <tr>
                 <td> </td>
                 <td colspan="3" class="clsVersionTableCharacterizationAndTuningHeader">
-                   Internal releases of products used for the GENIE global analysis of scattering data,
+                   Public and internal releases of products used for the GENIE global analysis of scattering data,
                    in support of the publicly-released comprehensive model configurations and tunes. </td>
                 <td> </td>
                 <td colspan="9" class="clsVersionTableExternalProductsHeader"> 
@@ -227,10 +227,10 @@
                 <td colspan="9" class="clsVersionTableExternalProductsHeader"> </td>
              </tr>
              <tr>
-                <td class="clsVersionTableReweight">                   ?     </td>
+                <td class="clsVersionTableReweight">                   1.0.4 </td>
                 <td class="clsVersionTableGenerator">                  3.2.0 </td>
-                <td class="clsVersionTableCharacterizationAndTuning">  ?     </td> 
-                <td class="clsVersionTableCharacterizationAndTuning">  ?     </td>
+                <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td> 
+                <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
                 <td> </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
@@ -350,25 +350,54 @@
                <li> </li>
                <li> </li>
              </ul>
-             New physics models:             
+             New and/or updated physics models:             
              <ul>
-               <li> </li>
-               <li> </li>
+               <li> Addition of a new NLO DIS cross-section calculation and event generator module
+                    tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE
+                    (requires a new GENE external dependence: APFEL DGLAP evolution code).
+               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the 
+                    INCL generator (requires a new GENE external dependence:  INCL).</li>
+               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the 
+                    GEANT4 generator (requires a new GENIE external dependence: GEANT4). </li>
+               <li> Addition of a first working interface the PYTHIA8 hadronization code,
+                    as part of an alternative, experimental configuration of the AGKY hadronization model
+                    (requires a new GENIE external dependence: PYTHIA8). </li>
+               <li> Addition of the Correlated Fermi Gas nuclear model. </li>
+               <li> A substantial update in GENIE Boosted Dark Matter (BDM) modules,
+                    bringing it sync with the model described in arXiv:1812.05616.
+                    The newly deployed BDM code 
+                    a) allows a broader set of particle physics models, including 
+                       both vector and axial couplings, as well as different isospin structures,
+                    b) has improved modeling of the elastic scattering process, including a pseudoscalar form factor,
+                    c) includes the simulation of scattering off electrons, and
+                    d) includes anti-dark matter scattering. </li>
+               <li> Addition of a new and complete implementation of a CEvNS event generator. </li>
              </ul>
              Event generation and core framework improvements:             
              <ul>
-               <li> </li>
-               <li> </li>
+               <li> Complete refactoring of the GENIE decayer and hadronization modules, upgrading 
+                    decayers and hadronization modules to full-blown GENIE "event record visitors"
+                    and eliminating PYTHIA6-specific elements from GENIE interfaces. 
+                    The change underpinned newly developed interfaces to PYTHIA8. </li>
+               <li> Added a new toolkit to generalise and simplify the implementation of cross-section
+                    models relying on tabulated hadron tensors.
+                    The change underpinned newly developed implementation of the SuSA2 model.
+                    Old models were upgared to use the new toolkit</li>
              </ul>
              Improvements in generator tools (flux and geometry drivers, event generation and other apps):             
              <ul>
                <li> </li>
                <li> </li>
              </ul>
-             Other bug fixes:             
+             Other improvements / bug fixes:             
              <ul>
-               <li> </li>
-               <li> </li>
+               <li> Bug fix: Added code to handle P33(1600) in the GENIE event generation modules. The P33(1600) resonance
+                    (a 4-star resonance in 2019 PDG) was added in the GENIE v3 cross-section calculations but, 
+                    due to missing resonance data, the resonance was ignored during event generation. 
+                    In versions affected by this bug, P33(1600) is added as a "Rootino" (pseudo-particle PDG code = 0)
+                    and its decay is not simulated. </li>
+               <li> Bug fix: Fixed a mistake in BaryonResonanceDecayer::IsHandled() (returned input PDG code, as opposed 
+                    to the correct boolean flag). </li>
              </ul>
            </div>
          </div>
