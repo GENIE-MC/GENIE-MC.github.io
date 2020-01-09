@@ -239,94 +239,6 @@ specification, can launch new incubator projects.
 
         <br />
 
-
-        <div id="IncubatorProject">
-           <b>Project:</b> <em class="clsIncubatorProjectTitle"> comparisons_hadronization_upgrade </em>
-           <br />
-           <b>Description: </b>
-              Move the existing GENIE hadronization data/MC comparisons into the new GENIE/Comparisons framework,
-              to allow a fit to hadronization data exploiting the new Professor/GENIE interface.
-           <br />
-           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Hugh Gallagher (Tufts), Marco Roda (Liverpool),
-                          Vlad Syrotenko (Tufts), Julia Tena-Vidal (Liverpool)
-           <br />
-           <b>Reporting: </b> STWG
-           <br />
-           <b>Target release: </b> GENIE/Comparisons v1.2.0
-           <br />
-           <b>Documentation: </b>
-             GENIE-Doc-40
-             <img src="./images/icons/lock.png" align="top" height="15">
-           <br />
-        </div>
-
-        <br />
-
-        <div id="IncubatorProject">
-           <b>Project:</b> <em class="clsIncubatorProjectTitle"> hadronization_data_fit </em>
-           <br />
-           <b>Description: </b>
-              Exploit the new Professor/GENIE interface to develop GENIE fits to hadronization data.
-              Provide improved hadronization model tunes, and model parameter uncertainties / correlations.
-           <br />
-           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Hugh Gallagher (Tufts), Marco Roda (Liverpool),
-                          Vlad Syrotenko (Tufts), Julia Tena-Vidal (Liverpool)
-           <br />
-           <b>Reporting: </b> STWG
-           <br />
-           <b>Target release: </b> GENIE/Comparisons v?, GENIE/Tuning v?
-           <br />
-           <b>Documentation: </b>
-             GENIE-Doc-41
-             <img src="./images/icons/lock.png" align="top" height="15">
-           <br />
-        </div>
-
-        <br />
-
-        <div id="IncubatorProject">
-           <b>Project:</b> <em class="clsIncubatorProjectTitle"> refactorize_hadronization_and_decay </em>
-           <br />
-           <b>Description: </b>
-              A substantial code refactorization, excising TMCParticle from the interfaces and
-              converting the hadronization and particle decay algorithms to the GENIE `event record visitor' interface.
-              This is a mandatory refactorization, paving the way to switch from PYTHIA6 to PYTHIA8.
-           <br />
-           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Marco Roda (Liverpool), +++?
-           <br />
-           <b>Reporting: </b> TCWG / PPWG
-           <br />
-           <b>Target release: </b> GENIE/Generator v3.2?
-           <br />
-           <b>Documentation: </b>
-             GENIE-Doc-22
-             <img src="./images/icons/lock.png" align="top" height="15">,
-             <A href="https://github.com/GENIE-MC/Generator/projects/1"> GitHub project</A>
-           <br />
-        </div>
-
-        <br />
-
-        <div id="IncubatorProject">
-           <b>Project:</b> <em class="clsIncubatorProjectTitle"> hadronization_pythia8 </em>
-           <br />
-           <b>Description: </b>
-              Integrate PYTHIA8 into GENIE
-           <br />
-           <b>Developers: </b> Teppei Katori (QMUL), Shivesh Mandalia (QMUL)
-           <br />
-           <b>Reporting: </b> PPWG
-           <br />
-           <b>Target release: </b> GENIE/Generator v?
-           <br />
-           <b>Documentation: </b>
-             GENIE-Doc-42
-             <img src="./images/icons/lock.png" align="top" height="15">
-           <br />
-        </div>
-
-        <br />
-
         <div id="IncubatorProject">
            <b>Project: </b> <em class="clsIncubatorProjectTitle"> sf_interface </em>
            <br />
@@ -413,26 +325,6 @@ specification, can launch new incubator projects.
            <b>Description: </b> Improve modeling of NC1&gamma; production in GENIE.
            <br />
            <b>Developers: </b> Teppei Katori (QMUL), Pierre Lasorak (QMUL)
-           <br />
-           <b>Reporting: </b> PPWG.
-           <br />
-           <b>Target release: </b> GENIE/Generator v?
-           <br />
-           <b>Documentation: </b>
-             GENIE-Doc-47
-             <img src="./images/icons/lock.png" align="top" height="15">
-           <br />
-        </div>
-
-        <br />
-
-
-        <div id="IncubatorProject">
-           <b>Project: </b> <em class="clsIncubatorProjectTitle"> bdm2 </em>
-           <br />
-           <b>Description: </b> Upgraded Boosted Dark Matter model
-           <br />
-           <b>Developers: </b> Josh Berger (Pittsburgh)
            <br />
            <b>Reporting: </b> PPWG.
            <br />
@@ -545,77 +437,6 @@ specification, can launch new incubator projects.
 
        <br />
 
-       <div id="IncubatorProject">
-           <b>Project:</b> <em class="clsIncubatorProjectTitle"> professor_sampling </em>
-           <br />
-           <b>Description: </b>
-             Improve the sampling procedure used for GENIE/Professor tunes,
-             to improve the validity of Professor parameterizations for parameters
-             near physical (or other) boundaries.
-           <br />
-            <b>Developers: </b>
-              Marco Roda (Liverpool), Julia Tena-Vidal (Liverpool)
-           <br />
-           <b>Reporting: </b> STWG
-           <br />
-           <b>Released: </b> GENIE/Tuning v1.2.0, GENIE/Comparisons v1.2.0
-           <br />
-           <b>Documentation:</b>
-           GENIE-Doc-46
-           <img src="./images/icons/lock.png" align="top" height="15">
-           <br />
-       </div>
-
-       <br />
-
-       <div id="IncubatorProject">
-            <b>Project: </b> <em class="clsIncubatorProjectTitle"> comparisons_API_refactorization </em>
-            <br />
-            <b>Description: </b>
-              The current API don't allow to build observables other than those which are data related and that come from a standard GENIE simulation.
-              The system needs to be updated to allow two new fondamental features: <br>
-               a) build confidence belts around predictions due to error propagation of parameters coming from a tune; <br>
-               b) build generic predictions of obsrvables not necessarily related to specific data release.
-            <br />
-            <b>Developers: </b>
-              Marco Roda (Liverpool), Julia Tena-Vidal (Liverpool)
-            <br />
-            <b>Reporting: </b>
-              STWG
-            <br />
-            <b>Target release: </b> GENIE/Comparisons v1.2.0
-            <br />
-            <b>Documentation: </b>
-              GENIE-Doc-49
-              <img src="./images/icons/lock.png" align="top" height="15">
-            <br />
-        </div>
-
-        <br />
-
-        <div id="IncubatorProject">
-            <b>Project: </b> <em class="clsIncubatorProjectTitle"> comparisons_plotting_update </em>
-            <br />
-            <b>Description: </b>
-              The plotting of comparisons even has some faults: the code is a bit unorganised and the there are some problem in the memory management that causes a double free corruption.
-              Ideally we want to add a method Draw() that can be specified for each dataset and move some of the plotting code at the Storages level
-            <br />
-            <b>Developers: </b>
-              Marco Roda (Liverpool)
-            <br />
-            <b>Reporting: </b>
-              STWG
-            <br />
-            <b>Target release: </b> GENIE/Comparisons v1.2.0
-            <br />
-            <b>Documentation: </b>
-              Genie-doc-50
-              <img src="./images/icons/lock.png" align="top" height="15">
-            <br />
-        </div>
-
-        <br />
-
         <div id="IncubatorProject">
             <b>Project: </b> <em class="clsIncubatorProjectTitle"> hadronization_data_systematics </em>
             <br />
@@ -708,7 +529,7 @@ GRADUATED
 <a name="graduated"></a>
 
 <div id="InsidePageSectionHeader">
-     Graduated from incubation <i>(since Jan 1st, 2015):</i> 36 projects
+     Graduated from incubation <i>(since Jan 1st, 2015):</i> 45 projects
 </div>
 
 <div id="InsidePageSectionBody">
@@ -918,6 +739,101 @@ GRADUATED
 
   <br />
 
+        <div id="IncubatorProject">
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> comparisons_hadronization_upgrade </em>
+           <br />
+           <b>Description: </b>
+              Move the existing GENIE hadronization data/MC comparisons into the new GENIE/Comparisons framework,
+              to allow a fit to hadronization data exploiting the new Professor/GENIE interface.
+           <br />
+           <b>Developers: </b> Marco Roda (Liverpool),
+                          Vlad Syrotenko (Tufts), Julia Tena-Vidal (Liverpool)
+           <br />
+           <b>Reporting: </b> STWG
+           <br />
+           <b>Target release: </b> GENIE/Comparisons v1.2.0
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-40
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
+
+
+       <div id="IncubatorProject">
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> professor_sampling </em>
+           <br />
+           <b>Description: </b>
+             Improve the sampling procedure used for GENIE/Professor tunes,
+             to improve the validity of Professor parameterizations for parameters
+             near physical (or other) boundaries.
+           <br />
+            <b>Developers: </b>
+              Marco Roda (Liverpool), Julia Tena-Vidal (Liverpool)
+           <br />
+           <b>Reporting: </b> STWG
+           <br />
+           <b>Released: </b> GENIE/Tuning v1.2.0, GENIE/Comparisons v1.2.0
+           <br />
+           <b>Documentation:</b>
+           GENIE-Doc-46
+           <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+       </div>
+
+       <br />
+
+       <div id="IncubatorProject">
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> comparisons_API_refactorization </em>
+            <br />
+            <b>Description: </b>
+              The current API don't allow to build observables other than those which are data related and that come from a standard GENIE simulation.
+              The system needs to be updated to allow two new fondamental features: <br>
+               a) build confidence belts around predictions due to error propagation of parameters coming from a tune; <br>
+               b) build generic predictions of obsrvables not necessarily related to specific data release.
+            <br />
+            <b>Developers: </b>
+              Marco Roda (Liverpool), Julia Tena-Vidal (Liverpool)
+            <br />
+            <b>Reporting: </b>
+              STWG
+            <br />
+            <b>Target release: </b> GENIE/Comparisons v1.2.0
+            <br />
+            <b>Documentation: </b>
+              GENIE-Doc-49
+              <img src="./images/icons/lock.png" align="top" height="15">
+            <br />
+        </div>
+
+        <br />
+
+        <div id="IncubatorProject">
+            <b>Project: </b> <em class="clsIncubatorProjectTitle"> comparisons_plotting_update </em>
+            <br />
+            <b>Description: </b>
+              The plotting of comparisons even has some faults: the code is a bit unorganised and the there are some problem in the memory management that causes a double free corruption.
+              Ideally we want to add a method Draw() that can be specified for each dataset and move some of the plotting code at the Storages level
+            <br />
+            <b>Developers: </b>
+              Marco Roda (Liverpool)
+            <br />
+            <b>Reporting: </b>
+              STWG
+            <br />
+            <b>Target release: </b> GENIE/Comparisons v1.2.0
+            <br />
+            <b>Documentation: </b>
+              Genie-doc-50
+              <img src="./images/icons/lock.png" align="top" height="15">
+            <br />
+        </div>
+
+        <br />
+
+
   <div id="IncubatorProject">
      <b>Project:</b> <em class="clsIncubatorProjectTitle"> sf_error_envelope </em>
      <br />
@@ -1073,6 +989,25 @@ GRADUATED
   </div>
 
   <br />
+
+        <div id="IncubatorProject">
+           <b>Project: </b> <em class="clsIncubatorProjectTitle"> bdm2 </em>
+           <br />
+           <b>Description: </b> Upgraded Boosted Dark Matter model
+           <br />
+           <b>Developers: </b> Josh Berger (Pittsburgh)
+           <br />
+           <b>Reporting: </b> PPWG.
+           <br />
+           <b>Target release: </b> GENIE/Generator v3.2.0
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-47
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
 
   <div id="IncubatorProject">
      <b>Project:</b> <em class="clsIncubatorProjectTitle"> n_nbar </em>
@@ -1346,6 +1281,72 @@ GRADUATED
   </div>
 
   <br />
+
+        <div id="IncubatorProject">
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> hadronization_data_fit </em>
+           <br />
+           <b>Description: </b>
+              Exploit the new Professor/GENIE interface to develop GENIE fits to hadronization data.
+              Provide improved hadronization model tunes, and model parameter uncertainties / correlations.
+           <br />
+           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Hugh Gallagher (Tufts), Marco Roda (Liverpool),
+                          Vlad Syrotenko (Tufts), Julia Tena-Vidal (Liverpool)
+           <br />
+           <b>Reporting: </b> STWG
+           <br />
+           <b>Target release: </b> GENIE/Comparisons v3.2.0, GENIE/Tuning v1.2.0
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-41
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
+
+        <div id="IncubatorProject">
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> refactorize_hadronization_and_decay </em>
+           <br />
+           <b>Description: </b>
+              A substantial code refactorization, excising TMCParticle from the interfaces and
+              converting the hadronization and particle decay algorithms to the GENIE `event record visitor' interface.
+              This is a mandatory refactorization, paving the way to switch from PYTHIA6 to PYTHIA8.
+           <br />
+           <b>Developers: </b> C.Andreopoulos (Liverpool/STFC-RAL), Marco Roda (Liverpool), +++?
+           <br />
+           <b>Reporting: </b> TCWG / PPWG
+           <br />
+           <b>Target release: </b> GENIE/Generator v3.2.0
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-22
+             <img src="./images/icons/lock.png" align="top" height="15">,
+             <A href="https://github.com/GENIE-MC/Generator/projects/1"> GitHub project</A>
+           <br />
+        </div>
+
+        <br />
+
+        <div id="IncubatorProject">
+           <b>Project:</b> <em class="clsIncubatorProjectTitle"> hadronization_pythia8 </em>
+           <br />
+           <b>Description: </b>
+              Integrate PYTHIA8 into GENIE
+           <br />
+           <b>Developers: </b> Teppei Katori (QMUL), Shivesh Mandalia (QMUL)
+           <br />
+           <b>Reporting: </b> PPWG
+           <br />
+           <b>Target release: </b> GENIE/Generator v3.2.0
+           <br />
+           <b>Documentation: </b>
+             GENIE-Doc-42
+             <img src="./images/icons/lock.png" align="top" height="15">
+           <br />
+        </div>
+
+        <br />
+
 
   <div id="IncubatorProject">
      <b>Project:</b> <em class="clsIncubatorProjectTitle"> K+_fsi </em>

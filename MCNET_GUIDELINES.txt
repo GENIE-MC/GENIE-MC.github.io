@@ -21,14 +21,6 @@ context requires full availability of all source code, to further
 progress and to allow local modifications to meet the specific
 requirements of the individual user.
 
-Therefore we have decided to release this program under the GNU
-General Public License (GPL) version 2 (with the option to instead
-follow the terms and conditions of any later version of GPL). This
-ensures that the source code will be available to you and grants you
-the freedom to use and modify the program. You can redistribute your
-modified versions as long as you retain the GPL and respect existing
-copyright notices.
-
 By using the GPL, we entrust you with considerable freedom and expect
 you to use it wisely, since the GPL does not address the issues in
 the first two paragraphs. To remedy this shortcoming, we have
