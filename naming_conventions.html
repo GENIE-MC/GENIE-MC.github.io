@@ -97,73 +97,75 @@
 
      <br />
 
-     <div id="InsidePageSectionHeader"> 
-         GENIE/Generator comprehensive model configurations 
+     <div id="InsidePageSectionHeader">
+         GENIE/Generator comprehensive model configurations
      </div>
-     <div id="InsidePageSectionBody">    
-     
-        Starting from v3.0.0, with the deployment of multiple comprehensive configurations and tunes, 
-        and the addition of a `--tune' argument in several apps, GENIE adopted the following uniform 
+     <div id="InsidePageSectionBody">
+
+        Starting from v3.0.0, with the deployment of multiple comprehensive configurations and tunes,
+        and the addition of a `--tune' argument in several apps, GENIE adopted the following uniform
         naming convention for its model configurations and tunes:
         <br />
         <br />
-        A comprehensive model configuration is identified by a 7-character string in the form 
+        A comprehensive model configuration is identified by a 7-character string in the form
         <h3 style="text-align:center;"> <b> Gdd_MMv </b> </h3>
-        where 
+        where
         <ol type="1">
-           <li> 
+           <li>
              <b>G</b> is a capital letter that identifies the author of the tune.
-             The default value is G (for the GENIE collaboration). 
+             The default value is G (for the GENIE collaboration).
            </li>
-           <li> 
+           <li>
              <b>dd</b> is a number describing the year during which the model configuration was developed.
-           </li> 
-           <li> 
+           </li>
+           <li>
              <b>MM</b> is a number (00, 01, 02, ...) identifying a model configuration branch.
-           </li> 
-           <li> 
+           </li>
+           <li>
              <b>v</b> is a character (a, b, c, ...) enumerating variations / offshoots of a model configuration branch.
-           </li>        
+           </li>
        </ol>
+
+       <br />
+       Test CMCs might be created temporally in order to make easier to use new models and to make sure the new models are properly configured.
+       These are identified in the name by having the initial <b>G</b> replaced by <b>GTEST</b>.
+       Test CMCs are not official tunes: they are not going to be supported by the GENIE collaboration and are not suppoed to be used in official public contexts. 
 
      </div>
 
      <br />
 
-     <div id="InsidePageSectionHeader"> 
-         GENIE/Generator tunes  
+     <div id="InsidePageSectionHeader">
+         GENIE/Generator tunes
      </div>
-     <div id="InsidePageSectionBody">    
+     <div id="InsidePageSectionBody">
 
        Once a comprehensive model configuration is defined, a number of different tunes may be produced.
-       Each distinct choice of a) fit datasets and dataset weighting scheme, b) parameters of interest and nuisance parameters, 
+       Each distinct choice of a) fit datasets and dataset weighting scheme, b) parameters of interest and nuisance parameters,
        and c) prior constraints, leads to a different tune. A tune is identified by the model configuration name, and additional
        information enumerating the parameters and datasets. This is a 14-character string in the form
-       <h3 style="text-align:center;"> <b> Gdd_MMv_PP_xxx </b> </h3> 
-       where 
-       <ol type="1"> 
+       <h3 style="text-align:center;"> <b> Gdd_MMv_PP_xxx </b> </h3>
+       where
+       <ol type="1">
          <li> <b>Gdd_MMv</b> describes the model configuration (see above).
          </li>
-         <li> <b>PP</b> is a number identifying the set of tuned parameters. 
-              This parameter set is defined uniquely only in the context of a particular model configuration. 
-              The number 00 indicates that a model configuration has not been tuned by GENIE. 
+         <li> <b>PP</b> is a number identifying the set of tuned parameters.
+              This parameter set is defined uniquely only in the context of a particular model configuration.
+              The number 00 indicates that a model configuration has not been tuned by GENIE.
          </li>
-         <li> <b>xxx</b> is a number that identifies the dataset used for the model configuration tuning. 
-              This may include a unique set weights associated with each component dataset. 
-              The number 00 indicates that a model configuration has not been tuned by GENIE. 
+         <li> <b>xxx</b> is a number that identifies the dataset used for the model configuration tuning.
+              This may include a unique set weights associated with each component dataset.
+              The number 00 indicates that a model configuration has not been tuned by GENIE.
          </li>
-       </ol> 
-     </div>   
+       </ol>
+     </div>
 
 
 
-     
+
   </div>  <!-- main -->
-        
+
   <!--#include FILE="./footer.inc"-->
-        
-</body>  
-</html> 
-        
-        
-     
+
+</body>
+</html>
