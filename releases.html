@@ -347,6 +347,14 @@
              <br />
              New comprehensive model configurations and tunes:             
              <ul>
+               <li> For every existing cross-section model tune, we released new variants incorporating the
+                    INCL and GEANT4 FSI codes in addition to existing variants incorporating the 
+                    INTRANUKE hA and hN FSI models. This addition does not invalidate the published
+                    cross-section tunes which relied only on Hydrogen and Deuterium data.</li>
+               <li> Released optional AGKY hadronization model configurations, incorporating the first
+                    results from our global analysis of data on neutrino-induced hadron shower characteristics.</li>
+               <li> Released a new set of tunes, geared towards our ultra high enerrgy user communities,
+                    based on our new NLO DIS cross-section calculation and event generator modules.</li>
                <li> </li>
                <li> </li>
              </ul>
@@ -354,9 +362,9 @@
              <ul>
                <li> Addition of a new NLO DIS cross-section calculation and event generator module
                     tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE
-                    (requires a new GENE external dependence: APFEL DGLAP evolution code).
+                    (requires a new GENIE external dependence: APFEL DGLAP evolution code).
                <li> Addition of a new intranuclear rescattering / FSI model through an interface to the 
-                    INCL generator (requires a new GENE external dependence:  INCL).</li>
+                    INCL generator (requires a new GENIE external dependence:  INCL).</li>
                <li> Addition of a new intranuclear rescattering / FSI model through an interface to the 
                     GEANT4 generator (requires a new GENIE external dependence: GEANT4). </li>
                <li> Addition of a first working interface the PYTHIA8 hadronization code,
@@ -398,6 +406,9 @@
                     and its decay is not simulated. </li>
                <li> Bug fix: Fixed a mistake in BaryonResonanceDecayer::IsHandled() (returned input PDG code, as opposed 
                     to the correct boolean flag). </li>
+               <li> Installed a fix in AGCharm2019 hadronizatiom model, allowing the production of charmed-mesons 
+                    (D+, D_s and D0) above a previously existing cutoff value of 100 GeV 
+                    (issue reported by Emircan Elikkaya and Murat Ali Guler of the SHiP experiment).
              </ul>
            </div>
          </div>

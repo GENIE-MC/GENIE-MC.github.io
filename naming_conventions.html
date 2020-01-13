@@ -102,7 +102,7 @@
      </div>
      <div id="InsidePageSectionBody">
 
-        Starting from v3.0.0, with the deployment of multiple comprehensive configurations and tunes,
+        Starting from v3.0.0, with the deployment of multiple comprehensive configurations (CMCs) and tunes,
         and the addition of a `--tune' argument in several apps, GENIE adopted the following uniform
         naming convention for its model configurations and tunes:
         <br />
@@ -127,10 +127,18 @@
        </ol>
 
        <br />
-       Test CMCs might be created temporally in order to make easier to use new models and to make sure the new models are properly configured.
-       These are identified in the name by having the initial <b>G</b> replaced by <b>GTEST</b>.
-       Test CMCs are not official tunes: they are not going to be supported by the GENIE collaboration and are not suppoed to be used in official public contexts. 
-
+       <b>Note on test configurations</b>: 
+       <br />
+       <i>Test</i> comprehensive model configurations being developed, validated and tuned for deployment in future releases
+       may be created temporarily and appear in public releases. 
+       This would allow users to experiment with early versions of these comprehensive models,
+       making sure that these experimental models and their features are properly configured by GENIE.
+       These configurations may not necessarily follow the above naming convention and 
+       should be identified by the use of an initial <b>GTEST</b>.
+       Users are warned that <i>test</i> comprehensive model configurations may not be fully validated or tuned,
+       and that their very definition may subject to changes before they emerge as an officially supported tune.
+       We welcome feedback on these early snapshots of future model configurations but, for as long as they are classified as test
+       configurations, support will be limited and we may not prioritise bug-fix revisions to address issues in test configurations.
      </div>
 
      <br />
