@@ -188,7 +188,7 @@
                 <td class="clsVersionTableGeneric"> <A href="https://pythiasix.hepforge.org/">PYTHIA6</A>              </td>
                 <td class="clsVersionTableGeneric"> <A href="http://home.thep.lu.se/~torbjorn/Pythia.html">PYTHIA8</A> </td>
                 <td class="clsVersionTableGeneric"> INCL    </td>
-                <td class="clsVersionTableGeneric"> <A href="http://geant4.web.cern.ch/">GEANT4</A>                    </td>               
+                <td class="clsVersionTableGeneric"> <A href="http://geant4.web.cern.ch/">GEANT4</A>                    </td>
                 <td class="clsVersionTableGeneric"> Notes</td>
              </tr>
              <tr>
@@ -197,21 +197,21 @@
                    Public and internal releases of products used for the GENIE global analysis of scattering data,
                    in support of the publicly-released comprehensive model configurations and tunes. </td>
                 <td> </td>
-                <td colspan="9" class="clsVersionTableExternalProductsHeader"> 
+                <td colspan="9" class="clsVersionTableExternalProductsHeader">
                  External products that:
                  <ul>
                    <li>
-                      may have implications on the definition of GENIE tunes, 
-                      have their required version number shown in <b class="clsRed">red</b>. 
+                      may have implications on the definition of GENIE tunes,
+                      have their required version number shown in <b class="clsRed">red</b>.
                    </li>
                    <li>
                       are not mandatory for all comprehensive configurations and tunes
-                      but are required only for a specific <u>subset</u> of those, 
-                      have their required or recommended version shown within <b>( )</b>. 
+                      but are required only for a specific <u>subset</u> of those,
+                      have their required or recommended version shown within <b>( )</b>.
                    </li>
                    <li>
-                      are interfaced to GENIE but are not coupled to any publicly 
-                      released model configuration, are listed with a &#x2055;.                      
+                      are interfaced to GENIE but are not coupled to any publicly
+                      released model configuration, are listed with a &#x2055;.
                    </li>
                  </ul>
                 </td>
@@ -229,7 +229,7 @@
              <tr>
                 <td class="clsVersionTableReweight">                   1.0.4 </td>
                 <td class="clsVersionTableGenerator">                  3.2.0 </td>
-                <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td> 
+                <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
                 <td> </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
@@ -239,8 +239,8 @@
                 <td class="clsVersionTableExternalProducts">  ? </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
-                <td class="clsVersionTableExternalProducts">  ? </td>
-                <td class="clsVersionTableExternalProducts">  ? </td>
+                <td class="clsVersionTableExternalProducts"> modified <br /> v5.2.9.5 </td>
+                <td class="clsVersionTableExternalProducts"> v4.10.4.p02 </td>
                 <td class="clsVersionTableGeneric">
                      New minor release in preparation.
                     </td>
@@ -295,7 +295,7 @@
                 <td class="clsVersionTableExternalProducts">  N/A      </td>
                 <td class="clsVersionTableExternalProducts">  N/A      </td>
                 <td class="clsVersionTableGeneric">
-                    Release v1.0.0 of new, factored-out Reweight product 
+                    Release v1.0.0 of new, factored-out Reweight product
                     brings this producy sync with the v3 series of our Generator product.
                     </td>
              </tr>
@@ -345,10 +345,10 @@
              <b>Improvements over 3.0.*</b>
              <br />
              <br />
-             New comprehensive model configurations and tunes:             
+             New comprehensive model configurations and tunes:
              <ul>
                <li> For every existing cross-section model tune, we released new variants incorporating the
-                    INCL and GEANT4 FSI codes in addition to existing variants incorporating the 
+                    INCL and GEANT4 FSI codes in addition to existing variants incorporating the
                     INTRANUKE hA and hN FSI models. This addition does not invalidate the published
                     cross-section tunes which relied only on Hydrogen and Deuterium data.</li>
                <li> Released optional AGKY hadronization model configurations, incorporating the first
@@ -358,14 +358,14 @@
                <li> </li>
                <li> </li>
              </ul>
-             New and/or updated physics models:             
+             New and/or updated physics models:
              <ul>
                <li> Addition of a new NLO DIS cross-section calculation and event generator module
                     tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE
                     (requires a new GENIE external dependence: APFEL DGLAP evolution code).
-               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the 
+               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the
                     INCL generator (requires a new GENIE external dependence:  INCL).</li>
-               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the 
+               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the
                     GEANT4 generator (requires a new GENIE external dependence: GEANT4). </li>
                <li> Addition of a first working interface the PYTHIA8 hadronization code,
                     as part of an alternative, experimental configuration of the AGKY hadronization model
@@ -373,41 +373,41 @@
                <li> Addition of the Correlated Fermi Gas nuclear model. </li>
                <li> A substantial update in GENIE Boosted Dark Matter (BDM) modules,
                     bringing it sync with the model described in arXiv:1812.05616.
-                    The newly deployed BDM code 
-                    a) allows a broader set of particle physics models, including 
+                    The newly deployed BDM code
+                    a) allows a broader set of particle physics models, including
                        both vector and axial couplings, as well as different isospin structures,
                     b) has improved modeling of the elastic scattering process, including a pseudoscalar form factor,
                     c) includes the simulation of scattering off electrons, and
                     d) includes anti-dark matter scattering. </li>
                <li> Addition of a new and complete implementation of a CEvNS event generator. </li>
              </ul>
-             Event generation and core framework improvements:             
+             Event generation and core framework improvements:
              <ul>
-               <li> Complete refactoring of the GENIE decayer and hadronization modules, upgrading 
+               <li> Complete refactoring of the GENIE decayer and hadronization modules, upgrading
                     decayers and hadronization modules to full-blown GENIE "event record visitors"
-                    and eliminating PYTHIA6-specific elements from GENIE interfaces. 
+                    and eliminating PYTHIA6-specific elements from GENIE interfaces.
                     The change underpinned newly developed interfaces to PYTHIA8. </li>
                <li> Added a new toolkit to generalise and simplify the implementation of cross-section
                     models relying on tabulated hadron tensors.
                     The change underpinned newly developed implementation of the SuSA2 model.
                     Old models were upgared to use the new toolkit</li>
              </ul>
-             Improvements in generator tools (flux and geometry drivers, event generation and other apps):             
+             Improvements in generator tools (flux and geometry drivers, event generation and other apps):
              <ul>
                <li> </li>
                <li> </li>
              </ul>
-             Other improvements / bug fixes:             
+             Other improvements / bug fixes:
              <ul>
                <li> Bug fix: Added code to handle P33(1600) in the GENIE event generation modules. The P33(1600) resonance
-                    (a 4-star resonance in 2019 PDG) was added in the GENIE v3 cross-section calculations but, 
-                    due to missing resonance data, the resonance was ignored during event generation. 
+                    (a 4-star resonance in 2019 PDG) was added in the GENIE v3 cross-section calculations but,
+                    due to missing resonance data, the resonance was ignored during event generation.
                     In versions affected by this bug, P33(1600) is added as a "Rootino" (pseudo-particle PDG code = 0)
                     and its decay is not simulated. </li>
-               <li> Bug fix: Fixed a mistake in BaryonResonanceDecayer::IsHandled() (returned input PDG code, as opposed 
+               <li> Bug fix: Fixed a mistake in BaryonResonanceDecayer::IsHandled() (returned input PDG code, as opposed
                     to the correct boolean flag). </li>
-               <li> Installed a fix in AGCharm2019 hadronizatiom model, allowing the production of charmed-mesons 
-                    (D+, D_s and D0) above a previously existing cutoff value of 100 GeV 
+               <li> Installed a fix in AGCharm2019 hadronizatiom model, allowing the production of charmed-mesons
+                    (D+, D_s and D0) above a previously existing cutoff value of 100 GeV
                     (issue reported by Emircan Elikkaya and Murat Ali Guler of the SHiP experiment).
              </ul>
            </div>
@@ -1153,16 +1153,16 @@
              Non-physics changes:
              <ul>
                <li>
-		<p>
-		This release is almost identical to 2.8.4 with the only change being in how the <code>$LHAPATH</code> environment variable is handled and how the patched GRV98lo file is distributed.
-		</p>
-		<p>
-		We removed the restriction on <code>$LHAPATH</code>. We now supply, in <code>$GENIE/data/evgen/pdfs</code>, the patched PDF.
-		Please copy this to your <code>$LHAPATH area</code>. Note the PDF has a different name - it is <code>GRV98lo_patched.LHgrid</code>.
-		This changed name is reflected in <code>$GENIE/config/PDFLIB.xml</code>.
-		By default, GENIE will not run if you do not copy the patched PDF file to that area.
-		If you would like to use the older, un-patched PDF, simply rename the PDF in the configuration XML to drop the <code>_patched</code> part of the filename.
-		</p>
+                <p>
+                This release is almost identical to 2.8.4 with the only change being in how the <code>$LHAPATH</code> environment variable is handled and how the patched GRV98lo file is distributed.
+                </p>
+                <p>
+                We removed the restriction on <code>$LHAPATH</code>. We now supply, in <code>$GENIE/data/evgen/pdfs</code>, the patched PDF.
+                Please copy this to your <code>$LHAPATH area</code>. Note the PDF has a different name - it is <code>GRV98lo_patched.LHgrid</code>.
+                This changed name is reflected in <code>$GENIE/config/PDFLIB.xml</code>.
+                By default, GENIE will not run if you do not copy the patched PDF file to that area.
+                If you would like to use the older, un-patched PDF, simply rename the PDF in the configuration XML to drop the <code>_patched</code> part of the filename.
+                </p>
                </li>
              </ul>
 
