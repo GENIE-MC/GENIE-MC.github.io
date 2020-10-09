@@ -227,12 +227,12 @@
                 <td colspan="9" class="clsVersionTableExternalProductsHeader"> </td>
              </tr>
              <tr>
-                <td class="clsVersionTableReweight">                   1.x   </td>
+                <td class="clsVersionTableReweight">                   ?     </td>
                 <td class="clsVersionTableGenerator">                  3.2.0 </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
                 <td> </td>
-                <td class="clsVersionTableExternalProducts">  ? </td>
+                <td class="clsVersionTableExternalProducts">  &ge; 6 </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
@@ -364,21 +364,28 @@
                     tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE
                     (requires a new GENIE external dependence: APFEL DGLAP evolution code).
                <li> Addition of a new intranuclear rescattering / FSI model through an interface to the
-                    INCL generator (requires a new GENIE external dependence:  INCL).</li>
+                    INCL generator, a recent version of the Liege intranuclear model
+                    (requires a new GENIE external dependence:  INCL).</li>
                <li> Addition of a new intranuclear rescattering / FSI model through an interface to the
                     GEANT4 generator (requires a new GENIE external dependence: GEANT4). </li>
                <li> Addition of a first working interface the PYTHIA8 hadronization code,
                     as part of an alternative, experimental configuration of the AGKY hadronization model
                     (requires a new GENIE external dependence: PYTHIA8). </li>
                <li> Addition of the Correlated Fermi Gas nuclear model. </li>
-               <li> A substantial update in GENIE Boosted Dark Matter (BDM) modules,
+               <li> A native implementation of a new BSM generator, 
+                    simulating the production and decay of Dark Neutrinos
+                    according to the model described in 
+                    <A href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.241801">Phys. Rev. Lett. 121, 241801</A>
+                    (contributions by Iker de Icaza, and Pedro Machado).
+               <li> A substantial upgrade in the Boosted Dark Matter (BDM) BSM generator,
                     bringing it sync with the model described in arXiv:1812.05616.
                     The newly deployed BDM code
                     a) allows a broader set of particle physics models, including
                        both vector and axial couplings, as well as different isospin structures,
                     b) has improved modeling of the elastic scattering process, including a pseudoscalar form factor,
                     c) includes the simulation of scattering off electrons, and
-                    d) includes anti-dark matter scattering. </li>
+                    d) includes anti-dark matter scattering. 
+                    (contributions by Josh Berger). </li>
                <li> Addition of a new and complete implementation of a CEvNS event generator. </li>
              </ul>
              Event generation and core framework improvements:
@@ -409,6 +416,12 @@
                <li> Installed a fix in AGCharm2019 hadronizatiom model, allowing the production of charmed-mesons
                     (D+, D_s and D0) above a previously existing cutoff value of 100 GeV
                     (issue reported by Emircan Elikkaya and Murat Ali Guler of the SHiP experiment).
+             </ul>
+             Other comments:
+             <ul>
+               <li> Now supports C++14 (previously C++98) </li>
+               <li> Dropped support for ROOT5 </li>
+             <ul>
              </ul>
            </div>
          </div>
