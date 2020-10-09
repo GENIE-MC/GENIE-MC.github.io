@@ -360,49 +360,58 @@
              </ul>
              New and/or updated physics models:
              <ul>
-               <li> Addition of a new NLO DIS cross-section calculation and event generator module
+               <li> Addition of a new <b>NLO DIS cross-section calculation and event generator module</b>
                     tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE
                     (requires a new GENIE external dependence: APFEL DGLAP evolution code).
-               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the
-                    INCL generator, a recent version of the Liege intranuclear model
-                    (requires a new GENIE external dependence:  INCL).</li>
-               <li> Addition of a new intranuclear rescattering / FSI model through an interface to the
-                    GEANT4 generator (requires a new GENIE external dependence: GEANT4). </li>
-               <li> Addition of a first working interface the PYTHIA8 hadronization code,
+               <li> Addition of the <b>Liege intranuclear rescattering model</b> through an interface to the INCL generator.
+                    (requires a new GENIE external dependence: INCL).</li>
+               <li> Addition of the <b>Bertini intranuclear rescattering model</b> through an interface to the
+                    GEANT4 generator</b> (requires a new GENIE external dependence: GEANT4). </li>
+               <li> Addition of a first working <b>interface the PYTHIA8 hadronization code</b>,
                     as part of an alternative, experimental configuration of the AGKY hadronization model
                     (requires a new GENIE external dependence: PYTHIA8). </li>
                <li> Addition of the Correlated Fermi Gas nuclear model. </li>
                <li> A native implementation of a new BSM generator, 
-                    simulating the production and decay of Dark Neutrinos
+                    simulating the production and decay of <b>Dark Neutrinos</b>
                     according to the model described in 
                     <A href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.241801">Phys. Rev. Lett. 121, 241801</A>
                     (contributions by Iker de Icaza, and Pedro Machado).
-               <li> A substantial upgrade in the Boosted Dark Matter (BDM) BSM generator,
+               <li> A substantial upgrade in the <b>Boosted Dark Matter (BDM)</b> BSM generator,
                     bringing it sync with the model described in arXiv:1812.05616.
                     The newly deployed BDM code
                     a) allows a broader set of particle physics models, including
                        both vector and axial couplings, as well as different isospin structures,
                     b) has improved modeling of the elastic scattering process, including a pseudoscalar form factor,
                     c) includes the simulation of scattering off electrons, and
-                    d) includes anti-dark matter scattering. 
+                    d) includes anti-dark matter scattering
                     (contributions by Josh Berger). </li>
-               <li> Addition of a new and complete implementation of a CEvNS event generator. </li>
+               <li> Addition of a new and complete implementation of a <b>CEvNS event generator</b>. </li>
              </ul>
              Event generation and core framework improvements:
              <ul>
-               <li> Complete refactoring of the GENIE decayer and hadronization modules, upgrading
-                    decayers and hadronization modules to full-blown GENIE "event record visitors"
-                    and eliminating PYTHIA6-specific elements from GENIE interfaces.
-                    The change underpinned newly developed interfaces to PYTHIA8. </li>
                <li> Added a new toolkit to generalise and simplify the implementation of cross-section
                     models relying on tabulated hadron tensors.
                     The change underpinned newly developed implementation of the SuSA2 model.
                     Old models were upgared to use the new toolkit</li>
+               <li> Complete refactoring of the GENIE decayer and hadronization modules, upgrading
+                    decayers and hadronization modules to full-blown GENIE "event record visitors"
+                    and eliminating PYTHIA6-specific elements from GENIE interfaces.
+                    The change underpinned newly developed interfaces to PYTHIA8. </li>
              </ul>
              Improvements in generator tools (flux and geometry drivers, event generation and other apps):
              <ul>
-               <li> </li>
-               <li> </li>
+               <li> Added a new toolkit (EvtLib: Event Library Interface Generator)
+                    providing a file <b>interface to external neutrino MC generators</b>.
+                    EvtLib allows experiments to run external neutrino MC generators,
+                    re-using their existing GENIE MC production workflows
+                    and the extensive GENIE flux and geometry tools                    
+                    (contribution by Chris Backhouse).
+               <li> Added a new option (-T) in the GENIE atmospheric neutrino event generation app,
+                    to generate the number of corresponding to a given livetime (in sec).
+                    This is similar to the -e option in our apps for accelerator-based experiments,
+                    generating the number of events corresponding to a given data exposure unit 
+                    (here, proton on target) rather than generating a fixed number of events
+                    (contribution by Tony LaTorre). </li>
              </ul>
              Other improvements / bug fixes:
              <ul>
