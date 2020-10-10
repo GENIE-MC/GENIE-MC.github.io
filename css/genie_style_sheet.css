@@ -288,6 +288,11 @@ div#LogoBox {
         font-size: 15px;
 }
 
+.clsFContrib { 
+	color: #af81aa;
+	font-style: italic;
+}
+
 .clsFRed { 
 	color: red
 }
