@@ -348,23 +348,24 @@
              <br />
              New comprehensive model configurations and tunes:
              <ul>
-               <li> For every cross-section model construction, and for the 02_11a tune described in the above paper,        
-                    released two new comprehensive model variants by incorporating the
-                    INCL (Liege) and GEANT4/Bertini FSI codes, in addition to the existing variants incorporating the
-                    INTRANUKE/hA and INTRANUKE/hN FSI codes. 
+               <li> For every alternative cross-section model construction,        
+                    released two new comprehensive model variants by incorporating the INCL (Liege) and GEANT4/Bertini FSI codes, 
+                    in addition to the existing variants incorporating the INTRANUKE/hA and INTRANUKE/hN FSI codes. 
                     So, for example, for our G18_02 (theory) cross-section model construction, that incorporates the results of
-                    our 02_11a global analysis, users can obtain the following tunes:
-                    G18_02a_02_11a (hA FSI),  G18_02b_02_11a (hN FSI),  G18_02c_02_11a (INCL), G18_02d_02_11a (Bertini).
+                    the GENIE 02_11b global analysis, users can obtain the following tunes:
+                    G18_02a_02_11b (hA FSI),  G18_02b_02_11b (hN FSI),  G18_02c_02_11b (INCL), G18_02d_02_11b (Bertini).
                     <A href="http://tunes.genie-mc.org/"> Further details on the available tunes can be found here</A>
                     </li>
-               <li> Incorporated the final results of the GENIE global analysis of bare-nucleon cross-section data
-                    into all G18_[01a-d/02a-d]_<b>02_11a</b> GENIE tunes.
+               <li> Incorporated the <b>final results of the GENIE global analysis of bare-nucleon cross-section data</b>
+                    into all G18_[01a-d/02a-d]_<b>02_11b</b> GENIE tunes.
+                    Preliminary versions of our results were released in v3.0.0 - v3.0.6 in tunes carrying the label 02_11a.
+                    These preliminary (02_11a) were maintained in v3.2.0, but they will be phased out is the next release.
                     Details about this GENIE analysis are published in: <i>(Paper in preparation)</i>.
                     </li>
-               <li> Added 02_11a variants (tunes) for the G18_10 class of comprehensive models.
+               <li> Added 02_11b variants (tunes) for the G18_10 class of comprehensive models.
                     </li>
-               <li> Released optional AGKY hadronization model configurations, incorporating the first
-                    results from the GENIE global analysis of data on neutrino-induced hadron shower characteristics.
+               <li> Released optional AGKY hadronization model configurations, 
+                    incorporating the <b>first results from the GENIE global analysis of data on neutrino-induced hadron shower characteristics</b>
                     Details about this GENIE analysis are published in: <i>(Paper in preparation)</i>.
                     </li>
                <li> Released a new set of comprehensive models (GHE19_00a, GHE19_00b, and GHE19_00c) 
@@ -465,6 +466,15 @@
                     <A href="https://github.com/GENIE-MC/Generator/issues/83">[GENIE issue #83]</A>
                     <A href="https://github.com/GENIE-MC/Generator/pull/93">[GENIE pull request #93]</A>
                     </li>
+               <li> New options installed in GMCJDriver: Options to 
+                    a) always force an interaction of the input neutrino flux ray,
+                    b) use logarithmic binning in the histogram that records the maximum possible interaction
+                    probability, as a function of neutrino energy, in the current MC job, and 
+                    c) change the safety factor applied in the estimated maximum interaction probabilities
+                    when rejection sampling is used.
+                    <span class="clsFContrib"> Contribution by Alfonso Garcia (NIKHEF)</span>.
+                    <A href="https://github.com/GENIE-MC/Generator/pull/75">[GENIE pull request #75]</A>
+                    </li>
              </ul>
              Other improvements / bug fixes:
              <ul>
@@ -491,6 +501,20 @@
                     <span class="clsFContrib"> 
                     Issue reported by Emircan Elikkaya and Murat Ali Guler (METU) of the SHiP experiment. </span>
                     <A href="https://github.com/GENIE-MC/Generator/issues/77">[GENIE issue #77]</A>
+                    </li>
+               <li> Bug fix: Fixed a mistake in a Jacobean used in the Rosenbluth cross-section calculation.
+                    The bug affects the GENIE electron scattering mode only.
+                    <A href="https://github.com/GENIE-MC/Generator/pull/121">[GENIE pull request #121]</A>
+                    </li>
+               <li> The time coordinate of all particles in the event record (time increments with respect 
+                    to the event vertex time) is now recorded. 
+                    A new convention was introduced: The patricle time increments are given in ys (yocto-seconds / 1E-24 seconds).
+                    The conventions for other relevant quantities given in the event record
+                    remained unchanged (particle position increments in fm, event vertex coordinates in SI units).
+                    </li>
+               <li> The correct space and time coordinates of the daughter particles produced in PYTHIA decays are now stored in the GENIE event record.
+                    Previously, the coordinates of the daughter particles were set to be the ones of the mother particle.
+                    <A href="https://github.com/GENIE-MC/Generator/pull/119">[GENIE pull request #119]</A>
                     </li>
              </ul>
              Other comments:
