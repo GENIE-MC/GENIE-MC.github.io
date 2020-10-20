@@ -343,7 +343,10 @@
            <br />
            <div id="ReleaseTableBody">
              <b>Improvements over 3.0.*</b>
-             (<i>Important contributions by non-GENIE authors are especially acknowledged</i>)
+             <br />
+             <span class="clsFContrib">
+               (<i>Important contributions by non-GENIE authors are especially acknowledged in the text below</i>)
+             </span>
              <br />
              <br />
              New comprehensive model configurations and tunes:
@@ -482,6 +485,11 @@
                     The Smith-Monitz model (like any other RFG model) is not applicable to Helium,
                     and cross-section calculation code was crashing. An ad hoc solution was implemented.
                     <A href="https://github.com/GENIE-MC/Generator/pull/107">[GENIE pull request #107]</A>
+                    </li>
+               <li> Bug fix: Fixed two bugs with signs used in the Berger-Sehgal and Kuzmin-Lyubushkin-Naumov
+                    resonance models. The fix was installed for clarity and it has no effect, 
+                    as the wrong signs were cancelling each other out.
+                     <A href="https://github.com/GENIE-MC/Generator/pull/107">[GENIE pull request #107]</A>
                     </li>
                <li> Bug fix: Added code to handle P33(1600) in the GENIE event generation modules. The P33(1600) resonance
                     (a 4-star resonance in 2019 PDG) was added in the GENIE v3 cross-section calculations but,
