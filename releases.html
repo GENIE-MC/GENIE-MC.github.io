@@ -342,15 +342,15 @@
            <br />
            <br />
            <div id="ReleaseTableBody">
-             <b>Improvements over 3.0.*</b> 
+             <b>Improvements over 3.0.*</b>
              (<i>Important contributions by non-GENIE authors are especially acknowledged</i>)
              <br />
              <br />
              New comprehensive model configurations and tunes:
              <ul>
-               <li> For every alternative cross-section model construction,        
-                    released two new comprehensive model variants by incorporating the INCL (Liege) and GEANT4/Bertini FSI codes, 
-                    in addition to the existing variants incorporating the INTRANUKE/hA and INTRANUKE/hN FSI codes. 
+               <li> For every alternative cross-section model construction,
+                    released two new comprehensive model variants by incorporating the INCL (Liege) and GEANT4/Bertini FSI codes,
+                    in addition to the existing variants incorporating the INTRANUKE/hA and INTRANUKE/hN FSI codes.
                     So, for example, for our G18_02 (theory) cross-section model construction, that incorporates the results of
                     the GENIE 02_11b global analysis, users can obtain the following tunes:
                     G18_02a_02_11b (hA FSI),  G18_02b_02_11b (hN FSI),  G18_02c_02_11b (INCL), G18_02d_02_11b (Bertini).
@@ -364,32 +364,32 @@
                     </li>
                <li> Added 02_11b variants (tunes) for the G18_10 class of comprehensive models.
                     </li>
-               <li> Released optional AGKY hadronization model configurations, 
+               <li> Released optional AGKY hadronization model configurations,
                     incorporating the <b>first results from the GENIE global analysis of data on neutrino-induced hadron shower characteristics</b>
                     Details about this GENIE analysis are published in: <i>(Paper in preparation)</i>.
                     </li>
-               <li> Released a new set of comprehensive models (GHE19_00a, GHE19_00b, and GHE19_00c) 
+               <li> Released a new set of comprehensive models (GHE19_00a, GHE19_00b, and GHE19_00c)
                     optimised for our ultra high energy user communities,
                     based on our new NLO DIS cross-section calculation and event generation modules.
                     </li>
                <li> Released a new comprehensive model (GVLE18_01a) optimised for our low energy (< 100 MeV) user communities.
-                    </li>           
-               <li> Released a series of <u>experimental</u> comprehensive models incorporating 
-                    new cross-section modelling elements (SuSAv2) in preparation of a new generation of 
+                    </li>
+               <li> Released a series of <u>experimental</u> comprehensive models incorporating
+                    new cross-section modelling elements (SuSAv2) in preparation of a new generation of
                     comprehensive models and tunes for GENIE4.
                     </li>
              </ul>
              New and/or updated physics models:
              <ul>
-               <li> Addition of the <b>SuSAv2 1p1h and 2p2h</b> cross-section models. 
+               <li> Addition of the <b>SuSAv2 1p1h and 2p2h</b> cross-section models.
                     Details published in <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.101.033003">Phys. Rev. D 101, 033003</A>.
-                    <span class="clsFContrib">Contribution by Stephen Dolan, Guillermo Megias 
+                    <span class="clsFContrib">Contribution by Stephen Dolan, Guillermo Megias
                       and Sara Bolognesi (Ecole Polytechnique and IRFU, Saclay, DPP)</span>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/55">[GENIE pull request #55]</A>
                     </li>
-               <li> Addition of a new <b>NLO DIS cross-section calculation and event generation modules</b> 
+               <li> Addition of a new <b>NLO DIS cross-section calculation and event generation modules</b>
                     (including an implementation of the LEPTO interface to the PYTHIA6 hadronization routines)
-                    tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE. 
+                    tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE.
                     Details published in <A href="https://iopscience.iop.org/article/10.1088/1475-7516/2020/09/025">JCAP 09 (2020) 025</A>.
                     This model requires a new GENIE external dependence: <A href="https://apfel.hepforge.org/">APFEL DGLAP evolution code</A>.
                     <span class="clsFContrib"> Contribution by Alfonso Garcia (NIKHEF)</span>.
@@ -398,18 +398,18 @@
                     This model requires a new GENIE external dependence: INCL.
                     </li>
                <li> Addition of the <b>Bertini intranuclear rescattering model</b> through an interface to the
-                    GEANT4 generator</b>. This model requires a new GENIE external dependence: GEANT4. 
+                    GEANT4 generator</b>. This model requires a new GENIE external dependence: GEANT4.
                     <span class="clsFContrib"> Contributions by Dennis Wright and Makoto Asai (SLAC)</span>.
                     </li>
                <li> Addition of a first working <b>interface the PYTHIA8 hadronization code</b>,
                     as part of an alternative, <i>experimental configuration</i> of the AGKY hadronization model.
-                    This model requires a new GENIE external dependence: PYTHIA8. 
+                    This model requires a new GENIE external dependence: PYTHIA8.
                     <span class="clsFContrib">Contributions by Shivesh Mandalia (QMUL).</span>
                     </li>
                <li> Addition of the <b>Correlated Fermi Gas</b> nuclear model. </li>
-               <li> A native implementation of a new BSM generator, 
+               <li> A native implementation of a new BSM generator,
                     simulating the production and decay of <b>Dark Neutrinos</b>
-                    according to the model described in 
+                    according to the model described in
                     <A href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.241801">Phys. Rev. Lett. 121, 241801</A>.
                     <span class="clsFContrib"> Contributions by Iker de Icaza (Sussex) and Pedro Machado (FNAL)</span>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/114">[GENIE pull request #114]</A>
@@ -421,12 +421,12 @@
                     b) has improved modeling of the elastic scattering process, including a pseudoscalar form factor,
                     c) includes the simulation of scattering off electrons, and
                     d) includes anti-dark matter scattering.
-                    <span class="clsFContrib"> Contribution by Joshua Berger (Pittsburgh)</span>. 
+                    <span class="clsFContrib"> Contribution by Joshua Berger (Pittsburgh)</span>.
                     </li>
-               <li> Addition of a new and complete implementation of a <b>CEvNS event generator</b>. 
-                    Uses an implementation of the CEvNS cross-section model 
+               <li> Addition of a new and complete implementation of a <b>CEvNS event generator</b>.
+                    Uses an implementation of the CEvNS cross-section model
                     of Kelly Patton, Jonathan Engel, Gail C. McLaughlin, and Nicolas Schunck
-                    described in 
+                    described in
                     <A href="https://journals.aps.org/prc/abstract/10.1103/PhysRevC.86.024612">Phys. Rev. C 86, 024612</A>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/45">[GENIE pull request #45]</A>
                     </li>
@@ -455,21 +455,21 @@
                <li> Added a new option (-T) in the GENIE atmospheric neutrino event generation app,
                     to generate the number of corresponding to a given livetime (in sec).
                     This is similar to the -e option in our apps for accelerator-based experiments,
-                    generating the number of events corresponding to a given data exposure unit 
+                    generating the number of events corresponding to a given data exposure unit
                     (here, proton on target) rather than generating a fixed number of events.
                     <span class="clsFContrib"> Contribution by Tony LaTorre (Chicago). </span>
                     <A href="https://github.com/GENIE-MC/Generator/pull/92">[GENIE pull request #92]</A>
                     </li>
-               <li> Automatically select flux surface radii when a detector geometry is specified in 
+               <li> Automatically select flux surface radii when a detector geometry is specified in
                     the GENIE atmospheric neutrino event generation app.
                     <span class="clsFContrib"> Contribution by Tony LaTorre (Chicago). </span>
                     <A href="https://github.com/GENIE-MC/Generator/issues/83">[GENIE issue #83]</A>
                     <A href="https://github.com/GENIE-MC/Generator/pull/93">[GENIE pull request #93]</A>
                     </li>
-               <li> New options installed in GMCJDriver: Options to 
+               <li> New options installed in GMCJDriver: Options to
                     a) always force an interaction of the input neutrino flux ray,
                     b) use logarithmic binning in the histogram that records the maximum possible interaction
-                    probability, as a function of neutrino energy, in the current MC job, and 
+                    probability, as a function of neutrino energy, in the current MC job, and
                     c) change the safety factor applied in the estimated maximum interaction probabilities
                     when rejection sampling is used.
                     <span class="clsFContrib"> Contribution by Alfonso Garcia (NIKHEF)</span>.
@@ -478,27 +478,24 @@
              </ul>
              Other improvements / bug fixes:
              <ul>
-               <li> Bug fix: Fix an issue with electron (anti)neutrino scattering on Helium. 
-                    The Smith-Monitz model (like any other RFG model) is not applicable to Helium, 
+               <li> Bug fix: Fix an issue with electron (anti)neutrino scattering on Helium.
+                    The Smith-Monitz model (like any other RFG model) is not applicable to Helium,
                     and cross-section calculation code was crashing. An ad hoc solution was implemented.
-                    <A href="https://github.com/GENIE-MC/Generator/pull/105">[GENIE pull request #105]</A>
-                    </li>
-               <li> Bug fix: Fixed  the exponent in the dipole form factor squared in the empirical MEC model.
-                    <A href="https://github.com/GENIE-MC/Generator/pull/87">[GENIE pull request #87]</A>
+                    <A href="https://github.com/GENIE-MC/Generator/pull/107">[GENIE pull request #107]</A>
                     </li>
                <li> Bug fix: Added code to handle P33(1600) in the GENIE event generation modules. The P33(1600) resonance
                     (a 4-star resonance in 2019 PDG) was added in the GENIE v3 cross-section calculations but,
                     due to missing resonance data, the resonance was ignored during event generation.
                     In versions affected by this bug, P33(1600) is added as a "Rootino" (pseudo-particle PDG code = 0)
-                    and its decay is not simulated. 
+                    and its decay is not simulated.
                     <A href="https://github.com/GENIE-MC/Generator/pull/65">[GENIE pull request #65]</A>
                     </li>
                <li> Bug fix: Fixed a mistake in BaryonResonanceDecayer::IsHandled() (returned input PDG code, as opposed
-                    to the correct boolean flag). 
+                    to the correct boolean flag).
                     </li>
                <li> Bug fix: Installed a fix in AGCharm2019 hadronizatiom model, allowing the production of charmed-mesons
                     (D+, D_s and D0) above a previously existing cutoff value of 100 GeV.
-                    <span class="clsFContrib"> 
+                    <span class="clsFContrib">
                     Issue reported by Emircan Elikkaya and Murat Ali Guler (METU) of the SHiP experiment. </span>
                     <A href="https://github.com/GENIE-MC/Generator/issues/77">[GENIE issue #77]</A>
                     </li>
@@ -506,8 +503,8 @@
                     The bug affects the GENIE electron scattering mode only.
                     <A href="https://github.com/GENIE-MC/Generator/pull/121">[GENIE pull request #121]</A>
                     </li>
-               <li> The time coordinate of all particles in the event record (time increments with respect 
-                    to the event vertex time) is now recorded. 
+               <li> The time coordinate of all particles in the event record (time increments with respect
+                    to the event vertex time) is now recorded.
                     A new convention was introduced: The patricle time increments are given in ys (yocto-seconds / 1E-24 seconds).
                     The conventions for other relevant quantities given in the event record
                     remained unchanged (particle position increments in fm, event vertex coordinates in SI units).
