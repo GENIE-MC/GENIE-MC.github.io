@@ -478,6 +478,13 @@
                     <span class="clsFContrib"> Contribution by Alfonso Garcia (NIKHEF)</span>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/75">[GENIE pull request #75]</A>
                     </li>
+               <li> Added the option to use variable bin width flux histograms in the
+                    T2K and FNAL (applicable to all FNAL experiments) specialised event generation apps.
+                    Previously, this option for histogram-based flux descriptions existed in the generic event generation app 
+                    but was left out of the more specialised apps, since the power of these apps is exploited by providing
+                    detailed ntuple-based flux descriptions produced by beamline simulations.
+                    This update improves these specialised apps for users who wish to use them with simpler flux descriptions.
+                    <A href="https://github.com/GENIE-MC/Generator/pull/124">[GENIE pull request #124]</A>
              </ul>
              Other improvements / bug fixes:
              <ul>
