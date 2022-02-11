@@ -363,17 +363,20 @@
                     into all G18_[01a-d/02a-d]_<b>02_11b</b> GENIE tunes.
                     Preliminary versions of our results were released in v3.0.0 - v3.0.6 in tunes carrying the label 02_11a.
                     These preliminary (02_11a) were maintained in v3.2.0, but they will be phased out is the next release.
-                    Details about this GENIE analysis are published in: <i>(Paper in preparation)</i>.
+                    Details about this GENIE analysis are published in 
+                    <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.104.072009" target="_top"> Phys.Rev.D 104 (2021) 7, 072009</A>.
                     </li>
                <li> Added 02_11b variants (tunes) for the G18_10 class of comprehensive models.
                     </li>
                <li> Released optional AGKY hadronization model configurations,
                     incorporating the <b>first results from the GENIE global analysis of data on neutrino-induced hadron shower characteristics</b>
-                    Details about this GENIE analysis are published in: <i>(Paper in preparation)</i>.
+                    Details about this GENIE analysis are published in
+                    <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.012009" target="_top"> Phys.Rev.D 105 (2022) 1, 012009</A>.
                     </li>
-               <li> Released a new set of comprehensive models (GHE19_00a, GHE19_00b, and GHE19_00c)
+               <li> Released a new set of comprehensive models 
                     optimised for our ultra high energy user communities,
                     based on our new NLO DIS cross-section calculation and event generation modules.
+                    They are: GHE19_00a (BGR18 model), GHE19_00b (CMS11 model), GHE19_00c and GHE19_00d (GGHR model). 
                     </li>
                <li> Released a new comprehensive model (GVLE18_01a) optimised for our low energy (< 100 MeV) user communities.
                     </li>
@@ -401,12 +404,24 @@
                     <A href="https://github.com/GENIE-MC/Generator/pull/131">[GENIE pull request #131]</A>,
                     <A href="https://github.com/GENIE-MC/Generator/pull/132">[GENIE pull request #132]</A>.
                </li>
-               <li> Addition of a new <b>NLO DIS cross-section calculation and event generation modules</b>
-                    (including an implementation of the LEPTO interface to the PYTHIA6 hadronization routines)
-                    tested/validated up to 1E+9 GeV, in support of GENIE users in km3net and IceCUBE.
-                    Details published in <A href="https://iopscience.iop.org/article/10.1088/1475-7516/2020/09/025">JCAP 09 (2020) 025</A>.
-                    This model requires a new GENIE external dependence: <A href="https://apfel.hepforge.org/">APFEL DGLAP evolution code</A>.
-                    <span class="clsFContrib"> Contribution by Alfonso Garcia (NIKHEF)</span>.
+               <li> Addition of a new <b>NLO DIS cross-section calculation and event generation modules</b> (HEDIS package),
+                    including an implementation of the LEPTO interface to the PYTHIA6 hadronization routines,
+                    tested/validated up to 1E+9 GeV, in support of GENIE users in km3net, IceCUBE 
+                    and CERN Forward Physics Facility (FASERnu and other experiments).
+                    Details published in <A href="https://iopscience.iop.org/article/10.1088/1475-7516/2020/09/025" target="_top">JCAP 09 (2020) 025</A>
+                    and <A href="https://pos.sissa.it/358/895" target="_top">PoS ICRC2019 (2020) 895</A>.
+                    This model requires a new GENIE external dependence: <A href="https://apfel.hepforge.org/" target="_top">APFEL DGLAP evolution code</A>.
+                    New generalised interfaces for structure function calculations.
+                    <span class="clsFContrib"> Contribution by Juan Rojo, Rhorry Gauld and Aart Heijboer (NIKHEF)</span> 
+                    in collaboration with core GENIE member Alfonso Garcia (IFIC/Harvard).
+                    </li>
+               <li>
+                    New HELepton package, incorporating <b>a) resonant interactions with the nucleon's photon field, and b) coherent
+                    neutrino scattering</b> into the GENIE high energy event generator.                       
+                    Details in <A href="https://iopscience.iop.org/article/10.1088/1475-7516/2020/09/025" target="_top">JCAP 09 (2020) 025</A>.
+                    These processes were implemented at NLO. In addition, the new HELepton package absorbed old code to simulate the Glashow resonance
+                    and was re-implemented at NLO.
+                    <A href="https://github.com/GENIE-MC/Generator/pull/161">[GENIE pull request #161]</A>
                     </li>
                <li> Addition of the <b>Liege intranuclear rescattering model</b> through an interface to the INCL generator.
                     This model requires a new GENIE external dependence: INCL.
