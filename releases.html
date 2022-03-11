@@ -227,17 +227,17 @@
                 <td colspan="9" class="clsVersionTableExternalProductsHeader"> </td>
              </tr>
              <tr>
-                <td class="clsVersionTableReweight">                   ?     </td>
+                <td class="clsVersionTableReweight">                   1.2.0 </td>
                 <td class="clsVersionTableGenerator">                  3.2.0 </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
                 <td> </td>
                 <td class="clsVersionTableExternalProducts">  &ge; 6 </td>
+                <td class="clsVersionTableExternalProducts">  &ge; 2.6 </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
-                <td class="clsVersionTableExternalProducts">  ? </td>
-                <td class="clsVersionTableExternalProducts">  ? </td>
-                <td class="clsVersionTableExternalProducts">  ? </td>
+                <td class="clsVersionTableExternalProducts">  &ge; 6.3.0 </td>
+                <td class="clsVersionTableExternalProducts">  6.4.28 </td>
                 <td class="clsVersionTableExternalProducts">  ? </td>
                 <td class="clsVersionTableExternalProducts"> &#x2055; modified <br /> v5.2.9.5 </td>
                 <td class="clsVersionTableExternalProducts"> &#x2055; v4.10.4.p02 </td>
@@ -363,7 +363,7 @@
                     into all G18_[01a-d/02a-d]_<b>02_11b</b> GENIE tunes.
                     Preliminary versions of our results were released in v3.0.0 - v3.0.6 in tunes carrying the label 02_11a.
                     These preliminary (02_11a) were maintained in v3.2.0, but they will be phased out is the next release.
-                    Details about this GENIE analysis are published in 
+                    Details about this GENIE analysis are published in
                     <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.104.072009" target="_top"> Phys.Rev.D 104 (2021) 7, 072009</A>.
                     </li>
                <li> Added 02_11b variants (tunes) for the G18_10 class of comprehensive models.
@@ -373,11 +373,11 @@
                     Details about this GENIE analysis are published in
                     <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.012009" target="_top"> Phys.Rev.D 105 (2022) 1, 012009</A>.
                     </li>
-               <li> Released a new set of tunes 
+               <li> Released a new set of tunes
                     optimised for our ultra high energy user communities,
                     based on our new NLO DIS cross-section calculation and event generation modules.
-                    They are: GHE19_00a_00_000 (BGR18 model), GHE19_00b_00_000 (CMS11 model), 
-                    GHE19_00c_00_000 (GENHEN-like model) and GHE19_00d_00_000 (GGHR20 model). 
+                    They are: GHE19_00a_00_000 (BGR18 model), GHE19_00b_00_000 (CMS11 model),
+                    GHE19_00c_00_000 (GENHEN-like model) and GHE19_00d_00_000 (GGHR20 model).
                     </li>
                <li> Released a new comprehensive model (GVLE18_01a) optimised for our low energy (< 100 MeV) user communities.
                     </li>
@@ -394,10 +394,10 @@
                       and Sara Bolognesi (Ecole Polytechnique and IRFU, Saclay, DPP)</span>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/55">[GENIE pull request #55]</A>
                     </li>
-               <li> Addition of the published <b>Minoo Kabirnezhad (MK) single-pion cross-section model</b>	
+               <li> Addition of the published <b>Minoo Kabirnezhad (MK) single-pion cross-section model</b>
                     by the Dubna GENIE group, and a critical review of the published work
                     leading to model variants currently under consideration for GENIE v4.
-                    Details of the original model can be found in 
+                    Details of the original model can be found in
                     <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.013002">Phys. Rev. D 97, 013002</A>.
                     Details of the MK model variants are currently private.
                     <span class="clsFContrib">Contribution by Minoo Kabirnezhad (Oxford)</span>.
@@ -407,18 +407,18 @@
                </li>
                <li> Addition of a new <b>NLO DIS cross-section calculation and event generation modules</b> (HEDIS package),
                     including an implementation of the LEPTO interface to the PYTHIA6 hadronization routines,
-                    tested/validated up to 1E+9 GeV, in support of GENIE users in km3net, IceCUBE 
+                    tested/validated up to 1E+9 GeV, in support of GENIE users in km3net, IceCUBE
                     and CERN Forward Physics Facility (FASERnu and other experiments).
                     Details published in <A href="https://iopscience.iop.org/article/10.1088/1475-7516/2020/09/025" target="_top">JCAP 09 (2020) 025</A>
                     and <A href="https://pos.sissa.it/358/895" target="_top">PoS ICRC2019 (2020) 895</A>.
                     This model requires a new GENIE external dependence: <A href="https://apfel.hepforge.org/" target="_top">APFEL DGLAP evolution code</A>.
                     New generalised interfaces for structure function calculations.
-                    <span class="clsFContrib"> Contribution by Juan Rojo, Rhorry Gauld and Aart Heijboer (NIKHEF)</span> 
+                    <span class="clsFContrib"> Contribution by Juan Rojo, Rhorry Gauld and Aart Heijboer (NIKHEF)</span>
                     in collaboration with core GENIE member Alfonso Garcia (IFIC/Harvard).
                     </li>
                <li>
                     New HELepton package, incorporating <b>a) resonant interactions with the nucleon's photon field, and b) coherent
-                    neutrino scattering</b> into the GENIE high energy event generator.                       
+                    neutrino scattering</b> into the GENIE high energy event generator.
                     Details in <A href="https://iopscience.iop.org/article/10.1088/1475-7516/2020/09/025" target="_top">JCAP 09 (2020) 025</A>.
                     These processes were implemented at NLO. In addition, the new HELepton package absorbed old code to simulate the Glashow resonance
                     and was re-implemented at NLO.
@@ -507,7 +507,7 @@
                     </li>
                <li> Added the option to use variable bin width flux histograms in the
                     T2K and FNAL (applicable to all FNAL experiments) specialised event generation apps.
-                    Previously, this option for histogram-based flux descriptions existed in the generic event generation app 
+                    Previously, this option for histogram-based flux descriptions existed in the generic event generation app
                     but was left out of the more specialised apps, since the power of these apps is exploited by providing
                     detailed ntuple-based flux descriptions produced by beamline simulations.
                     This update improves these specialised apps for users who wish to use them with simpler flux descriptions.
@@ -521,7 +521,7 @@
                     <A href="https://github.com/GENIE-MC/Generator/pull/107">[GENIE pull request #107]</A>
                     </li>
                <li> Bug fix: Fixed two bugs with signs used in the Berger-Sehgal and Kuzmin-Lyubushkin-Naumov
-                    resonance models. The fix was installed for clarity and it has no effect, 
+                    resonance models. The fix was installed for clarity and it has no effect,
                     as the wrong signs were cancelling each other out.
                      <A href="https://github.com/GENIE-MC/Generator/pull/107">[GENIE pull request #107]</A>
                     </li>
