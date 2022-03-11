@@ -26,7 +26,7 @@
          <br />
          For large MC productions and physics studies, use
          one of the comprehensive model configurations supported in the latest
-         GENIE production release (<B>v3.0.6</B>).
+         GENIE production release (<B>v3.2.0</B>).
          <br />
          <br />
          To experiment with the latest publicly released physics models and technical
@@ -332,12 +332,70 @@
          <br />
 
          <div id="ReleaseTableHeader2">
+           <b>Version: 3.4.0 </b>
+           <br />
+           <small>
+            Tag: R-3_04_00,
+            <!-- Released: , -->
+            Status: <i class="clsFRed"> in development</i>
+           </small>
+           <br />
+           <br />
+           <div id="ReleaseTableBody">
+             <b>Improvements over 3.2.*</b>
+             <br />
+             <span class="clsFContrib">
+               (<i>Important contributions by non-GENIE authors are especially acknowledged in the text below</i>)
+             </span>
+             <br />
+             <br />
+             New comprehensive model configurations and tunes:
+             <ul>
+               <li> </li>
+             </ul>
+             New and/or updated physics models:
+             <ul>
+               <li> Addition of the published <b>Minoo Kabirnezhad (MK) single-pion cross-section model</b>	
+                    by the Dubna GENIE group, and a critical review of the published work
+                    leading to model variants currently under consideration for GENIE v4.
+                    Details of the original model can be found in 
+                    <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.013002">Phys. Rev. D 97, 013002</A>.
+                    Details of the MK model variants are currently private.
+                    <span class="clsFContrib">Contribution by Minoo Kabirnezhad (Oxford)</span>.
+                    <A href="https://github.com/GENIE-MC/Generator/pull/130">[GENIE pull request #130]</A>,
+                    <A href="https://github.com/GENIE-MC/Generator/pull/131">[GENIE pull request #131]</A>,
+                    <A href="https://github.com/GENIE-MC/Generator/pull/132">[GENIE pull request #132]</A>.
+               </li>
+               <li> </li>
+             </ul>
+             Event generation and core framework improvements:
+             <ul>
+               <li> </li>
+             </ul>
+             Improvements in generator tools (flux and geometry drivers, event generation and other apps):
+             <ul>
+               <li> </li>
+             </ul>
+             Other improvements / bug fixes:
+             <ul>
+               <li> </li>
+             </ul>
+             Other comments:
+             <ul>
+               <li> </li>
+             </ul>
+           </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
            <b>Version: 3.2.0 </b>
            <br />
            <small>
             Tag: R-3_02_00,
-            Released: to be annouced,
-            Status: <i class="clsFRed"> in preparation</i>
+            Released: 11 March 2022,
+            Status: <i class="clsFGreen"> pro</i>
            </small>
            <br />
            <br />
@@ -394,17 +452,6 @@
                       and Sara Bolognesi (Ecole Polytechnique and IRFU, Saclay, DPP)</span>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/55">[GENIE pull request #55]</A>
                     </li>
-               <li> Addition of the published <b>Minoo Kabirnezhad (MK) single-pion cross-section model</b>	
-                    by the Dubna GENIE group, and a critical review of the published work
-                    leading to model variants currently under consideration for GENIE v4.
-                    Details of the original model can be found in 
-                    <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.013002">Phys. Rev. D 97, 013002</A>.
-                    Details of the MK model variants are currently private.
-                    <span class="clsFContrib">Contribution by Minoo Kabirnezhad (Oxford)</span>.
-                    <A href="https://github.com/GENIE-MC/Generator/pull/130">[GENIE pull request #130]</A>,
-                    <A href="https://github.com/GENIE-MC/Generator/pull/131">[GENIE pull request #131]</A>,
-                    <A href="https://github.com/GENIE-MC/Generator/pull/132">[GENIE pull request #132]</A>.
-               </li>
                <li> Addition of a new <b>NLO DIS cross-section calculation and event generation modules</b> (HEDIS package),
                     including an implementation of the LEPTO interface to the PYTHIA6 hadronization routines,
                     tested/validated up to 1E+9 GeV, in support of GENIE users in km3net, IceCUBE 
@@ -547,7 +594,7 @@
                     </li>
                <li> The time coordinate of all particles in the event record (time increments with respect
                     to the event vertex time) is now recorded.
-                    A new convention was introduced: The patricle time increments are given in ys (yocto-seconds / 1E-24 seconds).
+                    A new convention was introduced: The particle time increments are given in ys (yocto-seconds / 1E-24 seconds).
                     The conventions for other relevant quantities given in the event record
                     remained unchanged (particle position increments in fm, event vertex coordinates in SI units).
                     <A href="https://github.com/GENIE-MC/Generator/pull/119">[GENIE pull request #119]</A>
