@@ -117,8 +117,10 @@
                <br />
                <br />
 
+<!--
                <A href="./news.html" target="_top">
                     News</A>
                <br />
+-->
 
 </div>
