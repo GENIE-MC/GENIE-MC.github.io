@@ -521,7 +521,18 @@ div#FrontPageMainText {
 	font-family: Arial, Helvetica, sans-serif; 
 	font-size:13px;
 	padding:8px; 
- 	width:100%;
+ 	width:50%;
+        float:left
+}
+
+div#TwitterFeed {
+ 	margin:0px 4px 3px 3px;
+	padding:5px;
+	width:250px;
+	background:white;
+	color:white;
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:8px;
 }
 
 div#CollabSectionHeader {
@@ -737,8 +748,6 @@ div#PageFooter {
   border-right:1px solid black; 
   padding:6px;
 }
-
-
 
 #MainIn2ColumnPage {
 	padding: 0px 5px 2px 2px;

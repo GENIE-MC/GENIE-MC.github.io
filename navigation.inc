@@ -15,6 +15,9 @@
                <A href="./policy.html" target="_top">
                     Policy documents</A>
                <br />
+               <A href="./products.html" target="_top">
+                    GENIE products</A>
+               <br />
                <A href="./copyright.html" target="_top">
                     Copyright notices</A>
                <br />

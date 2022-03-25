@@ -8,21 +8,23 @@
 
    <!--#include FILE="./navigation.inc"-->
 
+
    <div id="MainIn2ColumnPage">
 
-          <IMG src="./images/logos/genie_logo_2_big_medium_resolution.png" width="330px" hspace="30px" vspace="20px" align="right">
-          <div id="FrontPageMainText">
-            <b>GENIE</b> is an <b>international collaboration</b> of scientists that
+     <div style="display:flex"> 
+        <div id="FrontPageMainText">
+            <b>GENIE</b> is an <A href="./collaboration.html"><b>international collaboration</b></A> of scientists that
             plays the leading role in 
             a) the development of a modern and universal event generator framework and tools in support of neutrino experiments,
-            b) the consistent, validated and efficient implementation of a constellation of alternative physics models within a common platform,  
+            b) the consistent, validated and efficient implementation of a constellation of alternative 
+               physics models within a common platform,  
             c) the development and characterisation of novel <b><u>comprehensive</u> physics models</b> for the <b>simulation
             of neutrino interactions</b>, and 
             d) the development of an advanced <b>global analysis of neutrino scattering data</b>.
             <br />
             <br />
             The GENIE collaboration
-            <b>maintains a popular suite of software products</b> 
+            maintains a <A href="./products.html"><b>popular suite of software products</b></A> 
             (including the
              <A href="https://github.com/GENIE-MC/Generator" target="_top"><i><b>Generator</b></i></A>, 
              <A href="https://github.com/GENIE-MC/Comparisons" target="_top"><i><b>Comparisons</b></i></A>, 
@@ -31,45 +33,63 @@
             for the experimental neutrino community.
             <br />
             <br />
-            The well-known <i>Generator</i> implements a modern framework for Monte Carlo event generators and 
-            includes state-of-the-art physics modules. The <b>GENIE physics model is universal and comprehensive</b>:
-            It handles all neutrinos and targets, and all processes relevant from MeV to PeV energy scales.
-            The <i>Generator</i> includes several tools (flux drivers, detector geometry navigation drivers, 
-            and specialized event generation apps)
-            to <b>simulate complex experimental setups in full detail</b>.
-            The GENIE <i>Generator</i> is <b>used by nearly all modern neutrino experiments</b> and its
-            predictions serve as standard reference points for the neutrino community.
             <br />
-            <br />
-            The <i>Comparisons</i> product includes very <b>extensive curated archives of neutrino, charged-lepton 
-            and hadron scattering data</b>, as well as highly-developed software to produce a 
-            <b>comprehensive set of data/MC comparisons</b>.
-            It includes embedded <b>interfaces to the <A href="https://professor.hepforge.org">Professor</A> tuning tool</b>
-            which "<i>reduces the exponentially expensive process of brute-force tuning to a scaling closer to a power 
-            law in the number of parameters and allows for massive parallelisation</i>".
-            The <i>Comparisons</i> product plays a key role in comprehensive model characterization in GENIE,
-            it underpins the GENIE global analysis, and it enabled the production of several new tunes.
-            <br />
-            <br />
-            The <i>Tuning</i> product implements
-            the <b>powerfull new GENIE global analysis of neutrino scattering data</b>. 
-            The GENIE global analysis produces <b>physics tunes which are fully integrated in the 
-            <i>Generator</i> product</b>.
-            <br />
-            <br />
-            Finally, the <i>Reweight</i> product includes a selection of tools to <b>propagate model uncertainties 
-            and to support generator-related analysis tasks</b>. 
-            The reweighting procedure has inherent limitations. Important modelling systematics are not reweightable 
-            in principle and they have no corresponding weight calculator in the <i>Reweight</i> product.
-            Indeed, the GENIE tuning procedure itself makes no use of the Reweight product but it relies on response
-            functions constructed from brute-force parameter scans made with the aid of the Professor tool.
-            Currently, the <i>Reweight</i> product it does not provide the full systematic error 
-            for any GENIE tune. However, we have <b>medium-term plans to overhaul this product</b> and use it for
-            <b>public release of the detailed Professor/YODA response functions</b> constructed from our 
-            brute-force systematic parameter scans, as well as to 
-            release all covariance matrices from the GENIE global fits of neutrino scattering data. 
-            The upgraded <i>Reweight</i> product will support all public GENIE physics tunes!
-          </div>
+
+             <div CLASS="clsFrontPageTabHeader">
+               11th March 2022: New production release 3.2.0!
+             </div>
+             <div CLASS="clsFrontPageTabBody">
+               We are pleased to announce that version 3.02.00 of the GENIE event generator has been tagged.
+               <br />
+               <br />
+               This is an important new release that introduces several new models and tools.
+               The details of the improvements is available <A href="http://releases.genie-mc.org" target="_top">here</A>.
+               <br />
+               Physics improvements span from low-energy physics (implementation of a new CEvNS event generator) to
+               ultra high energies (implementation of new NLO DIS models and event generators
+               in support of the neutrino telescope and FPF users). In addition, new BSM models (dark neutrino,
+               and improved boosted dark matter simulations) were introduced, together with new interfaces to
+               the Liege/INCL and G4/Bertini intranuclear cascades, and several new tunes.
+               <br />
+               <br />
+               Some of these new models and event generator mechanisms are discussed in our recent paper
+               published in 
+               <A href="https://link.springer.com/article/10.1140/epjs/s11734-021-00295-7" target="_top">
+                  Eur.Phys.J.ST 230 (2021) 24</A>
+               <br />
+               <br />
+               The new code, as always, is available from 
+               our <A href="https://github.com/GENIE-MC" target="_top">GitHub repositories</A>
+               In case of problems, feel free to open GitHub issues and submit pull requests!
+               <br />
+               <br />
+               The User and Physics manual has been updated with some of the new developments. 
+               <br />
+               <br />
+               We look forward to your feedback.
+             </div>
+
+        </div>
+
+        <div>
+           <IMG src="./images/logos/genie_logo_2_big_medium_resolution.png" 
+		width="190px" hspace="10px" vspace="2px" align="center">
+           <br />
+           <br />
+           <a class="twitter-timeline" data-width="300" data-height="350" data-theme="light"
+               href="https://twitter.com/GENIENeutrinoMC?ref_src=twsrc%5Etfw">
+                  Tweets by GENIE</a>
+             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+           <br />
+<!--
+           <br />
+           <a href="https://twitter.com/GENIENeutrinoMC?ref_src=twsrc%5Etfw" 
+		class="twitter-follow-button" 
+		data-show-count="false">Follow @GENIE</a>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+        </div>
+     </div>
 
   </div>
 
