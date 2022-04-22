@@ -212,6 +212,15 @@ div#IncubatorProject {
 	padding:5pt
 }
 
+div#Note {  
+        background: #EEEEEE; 
+        color: black;
+        font-family: Arial, Helvetica, sans-serif; 
+	font-size:9pt;
+        border:1px dashed black; 
+	padding:5pt
+}
+
 div#bibtex {  
         background: #EEEEEE; 
         color: white;
@@ -603,8 +612,8 @@ div#InsidePageMainText {
 	border:0px;
 	background:white;
  	color:black;
- 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
+ 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
 	text-align: left;
 	padding:10px;
 	in-width:600px;

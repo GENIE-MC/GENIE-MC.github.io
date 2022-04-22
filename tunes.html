@@ -10,215 +10,536 @@
 
    <div id="MainIn2ColumnPage">
 
-
      <div CLASS="clsInsidePageHeader"> GENIE comprehensive model configurations and tunes </div>
 
+     <div id="InsidePageMainText">
+
+     This page is meant as <b>one-stop shop for public GENIE tunes and comprehensive model configurations (CMC)</b>.
+     It includes a ligh level summary of the physics content of each CMC, 
+     and information on all the tunes derived from that CMC.
+     it provides links to papers and other documents discussing 
+     the physics characterization of our CMCs, and the global analyses used for deriving our tunes.
+     <br />
+     <br />
+     <div id="Note">
+        Before going any further on this page,
+        you might find it useful to familiarize yourself with the GENIE naming conventions
+        for its comprehensive model configurations and tunes.
+        Please <A href="./naming_conventions.html">click here for details</A>.
+     </div>
+
      <br />
 
-     This section contains a summary description of public GENIE tunes and comprehensive model configurations
-     and provides links to tuning outputs (best-fit parameters, covariances) as well as detailed quantitative
-     characterizations of tunes against an extensive collection of data.
+     <b>Each GENIE physics tune is characterised using 
+     a very extensive set of electron, neutrino and hadron scattering data</b>.
      <br />
      <br />
-     Details for the physics configurations and tunes, as well as selected data/MC comparisons may be found in the
-     <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2" target="_top">Physics & User manual</A>.
-     The complete list of data/MC comparisons characterizing each tune will be linked in the table below in due time.
-     Please note that GENIE produces many more tunes than it makes available for public use (including several
-     partial tunes of datasets shown below). If you have a specific requirement, please contact the GENIE team.
+     <div id="Note">
+       In the future we aim to provide a searchable database to access the thousands of validation plots that we produce,
+        and which will be linked from here.
+        We also aim to provide additional support for our physics tunes,
+        building in the oututs of our tuning procedure into the ReWeight package for uncertainty propagation.
+        <b>Watch this space!</b>
+     </div>
      <br />
-     <br />
-     Tunes marked as <i>`baseline'</i>, include parameter values from a mixture of past GENIE tunes, external tunes,
-     or reasonable first estimates for new modelling elements that is too complex to note in this summary table.
-     They form the starting point for a branch of more refined and well-motivated GENIE tunes.
-     <br />
-     <br />
-     To familiarize yourself with the GENIE naming conventions for comprehensive physics configurations and physics tunes,
-     please see <A href="./naming_conventions.html">here</A>.
 
+
+     <!--
+
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     ME neutrino/electron generator
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+     -->
+
+     <h2> Medium energy (ME) GENIE configurations (100 MeV - 100 GeV) </h2>
+
+     <b>The physics content of the publicly available CMCs in GENIE v3.2.0 is outlined in the following table</b>
+     (along with a list of all abbreviations).
+     <br />
+     <br />
+     In general terms:
+     <ul>
+      <li>
+         The <b>G00_*</b> CMCs are attempts to preserve the historic but severely outdated model in GENIE v2 series
+        (G00_00a is the "Default" model and G00_00b is the "Default+MEC" model of GENIE v2.12)
+      </li>
+      <li>
+         The <b>G18_01*</b> CMCs are adiabatic evolutions of the historic model, updating some of the cross-section
+         and FSI models and including missing processes (diffractive production of pions, hyperon production)
+         but keeping the same basic model construction.
+      </li>
+      <li>
+         The <b>G18_02*</b> CMCs are similar to <b>G18_01*</b> CMCs, but upgrade the resonance and coherent pion
+         production models (RS &rightarrow; BS)
+      </li>
+      <li>
+         The <b>G18_10*</b> CMCs keep G18_02* upgrades to the resonance and coherent pion production models,
+         and add a consistent theory-based model of interactions around the quasi-elastic peak (NAV QE and NSV 2p2h model).
+         There are variants of that model that use a simple dipole axial form factor, and other variants that employ the
+         better motivated but multi-parameter z expansion of the axial form factor.
+      </li>
+      <li>
+         The <b>G21_11*</b> CMCs, similarly to G18_10*, start from G18_02* and install an improved and consistent model 
+         of interactions around the quasi-elastic peak. G21_11* uses the SuSAv2 QE and 2p2h model.
+      </li>
+      <li>
+         For each basic model construction, several CMC variants are produced by using different intranuclear hadron transport models:
+         `a' demotes use of INTRANUKE/hA, `b' of INTRANUKE/hN, `c' of Liege/INCL and `d' of Geant4 Bertini cascade.
+      </li>
+     </ul>
+     <br />
+     Other CMCs including some of our newer modelling elements are being prototyped and tested.
+     Experiments have limited capacity in understanding/evaluating different CMCs and producing large samples, 
+     so we apply a reasonably high threshold on the model combinations that are maintained and publicly released. 
+     Please get in contact if you have ideas about additional CMCs of interest to the community that could be included in a future public release.
+     <br />
+     <br />
+     <IMG src="./images/cmc/CMC_MC_v3.2.0.png">
+     <br />
+     <br />
+
+     <ul>
+       <li> opt.: Optional (needs to be enabled)
+       <li> <b>RFG</b>: Relativistic Fermi Gas model</li>
+       <li> <b>LFG</b>: Local Fermi Gas model </li>
+       <li> <b>LS</b>: Llewellyn-Smith quasi-elastic model</li> 
+       <li> <b>RS</b>: Rein and Sehgal models for resonance neutrino-production and coherent pion production </li>
+       <li> <b>BY</b>: Bodek and Yang model</li>
+       <li> <b>ASAV</b>: M. Rafi Alam, I. Ruiz Simo, M. Sajjad Athar and M.J. Vicente Vacas model of single-Kaon production</li> 
+       <li> <b>NAV</b>: J.Nieves, J. Enrique Amaro, and M. Valverde quasi-elastic interaction model</li> 
+       <li> <b>NSV</b>: J.Nieves, I. Ruiz Simo, and M.J. Vicente Vacas 2p2h model </li>
+       <li> <b>AGKY</b>: C.Andreopoulos, H.Gallagher, P.Kehayias and T.Yang neutrino-induced hadronization model</li>
+       <li> <b>AG</b>: C.Andreopoulos, and H.Gallagher charm hadronization model</li> 
+       <li> <b>hA</b>: Effective intranuclear transport model in INTRANUKE</li> 
+       <li> <b>hN</b>: Full intranuclear cascade (INC) model in INTRANUKE</li>
+       <li> <b>INCL</b>: The Liege INC model</li>
+       <li> <b>G4B</b>: Geant4 implementation of the Bertini INC model</li>
+     </ul>
+
+     <br />
+
+     <b>A large number tunes can be (are) produced for each CMC listed above, from fits to different datasets</b>.
+
+     Only a small fraction of these is made available, as we aim to consolidate efforts to a small number 
+     of predictive models and tunes that simultaneously describe large collections of data.
+     Many of the partial tunes described in our papers and presentations, 
+     which are usefull for understanding tensions between datasets and how to go about building joint fits,
+     are not always made available.
+     However we can provide these tunes on request.
+
+     <br />
+     <br />
+
+     <b>The following tunes are available in GENIE v3.0.6 and v3.2.0.</b>
+
+     <br />
+     <br />
+     Note that:
+     <ul>
+       <li>
+        We use the following status labels for tunes: Outdated (O), Experimental (E), Production (P), Recommended Production (P*)
+       </li>
+       <li>
+        <b>The tune labels shown in red below, are the labels that can be accepted as --tune arguments in GENIE applications</b>
+       </li>
+       <li>
+        Tunes marked as <i>`baseline'</i> describe the original settings of each new CMC and
+        include parameter values from a mixture of past GENIE tunes, external tunes,
+        or reasonable first estimates for new modelling elements that is too complex to note in this summary table.
+        Typically, they carry the label <b>00_000</b>.
+        They form the starting point for a branch of more refined and well-motivated GENIE tunes.
+       </li>
+       <li>
+        The label <b>02_11b</b> denotes
+        the final version of the GENIE 2020 
+        nucleon cross-section model re-tune using bubble chamber CCQE, CC1π, CC2π, and CC inclusive cross-section data, published in 
+        <A href="https://inspirehep.net/literature/1859145" target="_top">J.Tena-Vidal et al., Phys.Rev.D 104 (2021) 7, 072009</A>.
+        This tune was made available in v3.2.0.
+        Please note that the label 02_11a denotes a <em>Preliminary</em> version of that fit, and not the published version.
+       </li>
+       <li>
+        The GENIE 2021 hadronization tunes published in
+        <A href="https://inspirehep.net/literature/1868051"> J.Tena-Vidal, Phys.Rev.D 105 (2022) 1, 012009</A>
+        are not yet distributed as part of a tuned bundled in public GENIE release.
+       </li>
+       <li>
+        The GENIE 2022 nuclear CC0&pi; tunes published in
+        J.Tena-Vidal, <i>TBA</i>
+        are not yet distributed as part of a tuned bundled in public GENIE release.
+       </li>
+     </ul>
      <br />
      <br />
 
      <table CLASS="clsConfigTable" border="0" cellpadding="1" cellspacing="2">
 
        <tr CLASS="clsConfigTableHeader">
-          <td> Release &nbsp;&nbsp;      </td>
-          <td> Configuration             </td>
-          <td> Brief description         </td>
+           <td> Tune   </td>
+           <td> Status </td>
+           <td> GENIE releases &nbsp;&nbsp; </td>
+           <td> Comments </td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G00_00a </td>
-         <td> Historical GENIE default model configuration. </td>
-       </tr>
+       <!-- historic -->
+
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes:</b> </td>
          <td> <b class="clsFRed">G00_00a_00_000</b> &nbsp;&nbsp; </td>
-         <td>  Historical tune for the old GENIE default model (not supported) </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Preserved historic "Default" tune of GENIE v2.12</td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G00_00b </td>
-         <td> Historical GENIE default configuration, including empirical 2p/2h. </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes:</b> </td>
          <td> <b class="clsFRed">G00_00b_00_000</b> &nbsp;&nbsp; </td>
-         <td>  Historical tune for the old GENIE default model (not supported) </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0
+         <td> Preserved historic "Default+MEC" tune of GENIE v2.12</td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0</td>
-         <td> G18_01a </td>
-         <td> Update of the historical default, including diffractive and lambda production interactions and updated hA FSI. </td>
-       </tr>
+       <!-- G18_01 baseline -->
+
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes:</b> </td>
          <td> <b class="clsFRed">G18_01a_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune </td>
-       </tr>
-       <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> </td>
-         <td> <b class="clsFRed">G18_01a_02_11a</b> &nbsp;&nbsp; </td>
-         <td> Implements the GENIE 2018a free-nucleon cross-section model re-tune using mainly
-              bubble chamber CC1&pi;, CC2&pi;, and CC inclusive cross-section data </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_01a tune </td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G18_01b </td>
-         <td> As G18_01a, but hN for FSI. </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes:</b> </td>
          <td> <b class="clsFRed">G18_01b_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune</td>
-       </tr>
-       <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1">  </td>
-         <td> <b class="clsFRed">G18_01b_02_11a</b> &nbsp;&nbsp; </td>
-         <td> Implements the GENIE 2018a free nucleon cross-section model re-tune using
-              mainly bubble chamber CC1&pi;, CC2&pi;, and CC inclusive cross-section data </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_01b tune </td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G18_02a </td>
-         <td> As G18_01a, with updated Berger-Sehgal model for RES and COH </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes:</b> </td>
+         <td> <b class="clsFRed">G18_01c_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_01c tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_01d_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_01d tune </td>
+       </tr>
+
+       <!-- G18_02 baseline -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
          <td> <b class="clsFRed">G18_02a_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune.
-              See <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=17">
-                  [GENIE-DocDB-17]</A> for corresponding plots and data-files.
-         </td>
-       </tr>
-       <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1">  </td>
-         <td> <b class="clsFRed">G18_02a_02_11a</b> &nbsp;&nbsp; </td>
-         <td> Implements the GENIE 2018a free nucleon cross-section model re-tune
-              using mainly bubble chamber CCQE, CC1&pi;, CC2&pi;,
-              and CC inclusive cross-section data.
-              See <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=18">
-                 [GENIE-DocDB-18]</A> for corresponding plots and data-files.
-         </td>
-
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_02a tune </td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G18_02b </td>
-         <td> As G18_01b, with updated Berger-Sehgal model for RES and COH </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes:</b> </td>
          <td> <b class="clsFRed">G18_02b_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune</td>
-       </tr>
-       <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> </td>
-         <td> <b class="clsFRed">G18_02b_02_11a</b> &nbsp;&nbsp; </td>
-         <td> Implements the GENIE 2018a free nucleon cross-section model re-tune
-              using mainly bubble chamber CCQE, CC1&pi;, CC2&pi;, and CC inclusive cross-section data</td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_02b tune </td>
        </tr>
 
-
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G18_10a </td>
-         <td> A theory-driven configuration. Similar to G18_02a. LFG nuclear model.
-              Nieves models for CCQE and CC 2p/2h interactions </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes:</b> </td>
+         <td> <b class="clsFRed">G18_02c_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_02c tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_02d_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_02d tune </td>
+       </tr>
+
+       <!-- G18_10 baseline -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
          <td> <b class="clsFRed">G18_10a_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune.</td>
-       </tr>
-       <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> </td>
-         <td> <b class="clsFRed">G18_10a_02_11a</b> &nbsp;&nbsp; </td>
-         <td> Implements the GENIE 2018a free nucleon cross-section model re-tune using mainly
-              bubble chamber CCQE, CC1&pi;, CC2&pi;, and CC inclusive cross-section data </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_10a tune </td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G18_10b </td>
-         <td> A theory-driven configuration. Similar to G18_02b. LFG nuclear model.
-              Nieves models for CCQE and CC 2p/2h interactions </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes</b>: </td>
          <td> <b class="clsFRed">G18_10b_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune. </td>
-       </tr>
-       <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> </td>
-         <td> <b class="clsFRed">G18_10b_02_11a</b> &nbsp;&nbsp; </td>
-         <td> Implements the GENIE 2018a free nucleon cross-section model re-tune
-              using mainly bubble chamber CCQE, CC1&pi;, CC2&pi;, and CC inclusive cross-section data </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_10b tune </td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G18_10i </td>
-         <td> A theory-driven configuration. Similar to G18_10a. CCQE axial form factor parametrerised with z-exp. </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes</b>: </td>
+         <td> <b class="clsFRed">G18_10c_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_10c tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10d_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_10d tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
          <td> <b class="clsFRed">G18_10i_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune. </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_10i tune </td>
        </tr>
 
-       <!--
-       -->
-       <tr CLASS="clsConfigTableModelDescription">
-         <td> v3.0.0 </td>
-         <td> G18_10j </td>
-         <td> A theory-driven configuration. Similar to G18_10b. CCQE axial form factor parametrerised with z-exp. </td>
-       </tr>
        <tr CLASS="clsConfigTableTuneDescription">
-         <td rowspan="1"> <b>Tunes</b>: </td>
          <td> <b class="clsFRed">G18_10j_00_000</b> &nbsp;&nbsp; </td>
-         <td> Baseline tune. </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Baseline G18_10j tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10k_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_10k tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10l_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G18_10l tune </td>
+       </tr>
+
+       <!-- G21_11 baseline -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11a_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G21_11a tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11b_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G21_11b tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11c_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G21_11c tune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11d_00_000</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.2.0 </td>
+         <td> Baseline G21_11d tune </td>
+       </tr>
+
+       <!-- G18_01 prelim -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_01a_02_11a</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Prelim G18_01a free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_01b_02_11a</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Prelim G18_01b tune free nucleon x-section retune </td>
+       </tr>
+
+       <!-- G18_02 prelim -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_02a_02_11a</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Prelim G18_02a free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_02b_02_11a</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Prelim G18_02b free nucleon x-section retune </td>
+       </tr>
+
+       <!-- G18_10 prelim -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10a_02_11a</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Prelim G18_10a free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10b_02_11a</b> &nbsp;&nbsp; </td>
+         <td> O </td>
+         <td> v3.0.0 - v3.2.0 </td>
+         <td> Prelim G18_10b free nucleon x-section retune </td>
+       </tr>
+
+
+       <!-- G18_01 final -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_01a_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_01a 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_01b_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_01b 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_01c_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_01c 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_01d_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_01d 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <!-- G18_02 final -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_02a_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_02a 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_02b_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_02b 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_02c_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_02c 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_02d_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_02d 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <!-- G18_10 final -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10a_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10a 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10b_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10b 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10c_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10c 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10d_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10d 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10i_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10i 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10j_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10j 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10k_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10k 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G18_10l_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G18_10l 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <!-- G21_11 baseline -->
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11a_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G21_11a 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11b_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G21_11b 2020 free nucleon x-section retune </td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11c_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G21_11c 2020 free nucleon x-section retune</td>
+       </tr>
+
+       <tr CLASS="clsConfigTableTuneDescription">
+         <td> <b class="clsFRed">G21_11d_02_11b</b> &nbsp;&nbsp; </td>
+         <td> P </td>
+         <td> v3.2.0 </td>
+         <td> Final G21_11d 2020 free nucleon x-section retune </td>
        </tr>
 
 
@@ -226,6 +547,37 @@
 
 
 
+     <!--
+
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HE neutrino/electron generator
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+     -->
+
+
+     <h2> High energy (HE) GENIE configurations (> 100 GeV) </h2>
+
+     to be written
+
+
+     <!--
+
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LE neutrino/electron generator
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+     -->
+
+
+     <h2> Low energy (LE) GENIE configurations (<100 MeV) </h2>
+
+     to be written
+
+
+
+
+     </div> <!-- InsidePageMainText -->
 
   </div>  <!-- main -->
 
