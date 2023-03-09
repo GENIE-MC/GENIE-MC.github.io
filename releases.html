@@ -227,6 +227,24 @@
                 <td colspan="9" class="clsVersionTableExternalProductsHeader"> </td>
              </tr>
              <tr>
+              <td class="clsVersionTableReweight">                   1.2.0 </td>
+              <td class="clsVersionTableGenerator">                  3.4.0 </td>
+              <td class="clsVersionTableCharacterizationAndTuning">  1.4.0 </td>
+              <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
+              <td> </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 6.22.08 </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 2.6 </td>
+              <td class="clsVersionTableExternalProducts">  ? </td>
+              <td class="clsVersionTableExternalProducts">  ? </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 6.3.0 </td>
+              <td class="clsVersionTableExternalProducts">  6.4.28 </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 8.2.45 </td>
+              <td class="clsVersionTableExternalProducts"> &#x2055; modified <br /> v5.2.9.5 </td>
+              <td class="clsVersionTableExternalProducts"> &#x2055; v4.10.4.p02 </td>
+              <td class="clsVersionTableGeneric">
+                  </td>
+            </tr>
+             <tr>
                 <td class="clsVersionTableReweight">                   1.2.0 </td>
                 <td class="clsVersionTableGenerator">                  3.2.0 </td>
                 <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
@@ -331,7 +349,7 @@
          <br />
 
          <div id="ReleaseTableHeader2">
-           <b>Version: 3.4.0 </b>
+           <b>Version: 3.6.0 </b>
            <br />
            <small>
             Tag: R-3_04_00,
@@ -341,7 +359,7 @@
            <br />
            <br />
            <div id="ReleaseTableBody">
-             <b>Improvements over 3.2.*</b>
+             <b>Improvements over 3.4.*</b>
              <br />
              <span class="clsFContrib">
                (<i>Important contributions by non-GENIE authors are especially acknowledged in the text below</i>)
@@ -389,12 +407,88 @@
          <br />
 
          <div id="ReleaseTableHeader2">
+          <b>Version: 3.4.0 </b>
+          <br />
+          <small>
+           Tag: R-3_04_00,
+           Released: 10 March 2023,
+           Status: <i class="clsFGreen"> pro</i>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+            <b>Improvements over 3.2.2</b>
+            <br />
+            <span class="clsFContrib">
+              (<i>Important contributions by non-GENIE authors are especially acknowledged in the text below</i>)
+            </span>
+            <br />
+            <br />
+            New and/or updated physics models:
+            <ul>
+              <li> Addition of a spectral function-like approach for binding energies. 
+                   <span class="clsFContrib">Contribution by Steven Dolan and Laura Munteanu </span>.
+                   <A href="https://github.com/GENIE-MC/Generator/pull/249">[GENIE pull request #249]</A>.
+              </li>
+            </ul>
+            New comprehensive model configurations and tunes:
+            <ul>
+              <li> Added CMC desired by SBN and DUNE experiments: AR23_20i_00_000. 
+                   <A href="https://github.com/GENIE-MC/Generator/blob/master/config/AR23_20i/README.md#liquid-argon-experiment-tune">[Readme file]</A>.
+              </li>
+            </ul>
+            Beyond Standard model:
+            <ul>
+              <li> Addition of Beam-produced Heavy Neutral Leptons.
+                   <span class="clsFContrib">Contribution by John Plows (Oxford) </span>.
+                <A href="https://github.com/GENIE-MC/Generator/pull/223">[GENIE pull request #223]</A>.
+              </li>
+            </ul>
+            Other improvements / bug fixes:
+            <ul>
+              <li> Fix in HAIntranuke about random number generation. 
+                <A href="https://github.com/GENIE-MC/Generator/pull/241">[GENIE pull request #241]</A>.
+              </li>
+              <li> Fix in the hadronisation rotation.
+                <span class="clsFContrib">Contribution by Qiyu Yan </span>. 
+                <A href="https://github.com/GENIE-MC/Generator/pull/264">[GENIE pull request #264]</A>.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+
+         <div id="ReleaseTableHeader2">
+          <b>Version: 3.2.2 </b>
+          <br />
+          <small>
+           Tag: R-3_02_02,
+           Released: 29 November 2022,
+           Status: <i class="clsFBlue">old</i>
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+            <b>Improvements over 3.0.0</b>
+            <br />
+            <br />
+            Technical developments
+            <ul>
+              <li> Change in header file includes to fix compilations issues found in some platforms.
+                   </li>
+            </ul>
+          </div>
+        </div>
+
+
+         <div id="ReleaseTableHeader2">
            <b>Version: 3.2.0 </b>
            <br />
            <small>
             Tag: R-3_02_00,
             Released: 11 March 2022,
-            Status: <i class="clsFGreen"> pro</i>
+            Status: <i class="clsFBlue">old</i>
            </small>
            <br />
            <br />
