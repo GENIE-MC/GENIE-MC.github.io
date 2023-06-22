@@ -58,11 +58,11 @@
                   Document database</A>
                   <img src="./images/icons/lock.png" align="top" height="15">
                <br />
+               <A href="./pub.html">
+                   Publications & recent talks</A>
+
                <br />
-<!--
                <br />
-               <A href="./load.php?include=pub"> Publications</A> <br />
--->
 
                <A href="https://geniemc.slack.com" target="_top">
                    Slack workspace</A>
