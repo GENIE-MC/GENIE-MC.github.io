@@ -228,6 +228,24 @@
              </tr>
              <tr>
               <td class="clsVersionTableReweight">                   1.2.0 </td>
+              <td class="clsVersionTableGenerator">                  3.4.2 </td>
+              <td class="clsVersionTableCharacterizationAndTuning">  1.4.0 </td>
+              <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
+              <td> </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 6.22.08 </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 2.6 </td>
+              <td class="clsVersionTableExternalProducts">  ? </td>
+              <td class="clsVersionTableExternalProducts">  ? </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 6.3.0 </td>
+              <td class="clsVersionTableExternalProducts">  6.4.28 </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 8.2.45 </td>
+              <td class="clsVersionTableExternalProducts"> &#x2055; modified <br /> v5.2.9.5 </td>
+              <td class="clsVersionTableExternalProducts"> &#x2055; v4.10.4.p02 </td>
+              <td class="clsVersionTableGeneric">
+                  </td>
+            </tr>
+             <tr>
+              <td class="clsVersionTableReweight">                   1.2.0 </td>
               <td class="clsVersionTableGenerator">                  3.4.0 </td>
               <td class="clsVersionTableCharacterizationAndTuning">  1.4.0 </td>
               <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
@@ -387,7 +405,7 @@
              </ul>
              Event generation and core framework improvements:
              <ul>
-               <li> </li>
+               <li> Allow algorythms to be used in reweight and add Professor as an optional dependency <A href="https://github.com/GENIE-MC/Generator/pull/366">[GENIE pull request #366]</A>. </li>
              </ul>
              Improvements in generator tools (flux and geometry drivers, event generation and other apps):
              <ul>
@@ -407,12 +425,49 @@
          <br />
 
          <div id="ReleaseTableHeader2">
+          <b>Version: 3.4.2 </b>
+          <br />
+          <small>
+           Tag: R-3_04_02,
+           Released: 15 April 2024
+           Status: <i class="clsFGreen"> pro</i> 
+          </small>
+          <br />
+          <br />
+          <div id="ReleaseTableBody">
+            <b>Improvements over 3.4.0</b>
+            <br />
+            <span class="clsFContrib">
+              (<i>Important contributions by non-GENIE authors are especially acknowledged in the text below</i>)
+            </span>
+            <br />
+            <br />
+            Improvements in generator tools (flux and geometry drivers, event generation and other apps):
+            <ul>
+              <li> Implementation of the correct time shift for GSimpleNtpFlux class when users shift the starting z coordinate for a neutrino ray off of the flux window. <A href="https://github.com/GENIE-MC/Generator/pull/387">[GENIE pull request #387]</A>. </li>
+            </ul>
+            Other improvements / bug fixes:
+            <ul>
+              <li> Fix how 3rd party FSI handle nuclear remnants 
+                <A href="https://github.com/GENIE-MC/Generator/pull/373">[GENIE pull request #373]</A> and binding energy <A href="https://github.com/GENIE-MC/Generator/pull/367">[GENIE pull request #367]</A>.
+              </li>
+            </ul>
+            Other comments:
+            <ul>
+              <li> The splines for v3.04.00 are valid for v3.04.02 as well.</li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+
+        <div id="ReleaseTableHeader2">
           <b>Version: 3.4.0 </b>
           <br />
           <small>
            Tag: R-3_04_00,
            Released: 10 March 2023,
-           Status: <i class="clsFGreen"> pro</i>
+           Status: <i class="clsFBlue">old</i>
           </small>
           <br />
           <br />
