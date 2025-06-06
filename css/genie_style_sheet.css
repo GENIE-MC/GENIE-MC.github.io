@@ -702,6 +702,30 @@ header {
   justify-content: center;
 }
 
+.name-line {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.name-line i {
+  font-size: 1rem;
+  margin-left: 0.4rem;
+  font-weight: normal;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ccc;
+  margin-top: 0.25rem;
+}
+
+.header-logo img {
+  margin-top: 0.1rem;
+  height: 100px;
+}
+
 footer {
   margin:2px 5px 2px 5px;
   padding:5px;
