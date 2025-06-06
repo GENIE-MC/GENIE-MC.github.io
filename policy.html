@@ -2,17 +2,37 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | Policy documents">
+  </head>
 
-<body>
+  <body>
 
-   <!--#include FILE="./navigation.inc"-->
+    <!-- Header -->
+    <div id="header"></div>
 
-   <div id="MainIn2ColumnPage">
+    <!-- Main -->
+    <div id="pageLayout">
+
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
+
+       <!-- Main text -->
+       <div id="twoColumnPage">
+
+         <section id="frontPageMainText">
+
+           <div id="pageTitle">
+                GENIE Policy documents
+           </div>
 
 
-     <div CLASS="clsInsidePageHeader"> GENIE Policy Documents </div>
-     <br />
+
 
      <B> GENIE Collaboration Bylaws: </B>   
      <br />
@@ -21,9 +41,33 @@
      <br />
      <br />
 
-   </div>
 
-   <!--#include FILE="./footer.inc"-->
-          
-</body>
+
+   
+        </section>
+     </div>
+   </div> <!-- pageLayout -->
+     
+   <!-- Footer include -->
+   <div id="footer"></div>
+     
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+     
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+     
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>
+     
+  </body>
 </html>
+     
+

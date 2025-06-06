@@ -2,18 +2,36 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | Get started with the GENIE event generator">
+  </head>
 
-<body>
+  <body>
 
-   <!--#include FILE="./navigation.inc"-->
+    <!-- Header -->
+    <div id="header"></div>
 
-   <div id="MainIn2ColumnPage">
+    <!-- Main -->
+    <div id="pageLayout">
 
-     
-     <div CLASS="clsInsidePageHeader"> Get started with the GENIE/Generator  </div>
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
 
-      <br />
+       <!-- Main text -->
+       <div id="twoColumnPage">
+
+         <section id="frontPageMainText">
+
+           <div id="pageTitle">
+                Get started with the GENIE event generator
+           </div>
+
+
 
       This page includes a basic descriptions of the steps required to obtain the GENIE/Generator source code 
       (and the required 3rd party software packages),
@@ -478,10 +496,32 @@
 
 
 
-  </div>  <!-- main -->
+
+        </section>
+     </div>
+   </div> <!-- pageLayout -->
      
-   <!--#include FILE="./footer.inc"-->
+   <!-- Footer include -->
+   <div id="footer"></div>
      
-</body>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+     
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+     
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>
+     
+  </body>
 </html>
-       
+     
+
+

@@ -197,6 +197,12 @@ footer {
 	border-radius: 8px;
 }
 
+#navigation-promo p {
+	margin: 0.5rem 0.5rem 0 0.5rem;
+	padding: 0;
+	text-align: center;
+}
+
 #navigation-promo a {
 	color: #810c0c;
 	text-decoration: none;
