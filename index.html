@@ -23,6 +23,8 @@
 
        <!-- Navigation column -->
        <nav id="navigation"></nav>
+       <!-- Promo below the navigation links -->
+       <div id="navigation_promo"></div>
 
        <!-- Main text -->
        <div id="twoColumnPage">
@@ -114,6 +116,10 @@
        .then(res => res.text())
        .then(text => document.getElementById('navigation').innerHTML = text);
             
+     fetch('includes/navigation_promo.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation_promo').innerHTML = text);
+
      fetch('includes/footer.html')
        .then(res => res.text())
        .then(text => document.getElementById('footer').innerHTML = text);

@@ -184,6 +184,20 @@ footer {
         box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
+#navigation-promo {
+    background-color: transparent;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: black;
+}
+
+#navigation-promo img {
+    margin-top: 0.5rem;
+}
+
 /*  ---------------------------------------------------------------------------- */
 /*  Carousel                                                                     */
 /*  ---------------------------------------------------------------------------- */
