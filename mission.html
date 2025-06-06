@@ -2,94 +2,108 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
 
-<body>
+     <meta name="description" content = "GENIE | Home page">
 
-   <!--#include FILE="./navigation.inc"-->
+  </head>
 
-   <div id="MainIn2ColumnPage">
+  <body>
 
-     <div CLASS="clsInsidePageHeader"> GENIE Mission Statement </div>
-     <br />
+    <!-- Header -->
+    <div id="header"></div>
 
-     <div id="TextBlkNoBB">
+    <!-- Main -->
+    <div id="pageLayout">
 
-       <ol>
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
 
-        <li> 
-         The GENIE Collaboration shall <b>provide a state-of-the-art neutrino MC generator for the 
-         world experimental neutrino community</b>. GENIE shall simulate all processes for all neutrino 
-         species and nuclear targets, from MeV to PeV energy scales.
-        </li> 
+       <!-- Main text -->
+       <div id="twoColumnPage">
 
-        <br />
- 
-        <li>
-         The GENIE Collaboration shall provide electron-nucleus, hadron-nucleus and nucleon decay 
-         generators in the same physics framework as the neutrino-nucleus generator.
-        </li>
+         <section id="frontPageMainText">
 
-        <br />
+           <div id="pageTitle">GENIE Mission Statement</div>
+           <br />
 
-        <li>
-          The GENIE Collaboration shall <b>review critically all relevant theoretical work and 
-          experimental data</b> and it shall <b>synthesize selected physics models and data into a 
-          comprehensive and self-consistent picture of neutrino interaction physics</b>.
-        </li> 
+           <div id="TextBlkNoBB">
+           <ol>
+             <li> 
+              The GENIE Collaboration shall <b>provide a state-of-the-art neutrino MC generator 
+              for the  world experimental neutrino community</b>. GENIE shall simulate all processes 
+              for all neutrino species and nuclear targets, from MeV to PeV energy scales.</li> 
+             <br />
+             <li>
+              The GENIE Collaboration shall provide electron-nucleus, hadron-nucleus and nucleon decay 
+              generators in the same physics framework as the neutrino-nucleus generator.</li>
+             <br />
+             <li>
+              The GENIE Collaboration shall <b>review critically all relevant theoretical work and 
+              experimental data</b> and it shall <b>synthesize selected physics models and data into a 
+              comprehensive and self-consistent picture of neutrino interaction physics</b>.</li> 
+             <br />
+             <li>
+              The GENIE Collaboration shall <b>curate archives of the world neutrino scattering data, 
+              and a large sample of complementary charged lepton and hadron scattering data</b>, 
+              and it shall make those archives available in digital form for the purpose of neutrino 
+              interaction model validation, tuning and systematic error evaluation.</li>
+             <br />
+             <li>
+              The GENIE Collaboration shall <b>perform global fits</b> to neutrino, charged-lepton and 
+              hadron scattering data and <b>provide global neutrino interaction model tunes</b>.</li>
+             <br />
+             <li>
+              The GENIE Collaboration shall provide a complete <b>systematic analysis of its 
+              default model.</b></li>
+             <br />
+             <li>
+              The GENIE Collaboration shall <b>provide expert advice to the world neutrino community</b> on 
+              matters related to neutrino interaction phenomenology based on in-depth knowledge of 
+              relevant scattering data and the experience building a comprehensive model of neutrino 
+              interaction physics. It shall also expert advice on all technical matters related to the 
+              realistic simulation of complex experimental environments.</li>
+             <br />
+             <li>
+              The GENIE Collaboration shall <b>provide tools to support the full life-cycle of simulation 
+              and generator-related analysis tasks</b>, including a) a suite of neutrino flux and detector 
+              geometry navigation drivers which allow event generation for realistic, arbitrarily complex 
+              experimental setups using off-the-shelf components, b) standardised event generation 
+              applications for all major experiments, and c) event reweighting code allowing the propagation 
+              of generator-level uncertainties into physics analyses.</li>
+           </ol>
+           </div>
 
-        <br />
-
-        <li>
-          The GENIE Collaboration shall <b>curate archives of the world neutrino scattering data, 
-          and a large sample of complementary charged lepton and hadron scattering data</b>, 
-          and it shall make those archives available in digital form for the purpose of neutrino 
-          interaction model validation, tuning and systematic error evaluation.
-        </li>
-
-        <br />
-
-        <li>
-          The GENIE Collaboration shall <b>perform global fits</b> to neutrino, charged-lepton and 
-          hadron scattering data and <b>provide global neutrino interaction model tunes</b>.
-        </li>
-
-        <br />
-
-        <li>
-          The GENIE Collaboration shall provide a complete <b>systematic analysis of its default model.</b>
-        </li>
-
-        <br />
-
-        <li>
-          The GENIE Collaboration shall <b>provide expert advice to the world neutrino community</b> on 
-          matters related to neutrino interaction phenomenology based on in-depth knowledge of 
-          relevant scattering data and the experience building a comprehensive model of neutrino 
-          interaction physics. It shall also expert advice on all technical matters related to the 
-          realistic simulation of complex experimental environments.
-        </li>
-
-        <br />
-
-        <li>
-          The GENIE Collaboration shall <b>provide tools to support the full life-cycle of simulation 
-          and generator-related analysis tasks</b>, including a) a suite of neutrino flux and detector 
-          geometry navigation drivers which allow event generation for realistic, arbitrarily complex 
-          experimental setups using off-the-shelf components, b) standardised event generation 
-          applications for all major experiments, and c) event reweighting code allowing the propagation 
-          of generator-level uncertainties into physics analyses.
-        </li>
-
-       </ol>
-
+          </section>
      </div>
-
-
-  </div> <!-- main -->
-
-  <!--#include FILE="./footer.inc"-->
-
+   </div>
+       
+    <!-- Footer include -->
+    <div id="footer"></div>
+              
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+            
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+               
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+    </script>
+               
   </body>
 </html>
+               
+
 

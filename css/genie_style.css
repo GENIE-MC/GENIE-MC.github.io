@@ -39,12 +39,6 @@ ul,p,li {
   	overflow:hidden;
 }
 
-<!--
-#frontPageMainText {
-  	flex: 3;
-}
--->
-
 #frontPageMainText {
         flex: 3;
         font-size: 1.02rem;           /* moderately larger font */
@@ -75,6 +69,21 @@ ul,p,li {
         flex: 0 0 280px;       /* don't grow or shrink */
 }
 
+
+#pageTitle {
+	color: black;
+	font-family: 'Roboto', Helvetica, sans-serif;
+ 	font-size: 15pt;
+  	font-weight: 600; 
+  	font-variant: small-caps;
+  	font-style: normal;
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+  	margin: 1.2em 0 0.5em;
+  	border-bottom: 2px solid #ccc;
+  	padding-bottom: 4px;
+  	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* shadow, for depth */
+}
 
 /*  ---------------------------------------------------------------------------- */
 /*  Header and footer                                                            */
