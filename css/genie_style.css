@@ -87,7 +87,7 @@ header {
 	align-items: center;
 	gap: 1rem; /* Adds spacing between logo and text */
 	padding: 1rem 1.5rem;
-	background-color: #EEEEEE;
+	background-color: white;
 	color: #FFFFCC;
 	font-family: 'Roboto', Helvetica, sans-serif;
 	border-bottom: 0px solid #222;
