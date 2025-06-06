@@ -39,8 +39,35 @@ ul,p,li {
   	overflow:hidden;
 }
 
+<!--
 #frontPageMainText {
   	flex: 3;
+}
+-->
+
+#frontPageMainText {
+        flex: 3;
+        font-size: 1.05rem;           /* moderately larger font */
+        line-height: 1.75;            /* increased spacing between lines */
+        letter-spacing: 0.2px;        /* subtle improvement to text readability */
+        color: #111111;               /* slightly darker than pure black for polish */
+        font-weight: 400;
+        padding: 1rem 0.5rem 1rem 0;
+}
+
+#frontPageMainText p {
+        margin-bottom: 1.5rem;        /* consistent spacing between paragraphs */
+}
+
+#frontPageMainText a {
+        color: #23247a;
+        text-decoration: none;
+        font-weight: 500;
+}
+
+#frontPageMainText a:hover {
+        text-decoration: underline;
+        color: #e39007;
 }
 
 #frontPageRightSidebar {
@@ -89,7 +116,7 @@ header {
 	font-size: 1.1rem;
 	font-weight: 300;
 	margin-top: 0.25rem;
-	color: #e9a22d;
+	color: #e39007;
 }
 
 footer {
@@ -112,7 +139,7 @@ footer {
 
 #navigation {
  	background-color: #EEEEEE;
-	padding: 0.5rem 0.7rem; 
+	padding: 0.3rem 0.5rem; 
 	display: flex;
 	flex-direction: column;  /* stack vertically */
 	align-items: flex-start; /* align items to the left */
@@ -120,25 +147,31 @@ footer {
   	width: 180px;            /* set fixed width for sidebar */
     	min-height: 100vh;       /* stretch full height of viewport */
    	font-family: 'Roboto', Helvetica, sans-serif;
-    	font-size: 0.85rem;
+    	font-size: 0.92rem;
     	font-weight: normal;
     	box-sizing: border-box;  /* avoid width + padding overflow */
+	gap: 0.2rem;
 } 
 
 #navigation a {
 	display: block;
+	width: 100%
 	color: black;
 	text-decoration: none;
-	padding: 0.35rem 0.4rem; /* symmetric vertical padding */
+	padding: 0.25rem 0.5rem; /* symmetric vertical padding */
 	border-radius: 4px;
 	transition: background 0.2s ease;
-	line-height: 1.2; /* avoid spacing mismatch */
+	line-height: 1.15; /* avoid spacing mismatch */
 	margin: 0;
 }
  
 #navigation a:hover {
-  	background-color: #23247a;
- 	color:  #e9a22d;
+  	/* background-color: #23247a; */
+ 	/* color: #e39007; */
+        background: linear-gradient(to right, #23247a, #343677); /* fancier hover effect */
+        color: #f9b000;
+        font-weight: 500;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
 /*  ---------------------------------------------------------------------------- */
