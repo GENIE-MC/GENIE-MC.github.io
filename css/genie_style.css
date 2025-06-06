@@ -58,7 +58,7 @@ header {
 	align-items: center;
 	gap: 1rem; /* Adds spacing between logo and text */
 	padding: 1rem 1.5rem;
-	background-color: #2A2929;
+	background-color: white;
 	color: #FFFFCC;
 	font-family: 'Roboto', Helvetica, sans-serif;
 	border-bottom: 2px solid #222;
@@ -110,18 +110,21 @@ footer {
 
 #navigation {
  	background-color: #EEEEEE;
-	padding: 0; /* remove uneven padding */
+	padding: 1rem; 
 	display: flex;
-	align-items: center; /* vertically centers children */
-	justify-content: left; /* centers links horizontally */
-	min-height: 40px; /* clean, fixed height for the bar */
-	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size: 0.80rem;
-	font-weight: normal;
+	flex-direction: column;  /* stack vertically */
+	align-items: flex-start; /* align items to the left */
+	justify-content: flex-start; 
+  	width: 200px;            /* set fixed width for sidebar */
+    	min-height: 100vh;       /* stretch full height of viewport */
+   	font-family: 'Roboto', Helvetica, sans-serif;
+    	font-size: 0.85rem;
+    	font-weight: normal;
+    	box-sizing: border-box;  /* avoid width + padding overflow */
 } 
 
 #navigation a {
-	display: inline-block;
+	display: block;
 	color: black;
 	text-decoration: none;
 	padding: 0.5rem 0.7rem; /* symmetric vertical padding */
