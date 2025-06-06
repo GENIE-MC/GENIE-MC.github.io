@@ -191,8 +191,16 @@ footer {
  	background-color: white;
   	margin-top: 1rem;
 	text-align: center;
-	font-size: 0.7rem;
-	line-height: 1.2;
+	font-size: 0.6rem;
+	line-height: 1.1;
+        border:1px solid black; 
+	border-radius: 8px;
+}
+
+#navigation-promo a {
+	color: red;
+	text-decoration: none;
+	margin: 0;
 }
 
 #navigation-promo img {
@@ -266,15 +274,15 @@ div#collaboration-list {
         color: black;
         font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:11pt;
-        line-height: 1.3;    /* increased spacing between lines */
+        line-height: 1.4;    /* increased spacing between lines */
         border:0px solid black; 
 	padding:3pt;
 }
 
 #collaboration-list ul {
-  list-style-type: none;   /* removes bullets */
-  padding-left: 0;         /* removes default indent */
-  margin: 0;               /* optional: remove vertical spacing */
+  	list-style-type: none;   /* removes bullets */
+  	padding-left: 0;         /* removes default indent */
+  	margin: 0;               /* optional: remove vertical spacing */
 }
 
 

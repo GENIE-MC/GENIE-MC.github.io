@@ -1,20 +1,37 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | Products">
+  </head>
 
-<body>
+  <body>
 
-   <!--#include FILE="./navigation.inc"-->
+    <!-- Header -->
+    <div id="header"></div>
 
-   <div id="MainIn2ColumnPage">
+    <!-- Main -->
+    <div id="pageLayout">
 
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
 
-     <div CLASS="clsInsidePageHeader"> GENIE Products </div>
+       <!-- Main text -->
+       <div id="twoColumnPage">
 
-     <br />
+         <section id="frontPageMainText">
+
+           <div id="pageTitle">
+                GENIE suite of software products
+           </div>
+           <br />
+
 
 
      The GENIE collaboration <b>maintains a popular suite of software products</b>
@@ -120,13 +137,36 @@
 
      </ul>
       
-   </div>  <!-- main -->
-      
-   <!--#include FILE="./footer.inc"-->
-      
-</body>   
-</html>
+
+
+
      
 
+          </section>
+     </div>
+   </div> <!-- pageLayout -->
+                            
+   <!-- Footer include -->
+   <div id="footer"></div>
+                             
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+                             
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+                            
+     fetch('includes/footer.html')
+       .then(res => res.text()) 
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>                
+           
+  </body>                   
+</html>                     
+           
      
      
