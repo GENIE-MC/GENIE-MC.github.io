@@ -48,7 +48,7 @@ ul,p,li {
 #frontPageMainText {
         flex: 3;
         font-size: 1.05rem;           /* moderately larger font */
-        line-height: 1.75;            /* increased spacing between lines */
+        line-height: 1.5;            /* increased spacing between lines */
         letter-spacing: 0.2px;        /* subtle improvement to text readability */
         color: #111111;               /* slightly darker than pure black for polish */
         font-weight: 400;
