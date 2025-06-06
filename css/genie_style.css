@@ -159,14 +159,11 @@ footer {
 	flex-direction: column;  /* stack vertically */
 	align-items: flex-start; /* align items to the left */
 	justify-content: flex-start; 
- /* 	width: 180px; */           /* set fixed width for sidebar */
-    	/*min-height: 100vh;*/   /* stretch full height of viewport */
    	font-family: 'Roboto', Helvetica, sans-serif;
     	font-size: 0.92rem;
     	font-weight: normal;
     	box-sizing: border-box;  /* avoid width + padding overflow */
 	gap: 0.2rem;
-/*    	height: 100%;*/
 } 
 
 #navigation a {
@@ -191,14 +188,15 @@ footer {
 }
 
 #navigation-promo {
+ 	background-color: white;
   	margin-top: 1rem;
 	text-align: center;
-	font-size: 0.85rem;
-	line-height: 1.4;
+	font-size: 0.7rem;
+	line-height: 1.2;
 }
 
 #navigation-promo img {
-    margin-top: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 /*  ---------------------------------------------------------------------------- */
