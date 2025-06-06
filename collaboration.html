@@ -2,17 +2,37 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
 
-<body>
+     <meta name="description" content = "GENIE | Home page">
 
-   <!--#include FILE="./navigation.inc"-->
+  </head>
 
-   <div id="MainIn2ColumnPage">
+  <body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main -->
+    <div id="pageLayout">
+
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
+
+       <!-- Main text -->
+       <div id="twoColumnPage">
+
+         <section id="frontPageMainText">
+
+           <div id="pageTitle">GENIE Collaboration</div>
+           <br />
 
 
-  <div CLASS="clsInsidePageHeader"> GENIE Collaboration </div>
-  <br />
 
   <div id="InsidePageSectionBodyNoFrame">
 
@@ -222,12 +242,33 @@
 
   </div>
 
-          
-  </div>  <!-- main -->
 
-  <!--#include FILE="./footer.inc"-->
-        
-</body>
-</html> 
-         
 
+
+          </section>
+     </div>
+   </div> <!-- pageLayout -->
+     
+   <!-- Footer include -->
+   <div id="footer"></div>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+    
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+
+     fetch('includes/footer.html')
+       .then(res => res.text())   
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>
+
+  </body>
+</html>
+           
+           
