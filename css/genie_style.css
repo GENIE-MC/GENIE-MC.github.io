@@ -20,6 +20,92 @@ ul,p,li {
  	align-items: flex-start; /* aligns top of columns */
 }
 
+<!--
+Header and footer
+-->
+
+header {
+	display: flex;
+	justify-content: flex-start; /* Aligns all items to the left */
+	align-items: center;
+	gap: 1rem; /* Adds spacing between logo and text */
+	padding: 1rem 1.5rem;
+	background-color: #2A2929;
+	color: #FFFFCC;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	border-bottom: 2px solid #222;
+}
+
+.header-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header-line {
+	font-size: 1.3rem;
+	font-weight: 400;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.header-subtitle {
+	font-size: 1rem;
+	font-weight: 300;
+	color: #ccc;
+	margin-top: 0.25rem;
+}
+
+.header-logo img {
+	margin-top: 0.1rem;
+	height: 90px;
+}
+
+footer {
+	margin:2px 5px 2px 5px;
+	padding:5px;
+	letter-spacing:1px;
+	border-top-style:solid;
+	border-top-color:black;
+	border-top-width:1px;
+	align="left"; 
+ 	color: black;
+ 	background-color:white;
+ 	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size:12px;
+}
+
+<!--
+Navigation
+-->
+
+#navigation {
+ 	background-color: #EEEEEE;
+	padding: 0; /* remove uneven padding */
+	display: flex;
+	align-items: center; /* vertically centers children */
+	justify-content: left; /* centers links horizontally */
+	min-height: 40px; /* clean, fixed height for the bar */
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 0.90rem;
+	font-weight: bold;
+	border-bottom: 0px solid #AAAAAA;
+} 
+
+#navigation a {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	padding: 0.5rem 0.7rem; /* symmetric vertical padding */
+	border-radius: 4px;
+	transition: background 0.2s ease;
+	line-height: 1; /* avoid spacing mismatch */
+}
+ 
+#navigation a:hover {
+  	background-color: #2A2929;
+ 	color: #FFFFCC;
+}
+
 #TwoColumnPage {
 	display: flex;
 	flex-grow: 1;
@@ -709,61 +795,6 @@ div#InsidePageSectionNote {
         font-family: 'Roboto', Helvetica, sans-serif;
 }
 
-
-<!--
-Header and footer
--->
-
-header {
-  display: flex;
-  justify-content: flex-start; /* Aligns all items to the left */
-  align-items: center;
-  gap: 1rem; /* Adds spacing between logo and text */
-  padding: 1rem 1.5rem;
-  background-color: #2A2929;
-  color: #FFFFCC;
-  font-family: 'Roboto', Helvetica, sans-serif;
-  border-bottom: 2px solid #222;
-}
-
-.header-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.name-line {
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
-}
-
-.subtitle {
-  font-size: 1rem;
-  font-weight: 300;
-  color: #ccc;
-  margin-top: 0.25rem;
-}
-
-.header-logo img {
-  margin-top: 0.1rem;
-  height: 90px;
-}
-
-footer {
-  margin:2px 5px 2px 5px;
-  padding:5px;
-  letter-spacing:1px;
-  border-top-style:solid;
-  border-top-color:black;
-  border-top-width:1px;
-  align="left"; 
-  color: black;
-  background-color:white;
-  font-family: 'Roboto', Helvetica, sans-serif;
-  font-size:12px;
-}
-
 .clsFrontPageTabHeader {
   background: #EEEEEE; 
   color: black;
@@ -789,56 +820,6 @@ footer {
   border-right:0px solid black; 
   padding:6px;
 }
-
-<!--
-Navigation
--->
-
-#navigation {
-  background-color: #EEEEEE;
-  padding: 0; /* remove uneven padding */
-  display: flex;
-  align-items: center; /* vertically centers children */
-  justify-content: left; /* centers links horizontally */
-  min-height: 40px; /* clean, fixed height for the bar */
-  font-family: 'Roboto', Helvetica, sans-serif;
-  font-size: 0.90rem;
-  font-weight: bold;
-  border-bottom: 0px solid #AAAAAA;
-} 
-
-#navigation a {
-  display: inline-block;
-  color: black;
-  text-decoration: none;
-  padding: 0.5rem 0.7rem; /* symmetric vertical padding */
-  border-radius: 4px;
-  transition: background 0.2s ease;
-  line-height: 1; /* avoid spacing mismatch */
-}
- 
-#navigation a:hover {
-  background-color: #2A2929;
-  color: #FFFFCC;
-}
-
-<!--
-.clsNavigationMenu {
-  background: #EEEEEE; 
-  color: black;
-  font-family: 'Roboto', Helvetica, sans-serif;
-  font-size:9pt;
-  line-height: 1.4;
-  border-top:1px solid black; 
-  border-left:1px solid black; 
-  border-bottom:0px solid black; 
-  border-right:0px solid black; 
-  padding:6px;
-  margin:10px 10px 3px 3px;
-  width:170px;
-  float:left;
-}
--->
 
 .clsLogoBox {
   background: white; 
