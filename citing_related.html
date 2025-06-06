@@ -2,18 +2,36 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | Citing original research included in GENIE">
+  </head>
 
-<body>
+  <body>
 
-   <!--#include FILE="./navigation.inc"-->
+    <!-- Header -->
+    <div id="header"></div>
 
-   <div id="MainIn2ColumnPage">
+    <!-- Main -->
+    <div id="pageLayout">
+
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
+
+       <!-- Main text -->
+       <div id="twoColumnPage">
+
+         <section id="frontPageMainText">
+
+           <div id="pageTitle">
+                Citing original research included in GENIE
+           </div>
 
 
-     <div CLASS="clsInsidePageHeader"> Citing original research included in GENIE  </div>
-
-     <br />  
 
      The authors of GENIE endorse the 
      <A href="http://www.montecarlonet.org/GUIDELINES" target="_top">MCNET guidelines for fair academic use</A>. 
@@ -29,7 +47,6 @@
      <br />
 
      <small>
-
 
      Nuclear model: <br/>
 
@@ -479,14 +496,35 @@
 
      </small>
 
-     <br />  
 
 
 
- </div>  
-          
-  <!--#include FILE="./footer.inc"-->
-        
+        </section>
+     </div>
+   </div> <!-- pageLayout -->
+     
+   <!-- Footer include -->
+   <div id="footer"></div>
+     
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+     
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+     
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>
+     
   </body>
-</html> 
+</html>
+     
+     
+
 
