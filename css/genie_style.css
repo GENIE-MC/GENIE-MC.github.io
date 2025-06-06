@@ -112,12 +112,12 @@ footer {
 
 #navigation {
  	background-color: #EEEEEE;
-	padding: 1rem; 
+	padding: 0.5rem 0.7rem; 
 	display: flex;
 	flex-direction: column;  /* stack vertically */
 	align-items: flex-start; /* align items to the left */
 	justify-content: flex-start; 
-  	width: 200px;            /* set fixed width for sidebar */
+  	width: 180px;            /* set fixed width for sidebar */
     	min-height: 100vh;       /* stretch full height of viewport */
    	font-family: 'Roboto', Helvetica, sans-serif;
     	font-size: 0.85rem;
@@ -129,10 +129,11 @@ footer {
 	display: block;
 	color: black;
 	text-decoration: none;
-	padding: 0.5rem 0.7rem; /* symmetric vertical padding */
+	padding: 0.35rem 0.4rem; /* symmetric vertical padding */
 	border-radius: 4px;
 	transition: background 0.2s ease;
-	line-height: 1; /* avoid spacing mismatch */
+	line-height: 1.2; /* avoid spacing mismatch */
+	margin: 0;
 }
  
 #navigation a:hover {
