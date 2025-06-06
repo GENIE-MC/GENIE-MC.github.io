@@ -3,38 +3,14 @@
 <html>
 
   <head>
+     <script>
+	 fetch("includes/head_fragments.html")
+	      .then(res => res.text())
+	      .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
 
-     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-     <link type="text/css" rel="stylesheet" href="./css/genie_style.css"/>
+     <meta name="description" content = "GENIE | Home page">
 
-     <link rel="shortcut icon" href="./images/icons/favicon-genie.gif" type="image/x-icon">
-     <link rel="icon" href="./images/icons/favicon-genie.gif" type="image/x-icon">
-
-     <title> 
-        GENIE Event Generator 
-     </title>
-
-     <meta charset="UTF-8">
-
-     <meta name="description" 
-         content = "GENIE | Home page">
-
-     <meta http-equiv="Keywords" 
-         content = "Neutrino, Cross Section, Neutrino Generator, Monte Carlo, MC, HEP, MeV, GeV, TeV, PeV,
-                   T2K, ND280, SuperK, SK, SuperKamiokande, HK, HyperKamiokande, K2K, 
-                   MINOS, Minerva, NoVA, 
-                   ArgoNEUT, SBND, ICARUS, DUNE, 
-                   JUNO, KM3Net, IceCube, PINGU, P-ONE,
-                   MiniBooNE, MicroBooNE, NanoBooNE, WhateverBooNE, 
-                   Object Oriented, C++, ROOT,
-                   Quasi Elastic, Baryon Resonance Neutrinoproduction, Deep Inelastic, Coherent, Elastic, Inelastic, 
-                   Inverse Muon Decay, Diffractive, Charm, QEL, RES, DIS, 
-                   Llewellyn Smith, Rein Sehgal, Bodek Ritche, Bodek Yang, Parton Model, Fermi Gas, Spectral Function,
-                   Bertini, Nieves, Martini,
-                   Nuclear, Parton Density Function, Hadronization, Fragmentation, Intranuclear, Rescattering,
-                   PDFLIB, LHAPDF, PYTHIA, JETSET, GiBUU, FLUKA, TAUOLA, INCL, GEANT, 
-                   NEUGEN, NUANCE, NEUT, GENEVE, NUX, INTRANUKE, AGKY
-                   Andreopoulos, Gallagher, Dytman, Roda, Gardiner, Hatcher, Tena-Vidal">
   </head>
 
   <body>
