@@ -1,5 +1,6 @@
-BODY {
-	background: black
+body {
+	display: flex;
+ 	flex-direction: column;
         margin-left:10px;
         margin-right:10px;
 	font-family: 'Roboto', Helvetica, sans-serif;
@@ -21,6 +22,8 @@ ul,p,li {
 
 #pageLayout {
  	display: flex;
+ 	flex-direction: row;
+	flex: 1;
  	align-items: flex-start; /* aligns top of columns */
 	gap: 1rem;
 }
@@ -30,7 +33,6 @@ ul,p,li {
 	flex-grow: 1;
 	gap: 2rem;
   	padding: 0px 5px 2px 2px;
-  	margin: 10px 2px 3px 100px;
   	background: white;
   	font-family: 'Roboto', Helvetica, sans-serif;
   	font-size:12px; 
@@ -84,7 +86,7 @@ header {
 }
 
 .header-subtitle {
-	font-size: 1,1rem;
+	font-size: 1.1rem;
 	font-weight: 300;
 	margin-top: 0.25rem;
 	color: #e9a22d;
