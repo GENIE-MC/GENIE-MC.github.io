@@ -49,13 +49,14 @@ header {
 	font-size: 1.4rem;
 	font-weight: 400;
 	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+	color: #1f77b4;
 }
 
 .header-subtitle {
 	font-size: 1rem;
 	font-weight: 300;
-	color: #ccc;
 	margin-top: 0.25rem;
+	color: #ff7f0e;
 }
 
 .header-logo img {
