@@ -287,6 +287,19 @@ div#collaboration-list {
 
 
 
+.icon-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em; /* optional spacing between icon and text */
+}
+
+.icon-link img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+
 div#depend {  
 	background: white; 
 	color: black; 
