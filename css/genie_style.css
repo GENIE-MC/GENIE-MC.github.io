@@ -60,10 +60,10 @@ header {
 	align-items: center;
 	gap: 1rem; /* Adds spacing between logo and text */
 	padding: 1rem 1.5rem;
-	background-color: white;
+	background-color: #EEEEEE;
 	color: #FFFFCC;
 	font-family: 'Roboto', Helvetica, sans-serif;
-	border-bottom: 2px solid #222;
+	border-bottom: 0px solid #222;
 }
 
 .header-logo img {
