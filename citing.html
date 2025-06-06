@@ -1,18 +1,37 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | Citing">
+  </head>
+  
+  <body>
+  
+    <!-- Header -->
+    <div id="header"></div>
+    
+    <!-- Main -->
+    <div id="pageLayout">
+    
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
+       
+       <!-- Main text -->
+       <div id="twoColumnPage">
+       
+         <section id="frontPageMainText">
+         
+           <div id="pageTitle">
+                Citing GENIE 
+           </div>
 
-<body>
 
-   <!--#include FILE="./navigation.inc"-->
-
-   <div id="MainIn2ColumnPage">
-
-     <div CLASS="clsInsidePageHeader"> Citing GENIE  </div>
-
-     <br />  
 
      <div id="MCNetGuidelines">
       <H3> MCnet Guidelines for <i>Fair Academic Use</i> </H3>
@@ -201,10 +220,35 @@
 
      </div> 
 
-   </div>  <!-- main -->
-          
-   <!--#include FILE="./footer.inc"-->
-        
-</body>
-</html> 
+
+
+
+         </section>
+     </div>
+   </div> <!-- pageLayout -->
+     
+   <!-- Footer include -->
+   <div id="footer"></div>
+     
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+     
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+     
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>
+     
+  </body>
+</html>
+   
+
+
 
