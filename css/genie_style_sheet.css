@@ -17,7 +17,7 @@ ul,p,li {
 div#depend {  
 	background: white; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size: small 
 }
 
@@ -25,14 +25,14 @@ div#depend b {
 	background: white; 
 	color: black; 
 	font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:small 
 }
 
 div#terminal {  
 	background: black; 
 	color: white; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:13px;
         padding:2px 
 }
@@ -41,7 +41,7 @@ div#terminal b {
 	background: black; 
 	color: red; 
 	width:650px; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px 
 }
 
@@ -49,7 +49,7 @@ div#terminal i {
 	background: black; 
 	color: yellow; 
 	width:650px; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:px
 }
 
@@ -57,7 +57,7 @@ div#terminal a {
 	background: black; 
 	color: yellow; 
 	width:650px;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px 
 }
 
@@ -65,7 +65,7 @@ div#terminal a:link {
 	background: black; 
 	color: yellow; 
 	width:650px;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px 
 }
 
@@ -73,7 +73,7 @@ div#terminal a:visited {
 	background: black; 
 	color: yellow; 
 	width:650px;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px 
 }
 
@@ -81,48 +81,48 @@ div#terminal a:hover {
 	background: black; 
 	color: yellow; 
 	width:650px;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px 
 }
 
 div#directions {  
 	background: white; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:small 
 }
 
 div#directions ul {  
 	background: white; 
         color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:small 
 }
 
 div#directions li {  
 	background: white; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:small 
 }
 
 div#News {
         background: white;
         color: black;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', Helvetica, sans-serif;
         font-size:8pt
 }
 
 .clsContribTableRow {  
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:9pt
 }
 
 div#ReleaseTableHeader {  
         background: white; 
         color: #900C3F;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:14pt;
 	display:table-cell;
 	vertical-align:middle;
@@ -137,7 +137,7 @@ div#ReleaseTableHeader {
 div#ReleaseTableHeader2 {  
         background: #EEEEEE; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12pt;
         border:1px solid black; 
 	padding:5pt;
@@ -147,7 +147,7 @@ div#ReleaseTableHeader2 {
 div#ReleaseTableBody {  
         background: white; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:9pt;
 	padding:5pt;
         min-width:700px;
@@ -156,7 +156,7 @@ div#ReleaseTableBody {
 div#GenieSuiteProductHeader {  
         background: #EEEEEE; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-weight: bold;
 	font-style: italic;
 	font-size:11pt;
@@ -170,7 +170,7 @@ div#GenieSuiteProductHeader {
 div#GenieSuiteProductText {  
         background: white; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:11pt;
         border:1px solid black; 
 	padding:5pt
@@ -179,7 +179,7 @@ div#GenieSuiteProductText {
 div#MCNetGuidelines {  
         background: white; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:10pt;
         font-style:italic;
         border:1px dashed black; 
@@ -189,7 +189,7 @@ div#MCNetGuidelines {
 div#CopyrightContactInfoBox {  
         background: white; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:10pt;
 	padding:3pt
 }
@@ -197,7 +197,7 @@ div#CopyrightContactInfoBox {
 div#CollaborationList {  
         background: white; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:10pt;
         border:1px solid black; 
 	padding:3pt
@@ -206,7 +206,7 @@ div#CollaborationList {
 div#IncubatorProject {  
         background: #EEEEEE; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:10pt;
         border:1px dashed black; 
 	padding:5pt
@@ -215,7 +215,7 @@ div#IncubatorProject {
 div#Note {  
         background: #EEEEEE; 
         color: black;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:9pt;
         border:1px dashed black; 
 	padding:5pt
@@ -224,6 +224,7 @@ div#Note {
 div#bibtex {  
         background: #EEEEEE; 
         color: white;
+        font-family: 'Roboto', Helvetica, sans-serif;
         font-family: Helvetica; 
 	font-size:10pt;
 	padding:5pt;
@@ -261,7 +262,7 @@ div#LogoBox {
 
 .clsBigYellow {
 	color: yellow
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:15pt
 }
 
@@ -279,7 +280,7 @@ div#LogoBox {
 
 .clsInsidePageHeader { 
         border:0px;background:#404040;color:white;padding:0px;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-weight: bold;
         font-size: 22px;
 	text-align: left;
@@ -289,7 +290,7 @@ div#LogoBox {
 
 .clsIncubatorProjectTitle { 
 	color: #921B1B;
-        font-family: Helvetica, sans-serif, Arial; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-weight: bold;
 	font-style: italic;
         font-size: 15px;
@@ -319,40 +320,40 @@ div#LogoBox {
 .clsWorkshopDeadTime { 
 	background: green; 
 	color: white; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 .clsWorkshopSession { 
 	background: blue; 
 	color: white; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 .clsWorkshopHdr { 
 	background: #151B8D;
         color: white;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 .clsWorkshopMain { 
 	background: #CCFFFF;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 .clsTableEntryMain {  
 	background: white; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:small 
 }
 .clsTableEntryCommand {  
 	background: white; 
 	color: red; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:small 
 }
 .clsTableEntryComment {  
 	background: white; 
 	color: blue; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:small 
 }
 
@@ -365,7 +366,7 @@ div#LogoBox {
 	border-top:1px solid black;
 	border-left:1px solid black;
 	padding:8px;
-        font-family: Helvetica, Arial, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
         font-size:14px;
 }
 
@@ -373,7 +374,7 @@ div#LogoBox {
 	border-top:1px solid black;
 	border-left:1px solid black;
 	padding:8px;
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
         font-size:14px;
 }
 
@@ -382,7 +383,7 @@ div#LogoBox {
 	border-top:1px solid black;
 	border-right:1px solid black;
 	padding:8px;
-        font-family: Helvetica, Arial, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
         font-size:14px;
 }
 .clsBorderT1px {  
@@ -410,7 +411,7 @@ div#LogoBox {
 .clsConfigTableHeader {  
 	background: #B0B0B0; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12x; 
         font-weight: bold;
 	border-bottom:1px solid black;
@@ -419,14 +420,14 @@ div#LogoBox {
 .clsConfigTableModelDescription {  
 	background: #DCDCDC; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px; 
 	border-top:1px solid black;
 }
 .clsConfigTableTuneDescription {  
 	background: white; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px;
 	border-top:1px dashed #707070;
 }
@@ -438,7 +439,7 @@ div#LogoBox {
 .clsVersionTableGroupOfProductsHeader {  
 	background: #7b241c; 
 	color: white; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:14px;
 	border-top:  2px solid #7b241c;
 	border-left: 2px solid #7b241c;
@@ -447,7 +448,7 @@ div#LogoBox {
 .clsVersionTableReweightGeneratorHeader {  
 	background: white; 
 	color: #900C3F; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px;
 	border-top:  2px solid #900C3F;
 	border-left: 2px solid #900C3F;
@@ -456,7 +457,7 @@ div#LogoBox {
 .clsVersionTableReweight {  
 	background: white; 
 	color: #900C3F; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px;
 	border-top:   1px solid #707070;
 	border-bottom:1px solid #707070;
@@ -466,7 +467,7 @@ div#LogoBox {
 .clsVersionTableGenerator {  
 	background: #e0e0eb;
 	color: #900C3F; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:14px;
         font-weight: bold;
 	border-top:   1px solid #707070;
@@ -476,13 +477,13 @@ div#LogoBox {
 .clsVersionTableCharacterizationAndTuningHeader {  
 	background: #e0e0eb; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px;
 }
 .clsVersionTableCharacterizationAndTuning {  
 	background: #e0e0eb; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px;
 	border-top:   1px solid #707070;
 	border-bottom:1px solid #707070;
@@ -491,13 +492,12 @@ div#LogoBox {
 }
 .clsVersionTableExternalProductsHeader {  
 	background: #f0f3f4; 
-        font-family: Arial, Helvetica, sans-serif; 
 	font-size:12px;
 }
 .clsVersionTableExternalProducts {  
 	background: #f0f3f4; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px;
 	border-top:   1px solid #707070;
 	border-bottom:1px solid #707070;
@@ -511,7 +511,7 @@ div#LogoBox {
 .clsVersionTableGeneric {  
 	background: white; 
 	color: black; 
-        font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px;
 	border: 1px solid #707070;
 }
@@ -519,7 +519,7 @@ div#LogoBox {
 
 div#TextBlkNoBB {
 	color: black; 
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:14px;
 	padding:5px; 
  	width:100%;
@@ -527,7 +527,7 @@ div#TextBlkNoBB {
 
 div#FrontPageMainText {
 	color: black; 
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:13px;
 	padding:8px; 
  	width:50%;
@@ -540,14 +540,14 @@ div#TwitterFeed {
 	width:250px;
 	background:white;
 	color:white;
-	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:8px;
 }
 
 div#CollabSectionHeader {
 	background: #C0C0C0; 
 	color: black; 
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:18px;
 	padding:5px; 
 	border-top:1px solid black; 
@@ -564,13 +564,13 @@ div#CollabSectionBody {
 	border-right:0px solid black; 
 	padding:6px;
 	font-size:14px;
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 div#PubSectionHeader {
   background: #C0C0C0; 
   color: black; 
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size:17px;
   padding:4px; 
   border-top:1px solid black; 
@@ -585,13 +585,13 @@ div#PubSectionBody {
   border-left:1px solid black;
   padding:8px;
   font-size:13px;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 div#WorkshopHeader {
   background: #C0C0C0; 
   color: black; 
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size:18px;
   font-weight: bold;
   padding:1px; 
@@ -605,14 +605,14 @@ div#WorkshopBody {
   border:1px solid black; 
   padding:6px;
   font-size:14px;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 div#InsidePageMainText { 
 	border:0px;
 	background:white;
  	color:black;
- 	font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size: 13px;
 	text-align: left;
 	padding:10px;
@@ -622,7 +622,7 @@ div#InsidePageMainText {
 div#InsidePageSectionHeader {
 	background: #666666; 
 	color: white; 
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:18px;
 	padding:4px; 
 	border-top:1px solid black; 
@@ -638,20 +638,20 @@ div#InsidePageSectionBody {
 	border-left:1px solid black;
 	padding:6px;
 	font-size:12px;
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 div#InsidePageSectionBodyNoFrame {
 	background: white; 
  	padding:6px;
  	font-size:12px;
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 div#InsidePageSubSectionHeader {
 	background: white; 
 	color: black; 
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
  	font-size:18px;
 	padding:4px; 
 	border-top:1px solid black; 
@@ -667,7 +667,7 @@ div#InsidePageSubSectionBody {
 	border-left:1px solid black;
 	padding:6px;
 	font-size:12px;
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 div#InsidePageSectionNote {
@@ -676,37 +676,50 @@ div#InsidePageSectionNote {
 	border:1px solid black; 
 	padding:6px;
 	font-size:13px;
-	font-family: Arial, Helvetica, sans-serif; 
+        font-family: 'Roboto', Helvetica, sans-serif;
 }
 
-div#PageHeader {
+
+<!--
+Header and footer
+-->
+
+header {
+  display: flex;
+  justify-content: flex-start; /* Aligns all items to the left */
+  align-items: center;
+  gap: 1rem; /* Adds spacing between logo and text */
+  padding: 1rem 1.5rem;
+  background-color: #2A2929;
+  color: #FFFFCC;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  border-bottom: 2px solid #222;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
   margin:2px 5px 2px 5px;
   padding:5px;
-  line-height:22px;
   letter-spacing:1px;
-  align="left";
+  border-top-style:solid;
+  border-top-color:black;
+  border-top-width:1px;
+  align="left"; 
+  color: black;
   background-color:white;
-  height:60px;
-  font: 400 23px/2.5 Helvetica, sans-serif;
-  text-shadow: 4px 4px 4px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
-  overflow:hidden
-}
-
-div#PageFooter {
-  background: white; 
-  color: black; 
-  font-family: Helvetica, sans-serif, Arial; 
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size:12px;
-  padding:4px; 
-  border-top:1px solid black; 
-  line-height:1.5;
-  overflow:hidden
 }
 
 .clsFrontPageTabHeader {
   background: #EEEEEE; 
   color: black;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size:9pt;
   font-weight: bold;
   border-top:1px dashed black; 
@@ -719,7 +732,7 @@ div#PageFooter {
 .clsFrontPageTabBody {
   background: white; 
   color: black;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size:9pt;
   line-height: 1.4;
   border-top:1px dashed black; 
@@ -729,10 +742,43 @@ div#PageFooter {
   padding:6px;
 }
 
+<!--
+Navigation
+-->
+
+#navigation {
+  background-color: #EEEEEE;
+  padding: 0; /* remove uneven padding */
+  display: flex;
+  align-items: center; /* vertically centers children */
+  justify-content: left; /* centers links horizontally */
+  min-height: 40px; /* clean, fixed height for the bar */
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 0.90rem;
+  font-weight: bold;
+  border-bottom: 0px solid #AAAAAA;
+} 
+
+#navigation a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 0.7rem; /* symmetric vertical padding */
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  line-height: 1; /* avoid spacing mismatch */
+}
+ 
+#navigation a:hover {
+  background-color: #2A2929;
+  color: #FFFFCC;
+}
+
+<!--
 .clsNavigationMenu {
   background: #EEEEEE; 
   color: black;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size:9pt;
   line-height: 1.4;
   border-top:1px solid black; 
@@ -744,11 +790,12 @@ div#PageFooter {
   width:170px;
   float:left;
 }
+-->
 
 .clsLogoBox {
   background: white; 
   color: black;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size:9pt;
   line-height: 1.4;
   border-top:1px solid black; 
@@ -765,7 +812,7 @@ div#PageFooter {
 	min-width=550px;        
 	background: white;
 	float="right";        
-	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:12px; 
 	overflow:hidden;
 }

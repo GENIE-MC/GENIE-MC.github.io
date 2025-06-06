@@ -2,14 +2,48 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
 
-<body>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+     <link type="text/css" rel="stylesheet" href="./css/genie_style_sheet.css"/>
 
-   <!--#include FILE="./navigation.inc"-->
+     <link rel="shortcut icon" href="./images/icons/favicon-genie.gif" type="image/x-icon">
+     <link rel="icon" href="./images/icons/favicon-genie.gif" type="image/x-icon">
 
+     <title> 
+        GENIE Event Generator 
+     </title>
 
-   <div id="MainIn2ColumnPage">
+     <meta charset="UTF-8">
+
+     <meta name="description" 
+         content = "GENIE | Home page">
+
+     <meta http-equiv="Keywords" 
+         content = "Neutrino, Cross Section, Neutrino Generator, Monte Carlo, MC, HEP, MeV, GeV, TeV, PeV,
+                   T2K, ND280, SuperK, SK, SuperKamiokande, HK, HyperKamiokande, K2K, 
+                   MINOS, Minerva, NoVA, 
+                   ArgoNEUT, SBND, ICARUS, DUNE, 
+                   JUNO, KM3Net, IceCube, PINGU, P-ONE,
+                   MiniBooNE, MicroBooNE, NanoBooNE, WhateverBooNE, 
+                   Object Oriented, C++, ROOT,
+                   Quasi Elastic, Baryon Resonance Neutrinoproduction, Deep Inelastic, Coherent, Elastic, Inelastic, 
+                   Inverse Muon Decay, Diffractive, Charm, QEL, RES, DIS, 
+                   Llewellyn Smith, Rein Sehgal, Bodek Ritche, Bodek Yang, Parton Model, Fermi Gas, Spectral Function,
+                   Bertini, Nieves, Martini,
+                   Nuclear, Parton Density Function, Hadronization, Fragmentation, Intranuclear, Rescattering,
+                   PDFLIB, LHAPDF, PYTHIA, JETSET, GiBUU, FLUKA, TAUOLA, INCL, GEANT, 
+                   NEUGEN, NUANCE, NEUT, GENEVE, NUX, INTRANUKE, AGKY
+                   Andreopoulos, Gallagher, Dytman, Roda, Gardiner, Hatcher, Tena-Vidal">
+  </head>
+
+  <body>
+
+    <!-- Header and navigation bar -->
+    <div id="header"></div>
+    <div id="navigation"></div>
+
+    <div id="MainIn2ColumnPage">
 
      <div style="display:flex"> 
         <div id="FrontPageMainText">
@@ -81,10 +115,31 @@
         </div>
      </div>
 
-  </div>
+   </div>
 
-  <!--#include FILE="./footer.inc"-->
-
-  </body>
-</html>
-
+   <br /> 
+           
+    <!-- Footer include -->
+    <div id="footer"></div>
+           
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+       
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+            
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });        
+    </script>
+            
+  </body>   
+</html>     
+               
+             
+       
