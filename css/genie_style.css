@@ -43,14 +43,14 @@ header {
 	font-size: 1.4rem;
 	font-weight: 400;
 	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
-	color: #1f77b4;
+	color: #23247a;
 }
 
 .header-subtitle {
 	font-size: 1rem;
 	font-weight: 300;
 	margin-top: 0.25rem;
-	color: #ff7f0e;
+	color: #e9a22d;
 }
 
 .header-logo img {
@@ -100,8 +100,8 @@ footer {
 }
  
 #navigation a:hover {
-  	background-color: #1f77b4;;
- 	color:  #ff7f0e;
+  	background-color: #23247a;
+ 	color:  #e9a22d;
 }
 
 
