@@ -2,19 +2,36 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | Generator Releases">
+  </head>
 
-<body>
+  <body>
 
-   <!--#include FILE="./navigation.inc"-->
+    <!-- Header -->
+    <div id="header"></div>
 
-   <div id="MainIn2ColumnPage">
+    <!-- Main -->
+    <div id="pageLayout">
+
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
+
+       <!-- Main text -->
+       <div id="twoColumnPage">
+
+         <section id="frontPageMainText">
+
+           <div id="pageTitle">
+                GENIE Event Generator Releases
+           </div>
 
 
-
-    <div CLASS="clsInsidePageHeader"> GENIE/Generator Releases</div>
-
-    <br />
 
     <div id="InsidePageMainText">
          To familiarize yourself with the GENIE release naming conventions, please see
@@ -2140,9 +2157,30 @@
 
 
 
-  </div> <!-- main -->
-
-  <!--#include FILE="./footer.inc"-->
-
+        </section>
+     </div>
+   </div> <!-- pageLayout -->
+     
+   <!-- Footer include -->
+   <div id="footer"></div>
+     
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+     
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+     
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>
+     
   </body>
 </html>
+     
+   

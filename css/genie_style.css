@@ -191,16 +191,20 @@ footer {
  	background-color: white;
   	margin-top: 1rem;
 	text-align: center;
-	font-size: 0.6rem;
+	font-size: 0.7rem;
 	line-height: 1.1;
         border:1px solid black; 
 	border-radius: 8px;
 }
 
 #navigation-promo a {
-	color: red;
+	color: #810c0c;
 	text-decoration: none;
-	margin: 0;
+}
+
+#navigation-promo a:hover {
+	color: #810c0c;
+	text-decoration: none;
 }
 
 #navigation-promo img {
