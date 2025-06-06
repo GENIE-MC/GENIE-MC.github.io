@@ -26,6 +26,7 @@ Header and footer
 
 header {
 	display: flex;
+	flex-direction: row;
 	justify-content: flex-start; /* Aligns all items to the left */
 	align-items: center;
 	gap: 1rem; /* Adds spacing between logo and text */
@@ -34,16 +35,18 @@ header {
 	color: #FFFFCC;
 	font-family: 'Roboto', Helvetica, sans-serif;
 	border-bottom: 2px solid #222;
+  	gap: 1rem;
 }
 
 .header-text {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	display: block;
 }
 
-.header-line {
-	font-size: 1.3rem;
+.header-title {
+	font-size: 1.4rem;
 	font-weight: 400;
 	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
 }
@@ -58,6 +61,7 @@ header {
 .header-logo img {
 	margin-top: 0.1rem;
 	height: 90px;
+	display: block;
 }
 
 footer {
