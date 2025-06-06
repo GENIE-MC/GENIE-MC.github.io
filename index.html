@@ -5,7 +5,7 @@
   <head>
 
      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-     <link type="text/css" rel="stylesheet" href="./css/genie_style_sheet.css"/>
+     <link type="text/css" rel="stylesheet" href="./css/genie_style.css"/>
 
      <link rel="shortcut icon" href="./images/icons/favicon-genie.gif" type="image/x-icon">
      <link rel="icon" href="./images/icons/favicon-genie.gif" type="image/x-icon">
@@ -39,14 +39,20 @@
 
   <body>
 
-    <!-- Header and navigation bar -->
+    <!-- Header -->
     <div id="header"></div>
-    <div id="navigation"></div>
 
-    <div id="MainIn2ColumnPage">
 
-     <div style="display:flex"> 
-        <div id="FrontPageMainText">
+    <div id="PageLayout">
+
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
+
+       <!-- Main text -->
+       <main id="TwoColumnPage">
+
+         <section id="FrontPageMainText">
+           <p>
             <b>GENIE</b> is an <A href="./collaboration.html"><b>international collaboration</b></A> of scientists that
             plays the leading role in 
             a) the development of a modern and universal event generator framework and tools in support of neutrino experiments,
@@ -55,8 +61,9 @@
             c) the development and characterisation of novel <b><u>comprehensive</u> physics models</b> for the <b>simulation
             of neutrino interactions</b>, and 
             d) the development of an advanced <b>global analysis of neutrino scattering data</b>.
-            <br />
-            <br />
+           </p>
+           <br />
+           <p>
             The GENIE collaboration
             maintains a <A href="./products.html"><b>suite of software products</b></A> 
             for the experimental neutrino community,
@@ -67,14 +74,15 @@
             <A href="https://github.com/GENIE-MC/Comparisons" target="_top"><i><b>Comparisons</b></i></A> <img src="./images/icons/lock.png" align="top" height="15"> and
             <A href="https://github.com/GENIE-MC/Tuning" target="_top"><i><b>Tuning</b></i></A> <img src="./images/icons/lock.png" align="top" height="15"> products
             that underlie the GENIE global analysis.
-            <br />
-            <br />
-            <br />
+           </p>
+           <br />
+           <br />
 
-             <div CLASS="clsFrontPageTabHeader">
+           <section class="clsFrontPageTabHeader">
                15th April 2024: New production release 3.4.2!
-             </div>
-             <div CLASS="clsFrontPageTabBody">
+           </section>
+           <section class="clsFrontPageTabBody">
+             <p>
                We are pleased to announce that version 3.04.02 of the GENIE event generator has been tagged.
                <br />
                <br />
@@ -91,11 +99,11 @@
                <br />
                <br />
                We look forward to your feedback.
-             </div>
+             </p>
+           </section>
+        </section>
 
-        </div>
-
-        <div>
+        <aside id="FrontPageRightSidebar">
            <IMG src="./images/logos/genie_logo_2_big_medium_resolution.png" 
 		width="190px" hspace="10px" vspace="2px" align="center">
            <br />
@@ -104,17 +112,8 @@
                href="https://twitter.com/GENIENeutrinoMC?ref_src=twsrc%5Etfw">
                   Tweets by GENIE</a>
              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-           <br />
-<!--
-           <br />
-           <a href="https://twitter.com/GENIENeutrinoMC?ref_src=twsrc%5Etfw" 
-		class="twitter-follow-button" 
-		data-show-count="false">Follow @GENIE</a>
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
--->
-        </div>
-     </div>
-
+        </aside>
+     </main>
    </div>
 
    <br /> 

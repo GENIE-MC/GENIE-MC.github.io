@@ -14,6 +14,36 @@ ul,p,li {
         min-width: 200px;
 }
 
+
+#PageLayout {
+ 	display: flex;
+ 	align-items: flex-start; /* aligns top of columns */
+}
+
+#TwoColumnPage {
+	display: flex;
+	flex-grow: 1;
+	gap: 2rem;
+  	padding: 0px 5px 2px 2px;
+  	margin: 10px 2px 3px 100px;
+  	width=600px;
+  	min-width=550px;        
+  	background: white;
+  	float="right";        
+  	font-family: 'Roboto', Helvetica, sans-serif;
+  	font-size:12px; 
+  	overflow:hidden;
+}
+
+#FrontPageMainText {
+  	flex: 3;
+}
+
+#FrontPageRightSidebar {
+  	flex: 1;
+  	min-width: 220px;
+}
+
 div#depend {  
 	background: white; 
 	color: black; 
@@ -703,15 +733,9 @@ header {
 }
 
 .name-line {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 400;
   text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
-}
-
-.name-line i {
-  font-size: 1rem;
-  margin-left: 0.4rem;
-  font-weight: normal;
 }
 
 .subtitle {
@@ -723,7 +747,7 @@ header {
 
 .header-logo img {
   margin-top: 0.1rem;
-  height: 100px;
+  height: 90px;
 }
 
 footer {
@@ -828,17 +852,4 @@ Navigation
   border-right:1px solid black; 
   padding:6px;
 }
-
-#MainIn2ColumnPage {
-	padding: 0px 5px 2px 2px;
-	margin: 10px 2px 3px 100px;
-	width=600px;
-	min-width=550px;        
-	background: white;
-	float="right";        
-        font-family: 'Roboto', Helvetica, sans-serif;
-	font-size:12px; 
-	overflow:hidden;
-}
-
 
