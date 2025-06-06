@@ -242,9 +242,25 @@ footer {
 }
   
 
+/*  ---------------------------------------------------------------------------- */
+/*  Collaboration list                                                           */
+/*  ---------------------------------------------------------------------------- */
 
+div#collaboration-list {  
+        background: white; 
+        color: black;
+        font-family: 'Roboto', Helvetica, sans-serif;
+	font-size:11pt;
+        line-height: 1.3;    /* increased spacing between lines */
+        border:0px solid black; 
+	padding:3pt;
+}
 
-
+#collaboration-list ul {
+  list-style-type: none;   /* removes bullets */
+  padding-left: 0;         /* removes default indent */
+  margin: 0;               /* optional: remove vertical spacing */
+}
 
 
 
@@ -425,15 +441,6 @@ div#CopyrightContactInfoBox {
         color: black;
         font-family: 'Roboto', Helvetica, sans-serif;
 	font-size:10pt;
-	padding:3pt
-}
-
-div#CollaborationList {  
-        background: white; 
-        color: black;
-        font-family: 'Roboto', Helvetica, sans-serif;
-	font-size:10pt;
-        border:1px solid black; 
 	padding:3pt
 }
 
