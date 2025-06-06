@@ -14,99 +14,9 @@ ul,p,li {
         min-width: 200px;
 }
 
-<!--
-	Header and footer
--->
-
-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start; /* Aligns all items to the left */
-	align-items: center;
-	gap: 1rem; /* Adds spacing between logo and text */
-	padding: 1rem 1.5rem;
-	background-color: #2A2929;
-	color: #FFFFCC;
-	font-family: 'Roboto', Helvetica, sans-serif;
-	border-bottom: 2px solid #222;
-  	gap: 1rem;
-}
-
-.header-text {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.header-title {
-	font-size: 1.4rem;
-	font-weight: 400;
-	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
-	color: #23247a;
-}
-
-.header-subtitle {
-	font-size: 1rem;
-	font-weight: 300;
-	margin-top: 0.25rem;
-	color: #e9a22d;
-}
-
-.header-logo img {
-	margin-top: 0.1rem;
-	height: 90px;
-	display: block;
-}
-
-footer {
-	margin:2px 5px 2px 5px;
-	padding:5px;
-	letter-spacing:1px;
-	border-top-style:solid;
-	border-top-color:black;
-	border-top-width:1px;
-	align="left"; 
- 	color: black;
- 	background-color:white;
- 	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size:12px;
-}
-
-<!--
-	Navigation
--->
-
-#navigation {
- 	background-color: #EEEEEE;
-	padding: 0; /* remove uneven padding */
-	display: flex;
-	align-items: center; /* vertically centers children */
-	justify-content: left; /* centers links horizontally */
-	min-height: 40px; /* clean, fixed height for the bar */
-	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size: 0.80rem;
-	font-weight: normal;
-} 
-
-#navigation a {
-	display: inline-block;
-	color: black;
-	text-decoration: none;
-	padding: 0.5rem 0.7rem; /* symmetric vertical padding */
-	border-radius: 4px;
-	transition: background 0.2s ease;
-	line-height: 1; /* avoid spacing mismatch */
-}
- 
-#navigation a:hover {
-  	background-color: #23247a;
- 	color:  #e9a22d;
-}
-
-
-<!--
-	Main page layout
--->
+/*  ---------------------------------------------------------------------------- */
+/*  Main page layout                                                             */
+/*  ---------------------------------------------------------------------------- */
 
 #PageLayout {
  	display: flex;
@@ -136,6 +46,95 @@ footer {
   	flex: 1;
   	min-width: 220px;
 }
+
+
+/*  ---------------------------------------------------------------------------- */
+/*  Header and footer                                                            */
+/*  ---------------------------------------------------------------------------- */
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start; /* Aligns all items to the left */
+	align-items: center;
+	gap: 1rem; /* Adds spacing between logo and text */
+	padding: 1rem 1.5rem;
+	background-color: #2A2929;
+	color: #FFFFCC;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	border-bottom: 2px solid #222;
+}
+
+.header-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header-title {
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+	color: #23247a;
+}
+
+.header-subtitle {
+	font-size: 1,1rem;
+	font-weight: 300;
+	margin-top: 0.25rem;
+	color: #e9a22d;
+}
+
+.header-logo img {
+	margin-top: 0.1rem;
+	height: 90px;
+}
+
+footer {
+	margin:2px 5px 2px 5px;
+	padding:5px;
+	letter-spacing:1px;
+	border-top-style:solid;
+	border-top-color:black;
+	border-top-width:1px;
+	align="left"; 
+ 	color: black;
+ 	background-color:white;
+ 	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size:12px;
+}
+
+/*  ---------------------------------------------------------------------------- */
+/*  Navigation                                                                   */
+/*  ---------------------------------------------------------------------------- */
+
+#navigation {
+ 	background-color: #EEEEEE;
+	padding: 0; /* remove uneven padding */
+	display: flex;
+	align-items: center; /* vertically centers children */
+	justify-content: left; /* centers links horizontally */
+	min-height: 40px; /* clean, fixed height for the bar */
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 0.80rem;
+	font-weight: normal;
+} 
+
+#navigation a {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	padding: 0.5rem 0.7rem; /* symmetric vertical padding */
+	border-radius: 4px;
+	transition: background 0.2s ease;
+	line-height: 1; /* avoid spacing mismatch */
+}
+ 
+#navigation a:hover {
+  	background-color: #23247a;
+ 	color:  #e9a22d;
+}
+
 
 div#depend {  
 	background: white; 
