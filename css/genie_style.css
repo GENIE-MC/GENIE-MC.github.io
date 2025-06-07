@@ -242,7 +242,9 @@ footer {
 }
 
 #valor-promo img {
-	margin-top: 0.5rem;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
 }
 
 /*  ---------------------------------------------------------------------------- */
@@ -251,57 +253,115 @@ footer {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 400px;
-  position: relative;
-  margin: auto;  
+	max-width: 400px;
+	position: relative;
+	margin: auto;  
 }
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px; 
-  position: absolute;
-  bottom: 8px;
-  width: 100%;   
-  text-align: center;
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px; 
+	position: absolute;
+	bottom: 8px;
+	width: 100%;   
+	text-align: center;
 }
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
 }
 /* The dots/bullets/indicators */
 .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%; 
-  display: inline-block;
-  transition: background-color 0.6s ease;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%; 
+	display: inline-block;
+	transition: background-color 0.6s ease;
 } 
 /* */
 .active {
-  background-color: #717171;
+	background-color: #717171;
 } 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
 }
 /* */
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+	from {opacity: .4}
+	to {opacity: 1}
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+	.text {font-size: 11px}
 }
   
+
+/*  ---------------------------------------------------------------------------- */
+/*  Front page news tab                                                          */
+/*  ---------------------------------------------------------------------------- */
+
+.frontPageTab {
+	margin-bottom: 1.5rem;
+	border: 1px dashed #bbb;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.frontPageTabHeader {
+	background: #f5f5f5;
+	color: #222;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 0.95rem;
+	font-weight: 600;
+	padding: 0.5rem 0.75rem;
+	border-bottom: 1px dashed #bbb;
+}
+
+.frontPageTabBody {
+	background: #fff;
+	color: #111;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 0.85rem;
+	line-height: 1.6;
+	padding: 0.75rem;
+}
+
+<!--
+.clsFrontPageTabHeader {
+	background: #EEEEEE; 
+	color: black;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size:9pt;
+	font-weight: bold;
+	border-top:1px dashed black; 
+	border-left:1px dashed black;
+	border-right:1px dashed black; 
+	padding:3px;
+	width:65%;
+}
+
+.clsFrontPageTabBody {
+	background: white; 
+	color: black;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size:9pt;
+	line-height: 1.4;
+	border-top:1px dashed black; 
+	border-left:1px dashed black; 
+	border-bottom:0px solid black; 
+	border-right:0px solid black; 
+	padding:6px;
+}
+-->
 
 /*  ---------------------------------------------------------------------------- */
 /*  Collaboration list                                                           */
@@ -555,6 +615,8 @@ div#LogoBox {
         bottom:0px;
 }
 
+<!--
+
 .clsWhite {
 	color: white
 }
@@ -592,6 +654,8 @@ div#LogoBox {
 	background: #151B8D; 
 	color: white 
 }
+
+-->
 
 .clsInsidePageHeader { 
         border:0px;background:#404040;color:white;padding:0px;
@@ -994,32 +1058,8 @@ div#InsidePageSectionNote {
         font-family: 'Roboto', Helvetica, sans-serif;
 }
 
-.clsFrontPageTabHeader {
-  background: #EEEEEE; 
-  color: black;
-  font-family: 'Roboto', Helvetica, sans-serif;
-  font-size:9pt;
-  font-weight: bold;
-  border-top:1px dashed black; 
-  border-left:1px dashed black;
-  border-right:1px dashed black; 
-  padding:3px;
-  width:65%;
-}
 
-.clsFrontPageTabBody {
-  background: white; 
-  color: black;
-  font-family: 'Roboto', Helvetica, sans-serif;
-  font-size:9pt;
-  line-height: 1.4;
-  border-top:1px dashed black; 
-  border-left:1px dashed black; 
-  border-bottom:0px solid black; 
-  border-right:0px solid black; 
-  padding:6px;
-}
-
+<!--
 .clsLogoBox {
   background: white; 
   color: black;
@@ -1032,4 +1072,4 @@ div#InsidePageSectionNote {
   border-right:1px solid black; 
   padding:6px;
 }
-
+-->
