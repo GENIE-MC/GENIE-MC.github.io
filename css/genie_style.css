@@ -198,13 +198,13 @@ ul,p,li {
 /*  ---------------------------------------------------------------------------- */
 
 .genie-header {
-	background: radial-gradient(ellipse at top left, #003366, #001f3f);
-	color: white;
-	padding: 2rem 1.5rem;
-	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Nu_splash.svg/1024px-Nu_splash.svg.png');
+	background-color: #001f3f; /* fallback if image fails */
+	background-image: url('images/background/v01.png');
 	background-size: cover;
 	background-position: center right;
 	background-repeat: no-repeat;
+	color: white;
+	padding: 2rem 1.5rem;
 	position: relative;
 	overflow: hidden;
 	border-bottom: 4px solid #ffaa00;
@@ -213,6 +213,11 @@ ul,p,li {
 .header-content {
 	max-width: 1200px;
 	margin: 0 auto;
+}
+
+.genie-logo-header {
+	height: 60px;
+	margin-bottom: 0.5rem;
 }
 
 .header-title h1 {
