@@ -2,213 +2,229 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | Incubator">
+  </head>
 
-<body>
+  <body>
 
-   <!--#include FILE="./navigation.inc"-->
+    <!-- Header -->
+    <div id="header"></div>
 
-   <div id="MainIn2ColumnPage">
+    <!-- Main -->
+    <div id="pageLayout">
 
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
 
-<div CLASS="clsInsidePageHeader"> GENIE Incubator</div>
+       <!-- Main text -->
+       <div id="twoColumnPage">
 
-<br />
+         <section id="insidePageMainText">
 
-<div id="InsidePageMainText">
-
-
-<div id="Note">
-If you work on a development project with the intention of making it publicly
-available through an official GENIE release, you need a <b>GENIE incubator project</b>.
-This page explains <b>how to engage with the GENIE development process</b>.
-</div>
-
-<br/>
-
-<h2>What is the GENIE incubator?</h2>
-
-The <em>Incubator</em> is where all actual work above a complexity threshold takes place. 
-It consists of a series of <em>incubator projects</em>.
-<br />
-<br />
-
-Incubator projects are in-house development activities or community development efforts
-overseen by the GENIE scientific and technical leadership. An incubator project is the 
-<b>unique route for inclusion of physics or software developments into GENIE product releases</b>.
-<br />
-<br />
-
-<div id="Note">
-Incubator projects may include, but not limited to:
-the development of a new physics model,
-the improvement of an existing model,
-a systematic study,
-the tuning of a physics component,
-the development of a new tool or the addition of a new feature to an existing tool,
-an upgrade of the framework,
-an improvement of numerical procedure, or
-a documentation improvement.
-</div>
-<br />
-
-<h2>Incubator project phases</h2>
-
-The process is geared towards fast deployment, 
-while ensuring that all developments are peer reviewed
-and the usual high GENIE standards on 
-physics correctness, software engineering, computational efficiency and documentation 
-are maintained.
-
-<h3>Phase 0: Launch</h3>
-
-The process starts with the <b>identification of a GENIE development need</b>, 
-either by member of the GENIE collaboration or a contributor / member of the community.
-Following a consultation with GENIE leaders, 
-one or more incubator projects may be launched to address the identified GENIE need.
-<br />
-<br />
-During this phase we make sure that each project has:
-<ul>
- <li> Fully <b>defined, agreed and documented scope and milestones</b>. </li>
- <li> Fully <b>defined, agreed and documented requirements</b>, including physics validation,
-      tuning, software engineering, computational efficiency and documentation ones, as appropriate.
- <li> A <b>clear reporting line, and a plan for collaboration reviews</b>
-      encompassing both physics and technical aspects of work.</li>
-</ul>
-<br />
-
-<div id="Note">
-Note that an incubator project may be launched even if a team of developers is not yet identified.
-Such projects, are advertised in the User Forum to <b>solicit community contributions</b>.
-</div>
-
-<br />
-
-<h3>Phase 1: R&D</h3>
-<img src="./images/etc/incubator.jpg" width="80px" align="left">
-
-This is the main research and development phase, within the previously agreed scope.
-Regular updates in GENIE core group meetings are expected, as well as a series of intermediate reviews as agreed.
-
-<br />
-<br />
-
-As a result of the experience gained during this phase, the project definition may be altered.
-For example, the scope of a development can be reduced, or new requirements can be added.
-This needs to be agreed both by the developer team and the GENIE leadership.
-
-<br />
-<br />
-
-The developers of a project that achieved its agreed goal meeting its agreed requirements
-may request the graduation of that project and its inclusion within a GENIE product release.
-This initiates the <em>Graduation</em> phase.
-
-<br />
-<br />
-
-<h3>Phase 2: Graduation</h3>
-<img src="./images/etc/incubator_graduated.jpg" width="80px" align="left">
-
-Upon receiving a request for a project graduation, 
-GENIE leaders <b>confirm that the project meets its agreed goals</b> and, 
-on this condition, <b>launch a formal final review</b>.
-<br />
-<br />
-Reviews take place during video or face-to-face meetings.
-They are open to all members of the GENIE Collaboration and selected, invited external participants.
-The reviewed material which is made available well in advance include, 
-as appropriate given the nature of each project:
-<ul>
- <li> Clean and well-documented code. </li>
- <li> Validation programs, with sufficient documentation 
-     that they can be run by any member of the GENIE Collaboration. </li>
- <li> Archive of theorist communication (including original codes). </li>
- <li> A short document that 
-     (a) summarizes validation results, 
-     (b) presents a table summarizing code changes, 
-     (c) highlights important assumptions in the code,
-     (d) makes suggestions for merging or tuning the model in the future, and 
-     (e) makes suggestions for systematic error assignment for the model. 
-     Note that the above list is not exhaustive or definitive, but is meant to serve as a guide.
- </li>
-</ul>
-
-<br />
-
-The reviewers take into account the agreed scope and requirements and give special emphasis, 
-as appropriate, on:
-<ul>
-  <li> correctness and performance against previously agreed validation criteria,	
-  <li> robustness and use of sound software enginnering practices, and
-  <li> sufficient documentation in various forms.
-</ul>
-
-All concerns raised during the review, need to be addressed before the project is allowed to graduate.
-If major concerns are raised, one or more follow up reviews are scheduled.
-
-<br />
-<br />
-
-<h3>Phase 3: Integration</h3>
-
-Typically, the integration phase is handled by members of the core GENIE development team.
-The new code is merged into the master version of the corresponding GENIE product and the validation procedure is repeated.
-<br />
-<br />
-Additional development may commence during the integration phase.
-<br />
-<br />
-<div id="Note">
-In some instances, work may commence to bridge the gap between the requirements agreed with the 
-project developers and the actual requirements for inclusion in an official GENIE product release. 
-This may include the construction and tuning of a broader comprehensive physics model using a new development, 
-re-factorisations and improvement of interfaces that simplify integration of a new development,
-or improvements of the computational efficiency. 
-Event generator development requires a unique blend of physics, programming and numerical computing skills,
-and the expertise of the core GENIE team is in high demand for pushing some of the more complex projects to completion.
-If the necessary work is judged to be of a considerable complexity, requiring more research & development
-and necessitating peer reviews, new incubator projects are launched.
-</div>
-<br />
-Upon completion of the above process, and with the agreement of GENIE leadership,
-the improved work is merged into release candidate branch.
+           <div id="pageTitle">GENIE Incubator</div>
+           <br />
 
 
-<h2>Current incubator projects</h2>
+           If you’re working on a development project that you intend to make publicly available 
+           as part of an official GENIE release, you will need to register a <b>GENIE Incubator project</b>.
+           This page outlines <b>how to engage with the GENIE development process</b>
+           and contribute to future releases.
 
-<div id="Note">
-Many dozens of incubator projects,
-several of which with strong community support,
-were successfully delivered since the GENIE incubator was launched in 2015,
-shaping the content of recent <A href="http://releases.genie-mc.org" target="_top">GENIE releases</A>.
-<br />
-<br />
-This demonstrates the power of the GENIE incubator development paradigm
-whereby community resources are centrally coordinated and supported by the core GENIE group
-to deliver well-validated, efficient and fully documented simulations 
-for the benefit of the entire neutrino community.
-</div>
+           <br/>
 
-<br />
-<br />
+           <h2>What is the GENIE incubator?</h2>
 
-Following the release of GENIE v3.2.0 in February 2022, the status and tasks 
-of new GENIE incubator projects is recorded in the 
-<A href="https://github.com/orgs/GENIE-MC/projects?type=beta" target="_top">
- <b>projects page of the GENIE github organisation</b><A>.
+           The Incubator is the designated space where all development work exceeding a certain 
+           complexity threshold is carried out. It is structured as a collection of focused incubator projects.
+           <br />
+           <br />
+           Incubator projects are internal or community-led development efforts, 
+           overseen by the GENIE scientific and technical leadership.
+           They represent the exclusive pathway for integrating physics or software developments 
+           into official GENIE product releases.
+           <br />
+           <br />
+           Incubator projects may include, but are not limited to:
+           <ul>
+             <li> the development of new physics models, </li>
+             <li> improvements to existing models,  </li>
+             <li> systematic studies, </li>
+             <li> tuning of physics components,  </li>
+             <li> development of new tools or enhancements to existing ones,  </li>
+             <li> framework upgrades,  </li>
+             <li> improvements to numerical procedures, or  </li>
+             <li> documentation enhancements. </li> 
+           </ul>
+           <br />
 
-<br />
-<br />
+           <h2>Incubator project phases</h2>
+
+           The process is designed to enable rapid deployment,
+           while ensuring that all developments undergo peer review
+           and adhere to GENIE’s high standards for
+           physics accuracy, software engineering, computational efficiency, and documentation quality.
+
+           <h3>Phase 0: Launch</h3>
+
+           The process begins with the <b>identification of a GENIE development need</b>, 
+           either by a member of the GENIE collaboration or a contributor from the wider community.
+           After consultation with GENIE leadership,
+           one or more incubator projects may be initiated to address the identified need.
+           <br />
+           <br />
+           During this phase, we ensure that each project has:
+           <ul>
+             <li>A fully <b>defined, agreed-upon, and documented scope 
+                 and set of milestones</b>.</li>
+             <li>Clearly <b>defined, agreed-upon, and documented requirements</b>, 
+                 including those related to physics validation, tuning, software engineering, 
+                 computational efficiency, and documentation, as appropriate.</li>
+             <li>A <b>clear reporting structure and a plan for collaboration reviews</b> 
+                 that cover both the physics and technical dimensions of the work.</li>
+          </ul>
+          <br />
+
+          Note that an incubator project may be launched even if a development team has not 
+          yet been identified. Such projects are announced in the User Forum to solicit 
+          community contributions.
+          <br />
 
 
-</div>
+          <h3>Phase 1: R&D</h3>
+          <img src="./images/etc/incubator.jpg" width="80px" align="left">
+
+          This is the main research and development phase, carried out within the previously agreed scope.
+          Regular updates are expected at GENIE core group meetings, along with a series of 
+          intermediate reviews, as agreed.
+          <br />
+          <br />
+          Based on the experience gained during this phase, the project definition may evolve.
+          For example, the development scope might be narrowed, or new requirements may be introduced.
+          Any such changes must be agreed upon by both the development team and the GENIE leadership.
+          <br />
+          <br />
+          Once a project has successfully met its agreed goals and fulfilled its requirements,
+          the developers may request its graduation and inclusion in an official GENIE product release.
+          This marks the beginning of the <em>Graduation</em> phase.
+          <br />
+          <br />
 
 
-  </div> <!-- main -->
+          <h3>Phase 2: Graduation</h3>
+          <img src="./images/etc/incubator_graduated.jpg" width="80px" align="left">
 
-  <!--#include FILE="./footer.inc"-->
+          Upon receiving a graduation request, GENIE leadership will verify that the project has fulfilled its 
+          agreed goals and, if so, <b>initiate a formal final review</b>.
+          <br />
+          <br />
+          These reviews are conducted via video conference or in-person meetings.
+          They are open to all members of the GENIE Collaboration, 
+          as well as selected invited external participants.
+          All review materials are made available well in advance and typically include, as appropriate:
+          <ul>
+           <li> Clean, well-documented source code. </li>
+           <li> Validation programs, with documentation sufficient for any GENIE collaborator to run them. </li>
+           <li> Archive of communications with theorists (including original code, if applicable). </li>
+           <li> A concise summary document that includes:
+             <ul>
+               <li>(a) Validation results,</li>
+               <li>(b) A table summarizing code changes,</li>
+               <li>(c) Notable assumptions implemented in the code,</li>
+               <li>(d) Suggestions for future tuning or model integration, and</li>
+               <li>(e) Recommendations for assigning systematic uncertainties.</li>
+             </ul>
+             <br />
+             This list is not exhaustive, but serves as a guide to ensure consistency and transparency.
+           </li>
+          </ul>
+          <br />
+          The reviewers evaluate the project with respect to its agreed scope and requirements, 
+          placing particular emphasis, as appropriate, on:
+          <ul>
+            <li> Correctness and performance, based on the previously agreed validation criteria. </li>
+            <li> Robustness and adherence to sound software engineering practices. </li>
+            <li> Availability of sufficient and clear documentation, in all relevant forms. </li>
+          </ul>
+          All concerns raised during the review must be fully addressed before the project can graduate.  
+          If significant issues are identified, one or more follow-up reviews may be scheduled.
+          <br />
+          <br />
+
+
+          <h3>Phase 3: Integration</h3>
+
+          Typically, the integration phase is carried out by members of the core GENIE development team.
+          During this phase, the new code is merged into the master branch of the relevant GENIE product,
+          and the full validation procedure is repeated to ensure consistency and quality.
+          <br />
+          <br />
+          Further development may be undertaken during the integration phase if required:
+          <br />
+          <i>
+           In some cases, additional work is needed to bridge the gap between the original project scope 
+           and the requirements for inclusion in an official GENIE release. 
+           This may involve building and tuning comprehensive models, improving interfaces, 
+           or enhancing computational efficiency. Given the complexity of such tasks, the core GENIE team’s 
+           expertise is often essential. If the effort is substantial and warrants further R&D and peer review, 
+           new incubator projects are launched.
+          </i>
+          <br />
+          Once the process is complete and approved by GENIE leadership, 
+          the development is merged into a release candidate branch.
+
+
+          <h2>Current incubator projects</h2>
+
+          Since its launch in 2015, the GENIE incubator has successfully delivered dozens 
+          of projects — many of them with strong community backing.
+          This process has shaped the content of recent 
+          <A href="http://releases.genie-mc.org" target="_top">GENIE releases</A>.
+          <br />
+          <br />
+          This highlights the effectiveness of the GENIE incubator model, 
+          in which community-driven development is centrally coordinated and supported by the 
+          core GENIE team to produce well-validated, efficient, and fully documented simulations 
+          for the benefit of the global neutrino community.”
+          <br />
+          <br />
+          Following the release of GENIE v3.2.0 in February 2022, the status and tasks 
+          of new GENIE incubator projects is recorded in the 
+          <A href="https://github.com/orgs/GENIE-MC/projects?type=beta" target="_top">
+               <b>projects page of the GENIE github organisation</b><A>.
+          <br />
+
+
+
+         </section>
+     </div>  
+   </div>
+              
+    <!-- Footer include -->
+    <div id="footer"></div>
+     
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+    
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+
+     fetch('includes/footer.html')
+       .then(res => res.text())   
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+    </script>
 
   </body>
 </html>
+           
+
