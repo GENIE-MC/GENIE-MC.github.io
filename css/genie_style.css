@@ -120,14 +120,15 @@ ul,p,li {
 }
 
 
-.icon-link {
+.soc-icon-link {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.4em; /* optional spacing between icon and text */
 }
 
-.icon-link img {
-	width: 6%;
+.soc-icon-link img {
+	width: 16px;
+	height: auto;
 	display: inline-block;
 	vertical-align: middle;
 }
