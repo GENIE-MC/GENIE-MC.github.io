@@ -2,46 +2,86 @@
 
 <html>
 
-<!--#include FILE="./header.inc"-->
+  <head>
+     <script>
+         fetch("includes/head_fragments.html")
+              .then(res => res.text())
+              .then(html => document.head.insertAdjacentHTML("beforeend", html));
+     </script>
+     <meta name="description" content = "GENIE | User Forum">
+  </head>
 
-<body>
+  <body>
 
-   <!--#include FILE="./navigation.inc"-->
+    <!-- Header -->
+    <div id="header"></div>
 
-   <div id="MainIn2ColumnPage">
+    <!-- Main -->
+    <div id="pageLayout">
 
+       <!-- Navigation column -->
+       <nav id="navigation"></nav>
 
-     <div CLASS="clsInsidePageHeader"> GENIE user forum </div>
+       <!-- Main text -->
+       <div id="twoColumnPage">
 
-     <br />
-     The user forum is supposed to be a regular meeting where users main developers can meet to give each other feedbacks
-     about GENIE. The forum is held monthly, on the third Wednesday of each month at 15.00 GMT. Although this might change help the particpation of users all around the world.
+         <section id="frontPageMainText">
 
-     <br />
-     The agendas of the meetings are publicly available at the  <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/DocumentDatabase"> GENIE doc-db</A>.
-
-     <br />
-     <br />
-     The structure of the forum is variable, depending on the attendance and requested talks. Yet the general structure will be:
-     <ul style="list-style-type:circle;">
-       <li> GENIE status report </li>
-       <li> Report of progress/results from selected GENIE incubator projects </li>
-       <li> Reports from running experiments </li>
-       <li> Other requested user talk </li>
-       <li> Discussion / AOB </li>
-    </ul>
-
-    <br/>
-    The experiment reports are given in the form of a round table where each experiment liaison has a dedicated liaisons. We have liaisons from the major running experiments or soon to be taking data.
-
-    <br/>
-    <br/>
-    To ask for a talk or other questions, please write to the <A href="mailto:forum.moderator@genie-mc.org">forum moderator</A>.
+           <div id="pageTitle">
+                GENIE User Forum
+           </div>
 
 
-  </div>  <!-- main -->
+           The GENIE User Forum is intended as a regular meeting where users and core developers can exchange feedback on GENIE. 
+           It is typically held monthly, on the third Wednesday of each month at 15:00 GMT. 
+           The schedule may occasionally be adjusted to accommodate participants from different time zones.
+           <br />
+           <br />
+           Agendas for all meetings are publicly accessible at
+           the  <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/DocumentDatabase"> GENIE document database</A>.
+           <br />
+           <br />
+           The structure of the forum may vary depending on attendance and requested contributions. 
+           However, the typical format is as follows:
+           <ul style="list-style-type:circle;">
+              <li> GENIE status report </li>
+              <li> Progress reports from selected GENIE incubator projects </li>
+              <li> GENIE liason / experiment reports</li>
+              <li> Special invited talks </li>
+              <li> Discussion / AOB </li>
+           </ul>
+           <br />
+           Experiment updates are shared in a roundtable format, with each participating experiment represented by a dedicated liaison. 
+           We currently have liaisons from all major running experiments, as well as those about to begin data taking.
+           <br />
+           <br />
+           To ask for a talk or other questions, please write to the <A href="mailto:forum.moderator@genie-mc.org">forum moderator</A>.
 
-  <!--#include FILE="./footer.inc"-->
-
-</body>
+    
+        </section>
+     </div>
+   </div> <!-- pageLayout -->
+     
+   <!-- Footer include -->
+   <div id="footer"></div>
+     
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+     fetch('includes/header.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('header').innerHTML = text);
+     
+     fetch('includes/navigation.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('navigation').innerHTML = text);
+     
+     fetch('includes/footer.html')
+       .then(res => res.text())
+       .then(text => document.getElementById('footer').innerHTML = text);
+    });
+   </script>
+     
+  </body>
 </html>
+     
+  
