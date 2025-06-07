@@ -197,7 +197,48 @@ ul,p,li {
 /*  Header and footer                                                            */
 /*  ---------------------------------------------------------------------------- */
 
-header {
+.genie-header {
+	background: radial-gradient(ellipse at top left, #003366, #001f3f);
+	color: white;
+	padding: 2rem 1.5rem;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Nu_splash.svg/1024px-Nu_splash.svg.png');
+	background-size: cover;
+	background-position: center right;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 4px solid #ffaa00;
+}
+
+.header-content {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header-title h1 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 0;
+	color: #ffcc33; /* golden yellow for "GENIE" */
+}
+
+.header-title h2 {
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin: 0.5rem 0;
+	color: #ffffff;
+}
+
+.header-subtitle {
+	font-size: 1.1rem;
+	font-style: italic;
+	color: #ffcc66;
+	margin-top: 0.5rem;
+}
+
+
+header-OLD {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start; /* Aligns all items to the left */
@@ -210,26 +251,26 @@ header {
 	border-bottom: 0px solid #222;
 }
 
-.header-logo img {
+.header-logo-OLD img {
 	margin-top: 0.1rem;
 	height: 90px;
  	display: block;
 }
 
-.header-text {
+.header-text-OLD {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.header-title {
+.header-title-OLD {
 	font-size: 1.4rem;
 	font-weight: 400;
 	text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
 	color: #23247a;
 }
 
-.header-subtitle {
+.header-subtitle-OLD {
 	font-size: 1.1rem;
 	font-weight: 300;
 	margin-top: 0.25rem;
