@@ -199,7 +199,8 @@ ul,p,li {
 
 .genie-header {
 	background-color: #001f3f; /* fallback if image fails */
-	background-image: url('images/background/v01.png');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			  url('../images/background/v01.png'); /* relative to the path of the CSS file */
 	background-size: cover;
 	background-position: center right;
 	background-repeat: no-repeat;
