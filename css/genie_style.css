@@ -120,13 +120,13 @@ ul,p,li {
 }
 
 
-.soc-icon-link {
+#frontPageRightSidebar .soc-icon-link {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.4em; /* optional spacing between icon and text */
 }
 
-.soc-icon-link img {
+#frontPageRightSidebar .soc-icon-link img {
 	width: 16px;
 	height: auto;
 	display: inline-block;
