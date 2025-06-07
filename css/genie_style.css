@@ -225,7 +225,7 @@ footer {
  	background-color: white;
   	margin-top: 1rem;
 	text-align: center;
-	font-size: 0.8rem;
+	font-size: 0.65rem;
 	line-height: 1.3;
         border:1px solid black; 
 	border-radius: 8px;
@@ -242,7 +242,7 @@ footer {
 }
 
 #valor-promo img {
-	width: 80%;
+	width: 65%;
 	display: block;
 	margin: 0 auto;
 }
@@ -320,8 +320,8 @@ footer {
 	background: #f5f5f5;
 	color: #222;
 	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size: 0.95rem;
-	font-weight: 600;
+	font-size: 0.7rem;
+	font-weight: 300;
 	padding: 0.5rem 0.75rem;
 	border-bottom: 1px dashed #bbb;
 }
@@ -330,38 +330,11 @@ footer {
 	background: #fff;
 	color: #111;
 	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size: 0.85rem;
+	font-size: 0.7rem;
 	line-height: 1.6;
 	padding: 0.75rem;
 }
 
-<!--
-.clsFrontPageTabHeader {
-	background: #EEEEEE; 
-	color: black;
-	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size:9pt;
-	font-weight: bold;
-	border-top:1px dashed black; 
-	border-left:1px dashed black;
-	border-right:1px dashed black; 
-	padding:3px;
-	width:65%;
-}
-
-.clsFrontPageTabBody {
-	background: white; 
-	color: black;
-	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size:9pt;
-	line-height: 1.4;
-	border-top:1px dashed black; 
-	border-left:1px dashed black; 
-	border-bottom:0px solid black; 
-	border-right:0px solid black; 
-	padding:6px;
-}
--->
 
 /*  ---------------------------------------------------------------------------- */
 /*  Collaboration list                                                           */
@@ -614,48 +587,6 @@ div#LogoBox {
         vertical-align: middle;
         bottom:0px;
 }
-
-<!--
-
-.clsWhite {
-	color: white
-}
-
-.clsBlue {
-	color: blue  
-}
-
-.clsGreen {
-	color: #347235
-}
-
-.clsRed {
-	color: red
-}
-
-.clsYellow {
-	color: yellow
-}
-
-.clsBigYellow {
-	color: yellow
-        font-family: 'Roboto', Helvetica, sans-serif;
-	font-size:15pt
-}
-
-
-.clsBkgYellow {
-	color: #151B8D; 
-	font-variant: small-caps; 
-	background: yellow 
-}
-
-.clsBkgBlue { 
-	background: #151B8D; 
-	color: white 
-}
-
--->
 
 .clsInsidePageHeader { 
         border:0px;background:#404040;color:white;padding:0px;
@@ -1059,17 +990,3 @@ div#InsidePageSectionNote {
 }
 
 
-<!--
-.clsLogoBox {
-  background: white; 
-  color: black;
-  font-family: 'Roboto', Helvetica, sans-serif;
-  font-size:9pt;
-  line-height: 1.4;
-  border-top:1px solid black; 
-  border-left:1px solid black; 
-  border-bottom:1px solid black; 
-  border-right:1px solid black; 
-  padding:6px;
-}
--->
