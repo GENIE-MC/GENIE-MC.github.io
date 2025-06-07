@@ -46,7 +46,7 @@ ul,p,li {
         letter-spacing: 0.2px;        /* subtle improvement to text readability */
         color: #111111;               /* slightly darker than pure black for polish */
         font-weight: 400;
-        padding: 1rem 0.5rem 1rem 0;
+        padding: 0.3rem 0.5rem 1rem 0;
 }
 
 #frontPageMainText p {
@@ -79,7 +79,7 @@ ul,p,li {
   	font-style: normal;
   	text-transform: uppercase;
   	letter-spacing: 1px;
-  	margin: 1.2em 0 0.5em;
+  	margin: 0.3em 0 0.5em;
   	border-bottom: 2px solid #ccc;
   	padding-bottom: 4px;
   	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* shadow, for depth */
@@ -187,33 +187,31 @@ footer {
         box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
-#navigation-promo {
+/*  ---------------------------------------------------------------------------- */
+/*  VALOR promo                                                                  */
+/*  ---------------------------------------------------------------------------- */
+
+#valor-promo {
  	background-color: white;
   	margin-top: 1rem;
 	text-align: center;
-	font-size: 0.7rem;
-	line-height: 1.1;
+	font-size: 0.9rem;
+	line-height: 1.2;
         border:1px solid black; 
 	border-radius: 8px;
 }
 
-#navigation-promo p {
-	margin: 0.5rem 0.5rem 0 0.5rem;
-	padding: 0;
-	text-align: center;
-}
-
-#navigation-promo a {
+#valor-promo a {
 	color: #810c0c;
 	text-decoration: none;
 }
 
-#navigation-promo a:hover {
+#valor-promo a:hover {
 	color: #810c0c;
 	text-decoration: none;
 }
 
-#navigation-promo img {
+#valor-promo img {
 	margin-top: 0.5rem;
 }
 
