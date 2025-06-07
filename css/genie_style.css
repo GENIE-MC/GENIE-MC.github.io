@@ -79,17 +79,6 @@ ul,p,li {
         color: #e39007;
 }
 
-#frontPageRightSidebar {
-	width: 280px;          /* fixed width */
-        flex: 0 0 280px;       /* don't grow or shrink */
-}
-
-#frontPageRightSidebar img {
-	width: 100%;
-	display: block;
-	margin: 0 auto;
-}
-
 #insidePageMainText {
         flex: 3;
         font-size: 1.0rem;            /* moderately tweaked font */
@@ -113,6 +102,94 @@ ul,p,li {
 #insidePageMainText a:hover {
         text-decoration: underline;
         color: #e39007;
+}
+
+/*  ---------------------------------------------------------------------------- */
+/*  Front page sidebar                                                           */
+/*  ---------------------------------------------------------------------------- */
+
+#frontPageRightSidebar {
+	width: 280px;          /* fixed width */
+        flex: 0 0 280px;       /* don't grow or shrink */
+}
+
+#frontPageRightSidebar img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+
+.icon-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em; /* optional spacing between icon and text */
+}
+
+.icon-link img {
+	width: 6%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*  ---------------------------------------------------------------------------- */
+/*  Front page news tab                                                          */
+/*  ---------------------------------------------------------------------------- */
+
+.frontPageTab {
+	margin-bottom: 1rem;
+	border: 1px dashed #ccc;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.frontPageTabHeader {
+	background: #f9f9f9;
+	color: #333;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 0.68rem;
+	font-weight: 400;
+	padding: 0.3rem 0.6rem;
+	border-bottom: 1px dashed #ccc;
+}
+
+.frontPageTabBody {
+	background: #fff;
+	color: #222;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 0.6rem;
+	line-height: 1.4;
+	padding: 0.5rem 0.6rem
+}
+
+/*  ---------------------------------------------------------------------------- */
+/*  VALOR promo                                                                  */
+/*  ---------------------------------------------------------------------------- */
+
+#valor-promo {
+ 	background-color: white;
+  	margin-top: 1rem;
+	text-align: center;
+	font-size: 0.65rem;
+	line-height: 1.3;
+        border:1px solid black; 
+	border-radius: 8px;
+}
+
+#valor-promo a {
+	color: #810c0c;
+	text-decoration: none;
+}
+
+#valor-promo a:hover {
+	color: #810c0c;
+	text-decoration: none;
+}
+
+#valor-promo img {
+	width: 65%;
+	display: block;
+	margin: 0 auto;
 }
 
 /*  ---------------------------------------------------------------------------- */
@@ -217,35 +294,6 @@ footer {
         box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
-/*  ---------------------------------------------------------------------------- */
-/*  VALOR promo                                                                  */
-/*  ---------------------------------------------------------------------------- */
-
-#valor-promo {
- 	background-color: white;
-  	margin-top: 1rem;
-	text-align: center;
-	font-size: 0.65rem;
-	line-height: 1.3;
-        border:1px solid black; 
-	border-radius: 8px;
-}
-
-#valor-promo a {
-	color: #810c0c;
-	text-decoration: none;
-}
-
-#valor-promo a:hover {
-	color: #810c0c;
-	text-decoration: none;
-}
-
-#valor-promo img {
-	width: 65%;
-	display: block;
-	margin: 0 auto;
-}
 
 /*  ---------------------------------------------------------------------------- */
 /*  Carousel                                                                     */
@@ -306,37 +354,6 @@ footer {
   
 
 /*  ---------------------------------------------------------------------------- */
-/*  Front page news tab                                                          */
-/*  ---------------------------------------------------------------------------- */
-
-.frontPageTab {
-	margin-bottom: 1rem;
-	border: 1px dashed #ccc;
-	border-radius: 4px;
-	overflow: hidden;
-}
-
-.frontPageTabHeader {
-	background: #f9f9f9;
-	color: #333;
-	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size: 0.68rem;
-	font-weight: 400;
-	padding: 0.3rem 0.6rem;
-	border-bottom: 1px dashed #ccc;
-}
-
-.frontPageTabBody {
-	background: #fff;
-	color: #222;
-	font-family: 'Roboto', Helvetica, sans-serif;
-	font-size: 0.6rem;
-	line-height: 1.4;
-	padding: 0.5rem 0.6rem
-}
-
-
-/*  ---------------------------------------------------------------------------- */
 /*  Collaboration list                                                           */
 /*  ---------------------------------------------------------------------------- */
 
@@ -354,19 +371,6 @@ div#collaboration-list {
   	list-style-type: none;   /* removes bullets */
   	padding-left: 0;         /* removes default indent */
   	margin: 0;               /* optional: remove vertical spacing */
-}
-
-
-
-.icon-link {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.4em; /* optional spacing between icon and text */
-}
-
-.icon-link img {
-	display: inline-block;
-	vertical-align: middle;
 }
 
 
