@@ -387,9 +387,9 @@
            <b>Version: 3.6.0 </b>
            <br />
            <small>
-            Tag: R-3_04_00,
-            <!-- Released: , -->
-            Status: <i class="clsFRed"> in development</i>
+            Tag: R-3_06_00,
+            Released: 10 January 2025
+            Status: <i class="clsFGreen"> pro</i> 
            </small>
            <br />
            <br />
@@ -418,20 +418,23 @@
                     <A href="https://github.com/GENIE-MC/Generator/pull/131">[GENIE pull request #131]</A>,
                     <A href="https://github.com/GENIE-MC/Generator/pull/132">[GENIE pull request #132]</A>.
                </li>
-               <li> Implementation of a full simualtion chain independent from Pytha6 that uses <b>Pythia8</b>. 
-                    This follows the announcement that ROOT will drop the support for pythia6. 
+               <li> Implementation of a full simulation chain independent of Pythia6 and the ROOT/Pythia interface. 
+                    Instead, this alternative simulation chain uses a direct interface to <b>Pythia8</b>. 
+                    This follows the announcement that ROOT will drop the support for Pythia6. 
                     The contribution includes 3 PRs. 
                     <span class="clsFContrib">Contribution by Robert Hatcher (Fermilab)</span>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/408">[GENIE pull request #408]</A>,
                     <A href="https://github.com/GENIE-MC/Generator/pull/410">[GENIE pull request #410]</A>,
                     <A href="https://github.com/GENIE-MC/Generator/pull/409">[GENIE pull request #409]</A>.
-                    Only the first two at the moment are merged as this sets the default configuration to still using pythia6. 
-                    We will merge also the last one eventually, which sets the default to pythia8. 
+                    Only the first two were merged, as the third one makes Pythia8 the default option.
+                    Pythia6 remains the default option.
+                    Pythia8 will become the default option in a future GENIE release.. 
                 </li>
              </ul>
              Event generation and core framework improvements:
              <ul>
-               <li> Allow algorythms to be used in reweight and add Professor as an optional dependency <A href="https://github.com/GENIE-MC/Generator/pull/366">[GENIE pull request #366]</A>. </li>
+               <li> Allow algorithms to be used in reweight and add Professor as an optional dependency 
+                 <A href="https://github.com/GENIE-MC/Generator/pull/366">[GENIE pull request #366]</A>. </li>
              </ul>
              Improvements in generator tools (flux and geometry drivers, event generation and other apps):
              <ul>
