@@ -348,7 +348,7 @@
                 <td class="clsVersionTableExternalProducts">  N/A      </td>
                 <td class="clsVersionTableGeneric">
                     Release v1.0.0 of new, factored-out Reweight product
-                    brings this producy sync with the v3 series of our Generator product.
+                    brings this product sync with the v3 series of our Generator product.
                     </td>
              </tr>
              <tr>
@@ -384,12 +384,54 @@
          <br />
 
          <div id="ReleaseTableHeader2">
+           <b>Version: 3.6.2 </b>
+           <br />
+           <small>
+            Tag: R-3_06_02,
+            Released: 1 July 2025
+            Status: <i class="clsFGreen"> pro</i>
+           </small>
+           <br />
+           <br />
+           <div id="ReleaseTableBody">
+             <b>Improvements over 3.6.0</b>
+             <br />
+             <span class="clsFContrib">
+               (<i>Important contributions by non-GENIE authors are especially acknowledged in the text below</i>)
+             </span>
+             <br />
+             <br />
+             Bug fixes:
+             <ul>
+               <li> genie-config command-line tool now allows queries about which features were
+                 enabled in the build, including whether Pythia6 or Pythia8 was used <A href="https://github.com/GENIE-MC/Generator/pull/439">[GENIE pull request #439]</A>.
+               </li>
+               <li> Dependency on libnsl was removed <A href="https://github.com/GENIE-MC/Generator/pull/431">[GENIE pull request #431]</A>.
+               </li>
+               <li> The build system now searches for ROOT with root-config rather than the deprecated ROOTSYS environment variable <A href="https://github.com/GENIE-MC/Generator/pull/442">[GENIE pull request #442]</A>.
+               </li>
+               <li> Makefile infrastructure was updated to support MacOS arm64 builds <A href="https://github.com/GENIE-MC/Generator/pull/446">[GENIE pull request #446]</A>.
+               </li>
+             </ul>
+             Other comments:
+             <ul>
+               <li> Due to removal of the ROOT/Pythia6 interface starting with ROOT v6.32, this GENIE release is expected to be the last to use Pythia6 hadronization by default.
+                 <A href="https://github.com/GENIE-MC/Generator/pull/430">[GENIE pull request #430]</A>
+                 contains the configuration XML files currently needed for
+                 Pythia8-only simulations. </li>
+             </ul>
+           </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
            <b>Version: 3.6.0 </b>
            <br />
            <small>
             Tag: R-3_06_00,
             Released: 10 January 2025
-            Status: <i class="clsFGreen"> pro</i> 
+            Status: <i class="clsFGreen"> old</i>
            </small>
            <br />
            <br />
@@ -403,14 +445,16 @@
              <br />
              New comprehensive model configurations and tunes:
              <ul>
-               <li> </li>
+               <li> Added CMC requested by the NOvA experiment: N24_20i_02_11b
+                 <A href="https://github.com/GENIE-MC/Generator/blob/master/config/N24_20i/README.md">[Readme file]</A> <A href="https://github.com/GENIE-MC/Generator/pull/421">[GENIE pull request #421]</A>. This CMC restores a high-momentum tail to the spectral-function-like local Fermi gas model of the nuclear ground state used in AR23_20i_00_000 (added for SBN and DUNE in v3.4.0). The physics content is otherwise very similar to that earlier CMC.
+               </li>
              </ul>
              New and/or updated physics models:
              <ul>
-               <li> Addition of the published <b>Minoo Kabirnezhad (MK) single-pion cross-section model</b>	
+               <li> Addition of the published <b>Minoo Kabirnezhad (MK) single-pion cross-section model</b>
                     by the Dubna GENIE group, and a critical review of the published work
                     leading to model variants currently under consideration for GENIE v4.
-                    Details of the original model can be found in 
+                    Details of the original model can be found in
                     <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.013002">Phys. Rev. D 97, 013002</A>.
                     Details of the MK model variants are currently private.
                     <span class="clsFContrib">Contribution by Minoo Kabirnezhad (Oxford)</span>.
@@ -418,35 +462,36 @@
                     <A href="https://github.com/GENIE-MC/Generator/pull/131">[GENIE pull request #131]</A>,
                     <A href="https://github.com/GENIE-MC/Generator/pull/132">[GENIE pull request #132]</A>.
                </li>
-               <li> Implementation of a full simulation chain independent of Pythia6 and the ROOT/Pythia interface. 
-                    Instead, this alternative simulation chain uses a direct interface to <b>Pythia8</b>. 
-                    This follows the announcement that ROOT will drop the support for Pythia6. 
-                    The contribution includes 3 PRs. 
-                    <span class="clsFContrib">Contribution by Robert Hatcher (Fermilab)</span>.
-                    <A href="https://github.com/GENIE-MC/Generator/pull/408">[GENIE pull request #408]</A>,
-                    <A href="https://github.com/GENIE-MC/Generator/pull/410">[GENIE pull request #410]</A>,
-                    <A href="https://github.com/GENIE-MC/Generator/pull/409">[GENIE pull request #409]</A>.
-                    Only the first two were merged, as the third one makes Pythia8 the default option.
+               <li> Implementation of a full simulation chain independent of Pythia6 and the ROOT/Pythia interface.
+                    Instead, this alternative simulation chain uses a direct interface to <b>Pythia8</b>.
+                    This follows the announcement that ROOT will drop support for Pythia6.
+                    Code changes to enable a Pythia8-only build were made in
+                    <A href="https://github.com/GENIE-MC/Generator/pull/408">[GENIE pull request #408]</A>
+                    and <A href="https://github.com/GENIE-MC/Generator/pull/425">[GENIE pull request #425]</A>.
+                    XML configuration file adjustments needed to preserve the present Pythia6 default were made in <A href="https://github.com/GENIE-MC/Generator/pull/410">[GENIE pull request #410]</A>.
                     Pythia6 remains the default option.
-                    Pythia8 will become the default option in a future GENIE release.. 
+                    Pythia8 will become the default option in a future GENIE release.
+                    When using Pythia8 instead of Pythia6, the required XML configuration file changes are available in <A href="https://github.com/GENIE-MC/Generator/pull/430">[GENIE pull request #430]</A>.
+                </li>
+                <li> Addition of <b>z-expansion treatment of nucleon vector form factors</b> from
+                  <A href="https://doi.org/10.1103/PhysRevD.102.074012" target="_top">Phys. Rev. D 102, 074012 (2020)</A>
+                  <A href="https://github.com/GENIE-MC/Generator/pull/407">[GENIE pull request #407]</A>, including associated uncertainties
+                  <A href="https://github.com/GENIE-MC/Reweight/pull/29">[Reweight pull request #29]</A>.
+                  <span class="clsFContrib">Contribution by Kaushik Borah (University of Kentucky)</span>.
                 </li>
              </ul>
              Event generation and core framework improvements:
              <ul>
-               <li> Allow algorithms to be used in reweight and add Professor as an optional dependency 
+               <li> Allow algorithms to be used in Reweight and add Professor as an optional dependency
                  <A href="https://github.com/GENIE-MC/Generator/pull/366">[GENIE pull request #366]</A>. </li>
-             </ul>
-             Improvements in generator tools (flux and geometry drivers, event generation and other apps):
-             <ul>
-               <li> </li>
              </ul>
              Other improvements / bug fixes:
              <ul>
-               <li> </li>
-             </ul>
-             Other comments:
-             <ul>
-               <li> </li>
+               <li> Several memory leaks were removed
+                 <A href="https://github.com/GENIE-MC/Generator/pull/417">[GENIE pull request #417]</A>
+                 <A href="https://github.com/GENIE-MC/Generator/pull/418">[GENIE pull request #418]</A>.
+               </li>
+               <!-- G24_20i variations: https://github.com/GENIE-MC/Generator/pull/429 -->
              </ul>
            </div>
          </div>
@@ -459,7 +504,7 @@
           <small>
            Tag: R-3_04_02,
            Released: 15 April 2024
-           Status: <i class="clsFGreen"> pro</i> 
+           Status: <i class="clsFGreen"> old</i>
           </small>
           <br />
           <br />
@@ -477,10 +522,10 @@
             </ul>
             Other improvements / bug fixes:
             <ul>
-              <li> Fix how 3rd party FSI handle nuclear remnants 
+              <li> Fix how 3rd party FSI handle nuclear remnants
                 <A href="https://github.com/GENIE-MC/Generator/pull/373">[GENIE pull request #373]</A> and binding energy <A href="https://github.com/GENIE-MC/Generator/pull/367">[GENIE pull request #367]</A>.
               </li>
-              <li> Allow reweight to define algorithms, in order to access configurations 
+              <li> Allow reweight to define algorithms, in order to access configurations
                 <A href="https://github.com/GENIE-MC/Reweight/pull/25">[GENIE Reweight pull request #25]</A> and <A href="https://github.com/GENIE-MC/Generator/pull/366">[GENIE pull request #366]</A>.
               </li>
             </ul>
@@ -513,14 +558,14 @@
             <br />
             New and/or updated physics models:
             <ul>
-              <li> Addition of a spectral function-like approach for binding energies. 
+              <li> Addition of a spectral function-like approach for binding energies.
                    <span class="clsFContrib">Contribution by Steven Dolan and Laura Munteanu </span>.
                    <A href="https://github.com/GENIE-MC/Generator/pull/249">[GENIE pull request #249]</A>.
               </li>
             </ul>
             New comprehensive model configurations and tunes:
             <ul>
-              <li> Added CMC desired by SBN and DUNE experiments: AR23_20i_00_000. 
+              <li> Added CMC desired by SBN and DUNE experiments: AR23_20i_00_000.
                    <A href="https://github.com/GENIE-MC/Generator/blob/master/config/AR23_20i/README.md#liquid-argon-experiment-tune">[Readme file]</A>.
               </li>
             </ul>
@@ -533,11 +578,11 @@
             </ul>
             Other improvements / bug fixes:
             <ul>
-              <li> Fix in HAIntranuke about random number generation. 
+              <li> Fix in HAIntranuke about random number generation.
                 <A href="https://github.com/GENIE-MC/Generator/pull/241">[GENIE pull request #241]</A>.
               </li>
               <li> Fix in the hadronisation rotation.
-                <span class="clsFContrib">Contribution by Qiyu Yan </span>. 
+                <span class="clsFContrib">Contribution by Qiyu Yan </span>.
                 <A href="https://github.com/GENIE-MC/Generator/pull/264">[GENIE pull request #264]</A>.
               </li>
             </ul>
@@ -981,7 +1026,7 @@
            <small>
              Tag: R-2_12_10,
              Released: 19 February 2018,
-             Status: <i class="clsFGreen">pro</i>
+             Status: <i class="clsFGreen">old</i>
            </small>
            <br>
            <br>
@@ -2163,27 +2208,27 @@
         </section>
      </div>
    </div> <!-- pageLayout -->
-     
+
    <!-- Footer include -->
    <div id="footer"></div>
-     
+
    <script>
     document.addEventListener('DOMContentLoaded', () => {
      fetch('includes/header.html')
        .then(res => res.text())
        .then(text => document.getElementById('header').innerHTML = text);
-     
+
      fetch('includes/navigation.html')
        .then(res => res.text())
        .then(text => document.getElementById('navigation').innerHTML = text);
-     
+
      fetch('includes/footer.html')
        .then(res => res.text())
        .then(text => document.getElementById('footer').innerHTML = text);
     });
    </script>
-     
+
   </body>
 </html>
-     
-   
+
+
