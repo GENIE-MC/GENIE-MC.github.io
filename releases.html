@@ -43,7 +43,7 @@
          <br />
          For large MC productions and physics studies, use
          one of the comprehensive model configurations supported in the latest
-         GENIE production release (<B>v3.6.0</B>).
+         GENIE production release (<B>v3.6.2</B>).
          <br />
          <br />
          To experiment with the latest publicly released physics models and technical
@@ -403,12 +403,30 @@
              <br />
              Bug fixes:
              <ul>
+               <li>
+                 Fixed an incorrect differential phase-space label applied to events by RESKinematicsGenerator starting in v3.4.2 <A href="https://github.com/GENIE-MC/Generator/pull/452">[GENIE pull request #452]</A>. This mislabeling led to incorrect weights in Reweight calculators for resonance production form factors. Hard-coded phase-space assumptions were also removed from Reweight calculators that previously used them <A href="https://github.com/GENIE-MC/Reweight/pull/39">[Reweight pull request #39]</A>.
+               </li>
+               <li> Added a lower integration limit to fix a problem with spline generation by the dark neutrino module <A href="https://github.com/GENIE-MC/Generator/pull/445">[GENIE pull request #445]</A>. Contribution by Alessandro Ruggeri.
+               </li>
+               <li>
+                 Adjusted library linking order to avoid problems in loading GENIE ROOT dictionaries encountered in some Fermilab experiment workflows <A href="https://github.com/GENIE-MC/Generator/pull/393">[GENIE pull request #393]</A> <A href="https://github.com/GENIE-MC/Reweight/pull/28">[Reweight pull request #28]</A>. Contribution by Kyle Knoepfel.
+               </li>
+               <li>
+                 Fixed memory leak in GRV98LO model of the parton distribution functions <A href="https://github.com/GENIE-MC/Generator/pull/451">[GENIE pull request #451]</A>.
+               </li>
+             </ul>
+             Updates to build system:
+             <ul>
                <li> genie-config command-line tool now allows queries about which features were
                  enabled in the build, including whether Pythia6 or Pythia8 was used <A href="https://github.com/GENIE-MC/Generator/pull/439">[GENIE pull request #439]</A>.
                </li>
                <li> Dependency on libnsl was removed <A href="https://github.com/GENIE-MC/Generator/pull/431">[GENIE pull request #431]</A>.
                </li>
-               <li> The build system now searches for ROOT with root-config rather than the deprecated ROOTSYS environment variable <A href="https://github.com/GENIE-MC/Generator/pull/442">[GENIE pull request #442]</A>.
+               <li> The configure script now searches for ROOT with root-config rather than the ROOTSYS environment variable
+                 <A href="https://github.com/GENIE-MC/Generator/pull/442">[GENIE pull request #442]</A>
+                 <A href="https://github.com/GENIE-MC/Generator/pull/376">[GENIE pull request #376]</A>.
+                 This change facilitates builds in some environments, including via
+                 <A href="https://github.com/spack/spack">Spack</A>.
                </li>
                <li> Makefile infrastructure was updated to support MacOS arm64 builds <A href="https://github.com/GENIE-MC/Generator/pull/446">[GENIE pull request #446]</A>.
                </li>
@@ -447,6 +465,9 @@
              <ul>
                <li> Added CMC requested by the NOvA experiment: N24_20i_02_11b
                  <A href="https://github.com/GENIE-MC/Generator/blob/master/config/N24_20i/README.md">[Readme file]</A> <A href="https://github.com/GENIE-MC/Generator/pull/421">[GENIE pull request #421]</A>. This CMC restores a high-momentum tail to the spectral-function-like local Fermi gas model of the nuclear ground state used in AR23_20i_00_000 (added for SBN and DUNE in v3.4.0). The physics content is otherwise very similar to that earlier CMC.
+               </li>
+               <li>
+                 Added G24_20* CMCs based upon GENIE tuning to kinematic imbalance measurements as discussed in <A href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.110.072016">Phys. Rev. D 110, 072016 (2024)</A> <A href="https://github.com/GENIE-MC/Generator/pull/389">[GENIE pull request #389]</A>. Versions of this configuration with alternatives to the hA2018 FSI model were added in <A href="https://github.com/GENIE-MC/Generator/pull/429">[GENIE pull request #429]</A>.
                </li>
              </ul>
              New and/or updated physics models:
