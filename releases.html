@@ -43,7 +43,7 @@
          <br />
          For large MC productions and physics studies, use
          one of the comprehensive model configurations supported in the latest
-         GENIE production release (<B>v3.6.2</B>).
+         GENIE production release (<B>v3.8.0</B>).
          <br />
          <br />
          To experiment with the latest publicly released physics models and technical
@@ -244,6 +244,33 @@
                 <td colspan="9" class="clsVersionTableExternalProductsHeader"> </td>
              </tr>
              <tr>
+              <td class="clsVersionTableReweight">                   1.6.0 </td>
+              <td class="clsVersionTableGenerator">                  3.8.0 </td>
+              <td class="clsVersionTableCharacterizationAndTuning">  1.4.0 </td>
+              <td class="clsVersionTableCharacterizationAndTuning">  1.2.0 </td>
+              <td> </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 6.22.08 </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 2.6 </td>
+              <td class="clsVersionTableExternalProducts">  ? </td>
+              <td class="clsVersionTableExternalProducts">  ? </td>
+              <td class="clsVersionTableExternalProducts">  &ge; 6.3.0 </td>
+              <td class="clsVersionTableExternalProducts">  ( 6.4.28 ) </td>
+              <td class="clsVersionTableExternalProducts">  <b class="clsRed">&ge; 8.2.45</b> </td>
+              <td class="clsVersionTableExternalProducts"> modified <br /> v5.2.9.5 </td>
+              <td class="clsVersionTableExternalProducts"> &ge; v4.10.4.p02 </td>
+              <td class="clsVersionTableGeneric">
+                <b>Pythia8 is now enabled by default</b>.
+                Pythia6 is no longer used unless explicitly requested with
+                <tt>--enable-pythia6 --disable-pythia8</tt>.
+                </td>
+            </tr>
+
+            <!-- Empty spacer row -->
+            <tr style="height: 30px;">
+                <td colspan="2"></td>
+            </tr>
+
+             <tr>
               <td class="clsVersionTableReweight">                   1.4.2 </td>
               <td class="clsVersionTableGenerator">                  3.6.2 </td>
               <td class="clsVersionTableCharacterizationAndTuning">  1.4.0 </td>
@@ -260,6 +287,12 @@
               <td class="clsVersionTableExternalProducts"> &ge; v4.10.4.p02 </td>
               <td class="clsVersionTableGeneric"> See note about Pythia6 immediately below.</td>
             </tr>
+
+            <!-- Empty spacer row -->
+            <tr style="height: 30px;">
+                <td colspan="2"></td>
+            </tr>
+
              <tr>
               <td class="clsVersionTableReweight">                   1.4.0 </td>
               <td class="clsVersionTableGenerator">                  3.6.0 </td>
@@ -280,6 +313,12 @@
                 XMLs needed are available in <A href="https://github.com/GENIE-MC/Generator/pull/430">[GENIE pull request #430]</A>.
                   </td>
             </tr>
+
+            <!-- Empty spacer row -->
+            <tr style="height: 20px;">
+                <td colspan="2"></td>
+            </tr>
+
              <tr>
               <td class="clsVersionTableReweight">                   1.2.4 </td>
               <td class="clsVersionTableGenerator">                  3.4.2 </td>
@@ -388,6 +427,12 @@
                     brings this product sync with the v3 series of our Generator product.
                     </td>
              </tr>
+
+            <!-- Empty spacer row -->
+            <tr style="height: 30px;">
+                <td colspan="2"></td>
+            </tr>
+
              <tr>
                 <td class="clsVersionTableReweight">                  N/A   </td>
                 <td class="clsVersionTableGenerator">                 3.0.0 </td>
@@ -421,12 +466,99 @@
          <br />
 
          <div id="ReleaseTableHeader2">
+           <b>Version: 3.8.0 </b>
+           <br />
+           <small>
+            Tag: R-3_08_00,
+            Released: 15 October 2026
+            Status: <i class="clsFGreen"> pro</i>
+           </small>
+           <br />
+           <br />
+           <div id="ReleaseTableBody">
+             <b>Improvements over 3.6.2</b>
+             <br />
+             <span class="clsFContrib">
+               (<i>Important contributions by non-GENIE authors are especially acknowledged in the text below</i>)
+             </span>
+             <br />
+             <br />
+
+             Comprehensive model configurations and tunes:
+             <ul>
+               <li> Added AR25* CMCs requested by SBND and ICARUS. These are similar to the AR23* configurations but use a spectral function ground state for several nuclear targets, including argon. AR2*_22* variants use the HF-CRPA model for the CCQE cross section. Three tune suffixes provide versions of the AR* configurations that use a z-expansion axial-vector form factor: _01_000 (deuterium fit: <a href="https://doi.org/10.1103/PhysRevD.93.113015">Phys. Rev. D 93, 113015 (2016)</a>), _01_001 (MINERvA analysis: <a href="https://doi.org/10.1038/s41586-022-05478-3">Nature 614, 48 (2023)</a>), and _01_002 (lattice QCD average: <a href="https://doi.org/10.1103/ptwr-t73j">Phys. Rev. D 114, 052008 (2026)</a>). </li>
+
+<li> Added G24_12a_00_000, a CMC that uses the Martini <i>et al.</i> cross section models for CCQE and CCMEC <a href="https://github.com/GENIE-MC/Generator/pull/507">[GENIE pull request #507]</a>.
+               </li>
+               <li> Added CMC requested by the e4&nu; collaboration: GEM26_11a_00_000 <a href="https://github.com/GENIE-MC/Generator/pull/532">[GENIE pull request #532]</a>. This CMC uses the spectral function nuclear model for electron scattering. </li>
+               <li> Legacy G00* and G18_01* CMC families have been removed <a href="https://github.com/GENIE-MC/Generator/pull/548">[GENIE pull request #548]</a>.
+               </li>
+             </ul>
+             New and/or updated physics models:
+             <ul>
+               <li> Added a <b>spectral function</b> nuclear ground-state model for <sup>12</sup>C, <sup>16</sup>O, <sup>40</sup>Ar, and <sup>56</sup>Fe. The <sup>40</sup>Ar spectral function is based on the measurements reported in <a href="https://doi.org/10.1103/PhysRevD.105.112002">Phys. Rev. D 105, 112002</a> and <a href="https://doi.org/10.1103/PhysRevD.107.012005">Phys. Rev. D 107, 012005</a> <a href="https://github.com/GENIE-MC/Generator/pull/461">[GENIE pull request #461]</a>.
+               </li>
+               <li> Added the <b>Martini-Ericson-Chanfray-Marteau cross-section model</b> (<a href="https://doi.org/10.1103/PhysRevC.80.065501">Phys. Rev. C 80, 065501 (2009)</a>) for charged-current QE and 2p2h+3p3h interactions <a href="https://github.com/GENIE-MC/Generator/pull/507">[GENIE pull request #507]</a>. The GENIE implementation is described in <a href="https://doi.org/10.1103/v8hq-kppp">Phys. Rev. D 113, 012006 (2026)</a>. <span class="clsFContrib">Contribution by Lavinia Russo (LPNHE, CNRS / Sorbonne Universit&eacute;)</span>.
+               </li>
+               <li> Updated <b> 2021 Bodek-Yang DIS structure functions</b> (<a href="https://arxiv.org/abs/2108.09240">arXiv:2108.09240</a>) are now available alongside the originals (<a href="https://doi.org/10.1016/j.nuclphysbps.2004.11.208"</a>Nucl. Phys. B - Proc. Supp. 139, 113 (2005)</a>). Nuclear corrections for DIS are implemented following the Bodek-Yang 2000, Bodek-Yang 2021, and Gomez <i>et al.</i> (<a href="https://doi.org/10.1103/PhysRevD.49.4348">Phys. Rev. D 49, 4348 (1994)</a>) approaches <a href="https://github.com/GENIE-MC/Generator/pull/465">[GENIE pull request #465]</a> <a href="https://github.com/GENIE-MC/Generator/pull/512">[GENIE pull request #512]</a> <a href="https://github.com/GENIE-MC/Generator/pull/539">[GENIE pull request #539]</a>.
+               </li>
+
+               <li> Added the <b>hA2025 and hN2025 hadronic final-state interaction models</b>. These incorporate substantial changes to pion transport relative to the previous hA2018 and hN2018 treatments, which remain the defaults in most CMCs <a href="https://github.com/GENIE-MC/Generator/pull/467">[GENIE pull request #467]</a>. </li>
+               <li> Added a model for <b>resonance production in boosted dark matter interactions</b> <a href="https://github.com/GENIE-MC/Generator/pull/471">[GENIE pull request #471]</a>. <span class="clsFContrib">Contribution by Zach Orr (Colorado State University)</span>.
+               </li>
+
+               <li> Added the Kelly parameterisation of the nucleon elastic form factors (<a href="https://doi.org/10.1103/PhysRevC.70.068202">Phys. Rev. C 70, 068202</a>).
+               </li>
+             </ul>
+             Event generation and core framework improvements:
+             <ul>
+               <li> <b>Pythia8 has replaced Pythia6 as the default</b> external code for handling hadronization and particle decays <a href="https://github.com/GENIE-MC/Generator/pull/430">[GENIE pull request #430]</a>. Pythia6 will be linked only if it is explicitly requested using the <tt>--enable-pythia6 --disable-pythia8</tt> options when configuring the GENIE build. XML configuration changes are also required to use Pythia6 with this release.
+               </li>
+               <li> Individual Pythia8 particle decay channels can now be switched on and off via the XML configuration <a href="https://github.com/GENIE-MC/Generator/pull/483">[GENIE pull request #483]</a>.
+               </li>
+               <li> GENIE event files may be combined using the new <b>gevmerge</b> application <a href="https://github.com/GENIE-MC/Generator/pull/522">[GENIE pull request #522]</a>.
+               </li>
+             </ul>
+             Updates to build system:
+             <ul>
+               <li> Added support for the <tt>linuxriscv64</tt> architecture
+                 <a href="https://github.com/GENIE-MC/Generator/pull/491">[GENIE pull request #491]</a> and a Makefile fix for parallel builds <a href="https://github.com/GENIE-MC/Generator/pull/501">[GENIE pull request #501]</a>. <span class="clsFContrib">Contributions by Camilla Roselli (University of Bologna)</span>.
+               </li>
+               <li> The LHAPDF installation helper script was updated to use current Hepforge download links <a href="https://github.com/GENIE-MC/Generator/pull/482">[GENIE pull request #482]</a>.
+               </li>
+             </ul>
+             Reweight updates:
+             <ul>
+               <li> <b>Expanded MEC model reweighting</b> developed for the DUNE Neutrino Interaction Uncertainties working group. Additions include variations to the energy dependence of the total cross section, Legendre polynomial reshaping of the nucleon angular distribution, and interpolation between the leptonic kinematics predicted by the Nieves, SuSAv2, and Martini differential cross sections <a href="https://github.com/GENIE-MC/Reweight/pull/51">[Reweight pull request #51]</a>. <span class="clsFContrib">Contribution by Lars Bathe-Peters (University of Oxford)</span>.
+               </li>
+               <li> Updated reweighting for <b>z-expansion elastic and axial form factors</b> based on multi-parameter covariance matrices <a href="https://github.com/GENIE-MC/Reweight/pull/48">[Reweight pull request #48]</a>.
+               </li>
+               <li> Added an approximate calculator for <b>hA2018 to hA2025 pion fate reweighting</b> as requested by MicroBooNE <a href="https://github.com/GENIE-MC/Reweight/pull/53">[Reweight pull request #53]</a>. <span class="clsFContrib">Contribution by Mohamed Ismail (University of Pittsburgh)</span>.
+               </li>
+             </ul>
+
+             Other improvements / bug fixes:
+             <ul>
+               <li> As discussed in the Supplemental Material from <a href="https://doi.org/10.1016/j.physletb.2026.140750">Phys. Lett. B 880, 140750 (2026)</a>, a reference frame problem was found in the Nieves CCQE cross-section model implementation. The impact is small when using a local Fermi gas nuclear model but becomes significant for the newly-added spectral functions. For cases in which RPA corrections included in the Nieves model are turned off (as in the AR25_20* CMCs), the problem has been fixed in this release by a simple Lorentz boost <A href="https://github.com/GENIE-MC/Generator/pull/533">[GENIE pull request #533]</A>. Because the RPA corrections are not Lorentz-invariant, a more general fix is still under development. </li>
+               <li> Pion absorption in the hA and hN FSI models now correctly accounts for the pion's rest mass <a href="https://github.com/GENIE-MC/Generator/pull/503">[GENIE pull request #503]</a>. <span class="clsFContrib">Contribution by Matt King (University of Chicago)</span>.
+               </li>
+               <li> Pion production in the hA and hN FSI models now correctly <a href="https://mathworld.wolfram.com/SpherePointPicking.html">samples</a> the angular phase space <a href="https://github.com/GENIE-MC/Generator/pull/498">[GENIE pull request #498]</a>. <span class="clsFContrib">Contribution by Gray Putnam (Fermilab)</span>.
+               </li>
+               <li> Particle masses were updated in the default table to use the larger of the values adopted by Pythia8 and Geant4 <a href="https://github.com/GENIE-MC/Generator/pull/538">[GENIE pull request #538]</a>.
+               </li>
+             </ul>
+           </div>
+         </div>
+
+         <br />
+
+         <div id="ReleaseTableHeader2">
            <b>Version: 3.6.2 </b>
            <br />
            <small>
             Tag: R-3_06_02,
             Released: 1 July 2025
-            Status: <i class="clsFGreen"> pro</i>
+            Status: <i class="clsFGreen"> old</i>
            </small>
            <br />
            <br />
@@ -758,7 +890,7 @@
                     This model requires a new GENIE external dependence: INCL.
                     </li>
                <li> Addition of the <b>Bertini intranuclear rescattering model</b> through an interface to the
-                    GEANT4 generator</b>. This model requires a new GENIE external dependence: GEANT4.
+                    GEANT4 generator. This model requires a new GENIE external dependence: GEANT4.
                     <span class="clsFContrib"> Contributions by Dennis Wright and Makoto Asai (SLAC)</span>.
                     </li>
                <li> Addition of a first working <b>interface the PYTHIA8 hadronization code</b>,
@@ -773,6 +905,7 @@
                     <A href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.241801">Phys. Rev. Lett. 121, 241801</A>.
                     <span class="clsFContrib"> Contributions by Iker de Icaza (Sussex) and Pedro Machado (FNAL)</span>.
                     <A href="https://github.com/GENIE-MC/Generator/pull/114">[GENIE pull request #114]</A>
+                    </li>
                <li> A substantial upgrade in the native BSM generator for the simulation of <b>Boosted Dark Matter (BDM)</b>,
                     bringing it sync with the model described in <A href="https://arxiv.org/abs/1812.05616">arXiv:1812.05616</A>.
                     The newly deployed BDM code
@@ -842,6 +975,7 @@
                     detailed ntuple-based flux descriptions produced by beamline simulations.
                     This update improves these specialised apps for users who wish to use them with simpler flux descriptions.
                     <A href="https://github.com/GENIE-MC/Generator/pull/124">[GENIE pull request #124]</A>
+                    </li>
              </ul>
              Other improvements / bug fixes:
              <ul>
@@ -891,7 +1025,6 @@
              <ul>
                <li> Now supports C++14 (previously C++98) </li>
                <li> Dropped support for ROOT5 </li>
-             <ul>
              </ul>
            </div>
          </div>
@@ -919,12 +1052,16 @@
                     Other model sets are unaffected by this issue. More details about this problem are
                     available in a recent GENIE user forum talk
                     (<A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=129">GENIE doc-db 129</A>).
+                    </li>
                <li> Fix an error in the Jacobian used by the Rosenbluth EMQE cross section model.
                     See <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=133">GENIE doc-db 133</A>.
+                    </li>
                <li> Various issues with EM reaction channels were fixed, e.g., a missing Jacobian in the EMRES channel.
                     See <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=114">GENIE doc-db 114</A> and
                     <A href="https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=120">GENIE doc-db 120</A>.
+                    </li>
                <li> Very minor problems (e.g., a spurious warning message) in gntpc and gevcomp apps.
+                    </li>
              </ul>
            </div>
          </div>
@@ -950,6 +1087,7 @@
                     computed analytically. The calculation was valid only for a Fermi Gas model. Pauli blocking is now
                     implemented in a more generic way, as a cut on the outgoing nucleon momentum, allowing for correct
                     calculation of the effect irrespectively of the assumed nucleon momentum distribution.
+                    </li>
                <li> Bug fix: Removal energy was ignored by the quasielastic event generator, which always put the struck
                     nucleon on the mass shell.</li>
                <li> Bug fix: In the GENIE implementation of the Valenia model, an incorrect reference frame was used to compute
@@ -967,6 +1105,7 @@
                     the uncorrected 3-momentum transfer was pointing along the negative z direction. </li>
                <li> Bug fix: Previously, in the new quasielastic event generator first included in v3,
                     Fermi motion was erroneously applied to free nucleon targets.
+                    </li>
                <li> Bug fix: Previously, Pauli blocking was erroneously applied in the simulation of
                     quasielastic charm production. </li>
                <li> Bug fix: In the simulation of the &Delta; &rightarrow; N + &pi; decay, the polar angle &theta;
@@ -1184,7 +1323,7 @@
 
              <ul>
                 <li>Added new event generator lists: CCinclMEC+NueEl, duplicated Default+MEC as Default+CCMEC to avoid ambiguity, and added Default+CCMEC+NCMEC.</li>
-                <li>Fixed a bug in variable initialization in `GFLUKAAtmoFlux.cxx` pointed out by the community (Tao Lin).M/li>
+                <li>Fixed a bug in variable initialization in `GFLUKAAtmoFlux.cxx` pointed out by the community (Tao Lin).</li>
                 <li>Fixed a bug in the Valencia (NSV) MEC model in the scaling function that affected calculation for the neutrino case. The bug only affects nuclei scaled away from a hadtensor. There was no effect on C, O, Ca40, Pb.</li>
                 <li>Fixed a bug in the Valencia (NSV) MEC model that set a too-low XSecMax for O and maybe N14.  The XSecMax has been increased to be more safe.</li>
                 <li>Bugfix: The use of NucBindE was disabled in the Valencia (NSV) MEC model for 2p2h in 2.12. Therefore, we now add the resulting removal energy directly to the remnant nucleus.</li>
@@ -1336,7 +1475,7 @@
 
              <ul>
                 <li>Final State Interaction (FSI) model bugifx - The model used to make unguarded checks in some circumstances on the probe type during FSI computations, but the probe isn't defined for nucleon decay models. So, in these cases, we would access a null pointer and create undefined behavior. That is now fixed.</li>
-                <li>The Interaction package was patched to add an explicit streamer for `std::map<genie::KineVar_t,double>` which is required for reading back kinematics with newer versions of ROOT.</li>
+                <li>The Interaction package was patched to add an explicit streamer for `std::map&lt;genie::KineVar_t,double&gt;` which is required for reading back kinematics with newer versions of ROOT.</li>
                 <li>Change in KineVar map streamer means `Kinematics` ClassDef need to be bumped to version 2.</li>
                 <li>When using ROOT 6,  writing TTree branch `NtpMCEventRecord` refuses to be split, so don't event try (for now - will be revisited)</li>
                 <li>When generating ROOT 6 dictionary generate .rootmap file and regularize .pcm file name to match library name.</li>
@@ -1985,6 +2124,7 @@
                         (approaching speed of event generation for single nuclear targets).
                         Changes to the flux interface and GMCJDriver.
                         Currently only the T2K-specific event generation app employs the optimized scheme.
+                        </li>
                    <li> Improvement to reweighting tools (brings them in line with those used for evaluating GENIE systematics in the 2010a T2K analysis).</li>
                    <li> T2K event generation application: Add option to pre-calculate event generation probabilities for all neutrinos in the input flux ntuple.
                         Print out of exact event rate predictions, for use when deciding how many events to put in a spill/bunch later in T2K MC chain.</li>
@@ -2139,6 +2279,7 @@
                     <li> Installed new customized event generation application for T2K (gT2Kevgen, see $GENIE/src/support/t2k/EvGen)
                          including a driver for the JPARC neutrino flux
                          and hooks for the nd280, 2km, ingrid and SuperK detector geometries and/or nuclear target mix.
+                         </li>
                     <li> Added event converter from GENIE's native GHEP format to T2K/nd280's ROOT-only format (rootracker) </li>
                     <li> Added simulation of nuclear de-excitation gamma rays for O16.</li>
                     <li> Added a preliminary implementation of anomaly mediated neutrino - photon interactions
@@ -2175,8 +2316,8 @@
                     <li> Updates the code converting events from the native GHEP/ROOT format to
                          the tracker format used by T2K to better match what is expected by the
                          T2K/nd280 detector mc.
+                         </li>
                   </ul>
-                 </small>
              </div>
            </div>
 
@@ -2208,6 +2349,7 @@
                          (not fully developed yet and not enabled by default)</li>
                     <li> Added a few modifications / flags so as to handle newer version of log4cpp and
                          gcc versions > 4.1 and 64-bit systems.
+                         </li>
                   </ul>
              </div>
            </div>
